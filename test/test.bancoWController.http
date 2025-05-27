@@ -1,0 +1,18 @@
+### Traer todos registros 
+GET http://localhost:8080/api/bancow/all
+
+### Traer registro por id flujoRegistroEnlace
+GET http://localhost:8080/api/bancow/1
+
+### Crear registro
+POST http://localhost:8080/api/bancow/create
+Content-Type: application/json
+
+{
+  "IdFlujoRegistro": 4,
+  "Validacion_Banco_listas": "Aprobado",
+  "Aprobacion_Cupo_sugerido": "Sí",
+  "Pagare_Digital_Firmado": "Firmado correctamente",
+  "Creacion_Core_Bancario": "Completado",
+  "UsuarioAprobado": "jdoe"
+}

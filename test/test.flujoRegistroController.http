@@ -1,0 +1,52 @@
+### GET
+GET http://localhost:8080/api/flujoRegistroEnlace/all
+
+### GET:id 
+GET http://localhost:8080/api/flujoRegistroEnlace/2
+
+
+### GET:alpinaId
+GET http://localhost:8080/api/flujoRegistroEnlace/alpina/100010001000
+
+### Delete:id
+DELETE http://localhost:8080/api/flujoRegistroEnlace/2
+
+
+### POST 
+POST http://localhost:8080/api/flujoRegistroEnlace
+Content-Type: application/json
+
+{
+  "Numero_de_Cliente_Alpina": "123",
+  "Cedula_Cliente": "33333",
+  "Autorizacion_Habeas_Data": true,
+  "Autorizacion_Medios_de_Contacto": true,
+  "Numero_Celular": "320122234567",
+  "Correo_Electronico": "corrsseo@ejemplo.com",
+  "Nombres": "prueba",
+  "Primer_Apellido": "Pérez",
+  "2do_Apellido_opcional": "Gómez",
+  "Genero": "Masculino",
+  "Estado_Civil": "Soltero",
+  "Fecha_de_Nacimiento": "1990-01-01",
+  "Pais_de_Nacimiento": "Colombia",
+  "Departamento_de_Nacimiento": "Cundinamarca",
+  "Nivel_Educativo": "Universitario",
+  "Estrato": "3",
+  "Grupo_Etnico": "Ninguno",
+  "Declara_Renta": true,
+  "Esta_obligado_a_tener_RUT_por_tu_actividad_economica": true,
+  "Ubicacion_del_Negocio_Departamento": "Antioquia",
+  "Ubicacion_del_Negocio_Ciudad": "Medellín",
+  "Direccion": "Calle 123 # 45-67",
+  "Detalles": "Frente a la iglesia",
+  "Barrio": "Centro",
+  "Numero_de_neveras": "1",
+  "Registrado_Camara_Comercio": false,
+  "Rango_de_Ingresos": "1-2 millones",
+  "Persona_expuesta_politicamente_PEP": false,
+  "Familiar_expuesto_politicamente_PEP": false,
+  "Operaciones_moneda_extranjera": true,
+  "Declaracion_de_nacionalidad_y_residencia_fiscal_en_Colombia": true,
+  "Confirmacion_Identidad": false
+}
