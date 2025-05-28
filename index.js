@@ -4,12 +4,22 @@ import { poolPromise } from "./db/database.js"; // Importar la conexión de la b
 import flujoRegistroEnlace from "./routes/flujoRegistroEnlaceRoute.route.js";
 import bancoW from "./routes/bancoW.route.js";
 import scoring from "./routes/scoring.route.js";
+import cors from "cors";
 
 // Crear App express
 const app = express();
 
 // Midelware para parsear json en toda la aplicación
 app.use(express.json());
+
+app.use(
+  cors({
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+  })
+);
 
 app.use(flujoRegistroEnlace, bancoW, scoring);
 
