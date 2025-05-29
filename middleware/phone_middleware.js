@@ -25,6 +25,7 @@ const buscarUsuarioPorTelefono = async (req, res, next) => {
     if (admin.recordset.length > 0) {
       req.usuario = admin.recordset[0];
       req.tipo = "admin";
+      req.Empresa_Admin = admin.recordset[0].Empresa_Admin;
       return next();
     }
 
