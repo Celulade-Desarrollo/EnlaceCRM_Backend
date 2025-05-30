@@ -17,14 +17,14 @@ POST http://localhost:8080/api/flujoRegistroEnlace
 Content-Type: application/json
 
 {
-  "Numero_de_Cliente_Alpina": "123",
-  "Cedula_Cliente": "33333",
+  "Numero_de_Cliente_Alpina": "1222223",
+  "Cedula_Cliente": "33322222233",
   "Autorizacion_Habeas_Data": true,
   "Autorizacion_Medios_de_Contacto": true,
-  "Numero_Celular": "320122234567",
-  "Correo_Electronico": "corrsseo@ejemplo.com",
+  "Numero_Celular": "321237",
+  "Correo_Electronico": "corrsszccxeo@ejemplo.com",
   "Nombres": "prueba",
-  "Primer_Apellido": "Pérez",
+  "Primer_Apellido": "pRUEBA DE ESTADO",
   "2do_Apellido_opcional": "Gómez",
   "Genero": "Masculino",
   "Estado_Civil": "Soltero",

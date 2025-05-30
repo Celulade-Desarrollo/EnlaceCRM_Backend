@@ -99,6 +99,7 @@ const createRegistro = async (req, res) => {
     Operaciones_moneda_extranjera,
     Declaracion_de_nacionalidad_y_residencia_fiscal_en_Colombia,
     Confirmacion_Identidad,
+    Estado,
   } = req.body;
 
   try {
@@ -131,6 +132,7 @@ const createRegistro = async (req, res) => {
 
     const result = await pool
       .request()
+      .input("Estado", sql.NVarChar, Estado || "pendiente")
       .input("Numero_de_Cliente_Alpina", sql.NVarChar, Numero_de_Cliente_Alpina)
       .input("Cedula_Cliente", sql.NVarChar, Cedula_Cliente)
       .input("Autorizacion_Habeas_Data", sql.Bit, Autorizacion_Habeas_Data)
@@ -201,7 +203,7 @@ const createRegistro = async (req, res) => {
       .input("Confirmacion_Identidad", sql.Bit, Confirmacion_Identidad)
       .query(
         `INSERT INTO FlujosRegistroEnlace 
-            (Numero_de_Cliente_Alpina, Cedula_Cliente, Autorizacion_Habeas_Data, Autorizacion_Medios_de_Contacto,
+            (Estado, Numero_de_Cliente_Alpina, Cedula_Cliente, Autorizacion_Habeas_Data, Autorizacion_Medios_de_Contacto,
             Numero_Celular, Correo_Electronico, Nombres, Primer_Apellido, [2do_Apellido_opcional],
             Genero, Estado_Civil, Fecha_de_Nacimiento, Pais_de_Nacimiento, Departamento_de_Nacimiento,
             Nivel_Educativo, Estrato, Grupo_Etnico, Declara_Renta, Esta_obligado_a_tener_RUT_por_tu_actividad_economica,
@@ -210,7 +212,7 @@ const createRegistro = async (req, res) => {
             Familiar_expuesto_politicamente_PEP, Operaciones_moneda_extranjera,
             Declaracion_de_nacionalidad_y_residencia_fiscal_en_Colombia, Confirmacion_Identidad)
             VALUES 
-            (@Numero_de_Cliente_Alpina, @Cedula_Cliente, @Autorizacion_Habeas_Data, @Autorizacion_Medios_de_Contacto,
+            (@Estado, @Numero_de_Cliente_Alpina, @Cedula_Cliente, @Autorizacion_Habeas_Data, @Autorizacion_Medios_de_Contacto,
             @Numero_Celular, @Correo_Electronico, @Nombres, @Primer_Apellido, @SegundoApellido,
             @Genero, @Estado_Civil, @Fecha_de_Nacimiento, @Pais_de_Nacimiento, @Departamento_de_Nacimiento,
             @Nivel_Educativo, @Estrato, @Grupo_Etnico, @Declara_Renta, @Esta_obligado_a_tener_RUT,
