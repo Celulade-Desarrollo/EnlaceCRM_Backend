@@ -262,8 +262,41 @@ const getByEstado = async (req, res) => {
         .json({ message: "No hay registros con estado pendiente" });
     }
 
-    res.json(result.recordset[0]);
+    res.json(result.recordset);
     res.status(200);
+  } catch (err) {
+    res.status(500).send(err.message);
+  }
+};
+
+const updateEstadoById = async (req, res) => {
+  const { id } = req.params;
+  const { Estado } = req.body;
+
+  try {
+    const pool = await poolPromise;
+
+    // Verificar si el registro existe
+    const existing = await pool
+      .request()
+      .input("id", sql.Int, id)
+      .query("SELECT * FROM FlujosRegistroEnlace WHERE id = @id");
+
+    if (existing.recordset.length === 0) {
+      return res.status(404).json({ message: "Registro no encontrado" });
+    }
+
+    // Actualizar el registro
+    await pool
+      .request()
+      .input("id", sql.Int, id)
+      .input("Estado", sql.NVarChar(50), Estado || "pendiente").query(`
+        UPDATE FlujosRegistroEnlace
+        SET Estado = @Estado
+        WHERE id = @id
+      `);
+
+    res.json({ message: "Registro actualizado correctamente" });
   } catch (err) {
     res.status(500).send(err.message);
   }
@@ -277,4 +310,5 @@ export {
   deleteById,
   getBynumber,
   getByEstado,
+  updateEstadoById,
 };

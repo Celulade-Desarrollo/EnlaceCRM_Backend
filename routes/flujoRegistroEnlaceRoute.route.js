@@ -11,6 +11,7 @@ import {
   deleteById,
   getBynumber,
   getByEstado,
+  updateEstadoById,
 } from "../controller/flujoRegistroEnlace.controller.js";
 import { buscarUsuarioPorTelefono } from "../middleware/phone_middleware.js";
 
@@ -30,6 +31,12 @@ flujoRegistroEnlace.get("/api/flujoRegistroEnlace", getAll);
 flujoRegistroEnlace.get(
   "/api/flujoRegistroEnlace/estado/pendiente",
   getByEstado
+);
+
+// PUT para confirmar estado a completado
+flujoRegistroEnlace.put(
+  "/api/flujoRegistroEnlace/estado/pendiente/:id",
+  updateEstadoById
 );
 
 // GET por ID

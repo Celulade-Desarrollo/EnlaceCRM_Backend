@@ -9,6 +9,13 @@ GET http://localhost:8080/api/flujoRegistroEnlace/2
 GET http://localhost:8080/api/flujoRegistroEnlace/estado/pendiente
 
 
+### PUT por estado a completado 
+PUT http://localhost:8080/api/flujoRegistroEnlace/estado/pendiente/16
+Content-Type: application/json
+
+{
+  "Estado": "completado"
+}
 
 
 ### GET:alpinaId
