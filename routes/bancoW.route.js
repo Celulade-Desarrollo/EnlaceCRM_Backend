@@ -22,6 +22,7 @@ bancoW.post("/api/bancow", createBancoW);
 // DELETE: Eliminar registro por ID
 bancoW.delete("/api/bancow/:id", deleteBancoWbyId);
 
+// POST: Crear cuenta de usuario
 bancoW.post("/api/bancow/user", createUserAccount);
 
 // GET de userAccount por IdFlujoRegistro
