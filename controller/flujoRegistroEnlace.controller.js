@@ -246,6 +246,29 @@ const deleteById = async (req, res) => {
   }
 };
 
+const getByEstado = async (req, res) => {
+  try {
+    const pool = await poolPromise;
+    const result = await pool
+      .request()
+      .input("Estado", sql.NVarChar, "pendiente")
+
+      .query("SELECT * FROM FlujosRegistroEnlace WHERE Estado = @Estado");
+
+    // Valida si existen registros con estado pendiente
+    if (result.recordset.length === 0) {
+      return res
+        .status(404)
+        .json({ message: "No hay registros con estado pendiente" });
+    }
+
+    res.json(result.recordset[0]);
+    res.status(200);
+  } catch (err) {
+    res.status(500).send(err.message);
+  }
+};
+
 export {
   getAll,
   getById,
@@ -253,4 +276,5 @@ export {
   createRegistro,
   deleteById,
   getBynumber,
+  getByEstado,
 };
