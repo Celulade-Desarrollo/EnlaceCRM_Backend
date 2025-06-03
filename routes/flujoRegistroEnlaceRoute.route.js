@@ -26,7 +26,7 @@ flujoRegistroEnlace.post("/api/flujoRegistroEnlace", createRegistro);
 // GET todos los registros
 flujoRegistroEnlace.get("/api/flujoRegistroEnlace", getAll);
 
-// GET por estado
+// GET por estado pendiente
 
 flujoRegistroEnlace.get(
   "/api/flujoRegistroEnlace/estado/pendiente",

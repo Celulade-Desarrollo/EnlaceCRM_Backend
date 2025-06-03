@@ -10,7 +10,7 @@ GET http://localhost:8080/api/flujoRegistroEnlace/estado/pendiente
 
 
 ### PUT por estado a completado 
-PUT http://localhost:8080/api/flujoRegistroEnlace/estado/pendiente/16
+PUT http://localhost:8080/api/flujoRegistroEnlace/estado/pendiente/18
 Content-Type: application/json
 
 {

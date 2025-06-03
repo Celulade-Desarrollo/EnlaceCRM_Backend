@@ -15,7 +15,7 @@ scoring.get("/api/scoring", getAllScoring);
 // GET: Por IdFlujoRegistro de enlace
 scoring.get("/api/scoring/:id", getScoringById);
 
-// GET: Por Estado "pendiente"
+// GET: Por Estado "pendiente" bancow
 scoring.get("/api/scoring/estado/pendiente", getScoringByEstado);
 
 // PUT para actualizar un registro, para el banco
