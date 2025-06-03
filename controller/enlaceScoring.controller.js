@@ -103,7 +103,7 @@ const createScoring = async (req, res) => {
       .input("Numero_Cliente", sql.NVarChar(50), Numero_Cliente)
       .input("Cedula_Cliente", sql.NVarChar(50), Cedula_Cliente)
       .input("Estado", sql.NVarChar(50), Estado || "pendiente").query(`
-        INSERT INTO FlujosRegistroEnlaceScoring (IdFlujoRegistro, Scoring, Cupo, Numero_Cliente, Cedula_Cliente, Estado)
+        INSERT INTO FlujosRegistroEnlaceScoring (IdFlujoRegistro, Scoring, Cupo, Estado, Numero_Cliente, Cedula_Cliente)
         VALUES (@IdFlujoRegistro, @Scoring, @Cupo, @Estado, @Numero_Cliente, @Cedula_Cliente)
       `);
 
