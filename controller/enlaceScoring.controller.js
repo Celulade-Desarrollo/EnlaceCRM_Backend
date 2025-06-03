@@ -61,12 +61,20 @@ const getScoringByEstado = async (req, res) => {
 
 // Crear un nuevo registro de scoring
 const createScoring = async (req, res) => {
-  const { IdFlujoRegistro, Scoring, Cupo, Estado } = req.body;
+  const {
+    IdFlujoRegistro,
+    Scoring,
+    Cupo,
+    Numero_Cliente,
+    Cedula_Cliente,
+    Estado,
+  } = req.body;
 
-  if (!IdFlujoRegistro || !Cupo) {
-    return res
-      .status(400)
-      .json({ message: "IdFlujoRegistro y Cupo son requeridos" });
+  if (!IdFlujoRegistro || !Cupo || !Numero_Cliente || !Cedula_Cliente) {
+    return res.status(400).json({
+      message:
+        "IdFlujoRegistro, Numero del cliente, Cedula del cliente y Cupo son requeridos",
+    });
   }
 
   try {
@@ -92,9 +100,11 @@ const createScoring = async (req, res) => {
       .input("IdFlujoRegistro", sql.Int, IdFlujoRegistro)
       .input("Scoring", sql.NVarChar(50), Scoring || null)
       .input("Cupo", sql.NVarChar(100), Cupo)
+      .input("Numero_Cliente", sql.NVarChar(50), Numero_Cliente)
+      .input("Cedula_Cliente", sql.NVarChar(50), Cedula_Cliente)
       .input("Estado", sql.NVarChar(50), Estado || "pendiente").query(`
-        INSERT INTO FlujosRegistroEnlaceScoring (IdFlujoRegistro, Scoring, Cupo, Estado)
-        VALUES (@IdFlujoRegistro, @Scoring, @Cupo, @Estado)
+        INSERT INTO FlujosRegistroEnlaceScoring (IdFlujoRegistro, Scoring, Cupo, Numero_Cliente, Cedula_Cliente, Estado)
+        VALUES (@IdFlujoRegistro, @Scoring, @Cupo, @Estado, @Numero_Cliente, @Cedula_Cliente)
       `);
 
     res.status(201).json({ message: "Registro creado correctamente" });
