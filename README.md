@@ -1,5 +1,8 @@
-# Documentación Técnica Backend Enlace CRM
-
+---
+title: Enlace CRM Backend
+author: [Tu nombre]
+date: [Fecha de creación]
+---
 ## Descripción General
 
 Este backend está desarrollado en Node.js utilizando Express y MSSQL para la gestión de datos. Su objetivo es gestionar el flujo de registro de clientes, scoring, integración con BancoW, autenticación OTP vía Twilio y validaciones de usuarios.
