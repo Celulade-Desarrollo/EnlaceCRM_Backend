@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/Celulade-Desarrollo/EnlaceCRM_Backend'
+    repoURL: 'https://github.com/Celulade-Desarrollo/EnlaceCRM_Backend.git'
     targetRevision: main
     path: manifest
   destination:
