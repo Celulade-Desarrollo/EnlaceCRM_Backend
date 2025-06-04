@@ -6,6 +6,9 @@ import bancoW from "./routes/bancoW.route.js";
 import scoring from "./routes/scoring.route.js";
 import cors from "cors";
 
+// Swagger
+import swaggerDocs from "./swagger-config.js";
+
 // Crear App express
 const app = express();
 
@@ -21,7 +24,11 @@ app.use(
   })
 );
 
+// Rutas
 app.use(flujoRegistroEnlace, bancoW, scoring);
+
+// Documentación Swagger
+swaggerDocs(app);
 
 // direccion del servidor
 const PORT = 8080;
@@ -31,6 +38,7 @@ async function startServer() {
     console.log(pool);
     app.listen(PORT, () => {
       console.log(`http://localhost:${PORT}`);
+      console.log(`Documentación Swagger: http://localhost:${PORT}/api-docs`);
     });
   } catch (err) {
     console.error(
@@ -42,3 +50,4 @@ async function startServer() {
 
 // Iniciar servidor
 startServer();
+
