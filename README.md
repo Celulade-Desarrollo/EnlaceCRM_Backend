@@ -1,7 +1,7 @@
 ---
 title: Enlace CRM Backend
-author: [Tu nombre]
-date: [Fecha de creación]
+author: Mildred M. Moreno L.
+date: 04-05-2025
 ---
 ## Descripción General
 
