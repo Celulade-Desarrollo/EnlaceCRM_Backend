@@ -31,23 +31,22 @@ app.use(flujoRegistroEnlace, bancoW, scoring);
 swaggerDocs(app);
 
 // direccion del servidor
-const PORT = 8080;
+const PORT = process.env.PORT || 3000;
+
 async function startServer() {
   try {
     const pool = await poolPromise;
-    console.log(pool);
-    app.listen(PORT, () => {
-      console.log(`http://localhost:${PORT}`);
-      console.log(`Documentación Swagger: http://localhost:${PORT}/api-docs`);
-    });
+    console.log("Conexión a BD exitosa:", pool);
   } catch (err) {
-    console.error(
-      "Error al conectarse a la base de datos, no se pudo iniciar el servidor:",
-      err
-    );
+    console.error("❌ Error al conectar a la base de datos:", err.message);
   }
+
+  app.listen(PORT, () => {
+    console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
+    console.log(`📘 Swagger disponible en http://localhost:${PORT}/api-docs`);
+  });
 }
+
 
 // Iniciar servidor
 startServer();
-
