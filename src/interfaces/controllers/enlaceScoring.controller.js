@@ -1,157 +1,56 @@
-import { poolPromise } from "../db/database.js";
-import sql from "mssql";
+import { getAllScoringUseCase } from "../../application/usecases/scoring/getAllScoring.js";
+import { getScoringByIdUseCase } from "../../application/usecases/scoring/getScoringById.js";
+import { getScoringByEstadoUseCase } from "../../application/usecases/scoring/getScoringByEstado.js";
+import { createScoringUseCase } from "../../application/usecases/scoring/createScoring.js";
+import { updateScoringByIdUseCase } from "../../application/usecases/scoring/updateScoringById.js";
 
-// Obtener todos los registros
-const getAllScoring = async (req, res) => {
+export async function getAllScoring(req, res) {
   try {
-    const pool = await poolPromise;
-    const result = await pool
-      .request()
-      .query("SELECT * FROM FlujosRegistroEnlaceScoring");
-    res.json(result.recordset);
+    const data = await getAllScoringUseCase();
+    res.status(200).json(data);
   } catch (err) {
-    res.status(500).send(err.message);
+    res.status(500).json({ error: err.message });
   }
-};
+}
 
-// Obtener un registro por idFlujoRegistro
-const getScoringById = async (req, res) => {
+export async function getScoringById(req, res) {
   try {
-    const { id } = req.params;
-    const pool = await poolPromise;
-    const result = await pool
-      .request()
-      .input("idFlujoRegistro", sql.Int, id)
-      .query(
-        "SELECT * FROM FlujosRegistroEnlaceScoring WHERE IdFlujoRegistro = @IdFlujoRegistro"
-      );
-
-    if (result.recordset.length === 0) {
-      return res.status(404).json({ message: "Registro no encontrado" });
-    }
-
-    res.json(result.recordset[0]);
+    const data = await getScoringByIdUseCase(req.params.id);
+    if (!data) return res.status(404).json({ message: "No encontrado" });
+    res.status(200).json(data);
   } catch (err) {
-    res.status(500).send(err.message);
+    res.status(500).json({ error: err.message });
   }
-};
+}
 
-// Obtener un registro por Estado
-const getScoringByEstado = async (req, res) => {
+export async function getScoringByEstado(req, res) {
   try {
-    const pool = await poolPromise;
-    const result = await pool
-      .request()
-      .input("Estado", sql.NVarChar, "pendiente")
-      .query(
-        "SELECT * FROM FlujosRegistroEnlaceScoring WHERE Estado = @Estado"
-      );
-
-    if (result.recordset.length === 0) {
-      return res
-        .status(404)
-        .json({ message: "No hay registros con estado pendiente" });
+    const data = await getScoringByEstadoUseCase("pendiente");
+    if (data.length === 0) {
+      return res.status(404).json({ message: "No hay registros pendientes" });
     }
-
-    res.json(result.recordset);
+    res.status(200).json(data);
   } catch (err) {
-    res.status(500).send(err.message);
+    res.status(500).json({ error: err.message });
   }
-};
+}
 
-// Crear un nuevo registro de scoring
-const createScoring = async (req, res) => {
-  const {
-    IdFlujoRegistro,
-    Scoring,
-    Cupo,
-    Numero_Cliente,
-    Cedula_Cliente,
-    Estado,
-  } = req.body;
-
-  if (!IdFlujoRegistro || !Cupo || !Numero_Cliente || !Cedula_Cliente) {
-    return res.status(400).json({
-      message:
-        "IdFlujoRegistro, Numero del cliente, Cedula del cliente y Cupo son requeridos",
-    });
-  }
-
+export async function createScoring(req, res) {
   try {
-    const pool = await poolPromise;
-
-    // Validar si ya existe un registro con ese IdFlujoRegistro
-    const existing = await pool
-      .request()
-      .input("IdFlujoRegistro", sql.Int, IdFlujoRegistro)
-      .query(
-        "SELECT * FROM FlujosRegistroEnlaceScoring WHERE IdFlujoRegistro = @IdFlujoRegistro"
-      );
-
-    if (existing.recordset.length > 0) {
-      return res
-        .status(409)
-        .json({ message: "Ya existe un registro con este IdFlujoRegistro" });
-    }
-
-    // Insertar nuevo registro
-    await pool
-      .request()
-      .input("IdFlujoRegistro", sql.Int, IdFlujoRegistro)
-      .input("Scoring", sql.NVarChar(50), Scoring || null)
-      .input("Cupo", sql.NVarChar(100), Cupo)
-      .input("Numero_Cliente", sql.NVarChar(50), Numero_Cliente)
-      .input("Cedula_Cliente", sql.NVarChar(50), Cedula_Cliente)
-      .input("Estado", sql.NVarChar(50), Estado || "pendiente").query(`
-        INSERT INTO FlujosRegistroEnlaceScoring (IdFlujoRegistro, Scoring, Cupo, Estado, Numero_Cliente, Cedula_Cliente)
-        VALUES (@IdFlujoRegistro, @Scoring, @Cupo, @Estado, @Numero_Cliente, @Cedula_Cliente)
-      `);
-
+    await createScoringUseCase(req.body);
     res.status(201).json({ message: "Registro creado correctamente" });
   } catch (err) {
-    res.status(500).send(err.message);
+    res.status(400).json({ error: err.message });
   }
-};
+}
 
-const updateScoringById = async (req, res) => {
-  const { id } = req.params;
-  const { Estado } = req.body;
-
+export async function updateScoringById(req, res) {
   try {
-    const pool = await poolPromise;
-
-    // Verificar si el registro existe
-    const existing = await pool
-      .request()
-      .input("idFlujoRegistro", sql.Int, id)
-      .query(
-        "SELECT * FROM FlujosRegistroEnlaceScoring WHERE IdFlujoRegistro = @idFlujoRegistro"
-      );
-
-    if (existing.recordset.length === 0) {
-      return res.status(404).json({ message: "Registro no encontrado" });
-    }
-
-    // Actualizar el registro
-    await pool
-      .request()
-      .input("idFlujoRegistro", sql.Int, id)
-      .input("Estado", sql.NVarChar(50), Estado || "pendiente").query(`
-        UPDATE FlujosRegistroEnlaceScoring
-        SET Estado = @Estado
-        WHERE IdFlujoRegistro = @idFlujoRegistro
-      `);
-
-    res.json({ message: "Registro actualizado correctamente" });
+    const { id } = req.params;
+    const { Estado } = req.body;
+    await updateScoringByIdUseCase(id, Estado || "pendiente");
+    res.status(200).json({ message: "Registro actualizado correctamente" });
   } catch (err) {
-    res.status(500).send(err.message);
+    res.status(500).json({ error: err.message });
   }
-};
-
-export {
-  getAllScoring,
-  getScoringById,
-  createScoring,
-  getScoringByEstado,
-  updateScoringById,
-};
+}

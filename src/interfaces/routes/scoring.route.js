@@ -5,9 +5,16 @@ import {
   createScoring,
   getScoringByEstado,
   updateScoringById,
-} from "../controller/enlaceScoring.controller.js";
+} from "../../controllers/scoring.controller.js";
 
-const scoring = express.Router();
+const scoringRouter = express.Router();
+
+/**
+ * @swagger
+ * tags:
+ *   name: Scoring
+ *   description: Gestión del scoring de clientes
+ */
 
 /**
  * @swagger
@@ -19,7 +26,7 @@ const scoring = express.Router();
  *       200:
  *         description: Lista de registros
  */
-scoring.get("/api/scoring", getAllScoring);
+scoringRouter.get("/api/scoring", getAllScoring);
 
 /**
  * @swagger
@@ -38,7 +45,7 @@ scoring.get("/api/scoring", getAllScoring);
  *       200:
  *         description: Registro encontrado
  */
-scoring.get("/api/scoring/:id", getScoringById);
+scoringRouter.get("/api/scoring/:id", getScoringById);
 
 /**
  * @swagger
@@ -50,7 +57,7 @@ scoring.get("/api/scoring/:id", getScoringById);
  *       200:
  *         description: Lista de registros pendientes
  */
-scoring.get("/api/scoring/estado/pendiente", getScoringByEstado);
+scoringRouter.get("/api/scoring/estado/pendiente", getScoringByEstado);
 
 /**
  * @swagger
@@ -64,7 +71,6 @@ scoring.get("/api/scoring/estado/pendiente", getScoringByEstado);
  *         required: true
  *         schema:
  *           type: string
- *         description: ID del flujo
  *     requestBody:
  *       required: true
  *       content:
@@ -77,7 +83,7 @@ scoring.get("/api/scoring/estado/pendiente", getScoringByEstado);
  *       200:
  *         description: Registro actualizado
  */
-scoring.put("/api/scoring/estado/update/:id", updateScoringById);
+scoringRouter.put("/api/scoring/estado/update/:id", updateScoringById);
 
 /**
  * @swagger
@@ -98,35 +104,6 @@ scoring.put("/api/scoring/estado/update/:id", updateScoringById);
  *       201:
  *         description: Registro creado
  */
-scoring.post("/api/scoring", createScoring);
+scoringRouter.post("/api/scoring", createScoring);
 
-export default scoring;
-
-
-// import express from "express";
-// import {
-//   getAllScoring,
-//   getScoringById,
-//   createScoring,
-//   getScoringByEstado,
-//   updateScoringById,
-// } from "../controller/enlaceScoring.controller.js";
-
-// const scoring = express.Router();
-
-// // GET: Todos los registros
-// scoring.get("/api/scoring", getAllScoring);
-
-// // GET: Por IdFlujoRegistro de enlace
-// scoring.get("/api/scoring/:id", getScoringById);
-
-// // GET: Por Estado "pendiente" bancow
-// scoring.get("/api/scoring/estado/pendiente", getScoringByEstado);
-
-// // PUT para actualizar un registro, para el banco
-// scoring.put("/api/scoring/estado/update/:id", updateScoringById);
-
-// // POST: Crear nuevo registro
-// scoring.post("/api/scoring", createScoring);
-
-// export default scoring;
+export default scoringRouter;
