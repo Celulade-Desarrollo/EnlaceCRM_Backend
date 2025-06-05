@@ -1,20 +1,21 @@
-// Imports
 import express from "express";
-import { poolPromise } from "./db/database.js"; // Importar la conexión de la base de datos
-import flujoRegistroEnlace from "./routes/flujoRegistroEnlaceRoute.route.js";
-import bancoW from "./routes/bancoW.route.js";
-import scoring from "./routes/scoring.route.js";
 import cors from "cors";
+import { poolPromise } from "./infrastructure/persistence/database.js"; // nueva ruta
+
+// Rutas desde interfaces
+import flujoRegistroEnlace from "./interfaces/routes/flujoRegistroEnlace.route.js";
+import bancoW from "./interfaces/routes/bancoW.route.js";
+import scoring from "./interfaces/routes/scoring.route.js";
+import truora from "./interfaces/routes/truora.route.js"; // si ya lo tienes
 
 // Swagger
-import swaggerDocs from "./swagger-config.js";
+import swaggerDocs from "./config/swagger-config.js"; // nueva ubicación
 
 // Crear App express
 const app = express();
 
 // Midelware para parsear json en toda la aplicación
 app.use(express.json());
-
 app.use(
   cors({
     origin: "*",
@@ -24,19 +25,23 @@ app.use(
   })
 );
 
-// Rutas
-app.use(flujoRegistroEnlace, bancoW, scoring);
-
 // Documentación Swagger
 swaggerDocs(app);
 
-// direccion del servidor
+// Rutas
+app.use(flujoRegistroEnlace);
+app.use(bancoW);
+app.use(scoring);
+app.use(truora); // opcional, si ya está creado
+
+// Puerto del servidor
 const PORT = process.env.PORT || 3000;
 
+// Inicialización del servidor con conexión BD
 async function startServer() {
   try {
     const pool = await poolPromise;
-    console.log("Conexión a BD exitosa:", pool);
+    console.log("✅ Conexión a BD exitosa:", pool);
   } catch (err) {
     console.error("❌ Error al conectar a la base de datos:", err.message);
   }
@@ -47,6 +52,4 @@ async function startServer() {
   });
 }
 
-
-// Iniciar servidor
 startServer();
