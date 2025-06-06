@@ -1,4 +1,4 @@
-import { poolPromise } from "../db/database.js";
+import { poolPromise } from "../../infrastructure/persistence/database.js";
 import sql from "mssql";
 
 // GET: Todos los registros

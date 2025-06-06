@@ -1,9 +1,9 @@
-import { getAllFlujoRegistro } from "../../application/usecases/getAllFlujoRegistro.js";
+import { getAllFlujoRegistro } from "../../application/usecases/getAllFlujoRegistroUseCase.js";
 import { getFlujoRegistroById } from "../../application/usecases/getFlujoRegistroById.js";
 import { getFlujoRegistroByAlpina } from "../../application/usecases/getFlujoRegistroByAlpina.js";
 import { getFlujoRegistroByNumber } from "../../application/usecases/getFlujoRegistroByNumber.js";
 import { getFlujoRegistroByEstado } from "../../application/usecases/getFlujoRegistroByEstado.js";
-import { createFlujoRegistro } from "../../application/usecases/createFlujoRegistro.js";
+import { createFlujoRegistro } from "../../application/usecases/createFlujoRegistroUseCase.js";
 import { deleteFlujoRegistroById } from "../../application/usecases/deleteFlujoRegistroById.js";
 import { updateEstadoFlujoRegistroById } from "../../application/usecases/updateEstadoFlujoRegistroById.js";
 

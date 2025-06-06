@@ -11,10 +11,10 @@ import {
   getBynumber,
   getByEstado,
   updateEstadoById,
-} from "../interfaces/controllers/flujoRegistroEnlace.controller.js";
+} from "../controllers/flujoRegistroEnlace.controller.js";
 
-import { buscarUsuarioPorTelefono } from "../middleware/phone_middleware.js";
-import { sendOTP, verifyOTP } from "../controller/tiwilio.controller.js";
+import { buscarUsuarioPorTelefono } from "../../../middleware/phone_middleware.js";
+import { sendOTP, verifyOTP } from "../controllers/tiwilio.controller.js";
 
 /**
  * @swagger

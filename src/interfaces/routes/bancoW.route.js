@@ -6,7 +6,7 @@ import {
   deleteBancoWbyId,
   createUserAccount,
   getUserAccountById,
-} from "../controller/bancoW.controller.js";
+} from "../controllers/bancoW.controller.js";
 
 const bancoW = express.Router();
 

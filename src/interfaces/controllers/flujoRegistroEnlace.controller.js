@@ -1,4 +1,5 @@
-import { poolPromise } from "../db/database.js"; // Importar la conexión de la base de datos
+import { poolPromise } from "../../infrastructure/persistence/database.js";
+
 import sql from "mssql"; // SDK de MYSQL
 
 // Función GET

@@ -1,20 +1,20 @@
 import express from "express";
 import cors from "cors";
-import { poolPromise } from "./infrastructure/persistence/database.js"; // nueva ruta
+import { poolPromise } from "./infrastructure/persistence/database.js";
 
-// Rutas desde interfaces
-import flujoRegistroEnlace from "./interfaces/routes/flujoRegistroEnlace.route.js";
+// Rutas desde interfaces (corrige los nombres reales de los archivos)
+import flujoRegistroEnlace from "./interfaces/routes/flujoRegistroEnlaceRoute.route.js"; // ✅ nombre correcto
 import bancoW from "./interfaces/routes/bancoW.route.js";
 import scoring from "./interfaces/routes/scoring.route.js";
-import truora from "./interfaces/routes/truora.route.js"; // si ya lo tienes
+import truora from "./interfaces/routes/truora.route.js";
+import twilioRouter from "./interfaces/routes/twilio.route.js";
 
 // Swagger
-import swaggerDocs from "./config/swagger-config.js"; // nueva ubicación
+import swaggerDocs from "./config/swagger-config.js";
 
 // Crear App express
 const app = express();
 
-// Midelware para parsear json en toda la aplicación
 app.use(express.json());
 app.use(
   cors({
@@ -25,23 +25,23 @@ app.use(
   })
 );
 
-// Documentación Swagger
+// Swagger
 swaggerDocs(app);
 
 // Rutas
 app.use(flujoRegistroEnlace);
 app.use(bancoW);
 app.use(scoring);
-app.use(truora); // opcional, si ya está creado
+app.use(truora);
+app.use(twilioRouter);
 
 // Puerto del servidor
 const PORT = process.env.PORT || 3000;
 
-// Inicialización del servidor con conexión BD
 async function startServer() {
   try {
     const pool = await poolPromise;
-    console.log("✅ Conexión a BD exitosa:", pool);
+    console.log("✅ Conexión a BD exitosa");
   } catch (err) {
     console.error("❌ Error al conectar a la base de datos:", err.message);
   }
@@ -53,3 +53,4 @@ async function startServer() {
 }
 
 startServer();
+

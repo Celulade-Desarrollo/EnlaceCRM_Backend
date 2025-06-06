@@ -1,10 +1,15 @@
-// src/interfaces/routes/twilio.route.js
-
 import express from "express";
 import { sendOTP, verifyOTP } from "../controllers/twilio.controller.js";
 import { buscarUsuarioPorTelefono } from "../middleware/phone_middleware.js";
 
 const twilioRouter = express.Router();
+
+/**
+ * @swagger
+ * tags:
+ *   name: Twilio
+ *   description: Endpoints para verificación OTP
+ */
 
 /**
  * @swagger
@@ -18,8 +23,10 @@ const twilioRouter = express.Router();
  *         application/json:
  *           schema:
  *             type: object
- *             example:
- *               telefono: "3001234567"
+ *             properties:
+ *               phone:
+ *                 type: string
+ *                 example: "3001234567"
  *     responses:
  *       200:
  *         description: OTP enviado
@@ -38,9 +45,13 @@ twilioRouter.post("/api/twilio/send", buscarUsuarioPorTelefono, sendOTP);
  *         application/json:
  *           schema:
  *             type: object
- *             example:
- *               telefono: "3001234567"
- *               codigo: "123456"
+ *             properties:
+ *               phone:
+ *                 type: string
+ *                 example: "3001234567"
+ *               code:
+ *                 type: string
+ *                 example: "123456"
  *     responses:
  *       200:
  *         description: OTP verificado
@@ -48,3 +59,4 @@ twilioRouter.post("/api/twilio/send", buscarUsuarioPorTelefono, sendOTP);
 twilioRouter.post("/api/twilio/verify", verifyOTP);
 
 export default twilioRouter;
+

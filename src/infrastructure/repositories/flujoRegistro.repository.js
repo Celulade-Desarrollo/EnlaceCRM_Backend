@@ -1,4 +1,4 @@
-import { poolPromise } from "../db/database.js";
+import { poolPromise } from "../persistence/database.js";
 import sql from "mssql";
 
 export const flujoRegistroRepository = {

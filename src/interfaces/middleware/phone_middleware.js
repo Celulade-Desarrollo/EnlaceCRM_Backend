@@ -1,11 +1,15 @@
-import { poolPromise } from "../db/database.js"; // Importar la conexión de la base de datos
-import sql from "mssql"; // SDK de MYSQL
+// src/interfaces/middleware/phone_middleware.js
+
+import { poolPromise } from "../../infrastructure/persistence/database.js"; // Ajuste de ruta
+import sql from "mssql";
 
 const buscarUsuarioPorTelefono = async (req, res, next) => {
   const { phone } = req.body;
 
   try {
     const pool = await poolPromise;
+
+    // Verificar si es un usuario final
     const usuario = await pool
       .request()
       .input("phone", sql.NVarChar, phone)
@@ -17,6 +21,7 @@ const buscarUsuarioPorTelefono = async (req, res, next) => {
       return next();
     }
 
+    // Verificar si es un administrador
     const admin = await pool
       .request()
       .input("phone", sql.NVarChar, phone)
@@ -29,9 +34,10 @@ const buscarUsuarioPorTelefono = async (req, res, next) => {
       return next();
     }
 
+    // Si no se encuentra
     return res.status(404).json({ message: "Número no registrado" });
   } catch (error) {
-    res.status(500).json({ message: "Error consultando el número", error });
+    res.status(500).json({ message: "Error consultando el número", error: error.message });
   }
 };
 

@@ -5,7 +5,7 @@ import {
   createScoring,
   getScoringByEstado,
   updateScoringById,
-} from "../../controllers/scoring.controller.js";
+} from "../controllers/enlaceScoring.controller.js";
 
 const scoringRouter = express.Router();
 

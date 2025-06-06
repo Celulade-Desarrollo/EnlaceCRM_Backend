@@ -1,5 +1,3 @@
-// src/interfaces/controllers/twilio.controller.js
-
 import { sendOtpService, verifyOtpService } from "../../application/services/twilioService.js";
 
 export async function sendOTP(req, res) {

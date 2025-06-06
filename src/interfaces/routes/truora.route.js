@@ -2,7 +2,7 @@ import express from "express";
 const truora = express.Router();
 
 // Controladores
-import { truoraInfo } from "../controller/truora.controller.js";
+import { truoraInfo } from "../controllers/truora.controller.js";
 
 /**
  * @swagger
