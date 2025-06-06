@@ -1,7 +1,3 @@
-import { poolPromise } from "../../infrastructure/persistence/database.js";
-import sql from "mssql"; // SDK de MYSQL
-
-// Funcion GET que recibe la información de Truora
 const truoraInfo = async (req, res) => {
   try {
     const info = req.body;

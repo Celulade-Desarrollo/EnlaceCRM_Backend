@@ -3,4 +3,8 @@ export class TwilioRequest {
     this.telefono = telefono;
     this.codigo = codigo;
   }
+
+  toString() {
+    return `TwilioRequest: ${this.telefono} - ${this.codigo}`;
+  }
 }

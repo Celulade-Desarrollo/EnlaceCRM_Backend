@@ -1,5 +1,5 @@
 const loginController = async (req, res) => {
-  const { Numero_Cliente, Password } = req.body;
+  const { Numero_Cliente } = req.body;
 
   if (!Numero_Cliente || !Numero_Celular) {
     return res

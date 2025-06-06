@@ -116,7 +116,7 @@ const deleteBancoWbyId = async (req, res) => {
 const createUserAccount = async (req, res) => {
   try {
     const pool = await poolPromise;
-    const result = await pool
+    await pool
       .request()
       .input("IdFlujoRegistro", sql.Int, req.body.IdFlujoRegistro)
       .input("Numero_Cliente", sql.NVarChar, req.body.Numero_Cliente)

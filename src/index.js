@@ -40,7 +40,7 @@ const PORT = process.env.PORT || 3000;
 
 async function startServer() {
   try {
-    const pool = await poolPromise;
+    await poolPromise;
     console.log("✅ Conexión a BD exitosa");
   } catch (err) {
     console.error("❌ Error al conectar a la base de datos:", err.message);
