@@ -15,6 +15,14 @@ export class FlujoRegistroPort {
     throw new Error("Method not implemented.");
   }
 
+  async obtenerPorAlpina(alpinaId) {
+    throw new Error("Method not implemented.");
+  }
+
+  async obtenerPorCelular(numeroCelular) {
+    throw new Error("Method not implemented.");
+  }
+
   async obtenerPorEstado(estado) {
     throw new Error("Method not implemented.");
   }

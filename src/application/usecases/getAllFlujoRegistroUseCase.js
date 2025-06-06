@@ -1,5 +1,11 @@
-import { flujoRegistroRepository } from "../../infrastructure/repositories/flujoRegistro.repository.js";
+// import { flujoRegistroService } from "../services/flujoRegistroServiceInstance.js";
+
+// export async function getAllFlujoRegistroUseCase() {
+//   return await flujoRegistroService.obtenerTodos();
+// }
+
+import { flujoRegistroService } from "../services/flujoRegistroServiceInstance.js";
 
 export async function getAllFlujoRegistro() {
-  return await flujoRegistroRepository.obtenerTodos();
+  return await flujoRegistroService.obtenerTodos();
 }

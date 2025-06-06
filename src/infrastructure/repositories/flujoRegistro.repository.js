@@ -87,5 +87,54 @@ export const flujoRegistroRepository = {
     const pool = await poolPromise;
     const result = await pool.request().query("SELECT * FROM FlujosRegistroEnlace");
     return result.recordset;
-  }
+  },
+
+  async obtenerPorId(id) {
+    const pool = await poolPromise;
+    const result = await pool.request()
+      .input("id", sql.Int, id)
+      .query("SELECT * FROM FlujosRegistroEnlace WHERE id = @id");
+    return result.recordset[0];
+  },
+
+  async obtenerPorEstado(estado) {
+    const pool = await poolPromise;
+    const result = await pool.request()
+      .input("estado", sql.NVarChar, estado)
+      .query("SELECT * FROM FlujosRegistroEnlace WHERE Estado = @estado");
+    return result.recordset;
+  },
+
+  async actualizarEstadoPorId(id, estado) {
+    const pool = await poolPromise;
+    await pool.request()
+      .input("id", sql.Int, id)
+      .input("estado", sql.NVarChar, estado)
+      .query("UPDATE FlujosRegistroEnlace SET Estado = @estado WHERE id = @id");
+  },
+
+  async eliminarPorId(id) {
+    const pool = await poolPromise;
+    await pool.request()
+      .input("id", sql.Int, id)
+      .query("DELETE FROM FlujosRegistroEnlace WHERE id = @id");
+  },
+
+  async obtenerPorNumeroClienteAlpina(numeroCliente) {
+    const pool = await poolPromise;
+    const result = await pool.request()
+      .input("Numero_Cliente", sql.NVarChar, numeroCliente)
+      .query("SELECT * FROM FlujosRegistroEnlace WHERE Numero_de_Cliente_Alpina = @Numero_Cliente");
+  return result.recordset;
+},
+
+async obtenerPorNumeroCelular(numeroCelular) {
+  const pool = await poolPromise;
+  const result = await pool.request()
+    .input("Numero_Celular", sql.NVarChar, numeroCelular)
+    .query("SELECT * FROM FlujosRegistroEnlace WHERE Numero_Celular = @Numero_Celular");
+  return result.recordset;
+}
+
+
 };

@@ -1,5 +1,6 @@
-import { flujoRegistroRepository } from "../../repositories/flujoRegistro.repository.js";
-import { FlujoRegistroPort } from "../../../domain/ports/FlujoRegistroPort.js";
+import { flujoRegistroRepository } from "../repositories/flujoRegistro.repository.js";
+
+import { FlujoRegistroPort } from "../../domain/ports/FlujoRegistroPort.js";
 
 export class FlujoRegistroAdapter extends FlujoRegistroPort {
   async verificarDuplicados(input) {
@@ -29,4 +30,12 @@ export class FlujoRegistroAdapter extends FlujoRegistroPort {
   async eliminarPorId(id) {
     return await flujoRegistroRepository.eliminarPorId(id);
   }
+  async obtenerPorNumeroClienteAlpina(alpinaId) {
+    return await flujoRegistroRepository.obtenerPorNumeroClienteAlpina(alpinaId);
+  }
+
+  async obtenerPorNumeroCelular(numeroCelular) {
+    return await flujoRegistroRepository.obtenerPorNumeroCelular(numeroCelular);
+  }
+
 }

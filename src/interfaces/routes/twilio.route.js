@@ -7,15 +7,15 @@ const twilioRouter = express.Router();
 /**
  * @swagger
  * tags:
- *   name: Twilio
- *   description: Endpoints para verificación OTP
+ *   - name: Twilio
+ *     description: Endpoints para verificación OTP con Twilio
  */
 
 /**
  * @swagger
  * /api/twilio/send:
  *   post:
- *     summary: Enviar OTP usando Twilio
+ *     summary: Enviar código OTP al número de teléfono
  *     tags: [Twilio]
  *     requestBody:
  *       required: true
@@ -23,13 +23,20 @@ const twilioRouter = express.Router();
  *         application/json:
  *           schema:
  *             type: object
+ *             required:
+ *               - telefono
  *             properties:
- *               phone:
+ *               telefono:
  *                 type: string
+ *                 description: Número de teléfono del usuario
  *                 example: "3001234567"
  *     responses:
  *       200:
- *         description: OTP enviado
+ *         description: OTP enviado exitosamente
+ *       400:
+ *         description: Número no encontrado o inválido
+ *       500:
+ *         description: Error interno del servidor
  */
 twilioRouter.post("/api/twilio/send", buscarUsuarioPorTelefono, sendOTP);
 
@@ -37,7 +44,7 @@ twilioRouter.post("/api/twilio/send", buscarUsuarioPorTelefono, sendOTP);
  * @swagger
  * /api/twilio/verify:
  *   post:
- *     summary: Verificar OTP recibido
+ *     summary: Verificar el código OTP ingresado
  *     tags: [Twilio]
  *     requestBody:
  *       required: true
@@ -45,18 +52,26 @@ twilioRouter.post("/api/twilio/send", buscarUsuarioPorTelefono, sendOTP);
  *         application/json:
  *           schema:
  *             type: object
+ *             required:
+ *               - telefono
+ *               - codigo
  *             properties:
- *               phone:
+ *               telefono:
  *                 type: string
+ *                 description: Número de teléfono al que se envió el OTP
  *                 example: "3001234567"
- *               code:
+ *               codigo:
  *                 type: string
+ *                 description: Código OTP recibido por el usuario
  *                 example: "123456"
  *     responses:
  *       200:
- *         description: OTP verificado
+ *         description: OTP verificado correctamente
+ *       400:
+ *         description: Código inválido o expirado
+ *       500:
+ *         description: Error interno del servidor
  */
 twilioRouter.post("/api/twilio/verify", verifyOTP);
 
 export default twilioRouter;
-
