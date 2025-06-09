@@ -16,8 +16,8 @@ export class Bancow {
     }
 
     ValidarDatos() {
-        // Logica para validar datos del bancow 
 
+        // Logica para validar datos del bancow 
         if (!this.IdFlujoRegistro) {
             throw new Error("Falta IdFlujoRegistro")
         }
