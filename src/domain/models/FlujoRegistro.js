@@ -68,10 +68,10 @@ export class FlujoRegistro {
     this.Confirmacion_Identidad = Confirmacion_Identidad;
     this.Estado = Estado;
   }
-   validarDatos() {
+  validarDatos() {
     // Aquí puedes agregar lógica para validar los datos de entrada
     if (!this.Numero_de_Cliente_Alpina || !this.Cedula_Cliente) {
       throw new Error("Faltan datos obligatorios");
     }
-   }
+  }
 }
