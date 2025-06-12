@@ -31,4 +31,8 @@ export class BancowAdapter extends BancowPort {
         return await bancowRepository.obtenerPorIdFlujoRegistro(id)
     }
 
+    async actualizarEstadoBancow(id, estado) {
+        return await bancowRepository.actualizarEstadoPorId()
+    }
+
 }

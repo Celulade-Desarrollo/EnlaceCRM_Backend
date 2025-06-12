@@ -54,17 +54,6 @@ export const bancowRepository = {
         return result.rowsAffected[0];
     },
 
-    async crearUsuarioFinal(input) {
-        const pool = await poolPromise;
-        await pool.request()
-            .input("IdFlujoRegistro", sql.Int, input.IdFlujoRegistro)
-            .input("Numero_Cliente", sql.NVarChar, input.Numero_Cliente)
-            .input("CupoFinal", sql.NVarChar, input.CupoFinal)
-            .query(`
-        INSERT INTO UsuarioFinal (IdFlujoRegistro, CupoFinal, Numero_Cliente)
-        VALUES (@IdFlujoRegistro, @CupoFinal, @Numero_Cliente)
-      `);
-    },
 
     async obtenerUsuarioFinalPorIdFlujo(idFlujoRegistro) {
         const pool = await poolPromise;
@@ -72,6 +61,6 @@ export const bancowRepository = {
             .input("IdFlujoRegistro", sql.Int, idFlujoRegistro)
             .query("SELECT * FROM UsuarioFinal WHERE IdFlujoRegistro = @IdFlujoRegistro");
         return result.recordset[0];
-    }
+    },
 };
 

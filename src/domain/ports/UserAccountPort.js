@@ -1,5 +1,4 @@
-export class BancowPort {
-
+export class UserAccountPort {
     async verificarDuplicados(input) {
         throw new Error("Method verificarDuplicados not implemented.");
     }
@@ -20,4 +19,8 @@ export class BancowPort {
         throw new Error("Method deletePorIdFlujoRegistro not implemented.");
     }
 
+    async verificarToken(token, clave) {
+        throw new Error("Method verificarToken not implemented")
+    }
 }
+
