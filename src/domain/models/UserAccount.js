@@ -3,12 +3,10 @@ export class UserAccount {
         IdFlujoRegistro,
         CupoFinal,
         Numero_Cliente,
-        Contraseña = null
     }) {
         this.IdFlujoRegistro = IdFlujoRegistro,
             this.CupoFinal = CupoFinal,
-            this.Numero_Cliente = Numero_Cliente,
-            this.Contraseña = Contraseña
+            this.Numero_Cliente = Numero_Cliente
     }
     ValidarDatos() {
         // Logica para validar datos del bancow 
