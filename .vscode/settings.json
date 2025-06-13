@@ -1,0 +1,36 @@
+{
+  "maven.terminal.customEnv": [
+    {
+      "environmentVariable": "DB_USER",
+      "value": "sap-basis"
+    },
+    {
+      "environmentVariable": "DB_PASS",
+      "value": "!5n5@GV%"
+    },
+    {
+      "environmentVariable": "DB_SERVER",
+      "value": "10.240.82.3"
+    },
+    {
+      "environmentVariable": "DB_NAME",
+      "value": "EnlaceCRM"
+    },
+    {
+      "environmentVariable": "DB_PORT",
+      "value": "1433"
+    },
+    {
+      "environmentVariable": "TWILIO_ACCOUNT_SID",
+      "value": "ACb01187ac013012e6a7c3d2f0d7d12a3e"
+    },
+    {
+      "environmentVariable": "TWILIO_AUTH_TOKEN",
+      "value": "895a684ddc65cdc50d8a95a6a3b7573c"
+    },
+    {
+      "environmentVariable": "TWILIO_VERIFY_SERVICE_SID",
+      "value": "VA7013cddfe9e86ec2d5e618927b7d5923"
+    }
+  ]
+}
