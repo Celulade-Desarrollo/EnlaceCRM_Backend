@@ -70,12 +70,47 @@ flujoRegistroEnlace.post("/api/twilio/verify", verifyOTP);
  *           schema:
  *             type: object
  *             example:
- *               nombre: "Ejemplo"
- *               telefono: "3000000000"
+ *               Numero_de_Cliente_Alpina: "123456"
+ *               Cedula_Cliente: "123456789"
+ *               Autorizacion_Habeas_Data: true
+ *               Autorizacion_Medios_de_Contacto: true
+ *               Numero_Celular: "3000000000"
+ *               Correo_Electronico: "cliente@correo.com"
+ *               Nombres: "Juan"
+ *               Primer_Apellido: "Pérez"
+ *               SegundoApellido: "Gómez"
+ *               Genero: "Masculino"
+ *               Estado_Civil: "Soltero"
+ *               Fecha_de_Nacimiento: "1990-01-01"
+ *               Pais_de_Nacimiento: "Colombia"
+ *               Departamento_de_Nacimiento: "Antioquia"
+ *               Nivel_Educativo: "Universitario"
+ *               Estrato: "3"
+ *               Grupo_Etnico: "Mestizo"
+ *               Declara_Renta: false
+ *               Esta_obligado_a_tener_RUT_por_tu_actividad_economica: true
+ *               Ubicacion_del_Negocio_Departamento: "Cundinamarca"
+ *               Ubicacion_del_Negocio_Ciudad: "Bogotá"
+ *               Direccion: "Calle 123 #45-67"
+ *               Detalles: "Local 1"
+ *               Barrio: "Chapinero"
+ *               Numero_de_neveras: "2"
+ *               Registrado_Camara_Comercio: true
+ *               Rango_de_Ingresos: "2-5 millones"
+ *               Persona_expuesta_politicamente_PEP: false
+ *               Familiar_expuesto_politicamente_PEP: false
+ *               Operaciones_moneda_extranjera: false
+ *               Declaracion_de_nacionalidad_y_residencia_fiscal_en_Colombia: true
+ *               Confirmacion_Identidad: true
  *     responses:
  *       201:
- *         description: Registro creado
+ *         description: Registro creado exitosamente
+ *       400:
+ *         description: Error en los datos enviados
+ *       500:
+ *         description: Error interno del servidor
  */
+
 flujoRegistroEnlace.post("/api/flujoRegistroEnlace", createRegistro);
 
 /**
@@ -106,7 +141,7 @@ flujoRegistroEnlace.get("/api/flujoRegistroEnlace/estado/pendiente", getByEstado
  * @swagger
  * /api/flujoRegistroEnlace/estado/pendiente/{id}:
  *   put:
- *     summary: Cambiar estado a completado por ID
+ *     summary: Cambiar estado a completado por ID 
  *     tags: [FlujoRegistroEnlace]
  *     parameters:
  *       - in: path
@@ -114,6 +149,14 @@ flujoRegistroEnlace.get("/api/flujoRegistroEnlace/estado/pendiente", getByEstado
  *         required: true
  *         schema:
  *           type: string
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             example:
+ *               Estado: "aprobado"
  *     responses:
  *       200:
  *         description: Estado actualizado

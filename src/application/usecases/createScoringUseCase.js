@@ -18,7 +18,7 @@ export async function createScoringUseCase(input) {
   }
 
   // Verificar si ya existe un registro con ese ID
-  const existe = await scoringRepository.existePorIdFlujo(IdFlujoRegistro);
+  const existe = await scoringRepository.verificarDuplicados(IdFlujoRegistro);
   if (existe) {
     throw new Error("Ya existe un registro con este IdFlujoRegistro");
   }

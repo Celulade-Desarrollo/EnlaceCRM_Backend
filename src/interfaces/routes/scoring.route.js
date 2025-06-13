@@ -78,7 +78,7 @@ scoringRouter.get("/api/scoring/estado/pendiente", getScoringByEstado);
  *           schema:
  *             type: object
  *             example:
- *               estado: "aprobado"
+ *               Estado: "aprobado"
  *     responses:
  *       200:
  *         description: Registro actualizado
@@ -98,8 +98,12 @@ scoringRouter.put("/api/scoring/estado/update/:id", updateScoringById);
  *           schema:
  *             type: object
  *             example:
- *               idFlujoRegistro: "123"
- *               resultado: "Aprobado"
+ *               IdFlujoRegistro: "123"
+ *               Scoring: "123"
+ *               Cupo: "123"
+ *               Numero_Cliente: "123"
+ *               Cedula_Cliente: "123"
+ *               Estado: ""
  *     responses:
  *       201:
  *         description: Registro creado

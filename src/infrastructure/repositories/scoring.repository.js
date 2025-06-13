@@ -9,6 +9,21 @@ export const scoringRepository = {
     return result.recordset;
   },
 
+  // Verificar si ya existe 
+  async verificarDuplicados(input) {
+    const { IdFlujoRegistro } = input;
+    const pool = await poolPromise;
+
+    const result = await pool.request()
+      .input("IdFlujoRegistro", sql.NVarChar, IdFlujoRegistro)
+      .query(`
+        SELECT 1 FROM FlujosRegistroEnlaceScoring
+        WHERE IdFlujoRegistro = @IdFlujoRegistro`);
+
+    return result.recordset.length > 0;
+  },
+
+
   // Obtener un registro por ID de flujo
   async obtenerPorId(idFlujoRegistro) {
     const pool = await poolPromise;

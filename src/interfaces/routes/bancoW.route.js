@@ -54,8 +54,12 @@ bancoW.get("/api/bancow/:id", getByFlujoIdBancoW);
  *           schema:
  *             type: object
  *             example:
- *               nombre: Banco Prueba
- *               codigo: PRB01
+ *               IdFlujoRegistro: "123"
+ *               Validacion_Banco_Listas: "123"
+ *               Aprobacion_Cupo_Sugerido: "123"
+ *               Pagare_Digital_Firmado: "123"
+ *               Creacion_Core_Bancario: "123"
+ *               
  *     responses:
  *       201:
  *         description: Registro creado
