@@ -42,7 +42,7 @@ const getScoringByEstado = async (req, res) => {
     const pool = await poolPromise;
     const result = await pool
       .request()
-      .input("Estado", sql.NVarChar, "pendiente")
+      .input("Estado", sql.NVarChar, "pendiente" || "aprobado")
       .query(
         "SELECT * FROM FlujosRegistroEnlaceScoring WHERE Estado = @Estado"
       );
