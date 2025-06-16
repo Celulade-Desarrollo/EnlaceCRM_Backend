@@ -25,7 +25,7 @@ export async function getScoringById(req, res) {
 
 export async function getScoringByEstado(req, res) {
   try {
-    const data = await getScoringByEstadoUseCase("pendiente");
+    const data = await getScoringByEstadoUseCase();
     if (data.length === 0) {
       return res.status(404).json({ message: "No hay registros pendientes" });
     }
