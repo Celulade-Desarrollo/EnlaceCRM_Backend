@@ -1,5 +1,5 @@
-import { bancowRepository } from "../repositories/bancow.repository";
-import { BancowPort } from "../../domain/ports/BancowPort";
+import { bancowRepository } from "../repositories/bancow.repository.js";
+import { BancowPort } from "../../domain/ports/BancowPort.js";
 
 export class BancowAdapter extends BancowPort {
 
@@ -24,15 +24,15 @@ export class BancowAdapter extends BancowPort {
     }
 
     async eliminarPorIdFlujoRegistro(id) {
-        return await bancowRepository.eliminarPorIdFlujo(id)
+        return await bancowRepository.eliminarPorIdFlujoRegistro(id)
     }
 
     async obtenerUsuarioFinalPorIdFlujo(id) {
         return await bancowRepository.obtenerPorIdFlujoRegistro(id)
     }
 
-    async actualizarEstadoBancow(id, estado) {
-        return await bancowRepository.actualizarEstadoPorId()
+    async actualizarCoreBancario(idFlujoRegistro, input) {
+        return await bancowRepository.actualizarCoreBancario(idFlujoRegistro, input);
     }
 
 }

@@ -49,15 +49,15 @@ scoringRouter.get("/api/scoring/:id", getScoringById);
 
 /**
  * @swagger
- * /api/scoring/estado/pendiente:
+ * /api/scoring/estado/pendiente-aprobado:
  *   get:
- *     summary: Obtener registros con estado pendiente
+ *     summary: Obtener registros con estado pendiente y aprobado
  *     tags: [Scoring]
  *     responses:
  *       200:
- *         description: Lista de registros pendientes
+ *         description: Lista de registros pendientes y aprobados
  */
-scoringRouter.get("/api/scoring/estado/pendiente", getScoringByEstado);
+scoringRouter.get("/api/scoring/estado/pendiente-aprobado", getScoringByEstado);
 
 /**
  * @swagger

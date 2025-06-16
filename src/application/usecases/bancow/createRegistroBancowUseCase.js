@@ -1,5 +1,5 @@
-import { bancowService } from "../services/bancowServiceInstance";
-import { Bancow } from "../../domain/models/Bancow";
+import { bancowService } from "../../services/bancowServiceInstance.js";
+import { Bancow } from "../../../domain/models/Bancow.js";
 
 export async function createRegistroBancowUseCase(input) {
 

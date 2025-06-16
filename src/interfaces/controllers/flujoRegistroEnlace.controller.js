@@ -1,17 +1,15 @@
-import {
-  getAllRegistros,
-  getRegistroById,
-  getRegistroByEstado,
-  getRegistroByAlpina,
-  getRegistroByNumeroCelular,
-  createFlujoRegistro,
-  deleteRegistroById,
-  updateEstadoRegistro,
-} from "../../application/usecases/flujoRegistro.usecase.js";
+import { getAllFlujoRegistro } from "../../application/usecases/flujoRegistro/getAllFlujoRegistroUseCase.js";
+import { getFlujoRegistroById } from "../../application/usecases/flujoRegistro/getFlujoRegistroByIdUseCase.js";
+import { getFlujoRegistroByEstado } from "../../application/usecases/flujoRegistro/getFlujoRegistroByEstadoUseCase.js";
+import { getFlujoRegistroByAlpina } from "../../application/usecases/flujoRegistro/getFlujoRegistroByAlpinaUseCase.js";
+import { getFlujoRegistroByNumeroCelular } from "../../application/usecases/flujoRegistro/getFlujoRegistroByNumeroCelularUseCase.js";
+import { createFlujoRegistroUseCase } from "../../application/usecases/flujoRegistro/createFlujoRegistroUseCase.js";
+import { deleteFlujoRegistroUseCase } from "../../application/usecases/flujoRegistro/DeleteFlujoRegistroUseCase.js";
+import { updateEstadoFlujoRegistro } from "../../application/usecases/flujoRegistro/updateEstadoFlujoRegistroUseCase.js";
 
 export const getAll = async (req, res) => {
   try {
-    const data = await getAllRegistros();
+    const data = await getAllFlujoRegistro();
     res.json(data);
   } catch (err) {
     res.status(500).send(err.message);
@@ -20,7 +18,7 @@ export const getAll = async (req, res) => {
 
 export const getById = async (req, res) => {
   try {
-    const data = await getRegistroById(req.params.id);
+    const data = await getFlujoRegistroById(req.params.id);
     res.json(data);
   } catch (err) {
     res.status(500).send(err.message);
@@ -29,7 +27,7 @@ export const getById = async (req, res) => {
 
 export const getByAlpina = async (req, res) => {
   try {
-    const data = await getRegistroByAlpina(req.params.alpinaId);
+    const data = await getFlujoRegistroByAlpina(req.params.alpinaId);
     res.json(data);
   } catch (err) {
     res.status(500).send(err.message);
@@ -38,7 +36,7 @@ export const getByAlpina = async (req, res) => {
 
 export const getBynumber = async (req, res) => {
   try {
-    const data = await getRegistroByNumeroCelular(req.params.Numero_Celular);
+    const data = await getFlujoRegistroByNumeroCelular(req.params.Numero_Celular);
     res.json(data);
   } catch (err) {
     res.status(500).send(err.message);
@@ -47,7 +45,7 @@ export const getBynumber = async (req, res) => {
 
 export const createRegistro = async (req, res) => {
   try {
-    const result = await createFlujoRegistro(req.body); // ✅ nombre correcto del caso de uso
+    const result = await createFlujoRegistroUseCase(req.body);
     res.status(201).json({ message: result });
   } catch (err) {
     res.status(400).json({ error: err.message });
@@ -56,7 +54,7 @@ export const createRegistro = async (req, res) => {
 
 export const deleteById = async (req, res) => {
   try {
-    await deleteRegistroById(req.params.id); // ✅ nombre correcto del caso de uso
+    await deleteFlujoRegistroUseCase(req.params.id);
     res.json({ message: "Registro eliminado exitosamente" });
   } catch (err) {
     res.status(500).send(err.message);
@@ -65,7 +63,7 @@ export const deleteById = async (req, res) => {
 
 export const getByEstado = async (req, res) => {
   try {
-    const result = await getRegistroByEstado(req.query.estado || "pendiente");
+    const result = await getFlujoRegistroByEstado(req.query.estado || "pendiente");
     if (!result || result.length === 0) {
       return res.status(404).json({ message: "No hay registros con ese estado" });
     }
@@ -79,7 +77,7 @@ export const updateEstadoById = async (req, res) => {
   try {
     const { id } = req.params;
     const { Estado } = req.body;
-    await updateEstadoRegistro(id, Estado); // ✅ nombre correcto del caso de uso
+    await updateEstadoFlujoRegistro(id, Estado);
     res.json({ message: "Estado actualizado correctamente" });
   } catch (err) {
     res.status(500).send(err.message);

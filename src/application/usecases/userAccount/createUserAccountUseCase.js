@@ -1,5 +1,5 @@
-import { userAccountService } from "../services/userAccountServiceInstance";
-import { UserAccount } from "../../domain/models/UserAccount";
+import { userAccountService } from "../../services/userAccountServiceInstance.js";
+import { UserAccount } from "../../../domain/models/UserAccount.js";
 
 export async function createUserAccountUseCase(input) {
 

@@ -1,5 +1,5 @@
-import { flujoRegistroService } from "../services/flujoRegistroServiceInstance.js";
-import { FlujoRegistro } from "../../domain/models/FlujoRegistro.js";
+import { flujoRegistroService } from "../../services/flujoRegistroServiceInstance.js";
+import { FlujoRegistro } from "../../../domain/models/FlujoRegistro.js";
 
 export async function createFlujoRegistroUseCase(input) {
   const registro = new FlujoRegistro(input);
