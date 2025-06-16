@@ -1,8 +1,8 @@
-import { getAllScoringUseCase } from "../../application/usecases/getAllScoringUseCase.js";
-import { getScoringByIdUseCase } from "../../application/usecases/getScoringByIdUseCase.js";
-import { getScoringByEstadoUseCase } from "../../application/usecases/getScoringByEstadoUseCase.js";
-import { createScoringUseCase } from "../../application/usecases/createScoringUseCase.js";
-import { updateScoringByIdUseCase } from "../../application/usecases/updateScoringByIdUseCase.js";
+import { getAllScoringUseCase } from "../../application/usecases/scoring/getAllScoringUseCase.js";
+import { getScoringByIdUseCase } from "../../application/usecases/scoring/getScoringByIdUseCase.js";
+import { getScoringByEstadoUseCase } from "../../application/usecases/scoring/getScoringByEstadoUseCase.js";
+import { createScoringUseCase } from "../../application/usecases/scoring/createScoringUseCase.js";
+import { updateScoringByIdUseCase } from "../../application/usecases/scoring/updateScoringByIdUseCase.js";
 
 export async function getAllScoring(req, res) {
   try {

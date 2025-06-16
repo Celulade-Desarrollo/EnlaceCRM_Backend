@@ -1,5 +1,5 @@
-import { UserAccountPort } from "../../domain/ports/UserAccountPort";
-import { userAccountRepository } from "../repositories/userAccount.repository";
+import { UserAccountPort } from "../../domain/ports/UserAccountPort.js";
+import { userAccountRepository } from "../repositories/userAccount.repository.js";
 import jwt from "jsonwebtoken";
 
 export class UserAccountAdapter extends UserAccountPort {

@@ -4,8 +4,7 @@ import {
   getByFlujoIdBancoW,
   createBancoW,
   deleteBancoWbyId,
-  createUserAccount,
-  getUserAccountById,
+  updateCoreBancario
 } from "../controllers/bancoW.controller.js";
 
 const bancoW = express.Router();
@@ -87,30 +86,9 @@ bancoW.delete("/api/bancow/:id", deleteBancoWbyId);
 
 /**
  * @swagger
- * /api/bancow/user:
- *   post:
- *     summary: Crear cuenta de usuario bancaria
- *     tags: [BancoW]
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             type: object
- *             example:
- *               nombreUsuario: juan123
- *               clave: secreto
- *     responses:
- *       201:
- *         description: Cuenta de usuario creada
- */
-bancoW.post("/api/bancow/user", createUserAccount);
-
-/**
- * @swagger
- * /api/bancow/user/{id}:
- *   get:
- *     summary: Obtener cuenta de usuario por ID de flujo
+ * /api/coreBancario/{id}:
+ *   put:
+ *     summary: Actualizar información del core bancario
  *     tags: [BancoW]
  *     parameters:
  *       - name: id
@@ -118,11 +96,35 @@ bancoW.post("/api/bancow/user", createUserAccount);
  *         required: true
  *         schema:
  *           type: string
- *         description: ID de flujo
+ *         description: ID del flujo de registro
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               Pagare_Digital_Firmado:
+ *                 type: string
+ *                 description: Estado del pagaré digital firmado
+ *               Creacion_Core_Bancario:
+ *                 type: string
+ *                 description: Estado de la creación del core bancario
+ *               UsuarioAprobado:
+ *                 type: string
+ *                 description: Usuario que aprobó la operación
+ *             example:
+ *               Pagare_Digital_Firmado: "Completado"
+ *               Creacion_Core_Bancario: "En proceso"
+ *               UsuarioAprobado: "usuario123"
  *     responses:
  *       200:
- *         description: Cuenta encontrada
+ *         description: Core bancario actualizado exitosamente
+ *       404:
+ *         description: Flujo de registro no encontrado
+ *       500:
+ *         description: Error del servidor
  */
-bancoW.get("/api/bancow/user/:id", getUserAccountById);
+bancoW.put("/api/coreBancario/:id", updateCoreBancario)
 
 export default bancoW;

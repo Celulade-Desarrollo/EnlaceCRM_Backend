@@ -20,4 +20,8 @@ export class BancowPort {
         throw new Error("Method deletePorIdFlujoRegistro not implemented.");
     }
 
+    async actualizarCoreBancario(idFlujoRegistro, estados){
+        throw new Error("Method actualizarCoreBancario not implemented")
+    }
+
 }

@@ -1,4 +1,4 @@
-import { scoringRepository } from "../../infrastructure/repositories/scoring.repository.js";
+import { scoringRepository } from "../../../infrastructure/repositories/scoring.repository.js";
 
 export async function updateScoringByIdUseCase(id, estado = "pendiente") {
   const existe = await scoringRepository.obtenerPorId(id);

@@ -1,11 +1,11 @@
-import { getAllFlujoRegistro } from "../../application/usecases/getAllFlujoRegistroUseCase.js";
-import { getFlujoRegistroById } from "../../application/usecases/getFlujoRegistroById.js";
-import { getFlujoRegistroByAlpina } from "../../application/usecases/getFlujoRegistroByAlpina.js";
-import { getFlujoRegistroByNumber } from "../../application/usecases/getFlujoRegistroByNumber.js";
-import { getFlujoRegistroByEstado } from "../../application/usecases/getFlujoRegistroByEstado.js";
-import { createFlujoRegistro } from "../../application/usecases/createFlujoRegistroUseCase.js";
-import { deleteFlujoRegistroById } from "../../application/usecases/deleteFlujoRegistroById.js";
-import { updateEstadoFlujoRegistroById } from "../../application/usecases/updateEstadoFlujoRegistroById.js";
+import { getAllFlujoRegistro } from "../../application/usecases/flujoRegistro/getAllFlujoRegistroUseCase.js";
+import { getFlujoRegistroById } from "../../application/usecases/flujoRegistro/getFlujoRegistroByIdUseCase.js";
+import { getFlujoRegistroByAlpina } from "../../application/usecases/flujoRegistro/getFlujoRegistroByAlpinaUseCase.js";
+import { getFlujoRegistroByNumeroCelular } from "../../application/usecases/flujoRegistro/getFlujoRegistroByNumeroCelularUseCase.js";
+import { getFlujoRegistroByEstado } from "../../application/usecases/flujoRegistro/getFlujoRegistroByEstadoUseCase.js";
+import { createFlujoRegistroUseCase } from "../../application/usecases/flujoRegistro/createFlujoRegistroUseCase.js";
+import { deleteFlujoRegistroUseCase } from "../../application/usecases/flujoRegistro/DeleteFlujoRegistroUseCase.js";
+import { updateEstadoFlujoRegistro } from "../../application/usecases/flujoRegistro/updateEstadoFlujoRegistroUseCase.js";
 
 export async function getAll(req, res) {
   try {
@@ -38,7 +38,7 @@ export async function getByAlpina(req, res) {
 
 export async function getBynumber(req, res) {
   try {
-    const data = await getFlujoRegistroByNumber(req.params.Numero_Celular);
+    const data = await getFlujoRegistroByNumeroCelular(req.params.Numero_Celular);
     if (!data) return res.status(404).json({ message: "No encontrado" });
     res.status(200).json(data);
   } catch (err) {
@@ -60,7 +60,7 @@ export async function getByEstado(req, res) {
 
 export async function createRegistro(req, res) {
   try {
-    const result = await createFlujoRegistro(req.body);
+    const result = await createFlujoRegistroUseCase(req.body);
     res.status(201).json({ message: result.mensaje });
   } catch (err) {
     res.status(400).json({ error: err.message });
@@ -69,7 +69,7 @@ export async function createRegistro(req, res) {
 
 export async function deleteById(req, res) {
   try {
-    await deleteFlujoRegistroById(req.params.id);
+    await deleteFlujoRegistroUseCase(req.params.id);
     res.status(200).json({ message: "Registro eliminado exitosamente" });
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -80,7 +80,7 @@ export async function updateEstadoById(req, res) {
   try {
     const { id } = req.params;
     const { Estado } = req.body;
-    await updateEstadoFlujoRegistroById(id, Estado || "pendiente");
+    await updateEstadoFlujoRegistro(id, Estado || "pendiente");
     res.status(200).json({ message: "Registro actualizado correctamente" });
   } catch (err) {
     res.status(500).json({ error: err.message });

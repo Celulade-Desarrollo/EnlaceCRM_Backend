@@ -1,4 +1,4 @@
-import { twilioService } from "../../infrastructure/services/twilio.service.js";
+import { twilioService } from "../../services/twilioServiceInstance.js";
 
 export async function verifyOtpUseCase(telefono, codigo) {
   return await twilioService.verifyOtp(telefono, codigo);
