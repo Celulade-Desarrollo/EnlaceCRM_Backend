@@ -4,7 +4,8 @@ import {
   getByFlujoIdBancoW,
   createBancoW,
   deleteBancoWbyId,
-  updateCoreBancario
+  updateCoreBancario,
+  getExcel
 } from "../controllers/bancoW.controller.js";
 
 const bancoW = express.Router();
@@ -20,6 +21,21 @@ const bancoW = express.Router();
  *         description: Lista de registros
  */
 bancoW.get("/api/bancow", getAllBancoW);
+
+
+/**
+ * @swagger
+ * /api/excel:
+ *   get:
+ *     summary: Obtener todos los registros de bancow con informacion del usuario
+ *     tags: [BancoW]
+ *     responses:
+ *       200:
+ *         description: Lista de registros
+ */
+bancoW.get("/api/excel", getExcel);
+
+
 
 /**
  * @swagger

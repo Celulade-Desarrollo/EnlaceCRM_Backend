@@ -3,6 +3,7 @@ import { getBancowByIdFlujoRegistro } from "../../application/usecases/bancow/ge
 import { createRegistroBancowUseCase } from "../../application/usecases/bancow/createRegistroBancowUseCase.js";
 import { deleteRegistroBancowUseCase } from "../../application/usecases/bancow/deleteRegistroBancowUseCase.js";
 import { updateCoreBancarioUseCase } from "../../application/usecases/bancow/updateCoreBancarioUseCase.js";
+import { getExcelData } from "../../application/usecases/bancow/getExcelDataUseCase.js";
 
 // GET: Todos los registros
 const getAllBancoW = async (req, res) => {
@@ -93,6 +94,15 @@ const updateCoreBancario = async (req, res) => {
   }
 }
 
+const getExcel = async (req, res) => {
+  try {
+    const data = await getExcelData();
+    res.json(data);
+  } catch (err) {
+    res.status(500).send(err.message);
+  }
+};
+
 /*
 
 // POST para crear usuario final en dashboard
@@ -126,6 +136,7 @@ export {
   getByFlujoIdBancoW,
   createBancoW,
   deleteBancoWbyId,
-  updateCoreBancario
+  updateCoreBancario,
+  getExcel
 
 };

@@ -82,6 +82,15 @@ export const bancowRepository = {
                     UsuarioAprobado = @UsuarioAprobado
                 WHERE IdFlujoRegistro = @IdFlujoRegistro
             `);
+    },
+
+    async obtenerDatosExcel(){
+        const pool = await poolPromise;
+        const result = await pool.request().query("SELECT fre.*, fres.Estado as Estado_Scoring FROM FlujosRegistroEnlaceScoring fres INNER JOIN FlujosRegistroEnlace fre ON fres.IdFlujoRegistro = fre.Id");
+        return result.recordset;
     }
+
+
 };
+
 

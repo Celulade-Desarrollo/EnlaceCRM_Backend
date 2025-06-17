@@ -32,4 +32,8 @@ export class BancowAdapter extends BancowPort {
         return await bancowRepository.actualizarCoreBancario(idFlujoRegistro, input);
     }
 
+    async obtenerDatosExcel(){
+        return await bancowRepository.obtenerDatosExcel()
+    }
+
 }

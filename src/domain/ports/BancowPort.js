@@ -24,4 +24,8 @@ export class BancowPort {
         throw new Error("Method actualizarCoreBancario not implemented")
     }
 
+    async obtenerDatosExcel(){
+        throw new Error("Method actualizarCoreBancario not implemented")
+    }
+
 }
