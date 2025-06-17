@@ -3,8 +3,8 @@ import { BancowPort } from "../../domain/ports/BancowPort.js";
 
 export class BancowAdapter extends BancowPort {
 
-    async verificarDuplicadosPorIdFlujoRegistro(input) {
-        return await bancowRepository.verificarDuplicados(input)
+    async verificarDuplicadosPorIdFlujoRegistro(id) {
+        return await bancowRepository.verificarDuplicados(id)
     }
 
     async obtenerTodos() {
@@ -19,9 +19,6 @@ export class BancowAdapter extends BancowPort {
         return await bancowRepository.crearRegistro(input)
     }
 
-    async crearUsuarioFinal(input) {
-        return await bancowRepository.crearUsuarioFinal(input)
-    }
 
     async eliminarPorIdFlujoRegistro(id) {
         return await bancowRepository.eliminarPorIdFlujoRegistro(id)

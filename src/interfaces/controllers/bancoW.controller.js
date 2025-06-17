@@ -30,8 +30,30 @@ const getByFlujoIdBancoW = async (req, res) => {
 
 // POST: Crear nuevo registro
 const createBancoW = async (req, res) => {
+  const {
+    IdFlujoRegistro,
+    Validacion_Banco_listas,
+    Aprobacion_Cupo_sugerido,
+    Pagare_Digital_Firmado,
+    Creacion_Core_Bancario,
+    UsuarioAprobado
+  } = req.body;
+
   try {
-    const result = await createRegistroBancowUseCase(req.body);
+    // Convertir IdFlujoRegistro a número
+    const idFlujoRegistroNum = parseInt(IdFlujoRegistro);
+    if (isNaN(idFlujoRegistroNum)) {
+      return res.status(400).json({ error: "IdFlujoRegistro debe ser un número válido" });
+    }
+
+    const result = await createRegistroBancowUseCase({
+      IdFlujoRegistro: idFlujoRegistroNum,
+      Validacion_Banco_listas,
+      Aprobacion_Cupo_sugerido,
+      Pagare_Digital_Firmado,
+      Creacion_Core_Bancario,
+      UsuarioAprobado,
+    });
     res.status(201).json(result);
   } catch (err) {
     res.status(500).send(err.message);

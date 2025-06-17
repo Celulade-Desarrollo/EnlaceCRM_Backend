@@ -1,16 +1,16 @@
 export class Bancow {
     constructor({
         IdFlujoRegistro,
-        Validacion_Banco_Listas,
-        Apronacion_Cupo_Sugerido,
-        Pagare_digital_Firmado,
+        Validacion_Banco_listas,
+        Aprobacion_Cupo_sugerido,
+        Pagare_Digital_Firmado,
         Creacion_Core_Bancario,
         UsuarioAprobado,
     }) {
         this.IdFlujoRegistro = IdFlujoRegistro;
-        this.Validacion_Banco_Listas = Validacion_Banco_Listas;
-        this.Apronacion_Cupo_Sugerido = Apronacion_Cupo_Sugerido;
-        this.Pagare_digital_Firmado = Pagare_digital_Firmado;
+        this.Validacion_Banco_listas = Validacion_Banco_listas;
+        this.Aprobacion_Cupo_sugerido = Aprobacion_Cupo_sugerido;
+        this.Pagare_Digital_Firmado = Pagare_Digital_Firmado;
         this.Creacion_Core_Bancario = Creacion_Core_Bancario;
         this.UsuarioAprobado = UsuarioAprobado;
     }

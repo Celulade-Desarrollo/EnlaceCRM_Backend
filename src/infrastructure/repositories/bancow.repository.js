@@ -25,6 +25,7 @@ export const bancowRepository = {
     },
 
     async crearRegistro(input) {
+   
         const pool = await poolPromise;
         const result = await pool.request()
             .input("IdFlujoRegistro", sql.Int, input.IdFlujoRegistro)
@@ -42,10 +43,12 @@ export const bancowRepository = {
           @Pagare_Digital_Firmado, @Creacion_Core_Bancario, @UsuarioAprobado
         );
         SELECT SCOPE_IDENTITY() AS insertedId;
-      `);
+      `)
         return result.recordset[0].insertedId;
     },
 
+
+    
     async eliminarPorIdFlujoRegistro(idFlujoRegistro) {
         const pool = await poolPromise;
         const result = await pool.request()
