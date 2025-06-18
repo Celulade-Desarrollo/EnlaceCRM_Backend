@@ -33,6 +33,9 @@ export class FlujoRegistro {
     Declaracion_de_nacionalidad_y_residencia_fiscal_en_Colombia,
     Confirmacion_Identidad,
     Estado = "pendiente",
+    Cedula_Conyuge = "No aplica",
+    Nombre_Conyuge = "No aplica",
+    Apellido_Conyuge = "No aplica" ,
   }) {
     this.Numero_de_Cliente_Alpina = Numero_de_Cliente_Alpina;
     this.Cedula_Cliente = Cedula_Cliente;
@@ -67,6 +70,9 @@ export class FlujoRegistro {
     this.Declaracion_de_nacionalidad_y_residencia_fiscal_en_Colombia = Declaracion_de_nacionalidad_y_residencia_fiscal_en_Colombia;
     this.Confirmacion_Identidad = Confirmacion_Identidad;
     this.Estado = Estado;
+    this.Cedula_Conyuge = Cedula_Conyuge;
+    this.Nombre_Conyuge = Nombre_Conyuge;
+    this.Apellido_Conyuge = Apellido_Conyuge;
   }
   validarDatos() {
     // Aquí puedes agregar lógica para validar los datos de entrada
