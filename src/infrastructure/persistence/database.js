@@ -1,32 +1,40 @@
 import sql from "mssql";
 import dotenv from "dotenv";
+import { Sequelize } from "sequelize";
 
 // Cargar variables de entorno
 dotenv.config();
 
 // 🎯 Configuración centralizada (infraestructura, no dominio)
 const dbConfig = {
-  user: process.env.DB_USER,
+  username: process.env.DB_USER,
   password: process.env.DB_PASS,
-  server: process.env.DB_SERVER,
+  host: process.env.DB_SERVER,
   database: process.env.DB_NAME,
   port: parseInt(process.env.DB_PORT),
-  options: {
+  dialect: "mssql",
+  dialectOptions: {
     encrypt: true,
     trustServerCertificate: true,
-    enableArithAbort: true,
-    cryptoCredentialsDetails: {
-      minVersion: "TLSv1",
+    options: {
+      enableArithAbort: true,
+      cryptoCredentialsDetails: {
+        minVersion: "TLSv1",
+      },
     },
   },
   pool: {
     max: 10,
     min: 0,
-    idleTimeoutMillis: 30000,
+    idle: 30000,
   },
+  logging: false,
 };
 
-// 📦 Adaptador de infraestructura que provee la conexión
+// Instancia de Sequelize
+const sequelize = new Sequelize(dbConfig.database, dbConfig.username, dbConfig.password, dbConfig);
+
+/* 
 const poolPromise = new sql.ConnectionPool(dbConfig)
   .connect()
   .then((pool) => {
@@ -39,4 +47,6 @@ const poolPromise = new sql.ConnectionPool(dbConfig)
     throw err;
   });
 
-export { sql, poolPromise };
+  */
+
+export { sql, sequelize };
