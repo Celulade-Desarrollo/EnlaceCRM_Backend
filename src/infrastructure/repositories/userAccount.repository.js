@@ -30,12 +30,11 @@ export const userAccountRepository = {
             .input("IdFlujoRegistro", sql.Int, input.IdFlujoRegistro)
             .input("Numero_Cliente", sql.NVarChar, input.Numero_Cliente)
             .input("CupoFinal", sql.NVarChar, input.CupoFinal)
-            .input("Contrasena", sql.NVarChar, input.Contrasena || null)
             .query(`
                 INSERT INTO UsuarioFinal (
-                    IdFlujoRegistro, Numero_Cliente, CupoFinal, Contrasena
+                    IdFlujoRegistro, Numero_Cliente, CupoFinal
                 ) VALUES (
-                    @IdFlujoRegistro, @Numero_Cliente, @CupoFinal, @Contrasena
+                    @IdFlujoRegistro, @Numero_Cliente, @CupoFinal
                 );
                 SELECT SCOPE_IDENTITY() AS insertedId;
             `);

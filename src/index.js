@@ -8,6 +8,7 @@ import bancoW from "./interfaces/routes/bancoW.route.js";
 import scoring from "./interfaces/routes/scoring.route.js";
 import truora from "./interfaces/routes/truora.route.js";
 import twilioRouter from "./interfaces/routes/twilio.route.js";
+import UserAccountRoute from "./interfaces/routes/userAccount.route.js";
 
 // Swagger
 import swaggerDocs from "./config/swagger-config.js";
@@ -34,6 +35,7 @@ app.use(bancoW);
 app.use(scoring);
 app.use(truora);
 app.use(twilioRouter);
+app.use(UserAccountRoute)
 
 // Puerto del servidor
 const PORT = process.env.PORT || 3000;
