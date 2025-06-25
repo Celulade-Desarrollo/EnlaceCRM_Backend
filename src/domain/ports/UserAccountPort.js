@@ -24,7 +24,7 @@ export class UserAccountPort {
     }
 
     async validarCuentaCedula(cedula){
-        throw new Error("Method cedulamiddleware not implemented")
+        throw new Error("Method validarCuentaCedula not implemented")
     }
 }
 

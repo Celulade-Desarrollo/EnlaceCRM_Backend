@@ -17,7 +17,9 @@ export async function createUserAccountUseCase(input) {
         throw new Error("Ya existe una cuenta con este mismo id")
     }
 
+
     await userAccountService.crearCuenta(cuenta)
+    await tokenService.generarTokenUsuario(cuenta)
     return {
         mensaje: "Registro creado exitosamente",
     };
