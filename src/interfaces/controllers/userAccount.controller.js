@@ -9,8 +9,11 @@ export async function AccountType(req, res){
 
   try {
      const result = await verifyUserAccountTypeUseCase(Cedula)
-     if (!result) return res.status(404).json({ message: "Usuario o Admin no encontrado" });
-     res.status(200).json(result);
+     if (!result) return res.status(404).json({ message: "Usuario no encontrado" });
+     if(result) return res.status(200).json({
+      tipo: "usuario",
+      usuario: result
+     })
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

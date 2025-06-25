@@ -115,6 +115,6 @@ UserAccountRoute.delete("/api/user/:id", deleteUserAccountById);
  *       404:
  *         description: Usuario o Admin no encontrado
  */
-UserAccountRoute.get("/api/user/account/:Cedula", buscarUsuarioPorTelefono);
+UserAccountRoute.get("/api/user/account/:Cedula", AccountType);
 
 export default UserAccountRoute; 
