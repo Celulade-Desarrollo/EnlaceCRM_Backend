@@ -9,7 +9,7 @@ import scoring from "./interfaces/routes/scoring.route.js";
 import truora from "./interfaces/routes/truora.route.js";
 import twilioRouter from "./interfaces/routes/twilio.route.js";
 import UserAccountRoute from "./interfaces/routes/userAccount.route.js";
-
+import authRouter from "./interfaces/routes/auth.Routes.js"
 // Swagger
 import swaggerDocs from "./config/swagger-config.js";
 
@@ -36,7 +36,7 @@ app.use(scoring);
 app.use(truora);
 app.use(twilioRouter);
 app.use(UserAccountRoute)
-
+app.use('/auth', authRouter);
 // Puerto del servidor
 const PORT = process.env.PORT || 3000;
 
@@ -51,6 +51,8 @@ async function startServer() {
   app.listen(PORT, () => {
     console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
     console.log(`📘 Swagger disponible en http://localhost:${PORT}/api-docs`);
+      console.log(`Endpoint para login de Administrador (generar tu token): POST http://localhost:${PORT}/auth/admin/login`);
+  console.log(`Endpoint para login de Usuario Externo (generar tu token interno): POST http://localhost:${PORT}/auth/user/login-external`);
   });
 }
 
