@@ -22,5 +22,9 @@ export class UserAccountPort {
     async verificarToken(token, clave) {
         throw new Error("Method verificarToken not implemented")
     }
+
+    async cedulamiddleware(cedula){
+        throw new Error("Method cedulamiddleware not implemented")
+    }
 }
 

@@ -2,6 +2,19 @@ import { getAllUserAccountUseCase } from "../../application/usecases/userAccount
 import { getUserAccountByIdFlujoRegistro } from "../../application/usecases/userAccount/getUserAccountByIdFlujoRegistroUseCase.js";
 import { createUserAccountUseCase } from "../../application/usecases/userAccount/createUserAccountUseCase.js";
 import { deleteUserUserAccountById } from "../../application/usecases/userAccount/deleteUserAccountByIdUseCase.js";
+import { verifyUserAccountTypeUseCase } from "../../application/usecases/userAccount/verifyUserAccountTypeUseCase.js";
+
+export async function AccountType(req, res){
+  const Cedula = req.params.Cedula
+
+  try {
+     const result = await verifyUserAccountTypeUseCase(Cedula)
+     if (!result) return res.status(404).json({ message: "Usuario o Admin no encontrado" });
+     res.status(200).json(result);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+}
 
 export async function getAllUserAccounts(req, res) {
   try {

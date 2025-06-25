@@ -13,7 +13,7 @@ import {
   updateEstadoById,
 } from "../controllers/flujoRegistroEnlace.controller.js";
 
-import { buscarUsuarioPorTelefono } from "../middleware/phone_middleware.js";
+import { buscarUsuarioPorTelefono } from "../middleware/cedula_middleware.js";
 import { sendOTP, verifyOTP } from "../controllers/twilio.controller.js";
 
 /**

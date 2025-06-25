@@ -4,7 +4,10 @@ import {
   getUserAccountById,
   createUserAccount,
   deleteUserAccountById,
+  AccountType
 } from "../controllers/userAccount.controller.js";
+
+import { buscarUsuarioPorTelefono } from "../middleware/cedula_middleware.js";
 
 const UserAccountRoute = Router();
 
@@ -92,5 +95,26 @@ UserAccountRoute.post("/api/user", createUserAccount);
  *         description: No encontrado
  */
 UserAccountRoute.delete("/api/user/:id", deleteUserAccountById);
+
+/**
+ * @swagger
+ * /api/user/account/{Cedula}:
+ *   get:
+ *     summary: Obtener el tipo de cuenta de usuario (Usuario o Admin) por cédula
+ *     tags: [UserAccount]
+ *     parameters:
+ *       - in: path
+ *         name: Cedula
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: Cédula del usuario
+ *     responses:
+ *       200:
+ *         description: Tipo de cuenta encontrado
+ *       404:
+ *         description: Usuario o Admin no encontrado
+ */
+UserAccountRoute.get("/api/user/account/:Cedula", buscarUsuarioPorTelefono);
 
 export default UserAccountRoute; 
