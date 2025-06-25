@@ -1,6 +1,5 @@
 import { UserAccountPort } from "../../domain/ports/UserAccountPort.js";
 import { userAccountRepository } from "../repositories/userAccount.repository.js";
-import {buscarUsuarioPorTelefono} from "../../interfaces/middleware/cedula_middleware.js"
 import jwt from "jsonwebtoken";
 
 export class UserAccountAdapter extends UserAccountPort {
@@ -56,9 +55,7 @@ export class UserAccountAdapter extends UserAccountPort {
         }
     }
 
-    async cedulamiddleware(cedula){
-        await buscarUsuarioPorTelefono(cedula)
+    async validarCuentaCedula(cedula){
+       return await userAccountRepository.validarCuentaCedula(cedula)
     }
 }
-
-// exp  y quien lo emite ISS

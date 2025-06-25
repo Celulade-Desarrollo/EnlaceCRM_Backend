@@ -60,5 +60,15 @@ export const userAccountRepository = {
                 WHERE Numero_Cliente = @Numero_Cliente
             `);
         return result.rowsAffected[0];
+    },
+    
+    async validarCuentaCedula(cedula){
+        const pool = await poolPromise;
+        // Verificar si es un usuario final
+        const usuario = await pool
+          .request()
+          .input("Cedula_Usuario", sql.NVarChar, cedula)
+          .query(`SELECT * FROM UsuarioFinal WHERE Cedula_Usuario = @Cedula_Usuario`);
+          return usuario.recordset[0]
     }
 };
