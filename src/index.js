@@ -36,7 +36,7 @@ app.use(scoring);
 app.use(truora);
 app.use(twilioRouter);
 app.use(UserAccountRoute)
-app.use('/auth', authRouter);
+app.use(authRouter);
 // Puerto del servidor
 const PORT = process.env.PORT || 3000;
 
