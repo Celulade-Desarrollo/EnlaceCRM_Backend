@@ -6,7 +6,6 @@ import { verifyUserAccountTypeUseCase } from "../../application/usecases/userAcc
 
 export async function AccountType(req, res){
   const Cedula = req.params.Cedula
-
   try {
      const result = await verifyUserAccountTypeUseCase(Cedula)
      if (!result) return res.status(404).json({ message: "Usuario no encontrado" });
@@ -17,6 +16,12 @@ export async function AccountType(req, res){
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
+}
+
+export async function loginUserAccount(req,res){
+   const userState = await verifyUserAccountTypeUseCase(Cedula, Contrasena)
+   if(userState) return res.status(200).json({token: userState})
+   if(userState == false) return res.status(500)
 }
 
 export async function getAllUserAccounts(req, res) {
