@@ -3,8 +3,10 @@ import axios from 'axios';
 class AlpinaAdapter {
   constructor() {
     this.apiUrl = process.env.ALPINA_API_URL || 'https://api.alpina.com/facturas-pendientes';
-    this.apiKey = process.env.ALPINA_API_KEY || ''; // si usan auth por API key
-  }
+    this.apiKey = process.env.ALPINA_API_KEY;
+    if (!this.apiKey) {
+      throw new Error('ALPINA_API_KEY environment variable is required');
+    }  }
 
   async obtenerFacturasPendientes(identificadorTendero) {
     try {
