@@ -12,20 +12,26 @@ class EstadoCuentaAdapter {
   }
 
   async obtenerEstadoCuenta(identificadorTendero) {
+    if (!identificadorTendero || typeof identificadorTendero !== 'string') {
+      throw new Error('identificadorTendero debe ser un string válido');
+    }
+
     try {
       const response = await axios.get(this.apiUrl, {
         params: { identificadorTendero },
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json'
+          'Authorization': `Bearer ${this.apiKey}`
         }
       });
       return response.data;
     } catch (error) {
-      console.error('Error al consultar Estado de Cuenta Alpina:', error.message);
+      console.error('Error al consultar Estado de Cuenta Alpina:', {
+        message: error.message,
+        status: error.response?.status,
+        data: error.response?.data
+      });
       throw new Error('No se pudo obtener el estado de cuenta.');
     }
-  }
-}
+  }}
 
 export { EstadoCuentaAdapter };

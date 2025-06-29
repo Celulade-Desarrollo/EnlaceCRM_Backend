@@ -4,14 +4,19 @@ export const obtenerEstadoCuentaController = async (req, res) => {
   try {
     const { identificadorTendero } = req.query;
 
-    if (!identificadorTendero) {
-      return res.status(400).json({ mensaje: "El identificador del tendero es requerido." });
-    }
+    // Let the use case handle validation for consistency
+    const identificadorSanitizado = identificadorTendero?.trim();
 
-    const resultado = await estadoCuentaService.obtenerEstadoCuenta(identificadorTendero);
+    const resultado = await estadoCuentaService.obtenerEstadoCuenta(identificadorSanitizado);
     res.status(200).json(resultado);
   } catch (error) {
     console.error("Error en el controlador EstadoCuenta:", error.message);
-    res.status(500).json({ mensaje: error.message });
+    const isValidationError =
+      error.message.includes("requerido") || error.message.includes("válido");
+    const statusCode = isValidationError ? 400 : 500;
+    const mensaje = isValidationError
+      ? error.message
+      : "Error interno del servidor";
+    res.status(statusCode).json({ mensaje });
   }
 };
