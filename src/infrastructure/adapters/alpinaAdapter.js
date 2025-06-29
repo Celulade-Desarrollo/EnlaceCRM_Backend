@@ -1,12 +1,14 @@
 import axios from 'axios';
-
+import { ALPINA_API_KEY, ALPINA_FACTURAS_API_URL } from "../../config/env.js";
 class AlpinaAdapter {
-  constructor() {
-    this.apiUrl = process.env.ALPINA_API_URL || 'https://api.alpina.com/facturas-pendientes';
-    this.apiKey = process.env.ALPINA_API_KEY;
-    if (!this.apiKey) {
-      throw new Error('ALPINA_API_KEY environment variable is required');
-    }  }
+   constructor() {
+     this.apiUrl = ALPINA_FACTURAS_API_URL || 'https://api.alpina.com/estado-cuenta';    
+     this.apiKey = ALPINA_API_KEY;
+ 
+     if (!this.apiKey) {
+       throw new Error('ALPINA_API_KEY environment variable is required');
+     } 
+   }
 
   async obtenerFacturasPendientes(identificadorTendero) {
     try {

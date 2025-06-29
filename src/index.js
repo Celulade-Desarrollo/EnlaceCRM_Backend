@@ -1,15 +1,19 @@
+import "dotenv/config";
+console.log("🔐 ALPINA_API_KEY:", process.env.ALPINA_API_KEY); 
+
 import express from "express";
 import cors from "cors";
 import { poolPromise } from "./infrastructure/persistence/database.js";
 
 // Rutas desde interfaces (corrige los nombres reales de los archivos)
-import flujoRegistroEnlace from "./interfaces/routes/flujoRegistroEnlaceRoute.route.js"; // ✅ nombre correcto
+import flujoRegistroEnlace from "./interfaces/routes/flujoRegistroEnlaceRoute.route.js";
 import bancoW from "./interfaces/routes/bancoW.route.js";
 import scoring from "./interfaces/routes/scoring.route.js";
 import truora from "./interfaces/routes/truora.route.js";
 import twilioRouter from "./interfaces/routes/twilio.route.js";
 
 import alpinaRoutes from "./interfaces/routes/alpinaRoutes.js";
+import estadoCuentaRouter from "./interfaces/routes/estadoCuenta.route.js";
 
 
 // Swagger
@@ -39,6 +43,7 @@ app.use(truora);
 app.use(twilioRouter);
 
 app.use(alpinaRoutes);
+app.use(estadoCuentaRouter);
 
 
 // Puerto del servidor
