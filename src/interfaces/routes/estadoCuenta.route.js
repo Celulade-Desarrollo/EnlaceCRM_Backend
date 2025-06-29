@@ -20,11 +20,20 @@ const router = express.Router();
  *     responses:
  *       200:
  *         description: Estado de cuenta del tendero
+ *         content:
+ *           application/json:
+ *             example:
+ *               deudaTotal: 150000
+ *               siguienteAbono: "2025-07-10"
+ *               cupoDisponible: 50000
+ *               bloqueoPorMora: false
+ *               proveedoresHabilitados: ["Proveedor A", "Proveedor B"]
  *       400:
  *         description: Parámetro faltante
  *       500:
  *         description: Error al consultar Alpina
  */
+
 router.get("/pagos/estado-cuenta", obtenerEstadoCuentaController);
 
 export default router;
