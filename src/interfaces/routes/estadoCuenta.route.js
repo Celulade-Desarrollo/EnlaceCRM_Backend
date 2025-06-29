@@ -7,7 +7,7 @@ const router = express.Router();
  * @swagger
  * /pagos/estado-cuenta:
  *   get:
- *     summary: Consulta el estado de cuenta del tendero con Alpina
+ *     summary: Consulta el estado de cuenta del tendero
  *     tags:
  *       - Alpina
  *     parameters:

@@ -5,43 +5,35 @@ const router = express.Router();
 
 /**
  * @swagger
- * /pagos/facturas-disponibles:
+ * /pagos/facturas-pendientes:
  *   get:
- *     summary: Consulta las facturas pendientes de Alpina para un tendero
+ *     summary: Consulta las facturas pendientes del tendero con Alpina
  *     tags:
  *       - Alpina
  *     parameters:
  *       - in: query
  *         name: identificadorTendero
+ *         required: true
  *         schema:
  *           type: string
- *         required: true
  *         description: Identificador del tendero (cédula o código interno)
  *     responses:
  *       200:
  *         description: Lista de facturas pendientes
  *         content:
  *           application/json:
- *             schema:
- *               type: array
- *               items:
- *                 type: object
- *                 properties:
- *                   idFactura:
- *                     type: string
- *                   fechaEmision:
- *                     type: string
- *                   monto:
- *                     type: number
- *                   estado:
- *                     type: string
- *                   fechaVencimiento:
- *                     type: string
+ *             example:
+ *               - idFactura: "123456"
+ *                 fechaEmision: "2024-12-15"
+ *                 monto: 152000
+ *                 estado: "Pendiente"
+ *                 fechaVencimiento: "2025-01-15"
  *       400:
  *         description: Error de parámetros
  *       500:
  *         description: Error al consultar Alpina
  */
+
 router.get("/pagos/facturas-disponibles", obtenerFacturas);
 
 export default router;
