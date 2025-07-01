@@ -10,6 +10,7 @@ import truora from "./interfaces/routes/truora.route.js";
 import twilioRouter from "./interfaces/routes/twilio.route.js";
 import UserAccountRoute from "./interfaces/routes/userAccount.route.js";
 import authRouter from "./interfaces/routes/auth.Routes.js"
+import adminRouter from "./interfaces/routes/adminAccount.route.js";
 // Swagger
 import swaggerDocs from "./config/swagger-config.js";
 
@@ -37,6 +38,7 @@ app.use(truora);
 app.use(twilioRouter);
 app.use(UserAccountRoute)
 app.use(authRouter);
+app.use(adminRouter)
 // Puerto del servidor
 const PORT = process.env.PORT || 3000;
 

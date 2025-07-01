@@ -2,10 +2,11 @@ import { userAccountService } from "../../services/userAccountServiceInstance.js
 import { tokenVerifierService } from "../../services/TokenVerifierService.js";
 import { tokenGeneratorService } from "../../services/TokenGeneratorService.js";
 import { fetchNbCliente } from "../../services/fetchNbCliente.js";
+import { fetchLoginAlpina } from "../../services/fetchAlpina.js";
 
 export async function loginUserAccountUseCase(nbCliente, nbAgenteComercial, token){
-
-    const cedula = await fetchNbCliente(nbCliente, nbAgenteComercial)
+    const bearerToken = await fetchLoginAlpina()
+    const cedula = await fetchNbCliente(nbCliente, nbAgenteComercial, bearerToken)
 
 
     const cuenta = await userAccountService.validarCuentaCedula(cedula)

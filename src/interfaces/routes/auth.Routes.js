@@ -1,6 +1,6 @@
 // Ruta: src/interfaces/routes/auth.Routes.js
 import express from "express";
-import { loginUserAccount } from '../controllers/auth.controller.js'; // Importa el controlador delgado
+import { loginAdminAccount, loginUserAccount } from '../controllers/auth.controller.js'; // Importa el controlador delgado
 
 const authRouter = express.Router();
 
@@ -26,6 +26,26 @@ const authRouter = express.Router();
  *         description: Login exitoso
  */
 authRouter.post("/api/user/login", loginUserAccount );
-authRouter.post("/user/login-external", (req, res) => authController.loginUserWithExternalToken(req, res));
+
+/**
+ * @swagger
+ * /api/admin/login:
+ *   post:
+ *     summary: Login de administrador 
+ *     tags: [AdminAccountLogin]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             example:
+ *               Cedula: "123"
+ *               Password: "123"
+ *     responses:
+ *       201:
+ *         description: Login exitoso
+ */
+authRouter.post("/api/admin/login", loginAdminAccount)
 
 export default authRouter;

@@ -1,4 +1,4 @@
-export async function fetchNbCliente(nbCliente, nbAgenteComercial) {
+export async function fetchNbCliente(nbCliente, nbAgenteComercial, bearerToken) {
     const url = 'https://qa-client-gateway-general.amovil.com.co:42281/clients/bancoW';
   
     const data = {
@@ -11,7 +11,7 @@ export async function fetchNbCliente(nbCliente, nbAgenteComercial) {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsImVtYWlsIjoiYWxwaW5hYmFuY293QGFscGluYS5jb20iLCJpYXQiOjE3NTA5Njg0MzksImV4cCI6MTc1MDk3MjAzOX0.19VD9S3FvwiBRB3kF84WHiQniFHCN8liX65T3jvciow'
+          'Authorization': `Bearer ${bearerToken}`
         },
         body: JSON.stringify(data)
       });
