@@ -15,6 +15,7 @@ import twilioRouter from "./interfaces/routes/twilio.route.js";
 import alpinaRoutes from "./interfaces/routes/alpinaRoutes.js";
 import estadoCuentaRouter from "./interfaces/routes/estadoCuenta.route.js";
 
+import pagosRouter from "./interfaces/routes/pagos.route.js"; 
 
 // Swagger
 import swaggerDocs from "./config/swagger-config.js";
@@ -44,6 +45,7 @@ app.use(twilioRouter);
 
 app.use(alpinaRoutes);
 app.use(estadoCuentaRouter);
+app.use(pagosRouter); 
 
 
 // Puerto del servidor
