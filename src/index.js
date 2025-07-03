@@ -9,6 +9,8 @@ import scoring from "./interfaces/routes/scoring.route.js";
 import truora from "./interfaces/routes/truora.route.js";
 import twilioRouter from "./interfaces/routes/twilio.route.js";
 import ubicacionRoutes from "./interfaces/routes/ubicacion.routes.js";
+import movimientoRouter from "./interfaces/routes/movimiento.routes.js";
+
 // Swagger
 import swaggerDocs from "./config/swagger-config.js";
 
@@ -35,6 +37,8 @@ app.use(scoring);
 app.use(truora);
 app.use(twilioRouter);
 app.use(ubicacionRoutes);
+app.use(movimientoRouter);
+
 
 // Puerto del servidor
 const PORT = process.env.PORT || 3000;
