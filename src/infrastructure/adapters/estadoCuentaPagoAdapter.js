@@ -1,21 +1,22 @@
-import { EstadoCuentaPort } from "../../domain/ports/estadoCuentaPort.js";
-import { estadoCuentaPagoRepository } from "../repositories/estadoCuentaPago.repository.js";
+import { EstadoCuentaPort } from "../../domain/ports/EstadoCuentaPort.js";
+import { estadoCuentaRepository } from "../repositories/estadoCuenta.repository.js";
 
-export class EstadoCuentaPagoAdapter extends EstadoCuentaPort {
+
+export class EstadoCuentaAdapter extends EstadoCuentaPort {
   async obtenerEstadoCuenta(identificadorTendero) {
-    return await estadoCuentaPagoRepository.obtenerEstadoCuenta(identificadorTendero);
+    return await estadoCuentaRepository.obtenerEstadoCuenta(identificadorTendero);
   }
 
   async obtenerCupoDisponible(identificadorTendero) {
-    return await estadoCuentaPagoRepository.obtenerCupoDisponible(identificadorTendero);
+    return await estadoCuentaRepository.obtenerCupoDisponible(identificadorTendero);
   }
 
   async obtenerProveedoresHabilitados(identificadorTendero) {
-    return await estadoCuentaPagoRepository.obtenerProveedoresHabilitados(identificadorTendero);
+    return await estadoCuentaRepository.obtenerProveedoresHabilitados(identificadorTendero);
   }
 
   async registrarPago(pago) {
-    return await estadoCuentaPagoRepository.registrarPago(pago);
+    return await estadoCuentaRepository.registrarPago(pago);
   }
 }
 

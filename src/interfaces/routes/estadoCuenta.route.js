@@ -5,11 +5,11 @@ const router = express.Router();
 
 /**
  * @swagger
- * /pagos/estado-cuenta:
+ * /api/pagos/estado-cuenta:
  *   get:
  *     summary: Consulta el estado de cuenta del tendero
  *     tags:
- *       - Alpina
+ *       - Pagos
  *     parameters:
  *       - in: query
  *         name: identificadorTendero
@@ -31,10 +31,9 @@ const router = express.Router();
  *       400:
  *         description: Parámetro faltante
  *       500:
- *         description: Error al consultar Alpina
+ *         description: Error interno del servidor
  */
 
-router.get("/pagos/estado-cuenta", obtenerEstadoCuentaController);
+router.get("/api/pagos/estado-cuenta", obtenerEstadoCuentaController);
 
 export default router;
-

@@ -1,14 +1,16 @@
-import { estadoCuentaService } from "../../application/services/estadoCuentaServiceInstance.js";
+import { getEstadoCuentaUseCase } from "../../application/usecases/pagos/getEstadoCuentaUseCase.js";
 
 export const obtenerEstadoCuentaController = async (req, res) => {
   try {
     const { identificadorTendero } = req.query;
 
-    const identificadorSanitizado = identificadorTendero;
+    if (!identificadorTendero) {
+      return res.status(400).json({ mensaje: "Se requiere el identificador del tendero" });
+    }
 
+    const estadoCuenta = await getEstadoCuentaUseCase(identificadorTendero);
+    res.status(200).json(estadoCuenta);
 
-    const resultado = await estadoCuentaService.obtenerEstadoCuenta(identificadorSanitizado);
-    res.status(200).json(resultado);
   } catch (error) {
     console.error("Error en el controlador EstadoCuenta:", error.message);
 
@@ -18,6 +20,7 @@ export const obtenerEstadoCuentaController = async (req, res) => {
     const mensaje = isValidationError
       ? error.message
       : "Error interno del servidor";
+
     res.status(statusCode).json({ mensaje });
   }
 };

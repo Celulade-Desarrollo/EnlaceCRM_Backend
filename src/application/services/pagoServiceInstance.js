@@ -1,5 +1,3 @@
-import { EstadoCuentaPagoAdapter } from "../../infrastructure/adapters/estadoCuentaPagoAdapter.js";
+import { estadoCuentaAdapter } from "../../infrastructure/adapters/estadoCuentaAdapter.js";
 
-// Usar directamente el adapter como servicio
-export const pagoService = new EstadoCuentaPagoAdapter();
-
+export const pagoService = estadoCuentaAdapter;

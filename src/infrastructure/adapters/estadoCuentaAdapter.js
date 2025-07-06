@@ -1,39 +1,26 @@
-import axios from 'axios';
-import ValidationError from '../../errors/Validation.error.js';
+import { estadoCuentaRepository } from "../repositories/estadoCuenta.repository.js";
+import { EstadoCuentaPort } from "../../domain/ports/EstadoCuentaPort.js";
 
-class EstadoCuentaAdapter {
-  constructor() {
-    this.apiUrl = 'https://api.alpina.com/estado-cuenta'; // URL por defecto
+export class EstadoCuentaAdapter extends EstadoCuentaPort {
+  async obtenerEstadoCuenta(cedula) {
+    return await estadoCuentaRepository.obtenerEstadoCuentaPorCedula(cedula);
   }
 
-  async obtenerEstadoCuenta(identificadorTendero) {
-    identificadorTendero = identificadorTendero?.trim(); // ← limpieza aquí
-
-    if (!identificadorTendero || typeof identificadorTendero !== 'string') {
-      throw new ValidationError('identificadorTendero debe ser un string válido');
-    }
-
-    try {
-      const response = await axios.get(this.apiUrl, {
-        params: { identificadorTendero },
-        headers: {
-          'Content-Type': 'application/json'
-          // 'Authorization': `Bearer ${this.apiKey}`  ← eliminado por ahora
-        }
-      });
-      return response.data;
-    } catch (error) {
-      console.error('Error al consultar Estado de Cuenta Alpina:', {
-        message: error.message,
-        status: error.response?.status,
-        data: error.response?.data
-      });
-      throw new Error('No se pudo obtener el estado de cuenta.');
-    }
+  async calcularDeudaTotal(cedula) {
+    return await estadoCuentaRepository.calcularDeudaTotal(cedula);
   }
 
+  async obtenerCupoDisponible(cedula) {
+    return await estadoCuentaRepository.obtenerCupoDisponible(cedula);
+  }
 
+  async obtenerFechaSiguienteAbono(cedula) {
+    return await estadoCuentaRepository.obtenerFechaSiguienteAbono(cedula);
+  }
+
+  async estaBloqueadoPorMora(cedula) {
+    return await estadoCuentaRepository.estaBloqueadoPorMora(cedula);
+  }
 }
 
-export { EstadoCuentaAdapter };
-
+export const estadoCuentaAdapter = new EstadoCuentaAdapter();

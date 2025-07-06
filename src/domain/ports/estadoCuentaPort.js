@@ -1,11 +1,18 @@
-class EstadoCuentaPort {
-  constructor(adapter) {
-    this.adapter = adapter;
+export class EstadoCuentaPort {
+  async obtenerEstadoCuenta(identificadorTendero) {
+    throw new Error("Method not implemented.");
   }
 
-  async obtenerEstadoCuenta(identificadorTendero) {
-    return await this.adapter.obtenerEstadoCuenta(identificadorTendero);
+  async obtenerCupoDisponible(identificadorTendero) {
+    throw new Error("Method not implemented.");
+  }
+
+  async obtenerProveedoresHabilitados(identificadorTendero) {
+    throw new Error("Method not implemented.");
+  }
+
+  async registrarPago(pago) {
+    throw new Error("Method not implemented.");
   }
 }
 
-export { EstadoCuentaPort };
