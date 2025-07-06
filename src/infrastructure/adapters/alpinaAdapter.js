@@ -1,15 +1,18 @@
 import axios from 'axios';
 import {
   ALPINA_CLIENTE_ID,
-  ALPINA_AGENTE_COMERCIAL
+  ALPINA_AGENTE_COMERCIAL,
+  ALPINA_FACTURAS_API_URL
 } from "../../config/env.js";
 
 class AlpinaAdapter {
   constructor() {
-    this.apiUrl = 'https://qa-client-gateway-general.amovil.com.co:42281/historical/bancoW';
+    this.apiUrl = ALPINA_FACTURAS_API_URL;
+    this.clienteId = ALPINA_CLIENTE_ID;
+    this.agenteComercial = ALPINA_AGENTE_COMERCIAL;
 
-    if (!ALPINA_CLIENTE_ID || !ALPINA_AGENTE_COMERCIAL) {
-      throw new Error('Faltan ALPINA_CLIENTE_ID o ALPINA_AGENTE_COMERCIAL en el entorno');
+    if (!this.apiUrl || !this.clienteId || !this.agenteComercial) {
+      throw new Error('Faltan variables ALPINA_* en el archivo .env');
     }
   }
 

@@ -44,8 +44,7 @@ app.use(scoring);
 app.use(truora);
 app.use(twilioRouter);
 
-// app.use(alpinaRouter);
-app.use('/pagos', alpinaRouter);
+app.use(alpinaRouter);
 app.use(estadoCuentaRouter);
 app.use(pagosRouter); 
 

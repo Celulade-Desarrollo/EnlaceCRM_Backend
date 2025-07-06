@@ -5,7 +5,7 @@ const router = express.Router();
 
 /**
  * @swagger
- * /pagos/facturas-pendientes:
+ * /api/pagos/facturas-pendientes:
  *   get:
  *     summary: Consulta todas las facturas pendientes con Alpina
  *     tags:
@@ -23,7 +23,6 @@ const router = express.Router();
  *       500:
  *         description: Error al consultar Alpina
  */
-
-router.get("/facturas-pendientes", obtenerFacturas);
+router.get("/api/pagos/facturas-pendientes", obtenerFacturas);
 
 export default router;
