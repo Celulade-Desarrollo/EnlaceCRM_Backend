@@ -1,4 +1,5 @@
 import axios from 'axios';
+import ValidationError from '../../errors/Validation.error.js';
 
 class EstadoCuentaAdapter {
   constructor() {
@@ -6,8 +7,10 @@ class EstadoCuentaAdapter {
   }
 
   async obtenerEstadoCuenta(identificadorTendero) {
+    identificadorTendero = identificadorTendero?.trim(); // ← limpieza aquí
+
     if (!identificadorTendero || typeof identificadorTendero !== 'string') {
-      throw new Error('identificadorTendero debe ser un string válido');
+      throw new ValidationError('identificadorTendero debe ser un string válido');
     }
 
     try {
@@ -28,6 +31,8 @@ class EstadoCuentaAdapter {
       throw new Error('No se pudo obtener el estado de cuenta.');
     }
   }
+
+
 }
 
 export { EstadoCuentaAdapter };

@@ -15,9 +15,9 @@ export const ALPINA_API_KEY = process.env.ALPINA_API_KEY;
 export const ALPINA_FACTURAS_API_URL = process.env.ALPINA_FACTURAS_API_URL;
 
 // 🔧 Agrega estas tres líneas:
-export const ALPINA_AUTH_URL = process.env.AUTH_URL;
-export const ALPINA_AUTH_USERNAME = process.env.AUTH_USERNAME;
-export const ALPINA_AUTH_PASSWORD = process.env.AUTH_PASSWORD;
+export const ALPINA_AUTH_URL = process.env.ALPINA_AUTH_URL;
+export const ALPINA_AUTH_USERNAME = process.env.ALPINA_AUTH_USERNAME;
+export const ALPINA_AUTH_PASSWORD = process.env.ALPINA_AUTH_PASSWORD;
 
 
 export const ALPINA_CLIENTE_ID = process.env.ALPINA_CLIENTE_ID;

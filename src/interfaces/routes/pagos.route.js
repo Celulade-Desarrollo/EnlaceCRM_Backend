@@ -34,7 +34,6 @@ const router = express.Router();
  *       500:
  *         description: Error interno del servidor
  */
-// router.post("/confirmar", confirmarPagoController);
 router.post("/api/pagos/confirmar", confirmarPagoController);
 
 export default router;
