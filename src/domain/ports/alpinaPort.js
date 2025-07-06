@@ -3,11 +3,9 @@ class AlpinaPort {
     this.adapter = adapter;
   }
 
-  async obtenerFacturasPendientes(identificadorTendero) {
-    return await this.adapter.obtenerFacturasPendientes(identificadorTendero);
+  async obtenerFacturasPendientes(identificadorTendero, token) {
+    return await this.adapter.obtenerFacturasPendientes(identificadorTendero, token);
   }
 }
 
-//module.exports = { AlpinaPort };
-
-export {  AlpinaPort }; 
+export { AlpinaPort };

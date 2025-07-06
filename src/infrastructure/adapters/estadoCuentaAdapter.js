@@ -1,14 +1,8 @@
 import axios from 'axios';
-import { ALPINA_API_KEY, ESTADO_CUENTA_API_URL } from "../../config/env.js";
 
 class EstadoCuentaAdapter {
   constructor() {
-    this.apiUrl = ESTADO_CUENTA_API_URL || 'https://api.alpina.com/estado-cuenta';    
-    this.apiKey = ALPINA_API_KEY;
-
-    if (!this.apiKey) {
-      throw new Error('ALPINA_API_KEY environment variable is required');
-    } 
+    this.apiUrl = 'https://api.alpina.com/estado-cuenta'; // URL por defecto
   }
 
   async obtenerEstadoCuenta(identificadorTendero) {
@@ -20,7 +14,8 @@ class EstadoCuentaAdapter {
       const response = await axios.get(this.apiUrl, {
         params: { identificadorTendero },
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`
+          'Content-Type': 'application/json'
+          // 'Authorization': `Bearer ${this.apiKey}`  ← eliminado por ahora
         }
       });
       return response.data;
@@ -32,6 +27,8 @@ class EstadoCuentaAdapter {
       });
       throw new Error('No se pudo obtener el estado de cuenta.');
     }
-  }}
+  }
+}
 
 export { EstadoCuentaAdapter };
+

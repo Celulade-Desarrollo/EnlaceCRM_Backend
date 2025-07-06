@@ -1,32 +1,46 @@
 import axios from 'axios';
-import { ALPINA_API_KEY, ALPINA_FACTURAS_API_URL } from "../../config/env.js";
-class AlpinaAdapter {
-   constructor() {
-     this.apiUrl = ALPINA_FACTURAS_API_URL || 'https://api.alpina.com/estado-cuenta';    
-     this.apiKey = ALPINA_API_KEY;
- 
-     if (!this.apiKey) {
-       throw new Error('ALPINA_API_KEY environment variable is required');
-     } 
-   }
+import {
+  ALPINA_CLIENTE_ID,
+  ALPINA_AGENTE_COMERCIAL
+} from "../../config/env.js";
 
-  async obtenerFacturasPendientes(identificadorTendero) {
+class AlpinaAdapter {
+  constructor() {
+    this.apiUrl = 'https://qa-client-gateway-general.amovil.com.co:42281/historical/bancoW';
+
+    if (!ALPINA_CLIENTE_ID || !ALPINA_AGENTE_COMERCIAL) {
+      throw new Error('Faltan ALPINA_CLIENTE_ID o ALPINA_AGENTE_COMERCIAL en el entorno');
+    }
+  }
+
+  async obtenerFacturasPendientes(token) {
+    const headers = {
+      Authorization: `Bearer ${token}`,
+      'Content-Type': 'application/json'
+    };
+
+    const body = {
+      nbCliente: ALPINA_CLIENTE_ID,
+      nbAgenteComercial: ALPINA_AGENTE_COMERCIAL
+    };
+
+    // Logs temporales para depuración
+    console.log('[AlpinaAdapter] URL:', this.apiUrl);
+    console.log('[AlpinaAdapter] Headers:', headers);
+    console.log('[AlpinaAdapter] Body:', body);
+
     try {
-      const response = await axios.get(this.apiUrl, {
-        params: { identificadorTendero },
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json'
-        }
-      });
-      return response.data;
+      const response = await axios.post(this.apiUrl, body, { headers });
+      return response.data?.data || [];
     } catch (error) {
-      console.error('Error al consultar Alpina:', error.message);
+      console.error('Error al consultar Alpina:', {
+        message: error.message,
+        status: error.response?.status,
+        data: error.response?.data
+      });
       throw new Error('No se pudo obtener la información de facturas pendientes.');
     }
   }
 }
 
-//module.exports = { AlpinaAdapter };
-
-export { AlpinaAdapter }; 
+export { AlpinaAdapter };

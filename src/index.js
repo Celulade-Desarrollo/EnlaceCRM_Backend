@@ -12,7 +12,8 @@ import scoring from "./interfaces/routes/scoring.route.js";
 import truora from "./interfaces/routes/truora.route.js";
 import twilioRouter from "./interfaces/routes/twilio.route.js";
 
-import alpinaRoutes from "./interfaces/routes/alpinaRoutes.js";
+import alpinaRouter from "./interfaces/routes/alpina.route.js";
+
 import estadoCuentaRouter from "./interfaces/routes/estadoCuenta.route.js";
 
 import pagosRouter from "./interfaces/routes/pagos.route.js"; 
@@ -43,7 +44,8 @@ app.use(scoring);
 app.use(truora);
 app.use(twilioRouter);
 
-app.use(alpinaRoutes);
+// app.use(alpinaRouter);
+app.use('/pagos', alpinaRouter);
 app.use(estadoCuentaRouter);
 app.use(pagosRouter); 
 
