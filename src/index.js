@@ -1,6 +1,5 @@
 import "dotenv/config";
-console.log("🔐 ALPINA_API_KEY:", process.env.ALPINA_API_KEY); 
-
+// console.log("🔐 ALPINA_API_KEY:", process.env.ALPINA_API_KEY); // Remove in production
 import express from "express";
 import cors from "cors";
 import { poolPromise } from "./infrastructure/persistence/database.js";

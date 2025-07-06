@@ -1,6 +1,9 @@
 // src/infrastructure/adapters/AuthAlpinaAdapter.js
 import axios from 'axios';
-import { ALPINA_AUTH_URL, ALPINA_AUTH_USERNAME, ALPINA_AUTH_PASSWORD } from '../../config/env.js';
+import { ALPINA_AUTH_URL,
+         ALPINA_AUTH_USERNAME, 
+         ALPINA_AUTH_PASSWORD 
+       } from '../../config/env.js';
 
 class AuthAlpinaAdapter {
   constructor() {
@@ -20,7 +23,11 @@ class AuthAlpinaAdapter {
         headers: { 'Content-Type': 'application/json' }
       });
 
+      if (!response.data || !response.data.token) {
+        throw new Error('Token no encontrado en la respuesta de Alpina');
+      }
       return response.data.token;
+         
     } catch (error) {
       console.error('Error al obtener token JWT de Alpina:', error.message);
       throw new Error('No se pudo obtener el token JWT de Alpina.');
