@@ -12,12 +12,14 @@ export async function createUserAccountUseCase(input) {
         throw new Error("Faltan campos requeridos: IdFlujoRegistro, CupoFinal o Numero_Cliente");
     }
 
-    const duplicado = await userAccountService.verificarDuplicados(cuenta)
+    const duplicado = await userAccountService.verificarDuplicados(cuenta.IdFlujoRegistro)
     if (duplicado) {
         throw new Error("Ya existe una cuenta con este mismo id")
     }
 
+
     await userAccountService.crearCuenta(cuenta)
+    await tokenService.generarTokenUsuario(cuenta)
     return {
         mensaje: "Registro creado exitosamente",
     };
