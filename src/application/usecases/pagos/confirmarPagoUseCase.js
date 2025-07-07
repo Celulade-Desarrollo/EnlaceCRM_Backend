@@ -1,10 +1,12 @@
-// import { estadoCuentaService } from "../../services/estadoCuentaServiceInstance.js";
 export const confirmarPagoUseCase = async (adapter, datosPago = {}) => {
   const {
     identificadorTendero,
     monto,
     descripcion,
     fechaPagoProgramado,
+    idMedioPago,
+    nroFacturaAlpina,
+    telefonoTransportista
   } = datosPago;
 
   console.log("📦 Datos recibidos en confirmarPagoUseCase:", datosPago);
@@ -18,6 +20,8 @@ export const confirmarPagoUseCase = async (adapter, datosPago = {}) => {
     monto,
     descripcion,
     fechaPagoProgramado,
+    idMedioPago,
+    nroFacturaAlpina,
+    telefonoTransportista
   });
 };
-
