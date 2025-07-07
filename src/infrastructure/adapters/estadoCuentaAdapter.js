@@ -1,25 +1,33 @@
-import { estadoCuentaRepository } from "../repositories/estadoCuenta.repository.js";
 import { EstadoCuentaPort } from "../../domain/ports/EstadoCuentaPort.js";
+import { estadoCuentaRepository } from "../repositories/estadoCuenta.repository.js";
 
 export class EstadoCuentaAdapter extends EstadoCuentaPort {
-  async obtenerEstadoCuenta(cedula) {
-    return await estadoCuentaRepository.obtenerEstadoCuentaPorCedula(cedula);
+  async obtenerEstadoCuenta(identificadorTendero) {
+    return await estadoCuentaRepository.obtenerEstadoCuentaPorCedula(identificadorTendero);
   }
 
-  async calcularDeudaTotal(cedula) {
-    return await estadoCuentaRepository.calcularDeudaTotal(cedula);
+  async calcularDeudaTotal(identificadorTendero) {
+    return await estadoCuentaRepository.calcularDeudaTotal(identificadorTendero);
   }
 
-  async obtenerCupoDisponible(cedula) {
-    return await estadoCuentaRepository.obtenerCupoDisponible(cedula);
+  async obtenerCupoDisponible(identificadorTendero) {
+    return await estadoCuentaRepository.obtenerCupoDisponible(identificadorTendero);
   }
 
-  async obtenerFechaSiguienteAbono(cedula) {
-    return await estadoCuentaRepository.obtenerFechaSiguienteAbono(cedula);
+  async obtenerFechaSiguienteAbono(identificadorTendero) {
+    return await estadoCuentaRepository.obtenerFechaSiguienteAbono(identificadorTendero);
   }
 
-  async estaBloqueadoPorMora(cedula) {
-    return await estadoCuentaRepository.estaBloqueadoPorMora(cedula);
+  async estaBloqueadoPorMora(identificadorTendero) {
+    return await estadoCuentaRepository.estaBloqueadoPorMora(identificadorTendero);
+  }
+
+  async obtenerProveedoresHabilitados(identificadorTendero) {
+    return await estadoCuentaRepository.obtenerProveedoresHabilitados?.(identificadorTendero) ?? [];
+  }
+
+  async registrarPago(pago) {
+    return await estadoCuentaRepository.registrarPago(pago);
   }
 }
 

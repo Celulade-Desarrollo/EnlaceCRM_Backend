@@ -1,6 +1,5 @@
-import { EstadoCuentaAdapter } from "../../infrastructure/adapters/estadoCuentaAdapter.js";
-import { EstadoCuentaPort } from "../../domain/ports/EstadoCuentaPort.js";
+import { estadoCuentaAdapter } from "../../infrastructure/adapters/estadoCuentaAdapter.js";
 
-const estadoCuentaService = new EstadoCuentaPort(new EstadoCuentaAdapter());
+// Usamos el adapter como servicio directamente
+export const estadoCuentaService = estadoCuentaAdapter;
 
-export { estadoCuentaService };

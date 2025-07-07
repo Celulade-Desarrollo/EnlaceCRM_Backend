@@ -1,11 +1,11 @@
 import express from "express";
-import { confirmarPagoController } from "../controllers/pagos.controller.js";
+import { confirmarPagoController } from "../controllers/confirmarPago.controller.js";
 
 const router = express.Router();
 
 /**
  * @swagger
- * /pagos/confirmar:
+ * /api/pagos/confirmar:
  *   post:
  *     summary: Registra un pago confirmado para un tendero
  *     tags:
@@ -16,16 +16,23 @@ const router = express.Router();
  *         application/json:
  *           schema:
  *             type: object
+ *             required:
+ *               - identificadorTendero
+ *               - monto
  *             properties:
  *               identificadorTendero:
- *                 type: integer
+ *                 type: string
+ *                 description: Identificador del tendero (cédula o ID interno)
  *               monto:
  *                 type: number
+ *                 description: Monto a pagar
  *               descripcion:
  *                 type: string
+ *                 description: Descripción del pago
  *               fechaPagoProgramado:
  *                 type: string
  *                 format: date
+ *                 description: Fecha programada del pago
  *     responses:
  *       201:
  *         description: Pago registrado correctamente
@@ -37,3 +44,4 @@ const router = express.Router();
 router.post("/api/pagos/confirmar", confirmarPagoController);
 
 export default router;
+
