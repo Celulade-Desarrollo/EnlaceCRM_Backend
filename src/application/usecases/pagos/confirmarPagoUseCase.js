@@ -1,27 +1,8 @@
-export const confirmarPagoUseCase = async (adapter, datosPago = {}) => {
-  const {
-    identificadorTendero,
-    monto,
-    descripcion,
-    fechaPagoProgramado,
-    idMedioPago,
-    nroFacturaAlpina,
-    telefonoTransportista
-  } = datosPago;
+import { estadoCuentaService } from "../../services/estadoCuentaServiceInstance.js";
+import { Pago } from "../../../domain/models/Pago.js";
 
-  console.log("📦 Datos recibidos en confirmarPagoUseCase:", datosPago);
+export const confirmarPagoUseCase = async (datosPago = {}) => {
+  const pago = new Pago(datosPago);
 
-  if (!identificadorTendero || !monto || isNaN(monto)) {
-    throw new Error("identificadorTendero y monto válidos son requeridos");
-  }
-
-  return await adapter.registrarPago({
-    identificadorTendero,
-    monto,
-    descripcion,
-    fechaPagoProgramado,
-    idMedioPago,
-    nroFacturaAlpina,
-    telefonoTransportista
-  });
+  return await estadoCuentaService.registrarPago(pago);
 };

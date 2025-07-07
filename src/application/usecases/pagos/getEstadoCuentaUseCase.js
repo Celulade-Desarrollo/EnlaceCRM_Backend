@@ -1,4 +1,5 @@
-import { estadoCuentaAdapter } from "../../../infrastructure/adapters/estadoCuentaAdapter.js";
+import { estadoCuentaService } from "../../services/estadoCuentaServiceInstance.js";
+import { EstadoCuenta } from "../../../domain/models/EstadoCuenta.js";
 
 export async function getEstadoCuentaUseCase(idUsuarioFinal) {
   if (!idUsuarioFinal) {
@@ -7,28 +8,22 @@ export async function getEstadoCuentaUseCase(idUsuarioFinal) {
 
   try {
     const [movimientos, cupoDisponible, fechaSiguienteAbono, bloqueoMora] = await Promise.all([
-      estadoCuentaAdapter.obtenerEstadoCuenta(idUsuarioFinal),
-      estadoCuentaAdapter.obtenerCupoDisponible(idUsuarioFinal),
-      estadoCuentaAdapter.obtenerFechaSiguienteAbono?.(idUsuarioFinal),
-      estadoCuentaAdapter.estaBloqueadoPorMora?.(idUsuarioFinal)
+      estadoCuentaService.obtenerEstadoCuenta(idUsuarioFinal),
+      estadoCuentaService.obtenerCupoDisponible(idUsuarioFinal),
+      estadoCuentaService.obtenerFechaSiguienteAbono?.(idUsuarioFinal),
+      estadoCuentaService.estaBloqueadoPorMora?.(idUsuarioFinal)
     ]);
 
-    return {
-      deudaTotal: calcularDeudaTotal(movimientos),
-      cupoDisponible,
-      fechaSiguienteAbono: fechaSiguienteAbono || null,
-      bloqueoPorMora: bloqueoMora || false,
+    const estadoCuenta = new EstadoCuenta({
       movimientos,
-      proveedoresHabilitados: [] // pendiente implementar si aplica
-    };
+      cupoDisponible,
+      fechaSiguienteAbono,
+      bloqueoPorMora: bloqueoMora
+    });
+
+    return estadoCuenta;
   } catch (error) {
     console.error("[UseCase][getEstadoCuenta] Error:", error.message);
     throw new Error("No se pudo obtener el estado de cuenta");
   }
-}
-
-function calcularDeudaTotal(movimientos) {
-  return movimientos
-    .filter(m => m.IdTipoMovimiento === 1 && m.IdEstadoMovimiento !== 3) // Deudas activas
-    .reduce((total, m) => total + parseFloat(m.Monto || 0), 0);
 }

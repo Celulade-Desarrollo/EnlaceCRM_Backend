@@ -1,5 +1,4 @@
 import { confirmarPagoUseCase } from "../../application/usecases/pagos/confirmarPagoUseCase.js";
-import { estadoCuentaService } from "../../application/services/estadoCuentaServiceInstance.js";
 import ValidationError from "../../errors/Validation.error.js"; // Asegúrate que esta ruta sea correcta
 
 export const confirmarPagoController = async (req, res) => {
@@ -16,7 +15,7 @@ export const confirmarPagoController = async (req, res) => {
 
     console.log("🟡 Body recibido en controlador:", req.body);
 
-    const resultado = await confirmarPagoUseCase(estadoCuentaService, {
+    const resultado = await confirmarPagoUseCase({
       identificadorTendero,
       monto,
       descripcion,
@@ -37,3 +36,4 @@ export const confirmarPagoController = async (req, res) => {
     res.status(500).json({ mensaje: "Error interno al confirmar pago" });
   }
 };
+

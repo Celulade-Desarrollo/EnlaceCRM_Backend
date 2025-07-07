@@ -31,4 +31,4 @@ export class EstadoCuentaAdapter extends EstadoCuentaPort {
   }
 }
 
-export const estadoCuentaAdapter = new EstadoCuentaAdapter();
+// export const estadoCuentaAdapter = new EstadoCuentaAdapter();
