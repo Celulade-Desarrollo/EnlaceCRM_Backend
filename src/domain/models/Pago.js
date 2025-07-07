@@ -1,9 +1,13 @@
 export class Pago {
   constructor({ identificadorTendero, monto, descripcion, fechaPagoProgramado, idMedioPago, nroFacturaAlpina, telefonoTransportista }) {
-    if (!identificadorTendero || !monto || isNaN(monto)) {
-      throw new Error("identificadorTendero y monto válidos son requeridos");
+    if (!identificadorTendero || typeof identificadorTendero !== 'string' || identificadorTendero.trim() === '') {
+      throw new Error("identificadorTendero debe ser una cadena válida no vacía");
     }
 
+    const numericMonto = parseFloat(monto);
+    if (!monto || isNaN(numericMonto) || numericMonto <= 0) {
+      throw new Error("monto debe ser un número positivo válido");
+    }
     this.identificadorTendero = identificadorTendero;
     this.monto = parseFloat(monto);
     this.descripcion = descripcion || "";
