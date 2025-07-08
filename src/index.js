@@ -16,7 +16,7 @@ import estadoCuentaRouter from "./interfaces/routes/estadoCuenta.route.js";
 // import pagosRouter from "./interfaces/routes/confirmarPago.route.js"; 
 import UserAccountRoute from "./interfaces/routes/userAccount.route.js";
 import authRouter from "./interfaces/routes/auth.Routes.js"
-
+import adminRouter from "./interfaces/routes/adminAccount.route.js";
 import movimientoCuentaRouter from './interfaces/routes/movimientoCuenta.route.js';
 
 
@@ -49,6 +49,7 @@ app.use(UserAccountRoute)
 app.use(authRouter);
 app.use(alpinaRouter);
 app.use(estadoCuentaRouter);
+app.use(adminRouter)
 
 // app.use(pagosRouter); 
 app.use(movimientoCuentaRouter);
