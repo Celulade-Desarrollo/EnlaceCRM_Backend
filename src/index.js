@@ -14,7 +14,10 @@ import twilioRouter from "./interfaces/routes/twilio.route.js";
 import alpinaRouter from "./interfaces/routes/alpina.route.js";
 
 import estadoCuentaRouter from "./interfaces/routes/estadoCuenta.route.js";
-import pagosRouter from "./interfaces/routes/confirmarPago.route.js"; 
+// import pagosRouter from "./interfaces/routes/confirmarPago.route.js"; 
+
+import movimientoCuentaRouter from './interfaces/routes/movimientoCuenta.route.js';
+
 
 // Swagger
 import swaggerDocs from "./config/swagger-config.js";
@@ -44,7 +47,9 @@ app.use(twilioRouter);
 
 app.use(alpinaRouter);
 app.use(estadoCuentaRouter);
-app.use(pagosRouter); 
+
+// app.use(pagosRouter); 
+app.use(movimientoCuentaRouter);
 
 
 // Puerto del servidor

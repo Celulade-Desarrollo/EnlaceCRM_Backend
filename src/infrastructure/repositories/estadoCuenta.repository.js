@@ -69,6 +69,88 @@ export const estadoCuentaRepository = {
 
     return { mensaje: "Pago registrado exitosamente" };
   },
+
+  async registrarMovimiento({
+    identificadorTendero,
+    monto,
+    descripcion,
+    fechaPagoProgramado,
+    idMedioPago,
+    nroFacturaAlpina,
+    telefonoTransportista,
+    tipoMovimiento // 1 = débito, 2 = crédito
+  }) {
+    const pool = await poolPromise;
+
+    const resultUsuario = await pool.request()
+      .input("identificador", sql.VarChar, identificadorTendero)
+      .query(`
+        SELECT IdUsuarioFinal, CupoDisponible
+        FROM UsuarioFinal
+        WHERE Cedula_Usuario = @identificador
+      `);
+
+    if (!resultUsuario.recordset.length) {
+      throw new Error("Usuario no encontrado con ese identificador.");
+    }
+
+    const { IdUsuarioFinal: idUsuarioFinal, CupoDisponible } = resultUsuario.recordset[0];
+
+    const MOVEMENT_STATE_CONFIRMED = 1;
+
+    // Insertar movimiento
+    await pool.request()
+      .input("idUsuarioFinal", sql.Int, idUsuarioFinal)
+      .input("tipoMovimiento", sql.Int, tipoMovimiento)
+      .input("monto", sql.Decimal(18, 2), monto)
+      .input("descripcion", sql.VarChar, descripcion || null)
+      .input("fechaProgramada", sql.Date, fechaPagoProgramado || null)
+      .input("idMedioPago", sql.Int, idMedioPago || null)
+      .input("nroFacturaAlpina", sql.VarChar, nroFacturaAlpina || null)
+      .input("telefonoTransportista", sql.VarChar, telefonoTransportista || null)
+      .query(`
+        INSERT INTO EstadoCuentaMovimientos (
+          IdUsuarioFinal,
+          IdTipoMovimiento,
+          IdEstadoMovimiento,
+          Monto,
+          Descripcion,
+          FechaPagoProgramado,
+          IdMedioPago,
+          NroFacturaAlpina,
+          TelefonoTransportista
+        )
+        VALUES (
+          @idUsuarioFinal,
+          @tipoMovimiento,
+          ${MOVEMENT_STATE_CONFIRMED},
+          @monto,
+          @descripcion,
+          @fechaProgramada,
+          @idMedioPago,
+          @nroFacturaAlpina,
+          @telefonoTransportista
+        )
+      `);
+
+    // Calcular nuevo saldo
+    const nuevoSaldo = tipoMovimiento === 2
+      ? CupoDisponible + monto
+      : CupoDisponible - monto;
+
+    // Actualizar el saldo
+    await pool.request()
+      .input("idUsuarioFinal", sql.Int, idUsuarioFinal)
+      .input("nuevoSaldo", sql.Decimal(18, 2), nuevoSaldo)
+      .query(`
+        UPDATE UsuarioFinal
+        SET CupoDisponible = @nuevoSaldo
+        WHERE IdUsuarioFinal = @idUsuarioFinal
+      `);
+
+    return { mensaje: "Movimiento registrado y saldo actualizado exitosamente" };
+  },
+  
   async obtenerEstadoCuentaPorCedula(cedula) {
     const pool = await poolPromise;
     const query = `

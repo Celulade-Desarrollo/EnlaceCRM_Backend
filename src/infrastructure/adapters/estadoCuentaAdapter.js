@@ -6,6 +6,10 @@ export class EstadoCuentaAdapter extends EstadoCuentaPort {
     return await estadoCuentaRepository.obtenerEstadoCuentaPorCedula(identificadorTendero);
   }
 
+  async registrarMovimiento(movimiento) {
+    return await estadoCuentaRepository.registrarMovimiento(movimiento);
+  }
+
   async calcularDeudaTotal(identificadorTendero) {
     return await estadoCuentaRepository.calcularDeudaTotal(identificadorTendero);
   }
@@ -30,5 +34,3 @@ export class EstadoCuentaAdapter extends EstadoCuentaPort {
     return await estadoCuentaRepository.registrarPago(pago);
   }
 }
-
-// export const estadoCuentaAdapter = new EstadoCuentaAdapter();

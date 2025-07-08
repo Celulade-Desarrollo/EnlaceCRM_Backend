@@ -1,26 +1,42 @@
 import express from "express";
-import { confirmarPagoController } from "../controllers/confirmarPago.controller.js";
+import { registrarMovimientoController } from "../controllers/movimientoCuenta.controller.js";
 
 const router = express.Router();
 
 /**
  * @swagger
- * /api/pagos/confirmar:
+ * /api/movimientos:
  *   post:
- *     summary: Registra un pago confirmado para un tendero
+ *     summary: Registra un movimiento financiero (pago, abono, ajuste, interés o comisión) y actualiza el saldo del tendero
  *     tags:
- *       - Pagos
+ *       - Movimientos
  *     requestBody:
  *       required: true
  *       content:
  *         application/json:
  *           schema:
  *             type: object
+ *             required:
+ *               - identificadorTendero
+ *               - monto
+ *               - tipoMovimiento
  *             properties:
  *               identificadorTendero:
  *                 type: string
  *               monto:
- *                 type: number
+ *                  type: number
+ *                  format: float
+ *                  example: 100000               
+ *               tipoMovimiento:
+ *                  type: integer
+ *                  enum: [1, 2]
+ *                  description: >
+ *                  Tipo de movimiento:
+ *                  - 1 = PAGO (Débito resta del saldo)
+ *                  - 2 = ABONO (Crédito suma al saldo)
+ *                  - 3 = AJUSTE
+ *                  - 4 = INTERES
+ *                  - 5 = COMISION
  *               descripcion:
  *                 type: string
  *               fechaPagoProgramado:
@@ -34,15 +50,16 @@ const router = express.Router();
  *                 type: string
  *     responses:
  *       201:
- *         description: Pago registrado correctamente
+ *         description: Movimiento registrado correctamente
  *       400:
  *         description: Parámetros inválidos
  *       500:
  *         description: Error interno del servidor
  */
-router.post("/api/pagos/confirmar", confirmarPagoController);
+router.post("/api/movimientos", registrarMovimientoController);
 
 export default router;
+
 
 // import express from "express";
 // import { confirmarPagoController } from "../controllers/confirmarPago.controller.js";
@@ -62,23 +79,22 @@ export default router;
 //  *         application/json:
 //  *           schema:
 //  *             type: object
-//  *             required:
-//  *               - identificadorTendero
-//  *               - monto
 //  *             properties:
 //  *               identificadorTendero:
 //  *                 type: string
-//  *                 description: Identificador del tendero (cédula o ID interno)
 //  *               monto:
 //  *                 type: number
-//  *                 description: Monto a pagar
 //  *               descripcion:
 //  *                 type: string
-//  *                 description: Descripción del pago
 //  *               fechaPagoProgramado:
 //  *                 type: string
 //  *                 format: date
-//  *                 description: Fecha programada del pago
+//  *               idMedioPago:
+//  *                 type: integer
+//  *               nroFacturaAlpina:
+//  *                 type: string
+//  *               telefonoTransportista:
+//  *                 type: string
 //  *     responses:
 //  *       201:
 //  *         description: Pago registrado correctamente
