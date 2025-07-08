@@ -1,4 +1,5 @@
-import { userAccountService } from "../../services/userAccountServiceInstance";
+import { userAccountService } from "../../services/userAccountServiceInstance.js";
+
 
 export async function deleteUserUserAccountById(id) {
 

@@ -1,6 +1,5 @@
 import { UserAccountPort } from "../../domain/ports/UserAccountPort.js";
 import { userAccountRepository } from "../repositories/userAccount.repository.js";
-import jwt from "jsonwebtoken";
 
 export class UserAccountAdapter extends UserAccountPort {
 
@@ -23,8 +22,12 @@ export class UserAccountAdapter extends UserAccountPort {
     async eliminarPorIdFlujoRegistro(id) {
         return await userAccountRepository.eliminarPorIdFlujoRegistro(id)
     }
+    async validarCuentaCedula(cedula){
+        return await userAccountRepository.validarCuentaCedula(cedula)
+     }
 
-    async traerSaldo(idUsuario){
+     async traerSaldo(idUsuario){
         return await userAccountRepository.traerSaldo(idUsuario)
     }
+    
 }
