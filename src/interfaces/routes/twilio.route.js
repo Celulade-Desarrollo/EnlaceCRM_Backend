@@ -1,6 +1,6 @@
 import express from "express";
 import { sendOTP, verifyOTP } from "../controllers/twilio.controller.js";
-import { buscarUsuarioPorTelefono } from "../middleware/phone_middleware.js";
+import { buscarUsuarioPorTelefono } from "../middleware/cedula_middleware.js";
 
 const twilioRouter = express.Router();
 

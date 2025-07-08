@@ -41,7 +41,12 @@ export const scoringRepository = {
     const result = await pool
       .request()
       .input("Estado", sql.NVarChar, estado)
-      .query("SELECT * FROM FlujosRegistroEnlaceScoring WHERE Estado = @Estado");
+      .query(`
+        SELECT s.*, fr.Nombres, fr.Primer_Apellido
+        FROM FlujosRegistroEnlaceScoring s
+        JOIN FlujosRegistroEnlace fr ON s.IdFlujoRegistro = fr.Id
+        WHERE s.Estado = @Estado
+      `);
 
     return result.recordset;
   },
