@@ -1,4 +1,5 @@
 import { getEstadoCuentaUseCase } from "../../application/usecases/pagos/getEstadoCuentaUseCase.js";
+import { logger } from "../../config/logger.js";
 
 export const obtenerEstadoCuentaController = async (req, res) => {
   try {
@@ -12,10 +13,15 @@ export const obtenerEstadoCuentaController = async (req, res) => {
     res.status(200).json(estadoCuenta);
 
   } catch (error) {
-    console.error("Error en el controlador EstadoCuenta:", error.message);
+    logger.error("Error en el controlador EstadoCuenta", {
+      message: error.message,
+      stack: error.stack,
+      tendero: req.query?.identificadorTendero
+    });
 
     const isValidationError =
       error.name === 'ValidationError' || error.code === 'VALIDATION_ERROR';   
+
     const statusCode = isValidationError ? 400 : 500;
     const mensaje = isValidationError
       ? error.message
@@ -24,3 +30,4 @@ export const obtenerEstadoCuentaController = async (req, res) => {
     res.status(statusCode).json({ mensaje });
   }
 };
+

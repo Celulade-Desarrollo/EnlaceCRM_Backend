@@ -4,12 +4,24 @@ export class Movimiento {
       throw new Error("identificadorTendero debe ser una cadena válida no vacía");
     }
 
-    const numericMonto = parseFloat(monto);
-    if (!monto || isNaN(numericMonto) || numericMonto <= 0) {
-      throw new Error("monto debe ser un número positivo válido");
+    if (monto === undefined || monto === null || monto === '') {
+      throw new Error("monto es requerido");
     }
 
-    if (!tipoMovimiento || ![1, 2, 3, 4, 5].includes(tipoMovimiento)) {
+    const numericMonto = Number(monto);
+    const TIPOS_MOVIMIENTO = {
+      DEBITO: 1,
+      CREDITO: 2,
+      AJUSTE: 3,
+      REVERSO: 4,
+      TRANSFERENCIA: 5
+    };
+
+    const TIPOS_MOVIMIENTO_VALIDOS = Object.values(TIPOS_MOVIMIENTO);
+
+    if (!tipoMovimiento || !TIPOS_MOVIMIENTO_VALIDOS.includes(tipoMovimiento)) {
+      throw new Error("tipoMovimiento debe ser un valor válido entre 1 y 5");
+    }    if (!tipoMovimiento || ![1, 2, 3, 4, 5].includes(tipoMovimiento)) {
       throw new Error("tipoMovimiento debe ser un valor válido entre 1 y 5");
     }
 

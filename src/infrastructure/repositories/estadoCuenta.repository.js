@@ -29,6 +29,44 @@ export const estadoCuentaRepository = {
 
     const idUsuarioFinal = resultUsuario.recordset[0].IdUsuarioFinal;
 
+    // const MOVEMENT_TYPE_PAYMENT = 2;
+    // const MOVEMENT_STATE_CONFIRMED = 1;
+
+    // const query = `
+    //   INSERT INTO EstadoCuentaMovimientos (
+    //     IdUsuarioFinal,
+    //     IdTipoMovimiento,
+    //     IdEstadoMovimiento,
+    //     Monto,
+    //     Descripcion,
+    //     FechaPagoProgramado,
+    //     IdMedioPago,
+    //     NroFacturaAlpina,
+    //     TelefonoTransportista
+    //   )
+    //   VALUES (
+    //     @idUsuarioFinal,
+    //     ${MOVEMENT_TYPE_PAYMENT},
+    //     ${MOVEMENT_STATE_CONFIRMED},
+    //     @monto,
+    //     @descripcion,
+    //     @fechaProgramada,
+    //     @idMedioPago,
+    //     @nroFacturaAlpina,
+    //     @telefonoTransportista
+    //   )
+    // `;
+
+    // await pool.request()
+    //   .input("idUsuarioFinal", sql.Int, idUsuarioFinal)
+    //   .input("monto", sql.Decimal(18, 2), monto)
+    //   .input("descripcion", sql.VarChar, descripcion || null)
+    //   .input("fechaProgramada", sql.Date, fechaPagoProgramado || null)
+    //   .input("idMedioPago", sql.Int, idMedioPago || null)
+    //   .input("nroFacturaAlpina", sql.VarChar, nroFacturaAlpina || null)
+    //   .input("telefonoTransportista", sql.VarChar, telefonoTransportista || null)
+    //   .query(query);
+
     const MOVEMENT_TYPE_PAYMENT = 2;
     const MOVEMENT_STATE_CONFIRMED = 1;
 
@@ -46,8 +84,8 @@ export const estadoCuentaRepository = {
       )
       VALUES (
         @idUsuarioFinal,
-        ${MOVEMENT_TYPE_PAYMENT},
-        ${MOVEMENT_STATE_CONFIRMED},
+        @tipoMovimiento,
+        @estadoMovimiento,
         @monto,
         @descripcion,
         @fechaProgramada,
@@ -59,6 +97,8 @@ export const estadoCuentaRepository = {
 
     await pool.request()
       .input("idUsuarioFinal", sql.Int, idUsuarioFinal)
+      .input("tipoMovimiento", sql.Int, MOVEMENT_TYPE_PAYMENT)
+      .input("estadoMovimiento", sql.Int, MOVEMENT_STATE_CONFIRMED)
       .input("monto", sql.Decimal(18, 2), monto)
       .input("descripcion", sql.VarChar, descripcion || null)
       .input("fechaProgramada", sql.Date, fechaPagoProgramado || null)
@@ -66,7 +106,7 @@ export const estadoCuentaRepository = {
       .input("nroFacturaAlpina", sql.VarChar, nroFacturaAlpina || null)
       .input("telefonoTransportista", sql.VarChar, telefonoTransportista || null)
       .query(query);
-
+      
     return { mensaje: "Pago registrado exitosamente" };
   },
 
@@ -150,7 +190,7 @@ export const estadoCuentaRepository = {
 
     return { mensaje: "Movimiento registrado y saldo actualizado exitosamente" };
   },
-  
+
   async obtenerEstadoCuentaPorCedula(cedula) {
     const pool = await poolPromise;
     const query = `

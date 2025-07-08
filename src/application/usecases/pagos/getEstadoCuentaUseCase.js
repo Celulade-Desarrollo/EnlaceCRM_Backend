@@ -1,5 +1,7 @@
 import { estadoCuentaService } from "../../services/estadoCuentaServiceInstance.js";
 import { EstadoCuenta } from "../../../domain/models/EstadoCuenta.js";
+import { logger } from '../../../config/logger.js';
+
 
 export async function getEstadoCuentaUseCase(idUsuarioFinal) {
   if (!idUsuarioFinal) {
@@ -23,7 +25,11 @@ export async function getEstadoCuentaUseCase(idUsuarioFinal) {
 
     return estadoCuenta;
   } catch (error) {
-    console.error("[UseCase][getEstadoCuenta] Error:", error.message);
+    logger.error("[UseCase][getEstadoCuenta] Error:", {
+      message: error.message,
+      stack: error.stack,
+      idUsuarioFinal
+    });
     throw new Error("No se pudo obtener el estado de cuenta");
   }
 }
