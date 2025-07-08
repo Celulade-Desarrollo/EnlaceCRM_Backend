@@ -10,7 +10,7 @@ async function loginUserAccount(req,res){
     } res.json(data)
     
   } catch (err) {
-    return res.status(500).send(err.message)
+    return res.status(err.status).send(err.message)
   }
 }
 

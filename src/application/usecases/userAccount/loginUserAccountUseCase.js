@@ -13,11 +13,11 @@ export async function loginUserAccountUseCase(nbCliente, nbAgenteComercial, toke
 
 
     const cuenta = await userAccountService.validarCuentaCedula(cedula)
-    if(!cuenta) throw new Error({
-        message: "Cuenta no encontrada",
-        nbCliente: nbCliente,
-        nbAgenteComercial: nbAgenteComercial
-    })
+    if(!cuenta){
+        const error = new Error("Error al verificar la cuenta")
+        error.status = 400
+        throw error
+    }
 
     const Token = token
     if(!Token) throw new Error("Falta parametro Token")
