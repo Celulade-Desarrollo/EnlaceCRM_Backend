@@ -1,5 +1,5 @@
-import { poolPromise } from "../persistence/database.js";
-import sql from "mssql";
+    import { poolPromise } from "../persistence/database.js";
+    import sql from "mssql";
 
 export const userAccountRepository = {
     async obtenerTodos() {
@@ -30,12 +30,11 @@ export const userAccountRepository = {
             .input("IdFlujoRegistro", sql.Int, input.IdFlujoRegistro)
             .input("Numero_Cliente", sql.NVarChar, input.Numero_Cliente)
             .input("CupoFinal", sql.NVarChar, input.CupoFinal)
-            .input("Contrasena", sql.NVarChar, input.Contrasena || null)
             .query(`
                 INSERT INTO UsuarioFinal (
-                    IdFlujoRegistro, Numero_Cliente, CupoFinal, Contrasena
+                    IdFlujoRegistro, Numero_Cliente, CupoFinal
                 ) VALUES (
-                    @IdFlujoRegistro, @Numero_Cliente, @CupoFinal, @Contrasena
+                    @IdFlujoRegistro, @Numero_Cliente, @CupoFinal
                 );
                 SELECT SCOPE_IDENTITY() AS insertedId;
             `);
@@ -61,5 +60,51 @@ export const userAccountRepository = {
                 WHERE Numero_Cliente = @Numero_Cliente
             `);
         return result.rowsAffected[0];
+    },
+    
+    async validarCuentaCedula(cedula){
+        const pool = await poolPromise;
+        // Verificar si es un usuario final
+        const usuario = await pool
+          .request()
+          .input("Cedula_Usuario", sql.NVarChar, cedula)
+          .query(`SELECT * FROM UsuarioFinal WHERE Cedula_Usuario = @Cedula_Usuario`);
+          return usuario.recordset[0]
+    },
+    async  traerSaldo(idUsuario) {
+        try {
+            const pool = await poolPromise; 
+            const result = await pool.request()
+                .input("idUsuario", sql.Int, idUsuario)
+                .query(`
+                    SELECT 
+                        u.IdUsuarioFinal,
+                        u.CupoFinal,
+                        u.CupoDisponible,
+                        m.FechaPagoProgramado,
+                        m.BloqueoMora
+                    FROM 
+                        UsuarioFinal u
+                    OUTER APPLY (
+                        SELECT TOP 1 
+                            FechaPagoProgramado,
+                            BloqueoMora
+                        FROM 
+                            EstadoCuentaMovimientos
+                        WHERE 
+                            EstadoCuentaMovimientos.IdUsuarioFinal = u.IdUsuarioFinal
+                        ORDER BY 
+                            FechaHoraMovimiento DESC
+                    ) m
+                    WHERE 
+                        u.IdUsuarioFinal = @idUsuario
+                `);
+    
+            return result.recordset[0]; // Devuelve solo el estado de cuenta del usuario
+        } catch (err) {
+            console.error("Error al traer saldo:", err);
+            throw err;
+        }
     }
+    
 };
