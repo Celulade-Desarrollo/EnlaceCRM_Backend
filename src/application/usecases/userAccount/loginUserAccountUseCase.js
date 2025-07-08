@@ -4,10 +4,11 @@ import { tokenGeneratorService } from "../../services/TokenGeneratorService.js";
 import { fetchNbCliente } from "../../services/fetchNbCliente.js";
 import { alpinaService } from '../../services/alpinaServiceInstance.js';
 import { AuthAlpinaAdapter } from '../../../infrastructure/adapters/AuthAlpinaAdapter.js';  
+import {fetchLoginAlpina} from '../../services/fetchAlpina.js';
 
 export async function loginUserAccountUseCase(nbCliente, nbAgenteComercial, token){
     const authAdapter = new AuthAlpinaAdapter();
-    const bearerToken = await authAdapter.obtenerToken();
+    const bearerToken = await fetchLoginAlpina();
 
     const cedula = await fetchNbCliente(nbCliente, nbAgenteComercial, bearerToken)
 
