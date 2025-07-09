@@ -68,7 +68,12 @@ export const userAccountRepository = {
         const usuario = await pool
           .request()
           .input("Cedula_Usuario", sql.NVarChar, cedula)
-          .query(`SELECT * FROM UsuarioFinal WHERE Cedula_Usuario = @Cedula_Usuario`);
+          .query(`            
+                SELECT * 
+                FROM EnlaceCRM.dbo.UsuarioFinal u 
+                JOIN EnlaceCRM.dbo.FlujosRegistroEnlace f ON u.IdFlujoRegistro = f.Id
+                WHERE f.Cedula_Cliente  = @Cedula_Usuario
+            `);
           return usuario.recordset[0]
     },
     async  traerSaldo(idUsuario) {
