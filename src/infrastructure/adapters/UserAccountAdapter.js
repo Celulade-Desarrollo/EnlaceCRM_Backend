@@ -22,9 +22,12 @@ export class UserAccountAdapter extends UserAccountPort {
     async eliminarPorIdFlujoRegistro(id) {
         return await userAccountRepository.eliminarPorIdFlujoRegistro(id)
     }
-
-
     async validarCuentaCedula(cedula){
-       return await userAccountRepository.validarCuentaCedula(cedula)
+        return await userAccountRepository.validarCuentaCedula(cedula)
+     }
+
+     async traerSaldo(idUsuario){
+        return await userAccountRepository.traerSaldo(idUsuario)
     }
+    
 }
