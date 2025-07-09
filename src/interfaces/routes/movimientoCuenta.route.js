@@ -1,5 +1,6 @@
 import express from "express";
 import { registrarMovimientoController } from "../controllers/movimientoCuenta.controller.js";
+import { authMiddleware } from "../middleware/token-middleware.js";
 
 const router = express.Router();
 
@@ -56,6 +57,6 @@ const router = express.Router();
  *       500:
  *         description: Error interno del servidor
  */
-router.post("/api/movimientos", registrarMovimientoController);
+router.post("/api/movimientos", authMiddleware, registrarMovimientoController);
 
 export default router;
