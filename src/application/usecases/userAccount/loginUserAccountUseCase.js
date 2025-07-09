@@ -12,7 +12,6 @@ export async function loginUserAccountUseCase(nbCliente, nbAgenteComercial, toke
 
     const cedula = await fetchNbCliente(nbCliente, nbAgenteComercial, bearerToken)
 
-
     const cuenta = await userAccountService.validarCuentaCedula(cedula)
     if(!cuenta){
         const error = new Error("Error al verificar la cuenta")
