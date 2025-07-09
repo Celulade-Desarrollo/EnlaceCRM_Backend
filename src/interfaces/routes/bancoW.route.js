@@ -7,6 +7,7 @@ import {
   updateCoreBancario,
   getExcel
 } from "../controllers/bancoW.controller.js";
+import { authMiddleware } from "../middleware/token-middleware.js";
 
 const bancoW = express.Router();
 
@@ -20,7 +21,7 @@ const bancoW = express.Router();
  *       200:
  *         description: Lista de registros
  */
-bancoW.get("/api/bancow", getAllBancoW);
+bancoW.get("/api/bancow", authMiddleware, getAllBancoW);
 
 
 /**
@@ -33,7 +34,7 @@ bancoW.get("/api/bancow", getAllBancoW);
  *       200:
  *         description: Lista de registros
  */
-bancoW.get("/api/excel", getExcel);
+bancoW.get("/api/excel", authMiddleware, getExcel);
 
 
 
@@ -54,7 +55,7 @@ bancoW.get("/api/excel", getExcel);
  *       200:
  *         description: Registro encontrado
  */
-bancoW.get("/api/bancow/:id", getByFlujoIdBancoW);
+bancoW.get("/api/bancow/:id", authMiddleware, getByFlujoIdBancoW);
 
 /**
  * @swagger
@@ -79,7 +80,7 @@ bancoW.get("/api/bancow/:id", getByFlujoIdBancoW);
  *       201:
  *         description: Registro creado
  */
-bancoW.post("/api/bancow", createBancoW);
+bancoW.post("/api/bancow", authMiddleware, createBancoW);
 
 /**
  * @swagger
@@ -98,7 +99,7 @@ bancoW.post("/api/bancow", createBancoW);
  *       200:
  *         description: Registro eliminado
  */
-bancoW.delete("/api/bancow/:id", deleteBancoWbyId);
+bancoW.delete("/api/bancow/:id", authMiddleware, deleteBancoWbyId);
 
 /**
  * @swagger
@@ -141,6 +142,6 @@ bancoW.delete("/api/bancow/:id", deleteBancoWbyId);
  *       500:
  *         description: Error del servidor
  */
-bancoW.put("/api/coreBancario/:id", updateCoreBancario)
+bancoW.put("/api/coreBancario/:id", authMiddleware, updateCoreBancario)
 
 export default bancoW;

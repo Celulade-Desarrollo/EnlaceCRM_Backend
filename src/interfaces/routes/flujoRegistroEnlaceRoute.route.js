@@ -15,6 +15,7 @@ import {
 
 import { buscarUsuarioPorTelefono } from "../middleware/cedula_middleware.js";
 import { sendOTP, verifyOTP } from "../controllers/twilio.controller.js";
+import { authMiddleware } from "../middleware/token-middleware.js";
 
 /**
  * @swagger
@@ -34,7 +35,7 @@ import { sendOTP, verifyOTP } from "../controllers/twilio.controller.js";
  *       200:
  *         description: OTP enviado
  */
-flujoRegistroEnlace.post("/api/twilio/send", buscarUsuarioPorTelefono, sendOTP);
+flujoRegistroEnlace.post("/api/twilio/send", sendOTP);
 
 /**
  * @swagger
@@ -119,11 +120,13 @@ flujoRegistroEnlace.post("/api/flujoRegistroEnlace", createRegistro);
  *   get:
  *     summary: Obtener todos los registros
  *     tags: [FlujoRegistroEnlace]
+ *     security:
+ *       - bearerAuth: []
  *     responses:
  *       200:
  *         description: Lista de registros
  */
-flujoRegistroEnlace.get("/api/flujoRegistroEnlace", getAll);
+flujoRegistroEnlace.get("/api/flujoRegistroEnlace", authMiddleware, getAll);
 
 /**
  * @swagger
@@ -135,7 +138,7 @@ flujoRegistroEnlace.get("/api/flujoRegistroEnlace", getAll);
  *       200:
  *         description: Registros encontrados
  */
-flujoRegistroEnlace.get("/api/flujoRegistroEnlace/estado/pendiente", getByEstado);
+flujoRegistroEnlace.get("/api/flujoRegistroEnlace/estado/pendiente", authMiddleware, getByEstado);
 
 /**
  * @swagger
@@ -161,7 +164,7 @@ flujoRegistroEnlace.get("/api/flujoRegistroEnlace/estado/pendiente", getByEstado
  *       200:
  *         description: Estado actualizado
  */
-flujoRegistroEnlace.put("/api/flujoRegistroEnlace/estado/pendiente/:id", updateEstadoById);
+flujoRegistroEnlace.put("/api/flujoRegistroEnlace/estado/pendiente/:id", authMiddleware, updateEstadoById);
 
 /**
  * @swagger
@@ -179,7 +182,7 @@ flujoRegistroEnlace.put("/api/flujoRegistroEnlace/estado/pendiente/:id", updateE
  *       200:
  *         description: Registro encontrado
  */
-flujoRegistroEnlace.get("/api/flujoRegistroEnlace/:id", getById);
+flujoRegistroEnlace.get("/api/flujoRegistroEnlace/:id", authMiddleware, getById);
 
 /**
  * @swagger
@@ -197,7 +200,7 @@ flujoRegistroEnlace.get("/api/flujoRegistroEnlace/:id", getById);
  *       200:
  *         description: Registro encontrado
  */
-flujoRegistroEnlace.get("/api/flujoRegistroEnlace/alpina/:alpinaId", getByAlpina);
+flujoRegistroEnlace.get("/api/flujoRegistroEnlace/alpina/:alpinaId", authMiddleware, getByAlpina);
 
 /**
  * @swagger
@@ -215,7 +218,7 @@ flujoRegistroEnlace.get("/api/flujoRegistroEnlace/alpina/:alpinaId", getByAlpina
  *       200:
  *         description: Registro eliminado
  */
-flujoRegistroEnlace.delete("/api/flujoRegistroEnlace/:id", deleteById);
+flujoRegistroEnlace.delete("/api/flujoRegistroEnlace/:id", authMiddleware, deleteById);
 
 /**
  * @swagger
@@ -233,7 +236,7 @@ flujoRegistroEnlace.delete("/api/flujoRegistroEnlace/:id", deleteById);
  *       200:
  *         description: Registro encontrado
  */
-flujoRegistroEnlace.get("/api/flujoRegistroEnlace/num/:Numero_Celular", getBynumber);
+flujoRegistroEnlace.get("/api/flujoRegistroEnlace/num/:Numero_Celular", authMiddleware, getBynumber);
 
 export default flujoRegistroEnlace;
 

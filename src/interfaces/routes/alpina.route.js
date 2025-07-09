@@ -1,5 +1,6 @@
 import express from "express";
 import { obtenerFacturas } from "../controllers/alpina.controller.js";
+import { authMiddleware } from "../middleware/token-middleware.js";
 
 const router = express.Router();
 
@@ -23,6 +24,6 @@ const router = express.Router();
  *       500:
  *         description: Error al consultar Alpina
  */
-router.get("/api/pagos/facturas-pendientes", obtenerFacturas);
+router.get("/api/pagos/facturas-pendientes", authMiddleware, obtenerFacturas);
 
 export default router;

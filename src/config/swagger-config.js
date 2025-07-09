@@ -9,6 +9,20 @@ const options = {
       version: "1.0.0",
       description: "Documentación generada con Swagger para EnlaceCRM Backend",
     },
+    components: {
+      securitySchemes: {
+        bearerAuth: {
+          type: 'http',
+          scheme: 'bearer',
+          bearerFormat: 'JWT',
+        },
+      },
+    },
+    security: [
+      {
+        bearerAuth: [],
+      },
+    ],
   },
   apis: ["src/interfaces/routes/*.js"], // ✅ Ruta corregida
 };

@@ -3,6 +3,7 @@ const truora = express.Router();
 
 // Controladores
 import { truoraInfo } from "../controllers/truora.controller.js";
+import { authMiddleware } from "../middleware/token-middleware.js";
 
 /**
  * @swagger
@@ -14,6 +15,6 @@ import { truoraInfo } from "../controllers/truora.controller.js";
  *       200:
  *         description: Validación exitosa con Truora
  */
-truora.get("/api/truora", truoraInfo);
+truora.get("/api/truora", authMiddleware, truoraInfo);
 
 export default truora;
