@@ -13,7 +13,6 @@ import twilioRouter from "./interfaces/routes/twilio.route.js";
 import alpinaRouter from "./interfaces/routes/alpina.route.js";
 
 import estadoCuentaRouter from "./interfaces/routes/estadoCuenta.route.js";
-// import pagosRouter from "./interfaces/routes/confirmarPago.route.js"; 
 import UserAccountRoute from "./interfaces/routes/userAccount.route.js";
 import authRouter from "./interfaces/routes/auth.Routes.js"
 import adminRouter from "./interfaces/routes/adminAccount.route.js";
@@ -50,8 +49,6 @@ app.use(authRouter);
 app.use(alpinaRouter);
 app.use(estadoCuentaRouter);
 app.use(adminRouter)
-
-// app.use(pagosRouter); 
 app.use(movimientoCuentaRouter);
 
 // Puerto del servidor
