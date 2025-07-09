@@ -1,5 +1,5 @@
-import { poolPromise } from "../persistence/database.js";
-import sql from "mssql";
+    import { poolPromise } from "../persistence/database.js";
+    import sql from "mssql";
 
 export const userAccountRepository = {
     async obtenerTodos() {
@@ -70,5 +70,41 @@ export const userAccountRepository = {
           .input("Cedula_Usuario", sql.NVarChar, cedula)
           .query(`SELECT * FROM UsuarioFinal WHERE Cedula_Usuario = @Cedula_Usuario`);
           return usuario.recordset[0]
+    },
+    async  traerSaldo(idUsuario) {
+        try {
+            const pool = await poolPromise; 
+            const result = await pool.request()
+                .input("idUsuario", sql.Int, idUsuario)
+                .query(`
+                    SELECT 
+                        u.IdUsuarioFinal,
+                        u.CupoFinal,
+                        u.CupoDisponible,
+                        m.FechaPagoProgramado,
+                        m.BloqueoMora
+                    FROM 
+                        UsuarioFinal u
+                    OUTER APPLY (
+                        SELECT TOP 1 
+                            FechaPagoProgramado,
+                            BloqueoMora
+                        FROM 
+                            EstadoCuentaMovimientos
+                        WHERE 
+                            EstadoCuentaMovimientos.IdUsuarioFinal = u.IdUsuarioFinal
+                        ORDER BY 
+                            FechaHoraMovimiento DESC
+                    ) m
+                    WHERE 
+                        u.IdUsuarioFinal = @idUsuario
+                `);
+    
+            return result.recordset[0]; // Devuelve solo el estado de cuenta del usuario
+        } catch (err) {
+            console.error("Error al traer saldo:", err);
+            throw err;
+        }
     }
+    
 };

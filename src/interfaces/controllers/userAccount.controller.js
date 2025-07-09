@@ -3,6 +3,7 @@ import { getUserAccountByIdFlujoRegistro } from "../../application/usecases/user
 import { createUserAccountUseCase } from "../../application/usecases/userAccount/createUserAccountUseCase.js";
 import { deleteUserUserAccountById } from "../../application/usecases/userAccount/deleteUserAccountByIdUseCase.js";
 import { verifyUserAccountTypeUseCase } from "../../application/usecases/userAccount/verifyUserAccountTypeUseCase.js";
+import { saldoUserAccountUseCase } from "../../application/usecases/userAccount/saldoUserAccountUseCase.js";
 
 export async function AccountType(req, res){
   const Cedula = req.params.Cedula
@@ -55,6 +56,16 @@ export async function createUserAccount(req, res) {
 export async function deleteUserAccountById(req, res) {
   try {
     const result = await deleteUserUserAccountById(req.params.id);
+    res.status(200).json(result);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+}
+
+export async function getSaldoUsuario(req,res){
+  try {
+    const idUsuario = req.params.idUsuario
+    const result = await saldoUserAccountUseCase(idUsuario);
     res.status(200).json(result);
   } catch (err) {
     res.status(500).json({ error: err.message });

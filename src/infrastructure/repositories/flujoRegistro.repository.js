@@ -65,6 +65,8 @@ export const flujoRegistroRepository = {
       .input("Gastos_Mensuales", sql.NVarChar, input.Gastos_Mensuales)
       .input("Deuda_Mensual", sql.NVarChar, input.Deuda_Mensual)
       .input("Ingresos_Diferentes_Negocio", sql.NVarChar, input.Ingresos_Diferentes_Negocio)
+      .input("nbCliente", sql.VarChar, input.nbCliente)
+      .input("nbAgenteComercial", sql.VarChar, input.nbAgenteComercial)
       .query(`
         INSERT INTO FlujosRegistroEnlace (
           Estado, Numero_de_Cliente_Alpina, Cedula_Cliente, Autorizacion_Habeas_Data,
@@ -88,7 +90,8 @@ export const flujoRegistroRepository = {
           @Barrio, @Numero_de_neveras, @Registrado_Camara_Comercio, @Rango_de_Ingresos,
           @Persona_expuesta_politicamente_PEP, @Familiar_expuesto_politicamente_PEP,
           @Operaciones_moneda_extranjera, @Declaracion_residencia_fiscal, @Confirmacion_Identidad, @Cedula_Conyuge, @Nombre_Conyuge,@Apellido_Conyuge,
-          @Valor_Bienes, @Valor_Deudas, @Gastos_Mensuales, @Deuda_Mensual, @Ingresos_Diferentes_Negocio
+          @Valor_Bienes, @Valor_Deudas, @Gastos_Mensuales, @Deuda_Mensual, @Ingresos_Diferentes_Negocio,
+          @nbCliente, @nbAgenteComercial,
         )
       `);
   },

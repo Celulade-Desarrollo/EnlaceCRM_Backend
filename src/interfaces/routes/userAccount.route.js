@@ -4,10 +4,9 @@ import {
   getUserAccountById,
   createUserAccount,
   deleteUserAccountById,
-  AccountType
+  AccountType,
+  getSaldoUsuario
 } from "../controllers/userAccount.controller.js";
-
-import { buscarUsuarioPorTelefono } from "../middleware/cedula_middleware.js";
 
 const UserAccountRoute = Router();
 
@@ -50,6 +49,27 @@ UserAccountRoute.get("/api/user", getAllUserAccounts);
  *         description: No encontrado
  */
 UserAccountRoute.get("/api/user/:id", getUserAccountById);
+
+/**
+ * @swagger
+ * /api/user/estado-cuenta/{idUsuario}:
+ *   get:
+ *     summary: Obtener una el estado de cuenta de usuario por IdUsuario
+ *     tags: [UserAccount]
+ *     parameters:
+ *       - in: path
+ *         name: idUsuario
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: estado de la cuenta
+ *     responses:
+ *       200:
+ *         description: Cuenta encontrada
+ *       404:
+ *         description: No encontrado
+ */
+UserAccountRoute.get("/api/user/estado-cuenta/:idUsuario", getSaldoUsuario);
 
 /**
  * @swagger
