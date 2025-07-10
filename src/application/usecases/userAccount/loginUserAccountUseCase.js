@@ -26,7 +26,7 @@ export async function loginUserAccountUseCase(nbCliente, nbAgenteComercial, toke
     const tokenValidation = await tokenVerifierService.verifyToken(token)
     if(!tokenValidation) throw new Error("Token no valido");
 
-    const tokenTenderoEnlaceCRM = await tokenGeneratorService.generateToken(cuenta)
+    const tokenTenderoEnlaceCRM = await tokenGeneratorService.generateToken({cedula: cedula})
     if(!tokenTenderoEnlaceCRM) throw new Error("Falló la creación del token para el tendero")
 
     return{
@@ -34,7 +34,7 @@ export async function loginUserAccountUseCase(nbCliente, nbAgenteComercial, toke
         token: tokenTenderoEnlaceCRM,
         tipo: "usuario",
         state: "Authenticated",
-        idUsuario: cuenta.idUsuario
+        idUsuario: cuenta.IdUsuarioFinal
     }
 
 

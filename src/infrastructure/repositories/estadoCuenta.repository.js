@@ -1,3 +1,9 @@
+import { poolPromise } from "../persistence/database.js";
+import sql from "mssql";
+import { MOVEMENT_TYPES } from "../../constants/movement.constants.js";
+import { MOVEMENT_STATES } from "../../constants/movement.constants.js";
+import { MOVEMENT_TYPE_NAMES } from "../../constants/movement.constants.js";
+
 export const estadoCuentaRepository = {
   async registrarPago({
     identificadorTendero,
