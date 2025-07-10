@@ -33,7 +33,8 @@ export async function loginUserAccountUseCase(nbCliente, nbAgenteComercial, toke
      
         token: tokenTenderoEnlaceCRM,
         tipo: "usuario",
-        state: "Authenticated"
+        state: "Authenticated",
+        idUsuario: cuenta.idUsuario
     }
 
 
