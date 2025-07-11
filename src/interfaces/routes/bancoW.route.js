@@ -4,9 +4,10 @@ import {
   getByFlujoIdBancoW,
   createBancoW,
   deleteBancoWbyId,
-  createUserAccount,
-  getUserAccountById,
+  updateCoreBancario,
+  getExcel
 } from "../controllers/bancoW.controller.js";
+import { authMiddleware } from "../middleware/token-middleware.js";
 
 const bancoW = express.Router();
 
@@ -20,7 +21,22 @@ const bancoW = express.Router();
  *       200:
  *         description: Lista de registros
  */
-bancoW.get("/api/bancow", getAllBancoW);
+bancoW.get("/api/bancow", authMiddleware, getAllBancoW);
+
+
+/**
+ * @swagger
+ * /api/excel:
+ *   get:
+ *     summary: Obtener todos los registros de bancow con informacion del usuario
+ *     tags: [BancoW]
+ *     responses:
+ *       200:
+ *         description: Lista de registros
+ */
+bancoW.get("/api/excel", authMiddleware, getExcel);
+
+
 
 /**
  * @swagger
@@ -39,7 +55,7 @@ bancoW.get("/api/bancow", getAllBancoW);
  *       200:
  *         description: Registro encontrado
  */
-bancoW.get("/api/bancow/:id", getByFlujoIdBancoW);
+bancoW.get("/api/bancow/:id", authMiddleware, getByFlujoIdBancoW);
 
 /**
  * @swagger
@@ -64,7 +80,7 @@ bancoW.get("/api/bancow/:id", getByFlujoIdBancoW);
  *       201:
  *         description: Registro creado
  */
-bancoW.post("/api/bancow", createBancoW);
+bancoW.post("/api/bancow", authMiddleware, createBancoW);
 
 /**
  * @swagger
@@ -83,34 +99,13 @@ bancoW.post("/api/bancow", createBancoW);
  *       200:
  *         description: Registro eliminado
  */
-bancoW.delete("/api/bancow/:id", deleteBancoWbyId);
+bancoW.delete("/api/bancow/:id", authMiddleware, deleteBancoWbyId);
 
 /**
  * @swagger
- * /api/bancow/user:
- *   post:
- *     summary: Crear cuenta de usuario bancaria
- *     tags: [BancoW]
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             type: object
- *             example:
- *               nombreUsuario: juan123
- *               clave: secreto
- *     responses:
- *       201:
- *         description: Cuenta de usuario creada
- */
-bancoW.post("/api/bancow/user", createUserAccount);
-
-/**
- * @swagger
- * /api/bancow/user/{id}:
- *   get:
- *     summary: Obtener cuenta de usuario por ID de flujo
+ * /api/coreBancario/{id}:
+ *   put:
+ *     summary: Actualizar información del core bancario
  *     tags: [BancoW]
  *     parameters:
  *       - name: id
@@ -118,11 +113,35 @@ bancoW.post("/api/bancow/user", createUserAccount);
  *         required: true
  *         schema:
  *           type: string
- *         description: ID de flujo
+ *         description: ID del flujo de registro
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               Pagare_Digital_Firmado:
+ *                 type: string
+ *                 description: Estado del pagaré digital firmado
+ *               Creacion_Core_Bancario:
+ *                 type: string
+ *                 description: Estado de la creación del core bancario
+ *               UsuarioAprobado:
+ *                 type: string
+ *                 description: Usuario que aprobó la operación
+ *             example:
+ *               Pagare_Digital_Firmado: "Completado"
+ *               Creacion_Core_Bancario: "En proceso"
+ *               UsuarioAprobado: "usuario123"
  *     responses:
  *       200:
- *         description: Cuenta encontrada
+ *         description: Core bancario actualizado exitosamente
+ *       404:
+ *         description: Flujo de registro no encontrado
+ *       500:
+ *         description: Error del servidor
  */
-bancoW.get("/api/bancow/user/:id", getUserAccountById);
+bancoW.put("/api/coreBancario/:id", authMiddleware, updateCoreBancario)
 
 export default bancoW;

@@ -25,6 +25,7 @@ export const bancowRepository = {
     },
 
     async crearRegistro(input) {
+   
         const pool = await poolPromise;
         const result = await pool.request()
             .input("IdFlujoRegistro", sql.Int, input.IdFlujoRegistro)
@@ -42,10 +43,12 @@ export const bancowRepository = {
           @Pagare_Digital_Firmado, @Creacion_Core_Bancario, @UsuarioAprobado
         );
         SELECT SCOPE_IDENTITY() AS insertedId;
-      `);
+      `)
         return result.recordset[0].insertedId;
     },
 
+
+    
     async eliminarPorIdFlujoRegistro(idFlujoRegistro) {
         const pool = await poolPromise;
         const result = await pool.request()
@@ -62,5 +65,32 @@ export const bancowRepository = {
             .query("SELECT * FROM UsuarioFinal WHERE IdFlujoRegistro = @IdFlujoRegistro");
         return result.recordset[0];
     },
+
+    async actualizarCoreBancario(idFlujoRegistro, input) {
+        const pool = await poolPromise;
+        const { Pagare_Digital_Firmado, Creacion_Core_Bancario, UsuarioAprobado } = input;
+
+        await pool.request()
+            .input("IdFlujoRegistro", sql.Int, idFlujoRegistro)
+            .input("Pagare_Digital_Firmado", sql.NVarChar, Pagare_Digital_Firmado)
+            .input("Creacion_Core_Bancario", sql.NVarChar, Creacion_Core_Bancario)
+            .input("UsuarioAprobado", sql.NVarChar, UsuarioAprobado)
+            .query(`
+                UPDATE FlujosRegistroBancoW 
+                SET Pagare_Digital_Firmado = @Pagare_Digital_Firmado,
+                    Creacion_Core_Bancario = @Creacion_Core_Bancario,
+                    UsuarioAprobado = @UsuarioAprobado
+                WHERE IdFlujoRegistro = @IdFlujoRegistro
+            `);
+    },
+
+    async obtenerDatosExcel(){
+        const pool = await poolPromise;
+        const result = await pool.request().query("SELECT fre.*, fres.Estado as Estado_Scoring FROM FlujosRegistroEnlaceScoring fres INNER JOIN FlujosRegistroEnlace fre ON fres.IdFlujoRegistro = fre.Id");
+        return result.recordset;
+    }
+
+
 };
+
 

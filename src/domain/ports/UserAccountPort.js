@@ -22,5 +22,11 @@ export class UserAccountPort {
     async verificarToken(token, clave) {
         throw new Error("Method verificarToken not implemented")
     }
+
+    async validarCuentaCedula(cedula){
+        throw new Error("Method validarCuentaCedula not implemented")
+    }
+
+    
 }
 

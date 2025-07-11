@@ -57,6 +57,9 @@ export const flujoRegistroRepository = {
       .input("Operaciones_moneda_extranjera", sql.Bit, input.Operaciones_moneda_extranjera)
       .input("Declaracion_residencia_fiscal", sql.Bit, input.Declaracion_de_nacionalidad_y_residencia_fiscal_en_Colombia)
       .input("Confirmacion_Identidad", sql.Bit, input.Confirmacion_Identidad)
+      .input("Cedula_Conyuge", sql.NVarChar, input.Cedula_Conyuge)
+      .input("Nombre_Conyuge", sql.NVarChar, input.Nombre_Conyuge)
+      .input("Apellido_Conyuge", sql.NVarChar, input.Apellido_Conyuge)
       .query(`
         INSERT INTO FlujosRegistroEnlace (
           Estado, Numero_de_Cliente_Alpina, Cedula_Cliente, Autorizacion_Habeas_Data,
@@ -68,7 +71,7 @@ export const flujoRegistroRepository = {
           Barrio, Numero_de_neveras, Registrado_Camara_Comercio, Rango_de_Ingresos,
           Persona_expuesta_politicamente_PEP, Familiar_expuesto_politicamente_PEP,
           Operaciones_moneda_extranjera, Declaracion_de_nacionalidad_y_residencia_fiscal_en_Colombia,
-          Confirmacion_Identidad
+          Confirmacion_Identidad,Cedula_Conyuge, Nombre_Conyuge, Apellido_Conyuge
         ) VALUES (
           @Estado, @Numero_de_Cliente_Alpina, @Cedula_Cliente, @Autorizacion_Habeas_Data,
           @Autorizacion_Medios_de_Contacto, @Numero_Celular, @Correo_Electronico, @Nombres,
@@ -78,7 +81,7 @@ export const flujoRegistroRepository = {
           @Ubicacion_del_Negocio_Departamento, @Ubicacion_del_Negocio_Ciudad, @Direccion, @Detalles,
           @Barrio, @Numero_de_neveras, @Registrado_Camara_Comercio, @Rango_de_Ingresos,
           @Persona_expuesta_politicamente_PEP, @Familiar_expuesto_politicamente_PEP,
-          @Operaciones_moneda_extranjera, @Declaracion_residencia_fiscal, @Confirmacion_Identidad
+          @Operaciones_moneda_extranjera, @Declaracion_residencia_fiscal, @Confirmacion_Identidad, @Cedula_Conyuge, @Nombre_Conyuge,@Apellido_Conyuge
         )
       `);
   },
