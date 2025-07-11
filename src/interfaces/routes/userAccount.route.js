@@ -7,6 +7,7 @@ import {
   AccountType,
   getSaldoUsuario
 } from "../controllers/userAccount.controller.js";
+import { authMiddleware } from "../middleware/token-middleware.js";
 
 const UserAccountRoute = Router();
 
@@ -27,7 +28,7 @@ const UserAccountRoute = Router();
  *       200:
  *         description: Lista de cuentas de usuario
  */
-UserAccountRoute.get("/api/user", getAllUserAccounts);
+UserAccountRoute.get("/api/user", authMiddleware, getAllUserAccounts);
 
 /**
  * @swagger
@@ -48,7 +49,7 @@ UserAccountRoute.get("/api/user", getAllUserAccounts);
  *       404:
  *         description: No encontrado
  */
-UserAccountRoute.get("/api/user/:id", getUserAccountById);
+UserAccountRoute.get("/api/user/:id", authMiddleware, getUserAccountById);
 
 /**
  * @swagger
@@ -69,7 +70,7 @@ UserAccountRoute.get("/api/user/:id", getUserAccountById);
  *       404:
  *         description: No encontrado
  */
-UserAccountRoute.get("/api/user/estado-cuenta/:idUsuario", getSaldoUsuario);
+UserAccountRoute.get("/api/user/estado-cuenta/:idUsuario", authMiddleware, getSaldoUsuario);
 
 /**
  * @swagger
@@ -93,7 +94,7 @@ UserAccountRoute.get("/api/user/estado-cuenta/:idUsuario", getSaldoUsuario);
  *       400:
  *         description: Error de validación
  */
-UserAccountRoute.post("/api/user", createUserAccount);
+UserAccountRoute.post("/api/user", authMiddleware, createUserAccount);
 
 /**
  * @swagger
@@ -114,7 +115,7 @@ UserAccountRoute.post("/api/user", createUserAccount);
  *       404:
  *         description: No encontrado
  */
-UserAccountRoute.delete("/api/user/:id", deleteUserAccountById);
+UserAccountRoute.delete("/api/user/:id", authMiddleware, deleteUserAccountById);
 
 /**
  * @swagger
@@ -135,6 +136,6 @@ UserAccountRoute.delete("/api/user/:id", deleteUserAccountById);
  *       404:
  *         description: Usuario o Admin no encontrado
  */
-UserAccountRoute.get("/api/user/account/:Cedula", AccountType);
+UserAccountRoute.get("/api/user/account/:Cedula", authMiddleware, AccountType);
 
 export default UserAccountRoute; 

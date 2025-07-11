@@ -1,6 +1,7 @@
 import express from "express";
 import { sendOTP, verifyOTP } from "../controllers/twilio.controller.js";
 import { buscarUsuarioPorTelefono } from "../middleware/cedula_middleware.js";
+import { authMiddleware } from "../middleware/token-middleware.js";
 
 const twilioRouter = express.Router();
 
@@ -38,7 +39,7 @@ const twilioRouter = express.Router();
  *       500:
  *         description: Error interno del servidor
  */
-twilioRouter.post("/api/twilio/send", buscarUsuarioPorTelefono, sendOTP);
+twilioRouter.post("/api/twilio/send", authMiddleware, buscarUsuarioPorTelefono, sendOTP);
 
 /**
  * @swagger
@@ -72,6 +73,6 @@ twilioRouter.post("/api/twilio/send", buscarUsuarioPorTelefono, sendOTP);
  *       500:
  *         description: Error interno del servidor
  */
-twilioRouter.post("/api/twilio/verify", verifyOTP);
+twilioRouter.post("/api/twilio/verify", authMiddleware, verifyOTP);
 
 export default twilioRouter;
