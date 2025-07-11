@@ -24,7 +24,7 @@ const options = {
       },
     ],
   },
-  apis: ["src/interfaces/routes/*.js"], // ✅ Ruta corregida
+ apis: ["src/interfaces/routes/*.js", "src/interfaces/controllers/*.js"], // ✅ Ruta corregida
 };
 
 const swaggerSpec = swaggerJsDoc(options);

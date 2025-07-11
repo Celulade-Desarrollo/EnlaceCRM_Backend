@@ -9,8 +9,8 @@ import bancoW from "./interfaces/routes/bancoW.route.js";
 import scoring from "./interfaces/routes/scoring.route.js";
 import truora from "./interfaces/routes/truora.route.js";
 import twilioRouter from "./interfaces/routes/twilio.route.js";
+import ubicacionRoutes from "./interfaces/routes/ubicacion.routes.js";
 import alpinaRouter from "./interfaces/routes/alpina.route.js";
-
 import estadoCuentaRouter from "./interfaces/routes/estadoCuenta.route.js";
 import UserAccountRoute from "./interfaces/routes/userAccount.route.js";
 import authRouter from "./interfaces/routes/auth.Routes.js"
@@ -43,12 +43,14 @@ app.use(bancoW);
 app.use(scoring);
 app.use(truora);
 app.use(twilioRouter);
+app.use(ubicacionRoutes);
 app.use(UserAccountRoute)
 app.use(authRouter);
 app.use(alpinaRouter);
 app.use(estadoCuentaRouter);
 app.use(adminRouter)
 app.use(movimientoCuentaRouter);
+
 
 // Puerto del servidor
 const PORT = process.env.PORT || 3000;
