@@ -6,7 +6,7 @@ Un boilerplate o plantilla base para construir APIs RESTful utilizando Node.js, 
 
 -   **TypeScript**: Código tipado, robusto y más fácil de mantener.
 -   **Express.js**: Framework minimalista para construir el servidor web y las APIs.
--   **Mongoose**: Elegante modelado de objetos de MongoDB para Node.js.
+-   **SQL Server**: Elegante modelado deBase de Datos relacional para Node.js.
 -   **Variables de Entorno**: Configuración centralizada usando archivos `.env`.
 -   **Ejemplo de CRUD**: Implementación completa de operaciones Crear, Leer, Actualizar y Borrar para un modelo de `Usuario`.
 -   **Estructura Escalable**: El código está organizado en carpetas (rutas, controladores, modelos) para facilitar el crecimiento del proyecto.
@@ -46,9 +46,17 @@ Sigue estos pasos para poner en funcionamiento el proyecto en tu entorno local:
     ```
     Abre el archivo `.env` y modifica las variables según tu configuración.
     ```env
-    # URI de conexión a tu base de datos MongoDB
-    MONGODB_URI=mongodb://localhost/test
+    # URI de conexión a tu base de datos MSSQL
 
+    Edita el archivo `.env` para incluir los detalles de conexión a tu SQL Server:
+    ```    
+    # Detalles de conexión a SQL Server
+    DB_SERVER=your_server_address
+    DB_NAME=your_database_name
+    DB_USER=your_username
+    DB_PASSWORD=your_password
+
+    ```
     # Puerto en el que correrá el servidor
     PORT=3000
     ```
