@@ -8,8 +8,8 @@ export async function createUserAccountUseCase(input) {
     // Validaciones 
     cuenta.ValidarDatos()
 
-    if (!input || !input.IdFlujoRegistro || !input.CupoFinal || !input.Numero_Cliente) {
-        throw new Error("Faltan campos requeridos: IdFlujoRegistro, CupoFinal o Numero_Cliente");
+    if (!input || !input.IdFlujoRegistro || !input.CupoFinal || !input.Numero_Cliente || !input.Cedula_Usuario || !input.CupoDisponible) {
+        throw new Error("Faltan campos requeridos: IdFlujoRegistro, CupoFinal, Numero_Cliente, Cedula_Usuario, CupoDisponible");
     }
 
     const duplicado = await userAccountService.verificarDuplicados(cuenta.IdFlujoRegistro)
@@ -17,9 +17,8 @@ export async function createUserAccountUseCase(input) {
         throw new Error("Ya existe una cuenta con este mismo id")
     }
 
-
     await userAccountService.crearCuenta(cuenta)
-    await tokenService.generarTokenUsuario(cuenta)
+    //await tokenService.generarTokenUsuario(cuenta)
     return {
         mensaje: "Registro creado exitosamente",
     };

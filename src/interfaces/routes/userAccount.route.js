@@ -88,6 +88,8 @@ UserAccountRoute.get("/api/user/estado-cuenta/:idUsuario", authMiddleware, getSa
  *               IdFlujoRegistro: "123"
  *               CupoFinal: "10000"
  *               Numero_Cliente: "456"
+ *               CedulaUsuario: "789" 
+ *               CupoDisponible: "5000" 
  *     responses:
  *       201:
  *         description: Registro creado exitosamente
