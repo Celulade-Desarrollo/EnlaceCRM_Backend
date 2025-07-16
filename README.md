@@ -1,152 +1,137 @@
----
-title: Enlace CRM Backend
-author: Mildred M. Moreno L.
-date: 04-05-2025
----
-## Descripción General
+# TypeScript API Base
 
-Este backend está desarrollado en Node.js utilizando Express y MSSQL para la gestión de datos. Su objetivo es gestionar el flujo de registro de clientes, scoring, integración con BancoW, autenticación OTP vía Twilio y validaciones de usuarios.
+Un boilerplate o plantilla base para construir APIs RESTful utilizando Node.js, Express, TypeScript y Mongoose. Este proyecto proporciona una estructura sólida y un ejemplo de CRUD para empezar a desarrollar rápidamente.
 
----
+## ✨ Características (Features)
 
-## Estructura de Carpetas
+-   **TypeScript**: Código tipado, robusto y más fácil de mantener.
+-   **Express.js**: Framework minimalista para construir el servidor web y las APIs.
+-   **SQL Server**: Elegante modelado deBase de Datos relacional para Node.js.
+-   **Variables de Entorno**: Configuración centralizada usando archivos `.env`.
+-   **Ejemplo de CRUD**: Implementación completa de operaciones Crear, Leer, Actualizar y Borrar para un modelo de `Usuario`.
+-   **Estructura Escalable**: El código está organizado en carpetas (rutas, controladores, modelos) para facilitar el crecimiento del proyecto.
 
-- **controller/**: Lógica de negocio y acceso a datos.
-- **db/**: Configuración de la base de datos.
-- **middleware/**: Middlewares personalizados.
-- **routes/**: Definición de rutas de la API.
-- **test/**: Pruebas HTTP manuales.
-- **index.js**: Punto de entrada de la aplicación.
+## 📋 Requisitos Previos
 
----
+Asegúrate de tener instalado lo siguiente antes de comenzar:
 
-## Configuración de Base de Datos
+-   Node.js (v16 o superior recomendado)
+-   npm o yarn
+-   Una instancia de MongoDB corriendo (localmente o en un servicio en la nube).
 
-Archivo: `db/database.js`
+## 🚀 Instalación y Configuración
 
-- Utiliza variables de entorno (`.env`) para la configuración.
-- Conexión pool a SQL Server usando el paquete `mssql`.
+Sigue estos pasos para poner en funcionamiento el proyecto en tu entorno local:
 
----
+1.  **Clona el repositorio:**
+    (Recuerda reemplazar `TU_USUARIO/TU_REPOSITORIO` con los datos de tu repositorio de GitHub)
+    ```bash
+    git clone https://github.com/TU_USUARIO/TU_REPOSITORIO.git
+    cd TU_REPOSITORIO
+    ```
 
-## Middlewares
+2.  **Instala las dependencias:**
+    ```bash
+    npm install
+    ```
+    O si usas yarn:
+    ```bash
+    yarn install
+    ```
 
-### buscarUsuarioPorTelefono
+3.  **Configura las variables de entorno:**
+    Crea una copia del archivo `.env.example` y renómbrala a `.env`.
+    ```bash
+    cp .env.example .env
+    ```
+    Abre el archivo `.env` y modifica las variables según tu configuración.
+    ```env
+    # URI de conexión a tu base de datos MSSQL
 
-- Ubicación: `middleware/phone_middleware.js`
-- Busca un usuario o admin por número de teléfono en las tablas `UsuarioFinal` y `Admin`.
-- Si encuentra, añade el usuario y tipo al request y llama a `next()`.
-- Si no, responde 404.
+    Edita el archivo `.env` para incluir los detalles de conexión a tu SQL Server:
+    ```    
+    # Detalles de conexión a SQL Server
+    DB_SERVER=your_server_address
+    DB_NAME=your_database_name
+    DB_USER=your_username
+    DB_PASSWORD=your_password
 
----
+    ```
+    # Puerto en el que correrá el servidor
+    PORT=3000
+    ```
 
-## Rutas Principales
+## 📜 Scripts Disponibles
 
-### 1. Flujo de Registro Enlace
+Puedes usar los siguientes scripts definidos en `package.json`:
 
-Archivo: `routes/flujoRegistroEnlaceRoute.route.js`
+-   **`npm run dev`**: Inicia el servidor en modo de desarrollo usando `ts-node-dev`. El servidor se reiniciará automáticamente cada vez que hagas cambios en el código.
 
-| Método | Ruta                                         | Descripción                                                |
-| ------ | -------------------------------------------- | ---------------------------------------------------------- |
-| POST   | /api/flujoRegistroEnlace                     | Crea un nuevo registro de cliente.                         |
-| GET    | /api/flujoRegistroEnlace                     | Obtiene todos los registros.                               |
-| GET    | /api/flujoRegistroEnlace/:id                 | Obtiene un registro por ID.                                |
-| GET    | /api/flujoRegistroEnlace/alpina/:alpinaId    | Obtiene un registro por ID de Alpina.                      |
-| DELETE | /api/flujoRegistroEnlace/:id                 | Elimina un registro por ID.                                |
-| GET    | /api/flujoRegistroEnlace/num/:Numero_Celular | Obtiene un registro por número de celular.                 |
-| POST   | /api/twilio/send                             | Envía OTP (requiere middleware de validación de teléfono). |
-| POST   | /api/twilio/verify                           | Verifica OTP.                                              |
+-   **`npm run build`**: Compila el código de TypeScript a JavaScript. Los archivos resultantes se guardarán en la carpeta `dist`.
 
-#### Controlador: `controller/flujoRegistroEnlace.controller.js`
+-   **`npm run start`**: Ejecuta la aplicación en modo de producción desde la carpeta `dist`. Debes ejecutar `npm run build` antes de usar este comando.
 
-- **createRegistro**: Valida duplicados (cédula, celular, correo). Si existe, responde 400. Si no, inserta el registro.
-- **getAll**: Lista todos los registros.
-- **getById**: Busca por ID.
-- **getByAlpina**: Busca por ID de Alpina.
-- **getBynumber**: Busca por número de celular.
-- **deleteById**: Elimina por ID.
+## ⚙️ Endpoints de la API
 
-### 2. BancoW
+El proyecto incluye un conjunto de endpoints para gestionar usuarios.
 
-Archivo: `routes/bancoW.route.js`
+### Usuarios (`/users`)
 
-| Método | Ruta                 | Descripción                                 |
-| ------ | -------------------- | ------------------------------------------- |
-| GET    | /api/bancow          | Lista todos los registros BancoW            |
-| GET    | /api/bancow/:id      | Busca por IdFlujoRegistro                   |
-| POST   | /api/bancow          | Crea un nuevo registro BancoW               |
-| DELETE | /api/bancow/:id      | Elimina registro BancoW por IdFlujoRegistro |
-| POST   | /api/bancow/user     | Crea usuario final en dashboard             |
-| GET    | /api/bancow/user/:id | Obtiene usuario final por IdFlujoRegistro   |
+-   **`GET /users`**
+    -   Obtiene una lista de todos los usuarios.
+    -   **Respuesta Exitosa (200):**
+        ```json
+        [
+            {
+                "_id": "60d...e9d",
+                "name": "John Doe",
+                "email": "john.doe@example.com",
+                "password": "...",
+                "createdAt": "...",
+                "updatedAt": "..."
+            }
+        ]
+        ```
 
-#### Controlador: `controller/bancoW.controller.js`
-
-- **getAllBancoW**: Lista todos los registros.
-- **getByFlujoIdBancoW**: Busca por IdFlujoRegistro.
-- **createBancoW**: Inserta registro, valida duplicados.
-- **deleteBancoWbyId**: Elimina por IdFlujoRegistro.
-- **createUserAccount**: Crea usuario final.
-- **getUserAccountById**: Busca usuario final por IdFlujoRegistro.
-
-### 3. Scoring
-
-Archivo: `routes/scoring.route.js`
-
-| Método | Ruta             | Descripción                          |
-| ------ | ---------------- | ------------------------------------ |
-| GET    | /api/scoring     | Lista todos los registros de scoring |
-| GET    | /api/scoring/:id | Busca scoring por IdFlujoRegistro    |
-| POST   | /api/scoring     | Crea un nuevo registro de scoring    |
-
-#### Controlador: `controller/enlaceScoring.controller.js`
-
-- **getAllScoring**: Lista todos los registros.
-- **getScoringById**: Busca por IdFlujoRegistro.
-- **createScoring**: Inserta registro, valida duplicados.
-
-### 4. Truora
-
-Archivo: `routes/truora.route.js`
-
-| Método | Ruta        | Descripción                  |
-| ------ | ----------- | ---------------------------- |
-| GET    | /api/truora | Recibe información de Truora |
-
-#### Controlador: `controller/truora.controller.js`
-
-- **truoraInfo**: Recibe y muestra información de Truora.
+-   **`POST /users`**
+    -   Crea un nuevo usuario.
+    -   **Body (raw/json):**
+        ```json
+        {
+            "name": "Jane Doe",
+            "email": "jane.doe@example.com",
+            "password": "yoursecurepassword"
+        }
+        ```
+    -   **Respuesta Exitosa (200):** Devuelve el objeto del usuario creado.
 
 ---
 
-## Seguridad y Variables de Entorno
+### Usuario por ID (`/users/:id`)
 
-- `.env` contiene credenciales de base de datos y Twilio.
-- No subir este archivo a repositorios públicos.
+-   **`GET /users/:id`**
+    -   Obtiene un usuario específico por su ID.
+    -   **Respuesta Exitosa (200):** Devuelve el objeto del usuario.
 
----
+-   **`PUT /users/:id`**
+    -   Actualiza un usuario existente por su ID.
+    -   **Body (raw/json):** Puedes enviar cualquier campo que desees actualizar.
+        ```json
+        {
+            "name": "Jane Smith"
+        }
+        ```
+    -   **Respuesta Exitosa (200):** Devuelve el objeto del usuario actualizado.
 
-## Ejemplo de Flujo de Registro
+-   **`DELETE /users/:id`**
+    -   Elimina un usuario por su ID.
+    -   **Respuesta Exitosa (200):** Devuelve un mensaje de confirmación.
+        ```json
+        {
+            "message": "User Deleted"
+        }
+        ```
 
-1. El usuario envía datos a `/api/flujoRegistroEnlace`.
-2. El backend valida duplicados.
-3. Si no hay duplicados, inserta el registro y responde éxito.
-4. Se pueden consultar, eliminar o buscar registros por diferentes criterios.
+## 📄 Licencia
 
----
-
-## Dependencias Principales
-
-- express
-- mssql
-- dotenv
-- twilio
-
----
-
-## Contacto y Soporte
-
-Para dudas técnicas, contactar al equipo de desarrollo de Enlace CRM.
-
----
-
-_Documento generado automáticamente por GitHub Copilot, 27 de mayo de 2025._
+Este proyecto está bajo la Licencia MIT. Siéntete libre de usarlo y modificarlo.

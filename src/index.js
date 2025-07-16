@@ -12,14 +12,22 @@ import twilioRouter from "./interfaces/routes/twilio.route.js";
 import ubicacionRoutes from "./interfaces/routes/ubicacion.routes.js";
 import alpinaRouter from "./interfaces/routes/alpina.route.js";
 import estadoCuentaRouter from "./interfaces/routes/estadoCuenta.route.js";
+
+
+
+// import pagosRouter from "./interfaces/routes/confirmarPago.route.js"; 
+
 import UserAccountRoute from "./interfaces/routes/userAccount.route.js";
 import authRouter from "./interfaces/routes/auth.Routes.js"
 import adminRouter from "./interfaces/routes/adminAccount.route.js";
 import movimientoCuentaRouter from './interfaces/routes/movimientoCuenta.route.js';
 import validarMoraRouter from "./interfaces/routes/validarMora.route.js";
 
+
 import "./infrastructure/jobs/validarMora.job.js";
 
+// Importar la nueva ruta de movimientos
+import movimientoRouter from './interfaces/routes/movimiento.route.js';
 // Swagger
 import swaggerDocs from "./config/swagger-config.js";
 
@@ -53,6 +61,7 @@ app.use(estadoCuentaRouter);
 app.use(adminRouter)
 app.use(movimientoCuentaRouter);
 app.use(validarMoraRouter);
+app.use(movimientoRouter); // Registrar la nueva ruta en la aplicación
 
 
 // Puerto del servidor
@@ -75,4 +84,3 @@ async function startServer() {
 }
 
 startServer();
-
