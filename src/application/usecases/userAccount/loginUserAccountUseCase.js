@@ -23,7 +23,11 @@ export async function loginUserAccountUseCase(nbCliente, nbAgenteComercial, toke
     if(!Token) throw new Error("Falta parametro Token")
 
     const tokenValidation = await tokenVerifierService.verifyToken(token)
-    if(!tokenValidation) throw new Error("Token no valido");
+    if (!tokenValidation) {
+        const error = new Error("Token no valido");
+        error.status = 401;
+        throw error;
+    }
 
     const tokenTenderoEnlaceCRM = await tokenGeneratorService.generateToken({cedula: cedula})
     if(!tokenTenderoEnlaceCRM) throw new Error("Falló la creación del token para el tendero")
