@@ -82,4 +82,22 @@ async obtenerUFacturasAbonadas() {
   return result.recordset;
 },
 
+async desmarcarFacturasPagadas() {
+  const pool = await poolPromise;
+  const result = await pool.request()
+    .query(`
+      UPDATE m1
+      SET BloqueoMora = 0
+      FROM EstadoCuentaMovimientos m1
+      INNER JOIN EstadoCuentaMovimientos m2
+        ON m1.NroFacturaAlpina = m2.NroFacturaAlpina
+        AND m1.IdUsuarioFinal = m2.IdUsuarioFinal
+      WHERE m1.IdTipoMovimiento = 1
+        AND m1.BloqueoMora = 1
+        AND m2.IdTipoMovimiento = 2;
+    `);
+  console.log("Filas afectadas por desmarcarFacturasPagadas:", result.rowsAffected);
+}
+
+
 };

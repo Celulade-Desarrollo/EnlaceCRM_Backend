@@ -3,32 +3,23 @@ import { VerifyMoraAdapter } from "../../../infrastructure/adapters/verifyMoraAd
 export async function validarMoraUseCase() {
   const verifyMoraAdapter = new VerifyMoraAdapter();
 
-  const usuariosConPagosVencidos = await verifyMoraAdapter.obtenerUsuariosConPagosVencidos();
-  const facturasAbonadas = await verifyMoraAdapter.obtenerUFacturasAbonadas();
+  // limpiar facturas pagadas (desmarcar mora)
+console.log("Llamando a desmarcarFacturasPagadas()");
+await verifyMoraAdapter.desmarcarFacturasPagadas();
+console.log("Terminó desmarcarFacturasPagadas()");
 
-  // Set para busquedas rapidas de facturas pagadas por usuario
-  const facturasPagadasSet = new Set(
-    facturasAbonadas.map(f => `${f.IdUsuarioFinal},${f.NroFacturaAlpina}`)
-  );
+  const usuariosEnMora = await verifyMoraAdapter.obtenerUsuariosConPagosVencidos();
 
-  let totalMarcados = 0;
+  for (const usuario of usuariosEnMora) {
+    const { id, NroFacturaAlpina } = usuario;
 
-  for (const usuario of usuariosConPagosVencidos) {
-    const key = `${usuario.id}_${usuario.NroFacturaAlpina}`;
-    // si la factura no está en la lista de facturas pagadas, marcar en mora
-    if (!facturasPagadasSet.has(key)) {
-      try {
-        await verifyMoraAdapter.marcarUsuarioEnMora(usuario.id, usuario.NroFacturaAlpina);
-        console.log(`✅ Usuario ${usuario.id} marcado en mora (factura ${usuario.NroFacturaAlpina})`);
-        totalMarcados++;
-      } catch (err) {
-        console.error(`❌ Error al marcar en mora al usuario ${usuario.id}:`, err.message);
-      }
-    } else {
-      console.log(` Usuario ${usuario.id} factura ${usuario.NroFacturaAlpina} ya abonada, no se marca en mora.`);
+    try {
+      await verifyMoraAdapter.marcarUsuarioEnMora(id, NroFacturaAlpina);
+      console.log(`✅ Usuario ${id} marcado en mora (factura ${NroFacturaAlpina})`);
+    } catch (err) {
+      console.error(`❌ Error al marcar en mora al usuario ${id}:`, err.message);
     }
   }
 
-  return { totalMarcados };
+  return { totalMarcados: usuariosEnMora.length };
 }
-
