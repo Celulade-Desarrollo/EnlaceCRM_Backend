@@ -51,6 +51,6 @@ const validarMovimientoPago = async ({ cedula, tipoMovimiento, monto, nroFactura
   };
 };
 
-export const movimientoUseCase = {
+export const createMovimientoUseCase = {
   validarMovimientoPago,
 };

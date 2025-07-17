@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { validarMovimientoController } from "../controllers/movimiento.controller.js";
+import { validarMovimiento, crearMovimientoPago } from "../controllers/movimiento.controller.js";
 
 const router = Router();
 
@@ -7,14 +7,14 @@ const router = Router();
  * @swagger
  * tags:
  *   name: Movimientos
- *   description: API para la gestión de movimientos
+ *   description: Endpoints para la gestión de movimientos y pagos.
  */
 
 /**
  * @swagger
  * /api/movimiento/validar:
  *   post:
- *     summary: Valida un movimiento de pago antes de procesarlo
+ *     summary: Valida la información de un pago antes de procesarlo.
  *     tags: [Movimientos]
  *     requestBody:
  *       required: true
@@ -25,35 +25,68 @@ const router = Router();
  *             properties:
  *               cedula:
  *                 type: string
- *                 description: Cédula del tendero que realiza el pago.
+ *                 description: Cédula del usuario final.
  *                 example: "12345678"
- *               tipoMovimiento:
- *                 type: integer
- *                 description: "Tipo de movimiento. Debe ser 1 para 'Pago'."
- *                 example: 1
+ *               nrosFacturaAlpina:
+ *                 type: array
+ *                 items:
+ *                   type: string
+ *                 description: Arreglo con los números de las facturas a validar.
+ *                 example: ["F001", "F002"]
+ *     responses:
+ *       '200':
+ *         description: Validación exitosa. Devuelve el monto recomendado y el mínimo de pago.
+ *       '400':
+ *         description: Error de validación de negocio o datos de entrada incorrectos.
+ *       '500':
+ *         description: Error interno del servidor.
+ */
+router.post("/validar", validarMovimiento);
+
+/**
+ * @swagger
+ * /api/movimiento:
+ *   post:
+ *     summary: Crea un nuevo movimiento de pago y asocia las facturas correspondientes.
+ *     tags: [Movimientos]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               cedula:
+ *                 type: string
+ *                 example: "12345678"
  *               monto:
  *                 type: number
- *                 format: float
- *                 description: El monto que se desea pagar.
- *                 example: 150.50
- *               nroFactura:
+ *                 example: 250000.00
+ *               idMedioPago:
+ *                 type: integer
+ *                 example: 1
+ *               descripcion:
  *                 type: string
- *                 description: El número de la factura a pagar.
- *                 example: "F-00123"
+ *                 example: "Abono a facturas de Enero"
+ *               facturasSeleccionadas:
+ *                 type: array
+ *                 items:
+ *                   type: object
+ *                   properties:
+ *                     nroFacturaAlpina:
+ *                       type: string
+ *                       example: "F001"
+ *                     montoFacturaAlpina:
+ *                       type: number
+ *                       example: 250000.00
  *     responses:
- *       200:
- *         description: Movimiento válido. La solicitud es correcta y puede ser procesada.
- *       400:
- *         description: Error de validación o de negocio. La solicitud no puede ser procesada.
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 message:
- *                   type: string
- *                   example: "El tendero se encuentra bloqueado por mora y no puede realizar pagos."
+ *       '201':
+ *         description: Movimiento creado exitosamente.
+ *       '400':
+ *         description: Error de validación de negocio o datos de entrada incorrectos.
+ *       '500':
+ *         description: Error interno del servidor.
  */
-router.post("/api/movimiento/validar", validarMovimientoController);
+router.post("/", crearMovimientoPago);
 
 export default router;
