@@ -98,6 +98,4 @@ async desmarcarFacturasPagadas() {
     `);
   console.log("Filas afectadas por desmarcarFacturasPagadas:", result.rowsAffected);
 }
-
-
 };
