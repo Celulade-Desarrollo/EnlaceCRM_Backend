@@ -41,7 +41,7 @@ const router = Router();
  *       '500':
  *         description: Error interno del servidor.
  */
-router.post("/validar", validarMovimiento);
+router.post("/api/movimiento/validar", validarMovimiento);
 
 /**
  * @swagger
