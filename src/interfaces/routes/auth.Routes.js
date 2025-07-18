@@ -6,7 +6,7 @@ import { authMiddleware } from "../middleware/token-middleware.js";
 const authRouter = express.Router();
 
 // Define las rutas y apunta a los métodos del controlador
-/**
+/*
  * @swagger
  * /api/user/login:
  *   post:
