@@ -33,5 +33,9 @@ export class UserAccountAdapter extends UserAccountPort {
     async verificarNbCliente(nbCliente){
         return await userAccountRepository.verificarNbCliente(nbCliente)
     }
+
+    async verificarCuentaSimple(cedula){
+        return await userAccountRepository.verificarCuentaSimple(cedula)
+    }
     
 }
