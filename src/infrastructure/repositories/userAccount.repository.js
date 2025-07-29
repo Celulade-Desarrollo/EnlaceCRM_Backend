@@ -24,6 +24,17 @@ export const userAccountRepository = {
         return result.recordset.length > 0;
     },
 
+    
+    async verificarNbCliente(nbCliente) {
+        const pool = await poolPromise;
+        const result = await pool.request()
+            .input("nbCliente", sql.Int, nbCliete)
+            .query("SELECT * FROM FlujosRegistroEnlace WHERE nbCliente = @nbCliente");
+        return result.recordset[0];
+    },
+
+    
+
     async crearRegistro(input) {
         const pool = await poolPromise;
         const result = await pool.request()

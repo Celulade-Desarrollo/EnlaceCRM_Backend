@@ -29,5 +29,9 @@ export class UserAccountAdapter extends UserAccountPort {
      async traerSaldo(idUsuario){
         return await userAccountRepository.traerSaldo(idUsuario)
     }
+
+    async verificarNbCliente(nbCliente){
+        return await userAccountRepository.verificarNbCliente(nbCliente)
+    }
     
 }

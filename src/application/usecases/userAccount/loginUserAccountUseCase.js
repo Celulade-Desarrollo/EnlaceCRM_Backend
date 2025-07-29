@@ -11,11 +11,17 @@ export async function loginUserAccountUseCase(nbCliente, nbAgenteComercial, toke
     const bearerToken = await fetchLoginAlpina();
 
     const cedula = await fetchNbCliente(nbCliente, nbAgenteComercial, bearerToken)
-
     const cuenta = await userAccountService.validarCuentaCedula(cedula)
     if(!cuenta){
         const error = new Error("Error al verificar la cuenta")
         error.status = 400
+        throw error
+    }
+
+    const cuentaNbCliente = await userAccountService.verificarNbCliente(nbCliente)
+    if(cuentaNbCliente){
+        const error = new Error("Ya existe una solicitud de cuenta en proceso para nbCliente")
+        error.status = 412
         throw error
     }
 
