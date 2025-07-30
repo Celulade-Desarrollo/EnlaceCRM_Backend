@@ -24,6 +24,17 @@ export const userAccountRepository = {
         return result.recordset.length > 0;
     },
 
+    
+    async verificarNbCliente(nbCliente) {
+        const pool = await poolPromise;
+        const result = await pool.request()
+            .input("nbCliente", sql.VarChar(50), nbCliente)
+            .query("SELECT * FROM FlujosRegistroEnlace WHERE nbCliente = @nbCliente AND Estado = 'pendiente'");
+        return result.recordset[0];
+    },
+
+    
+
     async crearRegistro(input) {
         const pool = await poolPromise;
         const result = await pool.request()
@@ -75,6 +86,19 @@ export const userAccountRepository = {
                 FROM EnlaceCRM.dbo.UsuarioFinal u 
                 JOIN EnlaceCRM.dbo.FlujosRegistroEnlace f ON u.IdFlujoRegistro = f.Id
                 WHERE f.Cedula_Cliente  = @Cedula_Usuario
+            `);
+          return usuario.recordset[0]
+    },
+
+    async verificarCuentaSimple(cedula){
+        const pool = await poolPromise;
+        // Verificar si es un usuario final
+        const usuario = await pool
+          .request()
+          .input("Cedula_Cliente", sql.NVarChar, cedula)
+          .query(`            
+                SELECT * 
+                FROM EnlaceCRM.dbo.FlujosRegistroEnlace WHERE Cedula_Cliente  = @Cedula_Cliente
             `);
           return usuario.recordset[0]
     },
