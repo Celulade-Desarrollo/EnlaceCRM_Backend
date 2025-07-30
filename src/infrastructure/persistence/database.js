@@ -30,8 +30,7 @@ const dbConfig = {
 const poolPromise = new sql.ConnectionPool(dbConfig)
   .connect()
   .then((pool) => {
-    console.log("✅ Conectado a SQL Server");
-    console.log(process.env.DB_USER, process.env.DB_NAME, process.env.DB_PORT, process.env.DB_SERVER, process.env.DB_PASS)
+    console.log("✅ Conectado a SQL Server")
     return pool;
   })
   .catch((err) => {

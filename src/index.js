@@ -22,7 +22,7 @@ import authRouter from "./interfaces/routes/auth.Routes.js"
 import adminRouter from "./interfaces/routes/adminAccount.route.js";
 import movimientoCuentaRouter from './interfaces/routes/movimientoCuenta.route.js';
 import validarMoraRouter from "./interfaces/routes/validarMora.route.js";
-
+ 
 
 import "./infrastructure/jobs/validarMora.job.js";
 
@@ -84,3 +84,5 @@ async function startServer() {
 }
 
 startServer();
+
+ 
