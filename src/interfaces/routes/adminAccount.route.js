@@ -39,7 +39,7 @@ const adminRouter = express.Router();
  *       400:
  *         description: Error en la creación
  */
-adminRouter.post('/api/admin/create', authMiddleware, createUserAccount);
+adminRouter.post('/api/admin/create', createUserAccount);
 
 /**
  * @swagger

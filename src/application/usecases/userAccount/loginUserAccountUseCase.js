@@ -18,12 +18,15 @@ export async function loginUserAccountUseCase(nbCliente, nbAgenteComercial, toke
         throw error
     }
 
+
     const cuentaNbCliente = await userAccountService.verificarNbCliente(nbCliente)
     if(cuentaNbCliente){
         const error = new Error("Ya existe una solicitud de cuenta en proceso para nbCliente")
         error.status = 412
         throw error
     }
+
+    /*
 
     const Token = token
     if(!Token) throw new Error("Falta parametro Token")
@@ -34,11 +37,11 @@ export async function loginUserAccountUseCase(nbCliente, nbAgenteComercial, toke
         error.status = 401;
         throw error;
     }
-
+*/
     const tokenTenderoEnlaceCRM = await tokenGeneratorService.generateToken({cedula: cedula})
     if(!tokenTenderoEnlaceCRM) throw new Error("Falló la creación del token para el tendero")
 
-        console.log(cuenta)
+    console.log(cuenta)
 
     return{
      
