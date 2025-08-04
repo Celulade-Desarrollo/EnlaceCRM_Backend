@@ -24,3 +24,6 @@ jobs:
         run: |
           cd /home/s-appadm/EnlaceCRM_Backend
           pm2 restart index --update-env
+
+      - name: Reiniciar Nginx
+        run: sudo systemctl restart nginx
