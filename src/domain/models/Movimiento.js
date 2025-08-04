@@ -21,10 +21,7 @@ export class Movimiento {
 
     if (!tipoMovimiento || !TIPOS_MOVIMIENTO_VALIDOS.includes(tipoMovimiento)) {
       throw new Error("tipoMovimiento debe ser un valor válido entre 1 y 5");
-    }    if (!tipoMovimiento || ![1, 2, 3, 4, 5].includes(tipoMovimiento)) {
-      throw new Error("tipoMovimiento debe ser un valor válido entre 1 y 5");
     }
-
     this.identificadorTendero = identificadorTendero;
     this.monto = numericMonto;
     this.tipoMovimiento = tipoMovimiento;

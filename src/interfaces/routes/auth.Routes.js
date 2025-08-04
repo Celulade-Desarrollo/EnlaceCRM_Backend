@@ -1,11 +1,12 @@
 // Ruta: src/interfaces/routes/auth.Routes.js
 import express from "express";
 import { loginAdminAccount, loginUserAccount } from '../controllers/auth.controller.js'; // Importa el controlador delgado
+import { authMiddleware } from "../middleware/token-middleware.js";
 
 const authRouter = express.Router();
 
 // Define las rutas y apunta a los métodos del controlador
-/**
+/** 
  * @swagger
  * /api/user/login:
  *   post:

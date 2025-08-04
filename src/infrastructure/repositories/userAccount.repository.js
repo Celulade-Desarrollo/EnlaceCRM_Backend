@@ -24,17 +24,30 @@ export const userAccountRepository = {
         return result.recordset.length > 0;
     },
 
+    
+    async verificarNbCliente(nbCliente) {
+        const pool = await poolPromise;
+        const result = await pool.request()
+            .input("nbCliente", sql.VarChar(50), nbCliente)
+            .query("SELECT * FROM FlujosRegistroEnlace WHERE nbCliente = @nbCliente AND Estado = 'pendiente'");
+        return result.recordset[0];
+    },
+
+    
+
     async crearRegistro(input) {
         const pool = await poolPromise;
         const result = await pool.request()
             .input("IdFlujoRegistro", sql.Int, input.IdFlujoRegistro)
             .input("Numero_Cliente", sql.NVarChar, input.Numero_Cliente)
             .input("CupoFinal", sql.NVarChar, input.CupoFinal)
+            .input("Cedula_Usuario", sql.NVarChar, input.Cedula_Usuario)
+            .input("CupoDisponible",  sql.Decimal(18, 2), input.CupoDisponible)
             .query(`
                 INSERT INTO UsuarioFinal (
-                    IdFlujoRegistro, Numero_Cliente, CupoFinal
+                    IdFlujoRegistro, Numero_Cliente, CupoFinal, Cedula_Usuario, CupoDisponible
                 ) VALUES (
-                    @IdFlujoRegistro, @Numero_Cliente, @CupoFinal
+                    @IdFlujoRegistro, @Numero_Cliente, @CupoFinal, @Cedula_Usuario, @CupoDisponible
                 );
                 SELECT SCOPE_IDENTITY() AS insertedId;
             `);
@@ -68,7 +81,25 @@ export const userAccountRepository = {
         const usuario = await pool
           .request()
           .input("Cedula_Usuario", sql.NVarChar, cedula)
-          .query(`SELECT * FROM UsuarioFinal WHERE Cedula_Usuario = @Cedula_Usuario`);
+          .query(`            
+                SELECT * 
+                FROM EnlaceCRM.dbo.UsuarioFinal u 
+                JOIN EnlaceCRM.dbo.FlujosRegistroEnlace f ON u.IdFlujoRegistro = f.Id
+                WHERE f.Cedula_Cliente  = @Cedula_Usuario
+            `);
+          return usuario.recordset[0]
+    },
+
+    async verificarCuentaSimple(cedula){
+        const pool = await poolPromise;
+        // Verificar si es un usuario final
+        const usuario = await pool
+          .request()
+          .input("Cedula_Cliente", sql.NVarChar, cedula)
+          .query(`            
+                SELECT * 
+                FROM EnlaceCRM.dbo.FlujosRegistroEnlace WHERE Cedula_Cliente  = @Cedula_Cliente
+            `);
           return usuario.recordset[0]
     },
     async  traerSaldo(idUsuario) {

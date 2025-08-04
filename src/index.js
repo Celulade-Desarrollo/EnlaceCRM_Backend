@@ -1,5 +1,4 @@
 import "dotenv/config";
-// console.log("🔐 ALPINA_API_KEY:", process.env.ALPINA_API_KEY); // Remove in production
 import express from "express";
 import cors from "cors";
 import { poolPromise } from "./infrastructure/persistence/database.js";
@@ -10,16 +9,25 @@ import bancoW from "./interfaces/routes/bancoW.route.js";
 import scoring from "./interfaces/routes/scoring.route.js";
 import truora from "./interfaces/routes/truora.route.js";
 import twilioRouter from "./interfaces/routes/twilio.route.js";
+import ubicacionRoutes from "./interfaces/routes/ubicacion.routes.js";
 import alpinaRouter from "./interfaces/routes/alpina.route.js";
 import estadoCuentaRouter from "./interfaces/routes/estadoCuenta.route.js";
-import ubicacionRoutes from "./interfaces/routes/ubicacion.routes.js";
+import movimientoGetRouter from "./interfaces/routes/movimientoGet.routes.js";
+
+
 // import pagosRouter from "./interfaces/routes/confirmarPago.route.js"; 
+
 import UserAccountRoute from "./interfaces/routes/userAccount.route.js";
 import authRouter from "./interfaces/routes/auth.Routes.js"
 import adminRouter from "./interfaces/routes/adminAccount.route.js";
 import movimientoCuentaRouter from './interfaces/routes/movimientoCuenta.route.js';
+import validarMoraRouter from "./interfaces/routes/validarMora.route.js";
+ 
 
+import "./infrastructure/jobs/validarMora.job.js";
 
+// Importar la nueva ruta de movimientos
+import movimientoRouter from './interfaces/routes/movimiento.route.js';
 // Swagger
 import swaggerDocs from "./config/swagger-config.js";
 
@@ -51,10 +59,10 @@ app.use(authRouter);
 app.use(alpinaRouter);
 app.use(estadoCuentaRouter);
 app.use(adminRouter)
-
-// app.use(pagosRouter); 
 app.use(movimientoCuentaRouter);
-
+app.use(validarMoraRouter);
+app.use(movimientoRouter); // Registrar la nueva ruta en la aplicación
+app.use(movimientoGetRouter);
 
 // Puerto del servidor
 const PORT = process.env.PORT || 3000;
@@ -77,3 +85,4 @@ async function startServer() {
 
 startServer();
 
+ 

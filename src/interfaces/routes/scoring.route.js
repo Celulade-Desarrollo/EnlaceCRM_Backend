@@ -6,6 +6,7 @@ import {
   getScoringByEstado,
   updateScoringById,
 } from "../controllers/enlaceScoring.controller.js";
+import { authMiddleware } from "../middleware/token-middleware.js";
 
 const scoringRouter = express.Router();
 
@@ -26,7 +27,7 @@ const scoringRouter = express.Router();
  *       200:
  *         description: Lista de registros
  */
-scoringRouter.get("/api/scoring", getAllScoring);
+scoringRouter.get("/api/scoring", authMiddleware, getAllScoring);
 
 /**
  * @swagger
@@ -45,7 +46,7 @@ scoringRouter.get("/api/scoring", getAllScoring);
  *       200:
  *         description: Registro encontrado
  */
-scoringRouter.get("/api/scoring/:id", getScoringById);
+scoringRouter.get("/api/scoring/:id", authMiddleware, getScoringById);
 
 /**
  * @swagger
@@ -57,7 +58,7 @@ scoringRouter.get("/api/scoring/:id", getScoringById);
  *       200:
  *         description: Lista de registros pendientes y aprobados
  */
-scoringRouter.get("/api/scoring/estado/pendiente-aprobado", getScoringByEstado);
+scoringRouter.get("/api/scoring/estado/pendiente-aprobado", authMiddleware, getScoringByEstado);
 
 /**
  * @swagger
@@ -83,7 +84,7 @@ scoringRouter.get("/api/scoring/estado/pendiente-aprobado", getScoringByEstado);
  *       200:
  *         description: Registro actualizado
  */
-scoringRouter.put("/api/scoring/estado/update/:id", updateScoringById);
+scoringRouter.put("/api/scoring/estado/update/:id", authMiddleware, updateScoringById);
 
 /**
  * @swagger
@@ -108,6 +109,6 @@ scoringRouter.put("/api/scoring/estado/update/:id", updateScoringById);
  *       201:
  *         description: Registro creado
  */
-scoringRouter.post("/api/scoring", createScoring);
+scoringRouter.post("/api/scoring", authMiddleware, createScoring);
 
 export default scoringRouter;

@@ -1,8 +1,13 @@
 import SQLServerUbicacionRepository from "../../infrastructure/persistence/SQLServerUbicacionRepository.js";
 import UbicacionService from "../../application/services/UbicacionService.js";
+import axios from "axios";
+import dotenv from "dotenv";
 
+dotenv.config();
 const repository = new SQLServerUbicacionRepository();
 const service = new UbicacionService(repository);
+
+const BACKEND_URL = process.env.BACKEND_URL || "http://localhost:4000";
 
 /**
  * @swagger
@@ -23,10 +28,17 @@ const service = new UbicacionService(repository);
  */
 export const getDepartamentos = async (req, res) => {
   try {
-    const data = await service.obtenerDepartamentos();
-    res.json(data);
+    if (process.env.NODE_ENV === "production") {
+      // Proxy hacia backend remoto HTTP
+      const response = await axios.get(`${BACKEND_URL}/api/ubicacion/departamentos`);
+      res.json(response.data);
+    } else {
+      // Servicio local
+      const data = await service.obtenerDepartamentos();
+      res.json(data);
+    }
   } catch (error) {
-    console.error("Error al obtener departamentos:", error); // 👈 Muestra todo el error
+    console.error("Error al obtener departamentos:", error);
     res.status(500).json({ error: "Error obteniendo departamentos" });
   }
 };
