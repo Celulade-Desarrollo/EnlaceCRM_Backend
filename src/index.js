@@ -64,6 +64,10 @@ app.use(validarMoraRouter);
 app.use(movimientoRouter); // Registrar la nueva ruta en la aplicación
 app.use(movimientoGetRouter);
 
+app.get("/", (req, res) => {
+  res.send("Servidor funcionando correctamente");
+});
+
 // Puerto del servidor
 const PORT = process.env.PORT || 3000;
 
