@@ -26,4 +26,4 @@ jobs:
           pm2 restart index --update-env
 
       - name: Reiniciar Nginx
-        run: sudo systemctl restart nginx
+        run: systemctl restart nginx
