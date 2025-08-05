@@ -26,19 +26,18 @@ export const verifyMoraRepository = {
     return result.recordset;
   },
 
-  async marcarUsuarioEnMora(idUsuario, nroFactura) {
-    const pool = await poolPromise;
-    await pool.request()
-      .input("idUsuario", sql.Int, idUsuario)
-      .input("nroFactura", sql.NVarChar, nroFactura)
-      .query(`
-        UPDATE EstadoCuentaMovimientos
-        SET BloqueoMora = 1
-        WHERE IdUsuarioFinal = @idUsuario
-          AND NroFacturaAlpina = @nroFactura
-          AND IdTipoMovimiento = 1
-      `);
-  },
+async marcarUsuarioEnMora(idUsuario, nroFactura) {
+  const pool = await poolPromise;
+  await pool.request()
+    .input("idUsuario", sql.Int, idUsuario)
+    .input("nroFactura", sql.NVarChar, nroFactura)
+    .query(`
+      UPDATE UsuarioFinal
+      SET BloqueoPorMora = 1
+      WHERE IdUsuarioFinal = @idUsuario
+        AND BloqueoPorMora = 0
+    `);
+},
 
   // metodo para verificar si ya hay pago registrado para la factura
   async existePagoParaFactura(idUsuario, nroFactura) {
@@ -63,11 +62,10 @@ async quitarMoraSiPago(idUsuario, nroFactura) {
     .input("idUsuario", sql.Int, idUsuario)
     .input("nroFactura", sql.NVarChar, nroFactura)
     .query(`
-      UPDATE EstadoCuentaMovimientos
-      SET BloqueoMora = 0
+      UPDATE UsuarioFinal
+      SET BloqueoPorMora = 0
       WHERE IdUsuarioFinal = @idUsuario
-        AND NroFacturaAlpina = @nroFactura
-        AND IdTipoMovimiento = 1
+        AND BloqueoPorMora = 1
     `);
 },
 
@@ -81,5 +79,4 @@ async obtenerUFacturasAbonadas() {
     `);
   return result.recordset;
 },
-
 };

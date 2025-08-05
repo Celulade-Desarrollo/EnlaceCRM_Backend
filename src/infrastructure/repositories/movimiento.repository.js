@@ -12,18 +12,15 @@ const findUsuarioFinalByCedula = async (cedula) => {
   try {
     const pool = await poolPromise;
     const request = pool.request();
-    request.input("Cedula", sql.VarChar, cedula);
+    request.input("Cedula_Usuario", sql.VarChar, cedula); // nombre correcto en tabla
 
     const result = await request.query(
       `SELECT 
           uf.IdUsuarioFinal,
-          uf.Nombre,
-          uf.Apellido,
-          uf.Cedula,
           uf.MontoMinimoPago,
-          CASE WHEN uf.BloqueoMora IS NULL THEN 0 ELSE uf.BloqueoMora END AS BloqueoMora
+          CASE WHEN uf.BloqueoPorMora IS NULL THEN 0 ELSE uf.BloqueoPorMora END AS BloqueoPorMora
        FROM EnlaceCRM.dbo.UsuarioFinal uf
-       WHERE uf.Cedula = @Cedula`
+       WHERE uf.Cedula_Usuario = @Cedula_Usuario`
     );
 
     const usuarioData = result.recordset[0];
