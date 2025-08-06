@@ -24,17 +24,21 @@ class CreateMovimientoUseCase {
     }
 
     // ✅ Creamos el movimiento como un objeto tipo "movimiento" para insertarlo en EstadoCuenta
-    const movimiento = {
-      IdTipoMovimiento: EstadoCuenta.MOVEMENT_TYPES.CREDIT, // Tipo 2 = Crédito (Pago)
-      IdEstadoMovimiento: EstadoCuenta.MOVEMENT_STATES.ACTIVE,
-      Monto: monto,
-      Descripcion: "Pago realizado por el tendero",
-      FechaPagoProgramado: new Date(),
-      IdMedioPago: idMedioPago
+   const movimiento = {
+      idUsuarioFinal: usuario.idUsuarioFinal,
+      idTipoMovimiento: EstadoCuenta.MOVEMENT_TYPES.CREDIT, // Corregido
+      idEstadoMovimiento: EstadoCuenta.MOVEMENT_STATES.ACTIVE, // Corregido
+      monto: monto,
+      descripcion: "Pago realizado por el tendero",
+      fechaPagoProgramado: new Date(),
+      idMedioPago: idMedioPago,
+      bloqueoMora: usuario.estaBloqueadoPorMora ?? false,
+      telefonoTransportista: null // o el valor correspondiente si aplica
     };
 
     // ✅ Creamos el modelo EstadoCuenta con movimientos
     const estadoCuenta = new EstadoCuenta({
+      idUsuarioFinal: usuario.idUsuarioFinal,
       movimientos: [movimiento],
       cupoDisponible: usuario.cupoDisponible ?? 0,
       bloqueoPorMora: usuario.estaBloqueadoPorMora
@@ -48,7 +52,7 @@ class CreateMovimientoUseCase {
     }));
 
     // ✅ Llamamos al repositorio
-    return await movimientoRepository.crearMovimientoYFacturas(estadoCuenta, facturas);
+    return await movimientoRepository.crearMovimientoYFacturas(movimiento, facturas);
   }
 }
 

@@ -19,7 +19,7 @@ const findUsuarioFinalByCedula = async (cedula) => {
           uf.IdUsuarioFinal,
           uf.MontoMinimoPago,
           CASE WHEN uf.BloqueoPorMora IS NULL THEN 0 ELSE uf.BloqueoPorMora END AS BloqueoPorMora
-       FROM EnlaceCRM.dbo.UsuarioFinal uf
+       FROM UsuarioFinal uf
        WHERE uf.Cedula_Usuario = @Cedula_Usuario`
     );
 
@@ -49,7 +49,7 @@ const sumarMontoFacturasPorNumeros = async (nrosFacturaAlpina) => {
     // Construir la consulta SQL dinámicamente para múltiples números de factura
     const query = `
       SELECT SUM(MontoFacturaAlpina) AS MontoTotal
-      FROM EnlaceCRM.dbo.Factura
+      FROM Factura
       WHERE NroFacturaAlpina IN (${nrosFacturaAlpina.map((_, i) => `@NroFactura${i}`).join(', ')})`;
 
     // Añadir los inputs para cada número de factura
@@ -94,7 +94,7 @@ const crearMovimientoYFacturas = async (movimiento, facturas) => {
       .input("TelefonoTransportista", sql.VarChar, movimiento.telefonoTransportista);
 
     const resultMovimiento = await movimientoRequest.query(
-      `INSERT INTO EnlaceCRM.dbo.EstadoCuentas (
+      `INSERT INTO EstadoCuentaMovimientos (
         IdUsuarioFinal, IdTipoMovimiento, IdEstadoMovimiento, Monto, Descripcion, 
         FechaPagoProgramado, IdMedioPago, BloqueoMora, TelefonoTransportista
       ) 
@@ -118,7 +118,7 @@ const crearMovimientoYFacturas = async (movimiento, facturas) => {
         .input("MontoCancelado", sql.Decimal(18, 2), factura.montoCancelado);
       
       await facturaRequest.query(
-        `INSERT INTO EnlaceCRM.dbo.Factura (
+        `INSERT INTO Factura (
           IdEstadoCuentas, NroFacturaAlpina, MontoFacturaAlpina, MontoCancelado
         ) VALUES (
           @IdEstadoCuentas, @NroFacturaAlpina, @MontoFacturaAlpina, @MontoCancelado
