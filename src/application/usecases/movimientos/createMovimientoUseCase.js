@@ -33,7 +33,8 @@ class CreateMovimientoUseCase {
       fechaPagoProgramado: new Date(),
       idMedioPago: idMedioPago,
       bloqueoMora: usuario.estaBloqueadoPorMora ?? false,
-      telefonoTransportista: null // o el valor correspondiente si aplica
+      telefonoTransportista: null, // o el valor correspondiente si aplica
+      nroFacturaAlpina: facturasSeleccionadas[0]?.nroFacturaAlpina ?? null
     };
 
     // ✅ Creamos el modelo EstadoCuenta con movimientos
@@ -48,7 +49,7 @@ class CreateMovimientoUseCase {
     const facturas = facturasSeleccionadas.map((f) => new Factura({
       nroFacturaAlpina: f.nroFacturaAlpina,
       montoFacturaAlpina: f.montoFacturaAlpina,
-      montoCancelado: f.montoCancelado,
+      montoCancelado: f.montoCancelado
     }));
 
     // ✅ Llamamos al repositorio
