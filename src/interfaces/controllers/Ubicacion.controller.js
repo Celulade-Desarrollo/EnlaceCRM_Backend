@@ -7,7 +7,7 @@ dotenv.config();
 const repository = new SQLServerUbicacionRepository();
 const service = new UbicacionService(repository);
 
-const BACKEND_URL = process.env.BACKEND_URL || "http://localhost:4000";
+const BACKEND_URL = "http://localhost:3000";
 
 /**
  * @swagger
