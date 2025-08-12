@@ -1,41 +1,27 @@
-name: deploy-docker-node-backend
+name: Deploy EnlaceCRM backend en servidor Ubuntu automático
 
 on:
   push:
-    branches:
-      - main
-
-env:
-  IMAGE_NAME: milydemendoza/node-backend
-  IMAGE_TAG: "1.0.3"
-  GIT_USER_EMAIL: "milydemendoza@gmail.com"
-  GIT_USER_NAME: "milymoreno"
+    branches: [main]
 
 jobs:
-  docker_argo_ci_cd:
-    runs-on: ubuntu-latest
+  deploy:
+    runs-on: self-hosted
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Actualizar repositorio en ruta real
+        run: |
+          cd /home/s-appadm/EnlaceCRM_Backend
+          git reset --hard
+          git pull origin main
 
-      # - name: Set up QEMU
-      #   uses: docker/setup-qemu-action@v3
+      - name: Instalar dependencias
+        run: |
+          cd /home/s-appadm/EnlaceCRM_Backend
+          npm install
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+      - name: Reiniciar aplicación con PM2
+        run: |
+          cd /home/s-appadm/EnlaceCRM_Backend
+          pm2 restart index --update-env
 
-      - name: Login to Docker Hub
-        uses: docker/login-action@v3
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          push: true
-          tags: ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
-
-      # - name: Build and push Docker image
-      #   uses: docker/build-push-action@v6
