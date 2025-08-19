@@ -22,7 +22,7 @@ export async function loginUserAccountUseCase(nbCliente, nbAgenteComercial, toke
     const cuentaNbCliente = await userAccountService.verificarNbCliente(nbCliente)
     if(cuentaNbCliente){
         const error = new Error("Ya existe una solicitud de cuenta en proceso para nbCliente")
-        error.status = 412
+        error.status = 207
         throw error
     }
 
