@@ -11,19 +11,18 @@ export async function loginUserAccountUseCase(nbCliente, nbAgenteComercial, toke
     const bearerToken = await fetchLoginAlpina();
 
     const cedula = await fetchNbCliente(nbCliente, nbAgenteComercial, bearerToken)
-    const cuenta = await userAccountService.validarCuentaCedula(cedula)
-    if(!cuenta){
-        const error = new Error("Error al verificar la cuenta")
-        error.status = 400
-        throw error
-    }
-
-
     const cuentaNbCliente = await userAccountService.verificarNbCliente(nbCliente)
     if(cuentaNbCliente){
-        const error = new Error("Ya existe una solicitud de cuenta en proceso para nbCliente")
-        error.status = 207
-        throw error
+        const error = new Error("Ya existe una solicitud de cuenta en proceso para este cliente.");
+        error.status = 207;
+        throw error;
+    }
+
+    const cuenta = await userAccountService.validarCuentaCedula(cedula)
+    if(!cuenta){
+         const error = new Error("No se encontró una cuenta creada para esta cédula.");
+        error.status = 400;
+        throw error;
     }
 
     /*
