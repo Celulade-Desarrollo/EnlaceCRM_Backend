@@ -58,7 +58,7 @@ scoringRouter.get("/api/scoring/:id", authMiddleware, getScoringById);
  *       200:
  *         description: Lista de registros pendientes y aprobados
  */
-scoringRouter.get("/api/scoring/estado/pendiente-aprobado", authMiddleware, getScoringByEstado);
+scoringRouter.get("/api/scoring/estado/pendiente-aprobado-confirmado", authMiddleware, getScoringByEstado);
 
 /**
  * @swagger
