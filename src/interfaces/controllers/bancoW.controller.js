@@ -36,7 +36,7 @@ const createBancoW = async (req, res) => {
     Validacion_Banco_listas,
     Aprobacion_Cupo_sugerido,
     Pagare_Digital_Firmado,
-    Creacion_Core_Bancario,
+    Pagare_Digital_Enviado,
     UsuarioAprobado
   } = req.body;
 
@@ -52,7 +52,7 @@ const createBancoW = async (req, res) => {
       Validacion_Banco_listas,
       Aprobacion_Cupo_sugerido,
       Pagare_Digital_Firmado,
-      Creacion_Core_Bancario,
+      Pagare_Digital_Enviado,
       UsuarioAprobado,
     });
     res.status(201).json(result);
@@ -74,17 +74,17 @@ const deleteBancoWbyId = async (req, res) => {
 const updateCoreBancario = async (req, res) => {
   try {
     const { id } = req.params;
-    const { Pagare_Digital_Firmado, Creacion_Core_Bancario, UsuarioAprobado } = req.body;
+    const { Pagare_Digital_Firmado, Pagare_Digital_Enviado, UsuarioAprobado } = req.body;
     
-    if (!Pagare_Digital_Firmado || !Creacion_Core_Bancario || !UsuarioAprobado) {
-      return res.status(400).json({ 
-        error: "Faltan campos requeridos: Pagare_Digital_Firmado, Creacion_Core_Bancario, UsuarioAprobado" 
-      });
-    }
+    // if (Pagare_Digital_Firmado || Creacion_Core_Bancario || UsuarioAprobado) {
+    //   return res.status(400).json({ 
+    //     error: "Faltan campos requeridos: Pagare_Digital_Firmado, Creacion_Core_Bancario, UsuarioAprobado" 
+    //   });
+    // }
 
     await updateCoreBancarioUseCase(id, {
       Pagare_Digital_Firmado,
-      Creacion_Core_Bancario,
+      Pagare_Digital_Enviado,
       UsuarioAprobado
     });
     
