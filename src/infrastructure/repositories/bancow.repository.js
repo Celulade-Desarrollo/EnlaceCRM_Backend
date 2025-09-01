@@ -32,15 +32,15 @@ export const bancowRepository = {
             .input("Validacion_Banco_listas", sql.NVarChar, input.Validacion_Banco_listas)
             .input("Aprobacion_Cupo_sugerido", sql.NVarChar, input.Aprobacion_Cupo_sugerido)
             .input("Pagare_Digital_Firmado", sql.NVarChar, input.Pagare_Digital_Firmado)
-            .input("Creacion_Core_Bancario", sql.NVarChar, input.Creacion_Core_Bancario)
+            .input("Pagare_Digital_Enviado", sql.NVarChar, input.Pagare_Digital_Enviado)
             .input("UsuarioAprobado", sql.NVarChar, input.UsuarioAprobado)
             .query(`
         INSERT INTO FlujosRegistroBancoW (
           IdFlujoRegistro, Validacion_Banco_listas, Aprobacion_Cupo_sugerido,
-          Pagare_Digital_Firmado, Creacion_Core_Bancario, UsuarioAprobado
+          Pagare_Digital_Firmado, Pagare_Digital_Enviado, UsuarioAprobado
         ) VALUES (
           @IdFlujoRegistro, @Validacion_Banco_listas, @Aprobacion_Cupo_sugerido,
-          @Pagare_Digital_Firmado, @Creacion_Core_Bancario, @UsuarioAprobado
+          @Pagare_Digital_Firmado, @Pagare_Digital_Enviado, @UsuarioAprobado
         );
         SELECT SCOPE_IDENTITY() AS insertedId;
       `)
@@ -68,17 +68,17 @@ export const bancowRepository = {
 
     async actualizarCoreBancario(idFlujoRegistro, input) {
         const pool = await poolPromise;
-        const { Pagare_Digital_Firmado, Creacion_Core_Bancario, UsuarioAprobado } = input;
+        const { Pagare_Digital_Firmado, Pagare_Digital_Enviado, UsuarioAprobado } = input;
 
         await pool.request()
             .input("IdFlujoRegistro", sql.Int, idFlujoRegistro)
             .input("Pagare_Digital_Firmado", sql.NVarChar, Pagare_Digital_Firmado)
-            .input("Creacion_Core_Bancario", sql.NVarChar, Creacion_Core_Bancario)
+            .input("Pagare_Digital_Enviado", sql.NVarChar, Pagare_Digital_Enviado)
             .input("UsuarioAprobado", sql.NVarChar, UsuarioAprobado)
             .query(`
                 UPDATE FlujosRegistroBancoW 
                 SET Pagare_Digital_Firmado = @Pagare_Digital_Firmado,
-                    Creacion_Core_Bancario = @Creacion_Core_Bancario,
+                    Pagare_Digital_Enviado = @Pagare_Digital_Enviado,
                     UsuarioAprobado = @UsuarioAprobado
                 WHERE IdFlujoRegistro = @IdFlujoRegistro
             `);
