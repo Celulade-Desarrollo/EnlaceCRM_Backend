@@ -76,11 +76,11 @@ const updateCoreBancario = async (req, res) => {
     const { id } = req.params;
     const { Pagare_Digital_Firmado, Pagare_Digital_Enviado, UsuarioAprobado } = req.body;
     
-    // if (Pagare_Digital_Firmado || Creacion_Core_Bancario || UsuarioAprobado) {
-    //   return res.status(400).json({ 
-    //     error: "Faltan campos requeridos: Pagare_Digital_Firmado, Creacion_Core_Bancario, UsuarioAprobado" 
-    //   });
-    // }
+    //  if (Pagare_Digital_Firmado || Pagare_Digital_Enviado || UsuarioAprobado) {
+    //    return res.status(400).json({
+    //      error: "Faltan campos requeridos: Pagare_Digital_Firmado, Pagare_Digital_Enviado, UsuarioAprobado" 
+    //    });
+    //  }
 
     await updateCoreBancarioUseCase(id, {
       Pagare_Digital_Firmado,
