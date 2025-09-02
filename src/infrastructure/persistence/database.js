@@ -1,5 +1,6 @@
 import sql from "mssql";
 import dotenv from "dotenv";
+import { DATABASE_SERVER } from "./config.enviroment.js"; 
 
 // Cargar variables de entorno
 dotenv.config();
@@ -8,7 +9,7 @@ dotenv.config();
 const dbConfig = {
   user: process.env.DB_USER,
   password: process.env.DB_PASS,
-  server: process.env.DB_SERVER,
+  server: DATABASE_SERVER,
   database: process.env.DB_NAME,
   port: parseInt(process.env.DB_PORT),
   options: {

@@ -1,10 +1,11 @@
+import { truoraCedulaUseCase } from "../../application/usecases/truora/truoraCedulaUseCase.js";
 const truoraInfo = async (req, res) => {
   try {
-    const info = req.body;
-    console.log(info);
-    res.status(200); // Si sale bien
+    const {document_number} = req.body;
+    await truoraCedulaUseCase(document_number);
+    res.status(200); 
   } catch (err) {
-    res.status(500).send(err.message); // Si sale mal
+    res.status(500).send({message: "No se encontró un registro con la cédula proporcionada."}); 
   }
 };
 
