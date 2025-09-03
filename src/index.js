@@ -37,7 +37,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://enlace-crm.com",
+    origin: ["https://enlace-crm.com", "https://enlace-crm.com:3000" ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
