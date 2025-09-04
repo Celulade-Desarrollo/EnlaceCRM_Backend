@@ -12,11 +12,11 @@ export class Factura {
    * @param {number} data.MontoFacturaAlpina - El monto total original de la factura.
    * @param {number} data.MontoCancelado - El monto que se abonó a esta factura con el movimiento.
    */
-  constructor({ IdFactura, IdEstadoCuentaMovimientos, NroFacturaAlpina, MontoFacturaAlpina, MontoCancelado }) {
-    this.id = IdFactura;
-    this.idMovimiento = IdEstadoCuentaMovimientos;
-    this.nroFacturaAlpina = NroFacturaAlpina;
-    this.montoFacturaAlpina = parseFloat(MontoFacturaAlpina) || 0;
-    this.montoCancelado = parseFloat(MontoCancelado) || 0;
+constructor({ nroFacturaAlpina, montoFacturaAlpina, montoCancelado, id, idMovimiento }) {
+    this.id = id;
+    this.idMovimiento = idMovimiento;
+    this.nroFacturaAlpina = nroFacturaAlpina;
+    this.montoFacturaAlpina = parseFloat(montoFacturaAlpina) || 0;
+    this.montoCancelado = parseFloat(montoCancelado) || 0;
   }
 }

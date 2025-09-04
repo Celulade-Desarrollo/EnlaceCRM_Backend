@@ -1,5 +1,6 @@
 import { Router } from "express";
 import { validarMovimiento, crearMovimientoPago } from "../controllers/movimiento.controller.js";
+import { authMiddleware } from "../middleware/token-middleware.js";
 
 const router = Router();
 
@@ -87,6 +88,5 @@ router.post("/validar", validarMovimiento);
  *       '500':
  *         description: Error interno del servidor.
  */
-router.post("/", crearMovimientoPago);
-
+router.post("/", authMiddleware, crearMovimientoPago);
 export default router;

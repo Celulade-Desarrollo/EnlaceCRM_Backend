@@ -12,7 +12,7 @@ export class UsuarioFinal {
    * @param {boolean} data.BloqueoMora - Indica si el usuario está bloqueado por mora.
    */
   constructor({ IdUsuarioFinal, Cedula, MontoMinimoPago, BloqueoMora }) {
-    this.id = IdUsuarioFinal;
+    this.idUsuarioFinal = IdUsuarioFinal;
     this.cedula = Cedula;
     this.montoMinimoPago = parseFloat(MontoMinimoPago) || 0;
     this.estaBloqueadoPorMora = Boolean(BloqueoMora);

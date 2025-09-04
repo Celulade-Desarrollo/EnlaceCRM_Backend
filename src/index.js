@@ -61,7 +61,7 @@ app.use(estadoCuentaRouter);
 app.use(adminRouter)
 app.use(movimientoCuentaRouter);
 app.use(validarMoraRouter);
-app.use(movimientoRouter); // Registrar la nueva ruta en la aplicación
+app.use("/api/movimiento", movimientoRouter); // Registrar la nueva ruta en la aplicación
 app.use(movimientoGetRouter);
 
 app.get("/", (req, res) => {
