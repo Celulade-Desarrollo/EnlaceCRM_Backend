@@ -63,13 +63,13 @@ export const deleteById = async (req, res) => {
 
 export const getByEstado = async (req, res) => {
   try {
-    const result = await getFlujoRegistroByEstado(req.query.estado || "pendiente");
+    const result = await getFlujoRegistroByEstado();
     if (!result || result.length === 0) {
-      return res.status(404).json({ message: "No hay registros con ese estado" });
+      return res.status(404).json({ message: "No hay registros con estado pendiente o aprobado" });
     }
-    res.json(result);
+    res.status(200).json(result);
   } catch (err) {
-    res.status(500).send(err.message);
+    res.status(500).json({ error: err.message });
   }
 };
 
