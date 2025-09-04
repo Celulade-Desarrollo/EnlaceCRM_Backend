@@ -34,7 +34,7 @@ import swaggerDocs from "./config/swagger-config.js";
 // Crear App express
 const app = express();
 
-app.use(express.json());
+
 app.use(
   cors({
     origin: "*",
@@ -43,6 +43,8 @@ app.use(
     credentials: true,
   })
 );
+
+app.use(express.json());
 
 // Swagger
 swaggerDocs(app);
