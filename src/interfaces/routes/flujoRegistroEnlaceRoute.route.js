@@ -130,7 +130,7 @@ flujoRegistroEnlace.get("/api/flujoRegistroEnlace", authMiddleware, getAll);
 
 /**
  * @swagger
- * /api/flujoRegistroEnlace/estado/pendiente:
+ * /api/flujoRegistroEnlace/estado/pendiente-aprobado:
  *   get:
  *     summary: Obtener registros con estado pendiente
  *     tags: [FlujoRegistroEnlace]
@@ -138,7 +138,7 @@ flujoRegistroEnlace.get("/api/flujoRegistroEnlace", authMiddleware, getAll);
  *       200:
  *         description: Registros encontrados
  */
-flujoRegistroEnlace.get("/api/flujoRegistroEnlace/estado/pendiente", authMiddleware, getByEstado);
+flujoRegistroEnlace.get("/api/flujoRegistroEnlace/estado/pendiente-aprobado", authMiddleware, getByEstado);
 
 /**
  * @swagger

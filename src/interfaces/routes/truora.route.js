@@ -15,6 +15,6 @@ import { authMiddleware } from "../middleware/token-middleware.js";
  *       200:
  *         description: Validación exitosa con Truora
  */
-truora.get("/api/truora", authMiddleware, truoraInfo);
+truora.get("/api/truora", truoraInfo);
 
 export default truora;
