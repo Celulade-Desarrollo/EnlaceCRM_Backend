@@ -23,5 +23,5 @@ jobs:
       - name: Reiniciar aplicación con PM2
         run: |
           cd /home/s-appadm/EnlaceCRM_Backend_Dev
-          pm2 restart  --update-env
+          pm2 restart develop --update-env
 
