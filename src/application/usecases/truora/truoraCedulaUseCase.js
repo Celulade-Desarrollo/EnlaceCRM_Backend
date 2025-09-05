@@ -1,4 +1,4 @@
-import { TruoraService } from "../../services/TruoraService";
+import { TruoraService } from "../../services/TruoraService.js";
 
 export async function truoraCedulaUseCase(info) {
     const persona = await TruoraService.verificarInfoCedula(info);

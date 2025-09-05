@@ -35,16 +35,24 @@ import swaggerDocs from "./config/swagger-config.js";
 const app = express();
 
 
-app.use(
-  cors({
-    origin: "https://enlace-crm.com:3000",
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
+// Configuración de CORS
+app.use(cors({
+    origin: ["*"], // Permite frontend y swagger
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
+    allowedHeaders: [
+      "Content-Type", 
+      "Authorization", 
+      "Origin", 
+      "X-Requested-With",
+      "Accept"
+    ],
     credentials: true,
-  })
-);
+    optionsSuccessStatus: 200
+}));
 
+// Body parser
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Swagger
 swaggerDocs(app);
