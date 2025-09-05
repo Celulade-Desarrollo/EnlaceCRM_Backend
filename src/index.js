@@ -43,9 +43,9 @@ app.use(
     credentials: true,
   })
 );
-
-app.use(express.json());
-
+app.options("*", cors());
+app.use(express.json());    
+      
 // Swagger
 swaggerDocs(app);
 
