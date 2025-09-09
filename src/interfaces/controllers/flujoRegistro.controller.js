@@ -6,6 +6,7 @@ import { getFlujoRegistroByEstado } from "../../application/usecases/flujoRegist
 import { createFlujoRegistroUseCase } from "../../application/usecases/flujoRegistro/createFlujoRegistroUseCase.js";
 import { deleteFlujoRegistroUseCase } from "../../application/usecases/flujoRegistro/DeleteFlujoRegistroUseCase.js";
 import { updateEstadoFlujoRegistro } from "../../application/usecases/flujoRegistro/updateEstadoFlujoRegistroUseCase.js";
+import { consultarCedulaUseCase } from "../../application/usecases/flujoRegistro/consultarCedulaUseCase.js";
 
 export async function getAll(req, res) {
   try {
@@ -15,6 +16,8 @@ export async function getAll(req, res) {
     res.status(500).json({ error: err.message });
   }
 }
+
+
 
 export async function getById(req, res) {
   try {
