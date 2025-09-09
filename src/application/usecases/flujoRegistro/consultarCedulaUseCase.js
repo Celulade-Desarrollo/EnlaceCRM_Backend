@@ -5,5 +5,5 @@ export async function consultarCedulaUseCase(nbCliente, nbAgenteComercial) {
     const bearerToken = await fetchLoginAlpina();
     const cliente = await fetchNbCliente(nbCliente, nbAgenteComercial, bearerToken)
 
-    return cliente.data[0].documento;
+    return cliente;
 }

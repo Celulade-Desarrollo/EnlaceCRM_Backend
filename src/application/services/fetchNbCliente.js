@@ -5,6 +5,7 @@ export async function fetchNbCliente(nbCliente, nbAgenteComercial, bearerToken) 
       nbAgenteComercial: nbAgenteComercial,
       nbCliente: nbCliente
     };
+
   
     try {
       const response = await fetch(url, {

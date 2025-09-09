@@ -20,7 +20,7 @@ export const getAll = async (req, res) => {
 
 export async function consultarCedula(req, res) {
   try {
-    const data = await consultarCedulaUseCase(req.params.nbCliente, req.params.nbAgenteComercial);
+    const data = await consultarCedulaUseCase(req.body.nbCliente, req.body.nbAgenteComercial);
     if (!data) return res.status(404).json({ message: "No encontrado" });
     res.status(200).json(data);
   } catch (err) {
