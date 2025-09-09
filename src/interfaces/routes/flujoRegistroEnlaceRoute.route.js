@@ -11,6 +11,7 @@ import {
   getBynumber,
   getByEstado,
   updateEstadoById,
+  updateClienteAceptoById
 } from "../controllers/flujoRegistroEnlace.controller.js";
 
 import { buscarUsuarioPorTelefono } from "../middleware/cedula_middleware.js";
@@ -165,6 +166,33 @@ flujoRegistroEnlace.get("/api/flujoRegistroEnlace/estado/pendiente-aprobado", au
  *         description: Estado actualizado
  */
 flujoRegistroEnlace.put("/api/flujoRegistroEnlace/estado/pendiente/:id", authMiddleware, updateEstadoById);
+
+/**
+ * @swagger
+ * /api/flujoRegistroEnlace/clienteAcepto/{id}:
+ *   put:
+ *     summary: llenar campo si cliente acepto cupo por ID
+ *     tags: [FlujoRegistroEnlace]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             example:
+ *               respuestaCliente: "si"
+ *     responses:
+ *       200:
+ *         description: cliente_acepto actualizado
+ */
+flujoRegistroEnlace.put("/api/flujoRegistroEnlace/clienteAcepto/:id", authMiddleware, updateClienteAceptoById);
+
 
 /**
  * @swagger

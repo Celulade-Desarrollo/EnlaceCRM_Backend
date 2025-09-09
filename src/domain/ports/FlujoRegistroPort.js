@@ -34,4 +34,9 @@ export class FlujoRegistroPort {
   async eliminarPorId(id) {
     throw new Error("Method not implemented.");
   }
+
+  async actualizarclienteAcceptoPorId(id, respuestaCliente) {
+    throw new Error("Method not implemented.");
+  }
+
 }
