@@ -126,6 +126,21 @@ export const flujoRegistroRepository = {
       .query("UPDATE FlujosRegistroEnlace SET Estado = @estado WHERE id = @id");
   },
 
+ async actualizarClienteAproboporId(id, respuestaCliente) {
+  const pool = await poolPromise;
+  const result = await pool.request()
+    .input("idFlujoRegistro", sql.Int, id)
+    .input("Cliente_Acepto", sql.NVarChar, respuestaCliente)
+    .query(`
+      UPDATE FlujosRegistroEnlaceScoring
+      SET Cliente_Acepto = @Cliente_Acepto
+      WHERE idFlujoRegistro = @idFlujoRegistro
+    `);
+
+    if (result.rowsAffected[0] === 0) {
+      throw new Error("No se encontró ningún registro con ese ID");
+    }
+  },
   async eliminarPorId(id) {
     const pool = await poolPromise;
     await pool.request()

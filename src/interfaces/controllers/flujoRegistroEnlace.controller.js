@@ -7,7 +7,7 @@ import { createFlujoRegistroUseCase } from "../../application/usecases/flujoRegi
 import { deleteFlujoRegistroUseCase } from "../../application/usecases/flujoRegistro/DeleteFlujoRegistroUseCase.js";
 import { updateEstadoFlujoRegistro } from "../../application/usecases/flujoRegistro/updateEstadoFlujoRegistroUseCase.js";
 import { consultarCedulaUseCase } from "../../application/usecases/flujoRegistro/consultarCedulaUseCase.js";
-
+import { updateClienteAcepto } from "../../application/usecases/flujoRegistro/updateClienteAproboUseCase.js";
 export const getAll = async (req, res) => {
   try {
     const data = await getAllFlujoRegistro();
@@ -91,6 +91,17 @@ export const updateEstadoById = async (req, res) => {
     const { Estado } = req.body;
     await updateEstadoFlujoRegistro(id, Estado);
     res.json({ message: "Estado actualizado correctamente" });
+  } catch (err) {
+    res.status(500).send(err.message);
+  }
+};
+
+export const updateClienteAceptoById = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { respuestaCliente } = req.body;
+    await updateClienteAcepto(id, respuestaCliente);
+    res.json({ message: "campo cliente acepto actualizado correctamente" });
   } catch (err) {
     res.status(500).send(err.message);
   }
