@@ -27,6 +27,10 @@ export class FlujoRegistroAdapter extends FlujoRegistroPort {
     return await flujoRegistroRepository.actualizarEstadoPorId(id, estado);
   }
 
+   async actualizarclienteAcceptoPorId(id, respuestaCliente) {
+    return await flujoRegistroRepository.actualizarClienteAproboporId(id, respuestaCliente);
+  }
+
   async eliminarPorId(id) {
     return await flujoRegistroRepository.eliminarPorId(id);
   }
