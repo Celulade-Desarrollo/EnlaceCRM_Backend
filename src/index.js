@@ -34,15 +34,25 @@ import swaggerDocs from "./config/swagger-config.js";
 // Crear App express
 const app = express();
 
-app.use(express.json());
-app.use(
-  cors({
-    origin: "*",
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
+
+// Configuración de CORS
+app.use(cors({
+    origin: ["*"], // Permite frontend y swagger
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
+    allowedHeaders: [
+      "Content-Type", 
+      "Authorization", 
+      "Origin", 
+      "X-Requested-With",
+      "Accept"
+    ],
     credentials: true,
-  })
-);
+    optionsSuccessStatus: 200
+}));
+
+// Body parser
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Swagger
 swaggerDocs(app);
@@ -61,7 +71,7 @@ app.use(estadoCuentaRouter);
 app.use(adminRouter)
 app.use(movimientoCuentaRouter);
 app.use(validarMoraRouter);
-app.use(movimientoRouter); // Registrar la nueva ruta en la aplicación
+app.use("/api/movimiento", movimientoRouter); // Registrar la nueva ruta en la aplicación
 app.use(movimientoGetRouter);
 
 app.get("/", (req, res) => {

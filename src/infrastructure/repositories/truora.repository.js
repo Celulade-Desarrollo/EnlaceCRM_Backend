@@ -31,6 +31,8 @@ export const truoraRepository = {
     async setTruoraStatusProcess(cedula, status) {
     try {
         const pool = await poolPromise;
+
+      
         const result = await pool.request()
             .input("Cedula_Cliente", sql.NVarChar, cedula)
             .input("TruoraStatus", sql.NVarChar, status)
