@@ -5,6 +5,7 @@ const flujoRegistroEnlace = express.Router();
 import {
   getAll,
   getById,
+  consultarCedula,
   getByAlpina,
   createRegistro,
   deleteById,
@@ -37,6 +38,27 @@ import { authMiddleware } from "../middleware/token-middleware.js";
  *         description: OTP enviado
  */
 flujoRegistroEnlace.post("/api/twilio/send", sendOTP);
+
+/**
+ * @swagger
+ * /api/flujoRegistroEnlace/cedula:
+ *   post:
+ *     summary: Consultar cédula desde Alpina
+ *     tags: [FlujoRegistroEnlace]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             example:
+ *               nbCliente: "123456"
+ *               nbAgenteComercial: "654321"
+ *     responses:
+ *       200:
+ *         description: OTP enviado
+ */
+flujoRegistroEnlace.post("/api/flujoRegistroEnlace/cedula", consultarCedula);
 
 /**
  * @swagger

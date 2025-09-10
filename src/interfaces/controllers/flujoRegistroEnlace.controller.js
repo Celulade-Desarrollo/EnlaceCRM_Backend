@@ -6,9 +6,8 @@ import { getFlujoRegistroByNumeroCelular } from "../../application/usecases/fluj
 import { createFlujoRegistroUseCase } from "../../application/usecases/flujoRegistro/createFlujoRegistroUseCase.js";
 import { deleteFlujoRegistroUseCase } from "../../application/usecases/flujoRegistro/DeleteFlujoRegistroUseCase.js";
 import { updateEstadoFlujoRegistro } from "../../application/usecases/flujoRegistro/updateEstadoFlujoRegistroUseCase.js";
+import { consultarCedulaUseCase } from "../../application/usecases/flujoRegistro/consultarCedulaUseCase.js";
 import { updateClienteAcepto } from "../../application/usecases/flujoRegistro/updateClienteAproboUseCase.js";
-
-
 export const getAll = async (req, res) => {
   try {
     const data = await getAllFlujoRegistro();
@@ -17,6 +16,17 @@ export const getAll = async (req, res) => {
     res.status(500).send(err.message);
   }
 };
+
+
+export async function consultarCedula(req, res) {
+  try {
+    const data = await consultarCedulaUseCase(req.body.nbCliente, req.body.nbAgenteComercial);
+    if (!data) return res.status(404).json({ message: "No encontrado" });
+    res.status(200).json(data);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+}
 
 export const getById = async (req, res) => {
   try {

@@ -1,11 +1,12 @@
-const truoraInfo = async (req, res) => {
+import { setStatusProcessUseCase } from "../../application/usecases/truora/setStatusProcessUseCase.js";
+const setStatusProcess = async (req, res) => {
   try {
-    const info = req.body;
-    console.log(info);
-    res.status(200); // Si sale bien
+    const {process_id}=  req.params;
+    await setStatusProcessUseCase(process_id);
+    res.status(200); 
   } catch (err) {
-    res.status(500).send(err.message); // Si sale mal
+    res.status(500).json({ error: err.message }); 
   }
 };
 
-export { truoraInfo };
+export { setStatusProcess };
