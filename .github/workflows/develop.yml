@@ -1,0 +1,27 @@
+name: Deploy EnlaceCRM backend en servidor desarrollo Ubuntu automático
+
+on:
+  push:
+    branches: [develop]
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Actualizar repositorio en ruta real
+        run: |
+          cd /home/s-appadm/EnlaceCRM_Backend_Dev
+          git reset --hard
+          git pull origin main
+
+      - name: Instalar dependencias
+        run: |
+          cd /home/s-appadm/EnlaceCRM_Backend_Dev
+          npm install
+
+      - name: Reiniciar aplicación con PM2
+        run: |
+          cd /home/s-appadm/EnlaceCRM_Backend_Dev
+          pm2 restart develop --update-env
+

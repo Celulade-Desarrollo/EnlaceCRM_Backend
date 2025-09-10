@@ -1,6 +1,10 @@
 export class TruoraPort {
-  async verificarInfoCedula(info) {
-    throw new Error("Method verificarInfoCedula not implemented.");
-  }
+    async truoraInfoProcess(process_id) {
+        throw new Error("Method not implemented.");
+    }
+
+    async setTruoraStatusProcess(document_number, validation_status) {
+        throw new Error("Method not implemented.");
+    } 
 
 }
