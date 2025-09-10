@@ -34,7 +34,6 @@ import swaggerDocs from "./config/swagger-config.js";
 // Crear App express
 const app = express();
 
-
 // Configuración de CORS
 app.use(cors({
     origin: ["*"], // Permite frontend y swagger
