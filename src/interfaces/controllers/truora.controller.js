@@ -1,12 +1,12 @@
-import { truoraCedulaUseCase } from "../../application/usecases/truora/truoraCedulaUseCase.js";
-const truoraInfo = async (req, res) => {
+import { setStatusProcessUseCase } from "../../application/usecases/truora/setStatusProcessUseCase.js";
+const setStatusProcess = async (req, res) => {
   try {
-    const {document_number} = req.body;
-    await truoraCedulaUseCase(document_number);
+    const {process_id}=  req.params;
+    await setStatusProcessUseCase(process_id);
     res.status(200); 
   } catch (err) {
-    res.status(500).send({message: "No se encontró un registro con la cédula proporcionada."}); 
+    res.status(500).json({ error: err.message }); 
   }
 };
 
-export { truoraInfo };
+export { setStatusProcess };
