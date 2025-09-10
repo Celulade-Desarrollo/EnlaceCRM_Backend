@@ -86,7 +86,21 @@ export const bancowRepository = {
 
     async obtenerDatosExcel(){
         const pool = await poolPromise;
-        const result = await pool.request().query("SELECT fre.*, fres.Estado as Estado_Scoring FROM FlujosRegistroEnlaceScoring fres INNER JOIN FlujosRegistroEnlace fre ON fres.IdFlujoRegistro = fre.Id");
+        const result = await pool.request().query(`
+           SELECT 
+            fre.*,  -- Todos los campos de FlujosRegistroEnlace
+            fres.Estado AS Estado_Scoring,
+            fres.Cliente_Acepto,  -- Campo nuevo de Scoring
+            frb.Aprobacion_Cupo_sugerido,
+            frb.Pagare_Digital_Firmado,
+            frb.Pagare_Digital_Enviado,
+            frb.UsuarioAprobado
+        FROM FlujosRegistroEnlace fre
+        LEFT JOIN FlujosRegistroEnlaceScoring fres
+            ON fre.Id = fres.IdFlujoRegistro
+        LEFT JOIN FlujosRegistroBancoW frb
+            ON fre.Id = frb.IdFlujoRegistro
+        `);
         return result.recordset;
     }
 
