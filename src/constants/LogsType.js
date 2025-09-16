@@ -1,0 +1,17 @@
+export const LOGS_TYPE = {
+  APROBACION_CUPO: 1,
+  LOGIN: 2,
+  CREACION_USUARIO: 3,
+  APROBACION_SCORING: 4,
+  RECHAZO_SCORING: 5,
+  CREACION_SCORING: 6
+};
+
+export const LOGS_TYPE_NAMES = {
+  [LOGS_TYPE.APROBACION_CUPO]: "Aprobacion Cupo",
+  [LOGS_TYPE.LOGIN]: "Login",
+  [LOGS_TYPE.CREACION_SCORING]: "Creacion Scoring",
+  [LOGS_TYPE.CREACION_USUARIO]: "Creacion Usuario",
+  [LOGS_TYPE.RECHAZO_SCORING]: "Rechazo Scoring",
+  [LOGS_TYPE.APROBACION_SCORING]: "Aprobacion Scoring",
+};

@@ -2,8 +2,8 @@ import { setStatusProcessUseCase } from "../../application/usecases/truora/setSt
 const setStatusProcess = async (req, res) => {
   try {
     const {process_id}=  req.params;
-    await setStatusProcessUseCase(process_id);
-    res.status(200); 
+    const truora = await setStatusProcessUseCase(process_id);
+    res.status(200).json(truora); 
   } catch (err) {
     res.status(500).json({ error: err.message }); 
   }
