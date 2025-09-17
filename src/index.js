@@ -14,6 +14,7 @@ import alpinaRouter from "./interfaces/routes/alpina.route.js";
 import estadoCuentaRouter from "./interfaces/routes/estadoCuenta.route.js";
 import movimientoGetRouter from "./interfaces/routes/movimientoGet.routes.js";
 import abonoRouter from "./interfaces/routes/Abonos.route.js";
+import bajarAbonosRouter from "./interfaces/routes/bajarAbonos.route.js";
 
 // import pagosRouter from "./interfaces/routes/confirmarPago.route.js"; 
 import { LogsRouter } from "./interfaces/routes/logs.route.js";
@@ -74,6 +75,7 @@ app.use("/api/movimiento", movimientoRouter); // Registrar la nueva ruta en la a
 app.use(movimientoGetRouter);
 app.use(LogsRouter)
 app.use(abonoRouter);
+app.use(bajarAbonosRouter)
 
 app.get("/", (req, res) => {
   res.send("Servidor funcionando correctamente");
