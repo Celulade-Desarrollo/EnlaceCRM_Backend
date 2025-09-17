@@ -13,7 +13,7 @@ import ubicacionRoutes from "./interfaces/routes/ubicacion.routes.js";
 import alpinaRouter from "./interfaces/routes/alpina.route.js";
 import estadoCuentaRouter from "./interfaces/routes/estadoCuenta.route.js";
 import movimientoGetRouter from "./interfaces/routes/movimientoGet.routes.js";
-
+import abonoRouter from "./interfaces/routes/Abonos.route.js";
 
 // import pagosRouter from "./interfaces/routes/confirmarPago.route.js"; 
 import { LogsRouter } from "./interfaces/routes/logs.route.js";
@@ -36,7 +36,7 @@ const app = express();
 
 // Configuración de CORS
 app.use(cors({
-    origin: ["*"], // Permite frontend y swagger
+    origin: ["http://localhost:5173"], // Permite frontend y swagger
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
     allowedHeaders: [
       "Content-Type", 
@@ -73,6 +73,7 @@ app.use(validarMoraRouter);
 app.use("/api/movimiento", movimientoRouter); // Registrar la nueva ruta en la aplicación
 app.use(movimientoGetRouter);
 app.use(LogsRouter)
+app.use(abonoRouter);
 
 app.get("/", (req, res) => {
   res.send("Servidor funcionando correctamente");
