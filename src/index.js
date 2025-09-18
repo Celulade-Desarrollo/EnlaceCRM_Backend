@@ -13,7 +13,7 @@ import ubicacionRoutes from "./interfaces/routes/ubicacion.routes.js";
 import alpinaRouter from "./interfaces/routes/alpina.route.js";
 import estadoCuentaRouter from "./interfaces/routes/estadoCuenta.route.js";
 import movimientoGetRouter from "./interfaces/routes/movimientoGet.routes.js";
-import abonoRouter from "./interfaces/routes/Abonos.route.js";
+import abonoRouter from "./interfaces/routes/abonos.route.js";
 
 
 // import pagosRouter from "./interfaces/routes/confirmarPago.route.js"; 
