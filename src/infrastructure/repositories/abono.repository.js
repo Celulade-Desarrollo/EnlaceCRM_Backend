@@ -17,6 +17,13 @@ export const abonoRepository = {
             WHERE NOT EXISTS (
             SELECT 1 FROM Abonos WHERE Id_transaccion = @Id_transaccion
             )
-    `);
+     `);
+  },
+  async obtenerDatosExcel() {
+    const pool = await poolPromise;
+    const result = await pool.request().query("SELECT * FROM Abonos");
+    return result.recordset;
   }
 };
+
+

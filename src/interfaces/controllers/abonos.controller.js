@@ -1,4 +1,14 @@
 import { createAbonoUseCase } from "../../application/usecases/abonos/createAbonoUseCase.js";
+import { getExcelData } from "../../application/usecases/abonos/getAbonosUseCase.js";
+
+export const getExcel = async (req, res) => {
+  try {
+    const data = await getExcelData();
+    res.json(data);
+  } catch (err) {
+    res.status(500).send(err.message);
+  }
+};
 
 export const createAbono = async (req, res) => {
   try {

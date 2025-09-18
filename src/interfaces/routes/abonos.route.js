@@ -1,5 +1,6 @@
 import express from "express";
-import { createAbono } from "../controllers/abonos.controller.js";
+import { createAbono, getExcel } from "../controllers/abonos.controller.js";
+import { authMiddleware } from "../middleware/token-middleware.js";
 
 const rutaAbonos = express.Router();
 
@@ -57,6 +58,8 @@ const rutaAbonos = express.Router();
  *       500:
  *         description: Error interno del servidor
  */
-rutaAbonos.post('/api/abonos/upload', createAbono);
+rutaAbonos.post('/api/abonos/upload', authMiddleware, createAbono);
+
+rutaAbonos.get("/api/bajarAbonos", authMiddleware, getExcel);
 
 export default rutaAbonos;
