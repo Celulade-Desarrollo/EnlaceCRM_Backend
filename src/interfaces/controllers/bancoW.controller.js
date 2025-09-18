@@ -31,16 +31,24 @@ const getByFlujoIdBancoW = async (req, res) => {
 
 // POST: Crear nuevo registro
 const createBancoW = async (req, res) => {
-  const {
-    IdFlujoRegistro,
-    Validacion_Banco_listas,
-    Aprobacion_Cupo_sugerido,
-    Pagare_Digital_Firmado,
-    Pagare_Digital_Enviado,
-    UsuarioAprobado
-  } = req.body;
-
   try {
+    // Obtener el token del header Authorization
+    const authHeader = req.headers.authorization;
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+      return res.status(401).json({ error: "Token no proporcionado" });
+    }
+    
+    const token = authHeader.split(' ')[1];
+
+    const {
+      IdFlujoRegistro,
+      Validacion_Banco_listas,
+      Aprobacion_Cupo_sugerido,
+      Pagare_Digital_Firmado,
+      Pagare_Digital_Enviado,
+      UsuarioAprobado
+    } = req.body;
+
     // Convertir IdFlujoRegistro a número
     const idFlujoRegistroNum = parseInt(IdFlujoRegistro);
     if (isNaN(idFlujoRegistroNum)) {
@@ -54,7 +62,8 @@ const createBancoW = async (req, res) => {
       Pagare_Digital_Firmado,
       Pagare_Digital_Enviado,
       UsuarioAprobado,
-    });
+    }, token);
+
     res.status(201).json(result);
   } catch (err) {
     res.status(500).send(err.message);
@@ -73,6 +82,14 @@ const deleteBancoWbyId = async (req, res) => {
 
 const updateCoreBancario = async (req, res) => {
   try {
+     // Obtener el token del header Authorization
+    const authHeader = req.headers.authorization;
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+      return res.status(401).json({ error: "Token no proporcionado" });
+    }
+    
+    const token = authHeader.split(' ')[1];
+
     const { id } = req.params;
     const { Pagare_Digital_Firmado, Pagare_Digital_Enviado, UsuarioAprobado } = req.body;
     
@@ -86,7 +103,7 @@ const updateCoreBancario = async (req, res) => {
       Pagare_Digital_Firmado,
       Pagare_Digital_Enviado,
       UsuarioAprobado
-    });
+    }, token);
     
     res.status(200).json({ message: "Registro actualizado correctamente" });
   } catch (err) {
