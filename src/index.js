@@ -13,10 +13,11 @@ import ubicacionRoutes from "./interfaces/routes/ubicacion.routes.js";
 import alpinaRouter from "./interfaces/routes/alpina.route.js";
 import estadoCuentaRouter from "./interfaces/routes/estadoCuenta.route.js";
 import movimientoGetRouter from "./interfaces/routes/movimientoGet.routes.js";
+import abonoRouter from "./interfaces/routes/Abonos.route.js";
 
 
 // import pagosRouter from "./interfaces/routes/confirmarPago.route.js"; 
-
+import { LogsRouter } from "./interfaces/routes/logs.route.js";
 import UserAccountRoute from "./interfaces/routes/userAccount.route.js";
 import authRouter from "./interfaces/routes/auth.Routes.js"
 import adminRouter from "./interfaces/routes/adminAccount.route.js";
@@ -72,6 +73,8 @@ app.use(movimientoCuentaRouter);
 app.use(validarMoraRouter);
 app.use("/api/movimiento", movimientoRouter); // Registrar la nueva ruta en la aplicación
 app.use(movimientoGetRouter);
+app.use(LogsRouter)
+app.use(abonoRouter);
 
 app.get("/", (req, res) => {
   res.send("Servidor funcionando correctamente");
