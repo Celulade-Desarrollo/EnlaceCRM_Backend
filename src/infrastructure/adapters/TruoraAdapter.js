@@ -6,7 +6,7 @@ export class TruoraAdapter extends TruoraPort {
         return await truoraRepository.truoraInfoProcess(process_id)
     }
 
-    async setTruoraStatusProcess(document_number, validation_status) {
-        return await truoraRepository.setTruoraStatusProcess(document_number, validation_status)
+    async setTruoraStatusProcess(document_number, validation_status, birth_date, birth_department, birth_place, expedition_place, issue_date) {
+        return await truoraRepository.setTruoraStatusProcess(document_number, validation_status, birth_date, birth_department, birth_place, expedition_place, issue_date)
     }
 }
