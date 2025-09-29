@@ -2,7 +2,7 @@ import { ValidationError } from "../../../errors/Validation.error.js";
 import { estadoCuentaService } from "../../services/estadoCuentaServiceInstance.js";
 import { Movimiento } from "../../../domain/models/Movimiento.js";
 
-export const registrarMovimientoUseCase = async (datosMovimiento = {}, service = estadoCuentaService) => {
+export const registrarMovimientoUseCase = async (datosMovimiento = {}) => {
   try {
     if (
       !datosMovimiento.identificadorTendero ||
@@ -13,7 +13,7 @@ export const registrarMovimientoUseCase = async (datosMovimiento = {}, service =
     }
 
     const movimiento = new Movimiento(datosMovimiento);
-    return await service.registrarMovimiento(movimiento);
+    return await estadoCuentaService.registrarMovimiento(movimiento);
 
   } catch (error) {
     throw error;
