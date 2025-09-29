@@ -26,5 +26,22 @@ export class EstadoCuentaPort {
   async registrarPago(pago) {
     throw new Error("Method not implemented.");
   }
+
+  async registrarMovimiento(movimiento) {
+    throw new Error("Method not implemented.");
+  }
+
+  async obtenerMovimientosPorClienteUltimosTresMeses(IdUsuarioFinal) {
+    throw new Error("Method not implemented.");
+  }
+
+  async obtenerTodosLosMovimientos() {
+    throw new Error("Method not implemented.");
+  }
+
+  async actualizarMontoMovimiento(idMovimiento, nuevoMonto) {
+    throw new Error("Method not implemented.");
+  }
+
 }
 

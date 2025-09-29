@@ -1,3 +1,5 @@
+//[DEPRECADO]
+
 import { MovimientoRepositoryImpl } from "../../infrastructure/repositories/MovimientoRepositoryImpl.js";
 import { GetMovimientosUseCase } from "../../application/usecases/movimientos/GetMovimientosUseCase.js";
 
@@ -14,3 +16,5 @@ export const getMovimientosByCliente = async (req, res) => {
     res.status(500).json({ error: "Error al obtener movimientos" });
   }
 };
+
+
