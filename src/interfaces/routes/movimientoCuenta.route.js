@@ -108,7 +108,7 @@ router.post("/api/movimientos", authMiddleware, registrarMovimientoController);
  *                   Descripcion:
  *                     type: string
  *                   FechaPagoProgramado:
- *                     type: string
+ *                     type: string. 
  *                     format: date-time
  */
 router.get("/api/movimientos/:clienteId", getMovimientosByCliente );
