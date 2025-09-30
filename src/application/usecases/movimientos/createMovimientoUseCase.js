@@ -1,4 +1,5 @@
 import { movimientoRepository } from "../../../infrastructure/repositories/movimiento.repository.js";
+import {estadoCuentaService} from "../../services/estadoCuentaServiceInstance.js";
 import { EstadoCuenta } from "../../../domain/models/EstadoCuenta.js";
 import { Factura } from "../../../domain/models/Factura.js";
 

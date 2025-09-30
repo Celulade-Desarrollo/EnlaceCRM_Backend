@@ -1,4 +1,8 @@
 import { registrarMovimientoUseCase } from "../../application/usecases/pagos/registrarMovimientoUseCase.js";
+import { getMovimientosUseCase } from "../../application/usecases/movimientos/getMovimientosRefactorUseCase.js";
+import { listarMovimientosParaEnlace } from "../../application/usecases/movimientos/listarMovimientosParaEnlace.js";
+import { calcularInteresesUseCase } from "../../application/usecases/movimientos/calcularInteresesUseCase.js";
+
 import ValidationError from "../../errors/Validation.error.js";
 
 export const registrarMovimientoController = async (req, res) => {
@@ -39,42 +43,41 @@ export const registrarMovimientoController = async (req, res) => {
   }
 };
 
-// import { confirmarPagoUseCase } from "../../application/usecases/pagos/confirmarPagoUseCase.js";
-// import ValidationError from "../../errors/Validation.error.js";
 
-// export const confirmarPagoController = async (req, res) => {
-//   try {
-//     const {
-//       identificadorTendero,
-//       monto,
-//       descripcion,
-//       fechaPagoProgramado,
-//       idMedioPago,
-//       nroFacturaAlpina,
-//       telefonoTransportista
-//     } = req.body;
 
-//     console.log("🟡 Body recibido en controlador:", req.body);
+export const getMovimientosByCliente = async (req, res) => {
+  try {
+    const { clienteId } = req.params;
+    const movimientos = await getMovimientosUseCase(clienteId)
+    res.json(movimientos);
+  } catch (error) {
+    console.error("Error al obtener movimientos:", error.message);
+    res.status(500).json({ error: "Error al obtener movimientos" });
+  }
+};
 
-//     const resultado = await confirmarPagoUseCase({
-//       identificadorTendero,
-//       monto,
-//       descripcion,
-//       fechaPagoProgramado,
-//       idMedioPago,
-//       nroFacturaAlpina,
-//       telefonoTransportista
-//     });
 
-//     res.status(201).json(resultado);
-//   } catch (error) {
-//     console.error("❌ Error en confirmarPagoController:", error.message);
+export const listarMovimientosParaEnlaceController = async (req, res) => {
+  try {
+    const movimientos = await listarMovimientosParaEnlace();
+    res.json(movimientos);
+  } catch (error) {
+    console.error("Error al listar movimientos para Enlace:", error.message);
+    res.status(500).json({ error: "Error al listar movimientos para Enlace" });
+  }
+}
 
-//     if (error instanceof ValidationError) {
-//       return res.status(400).json({ mensaje: error.message });
-//     }
-
-//     res.status(500).json({ mensaje: "Error interno al confirmar pago" });
-//   }
-// };
-
+export const calcularInteresesController = async (req, res) => {
+  try {
+    const { idMovimiento } = req.body;
+    const { nuevoMonto } = req.body;
+    if (!idMovimiento || !nuevoMonto) {
+      return res.status(400).json({ error: "Faltan parámetros obligatorios: idMovimiento y nuevoMonto" });
+    } 
+    const resultado = await calcularInteresesUseCase(idMovimiento, nuevoMonto);
+    res.json(resultado);
+  } catch (error) {
+    console.error("Error al calcular intereses:", error.message);
+    res.status(500).json({ error: "Error al calcular intereses" });
+  } 
+}

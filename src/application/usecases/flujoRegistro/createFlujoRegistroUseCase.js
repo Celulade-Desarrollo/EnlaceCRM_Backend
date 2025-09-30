@@ -8,7 +8,6 @@ export async function createFlujoRegistroUseCase(input) {
   if (duplicado) {
     throw new Error("Ya existe un registro con los mismos datos (cédula, celular o correo).");
   }
-
   await flujoRegistroService.insertarRegistro(registro);
 
   return {

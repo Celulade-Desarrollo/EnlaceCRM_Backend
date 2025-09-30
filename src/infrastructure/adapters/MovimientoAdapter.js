@@ -1,3 +1,5 @@
+// [DEPRECADO]
+
 import { validarMovimientoPagoUseCase } from '../../application/usecases/movimientos/validarMovimientoUseCase.js';
 // Importaremos el caso de uso de creación más adelante cuando refactoricemos esa parte.
 import { createMovimientoUseCase } from '../../application/usecases/movimientos/createMovimientoUseCase.js';
