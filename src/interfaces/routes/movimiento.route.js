@@ -1,3 +1,5 @@
+//[DEPRECADO]
+
 import { Router } from "express";
 import { validarMovimiento, crearMovimientoPago } from "../controllers/movimiento.controller.js";
 import { authMiddleware } from "../middleware/token-middleware.js";

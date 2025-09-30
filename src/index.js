@@ -12,7 +12,7 @@ import twilioRouter from "./interfaces/routes/twilio.route.js";
 import ubicacionRoutes from "./interfaces/routes/ubicacion.routes.js";
 import alpinaRouter from "./interfaces/routes/alpina.route.js";
 import estadoCuentaRouter from "./interfaces/routes/estadoCuenta.route.js";
-import movimientoGetRouter from "./interfaces/routes/movimientoGet.routes.js";
+// import movimientoGetRouter from "./interfaces/routes/movimientoGet.routes.js";
 import abonoRouter from "./interfaces/routes/abonos.route.js";
 
 
@@ -72,7 +72,7 @@ app.use(adminRouter)
 app.use(movimientoCuentaRouter);
 app.use(validarMoraRouter);
 app.use("/api/movimiento", movimientoRouter); // Registrar la nueva ruta en la aplicación
-app.use(movimientoGetRouter);
+// app.use(movimientoGetRouter);
 app.use(LogsRouter)
 app.use(abonoRouter);
 
