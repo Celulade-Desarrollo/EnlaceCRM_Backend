@@ -1,4 +1,3 @@
-// src/application/services/CodigoTransaccionService.js
 import { poolPromise } from "../../infrastructure/persistence/database.js";
 import sql from "mssql";
 
