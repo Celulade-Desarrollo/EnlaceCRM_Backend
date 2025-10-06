@@ -1,18 +1,35 @@
 export class Abono {
-  constructor({ Cedula, Id_transaccion, Monto_total, Tipo_abono, Fecha, Hora }) {
-    this.Cedula = Cedula;
-    this.Id_transaccion = Id_transaccion;
-    this.Monto_total = Monto_total;
-    this.Tipo_abono = Tipo_abono;
-    this.Fecha = Fecha;
-    this.Hora = Hora;
+  constructor({
+    numeroid,
+    persona,
+    cuentacliente,
+    operacion,
+    VlrCuota,
+    VlrCuotalistadomora,
+    fecproxima,
+    nrodiasmora,
+    abonoIntereses,
+    AbonoFees,
+    CobroFees
+  }) {
+    this.numeroid = numeroid;
+    this.persona = persona;
+    this.cuentacliente = cuentacliente;
+    this.operacion = operacion;
+    this.VlrCuota = VlrCuota;
+    this.VlrCuotalistadomora = VlrCuotalistadomora;
+    this.fecproxima = fecproxima;
+    this.nrodiasmora = nrodiasmora;
+    this.abonoIntereses = abonoIntereses;
+    this.AbonoFees = AbonoFees;
+    this.CobroFees = CobroFees;
   }
 
   validarDatos() {
-    if (!this.Cedula || !this.Id_transaccion) {
-      throw new Error("Cedula e Id_transaccion son obligatorios");
+    if (!this.numeroid || !this.operacion) {
+      throw new Error("numeroid y operacion son obligatorios");
     }
-     this.Cedula = String(this.Cedula).trim();
-     this.Id_transaccion = String(this.Id_transaccion).trim();
+    this.numeroid = Number(this.numeroid);
+    this.operacion = Number(this.operacion);
   }
 }
