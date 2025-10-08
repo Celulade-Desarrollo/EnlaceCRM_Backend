@@ -42,12 +42,12 @@ export const truoraRepository = {
                 .input("IssueDate", sql.NVarChar, issue_date)
                 .query(`
                     UPDATE FlujosRegistroEnlace 
-                    SET truora = @TruoraStatus,
-                        birth_place = @BirthPlace,
-                        birth_department = @BirthDepartment,
-                        birth_date = @BirthDate,
-                        expedition_place = @ExpeditionPlace,
-                        issue_date = @IssueDate
+                    SET Confirmacion_Identidad = @TruoraStatus,
+                        Municipio_nacimiento = @BirthPlace,
+                        Departamento_de_Nacimiento = @BirthDepartment,
+                        Fecha_de_Nacimiento = @BirthDate,
+                        Lugar_expedicion = @ExpeditionPlace,
+                        Fecha_expedicion = @IssueDate
                     WHERE Cedula_Cliente = @Cedula_Cliente;
 
                     SELECT * FROM FlujosRegistroEnlace 
