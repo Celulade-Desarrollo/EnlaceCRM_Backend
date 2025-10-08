@@ -67,6 +67,7 @@ export const flujoRegistroRepository = {
       .input("Ingresos_Diferentes_Negocio", sql.NVarChar, input.Ingresos_Diferentes_Negocio)
       .input("nbCliente", sql.VarChar, input.nbCliente)
       .input("nbAgenteComercial", sql.VarChar, input.nbAgenteComercial)
+      .input("Monto_ingresos_diferentes_negocio", sql.NVarChar, input.Monto_ingresos_diferentes_negocio)
       .query(`
         INSERT INTO FlujosRegistroEnlace (
           Estado, Numero_de_Cliente_Alpina, Cedula_Cliente, Autorizacion_Habeas_Data,
@@ -79,7 +80,7 @@ export const flujoRegistroRepository = {
           Persona_expuesta_politicamente_PEP, Familiar_expuesto_politicamente_PEP,
           Operaciones_moneda_extranjera, Declaracion_de_nacionalidad_y_residencia_fiscal_en_Colombia,
           Confirmacion_Identidad,Cedula_Conyuge, Nombre_Conyuge, Apellido_Conyuge, Valor_Bienes, Valor_Deudas,
-          Gastos_Mensuales, Deuda_Mensual, Ingresos_Diferentes_Negocio, nbCliente, nbAgenteComercial
+          Gastos_Mensuales, Deuda_Mensual, Ingresos_Diferentes_Negocio, nbCliente, nbAgenteComercial,Monto_ingresos_diferentes_negocio
         ) VALUES (
           @Estado, @Numero_de_Cliente_Alpina, @Cedula_Cliente, @Autorizacion_Habeas_Data,
           @Autorizacion_Medios_de_Contacto, @Numero_Celular, @Correo_Electronico, @Nombres,
@@ -91,7 +92,7 @@ export const flujoRegistroRepository = {
           @Persona_expuesta_politicamente_PEP, @Familiar_expuesto_politicamente_PEP,
           @Operaciones_moneda_extranjera, @Declaracion_de_nacionalidad_y_residencia_fiscal_en_Colombia, @Confirmacion_Identidad, @Cedula_Conyuge, @Nombre_Conyuge,@Apellido_Conyuge,
           @Valor_Bienes, @Valor_Deudas, @Gastos_Mensuales, @Deuda_Mensual, @Ingresos_Diferentes_Negocio,
-          @nbCliente, @nbAgenteComercial
+          @nbCliente, @nbAgenteComercial,@Monto_ingresos_diferentes_negocio
         )
       `);
   },
@@ -163,6 +164,4 @@ async obtenerPorNumeroCelular(numeroCelular) {
     .query("SELECT * FROM FlujosRegistroEnlace WHERE Numero_Celular = @Numero_Celular");
   return result.recordset;
 }
-
-
 };
