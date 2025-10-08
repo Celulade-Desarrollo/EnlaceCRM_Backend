@@ -34,7 +34,7 @@ bancoW.get("/api/bancow", authMiddleware, getAllBancoW);
  *       200:
  *         description: Lista de registros
  */
-bancoW.get("/api/excel", authMiddleware, getExcel);
+bancoW.get("/api/excel", getExcel);
 
 
 
