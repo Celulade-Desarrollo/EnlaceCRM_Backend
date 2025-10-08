@@ -18,7 +18,7 @@ export async function getExcelData() {
         Estado_Civil: excelData.Estado_Civil,
         Fecha_de_Nacimiento: excelData.Fecha_de_Nacimiento,
         Pais_de_Nacimiento: excelData.Pais_de_Nacimiento,
-        Departamento_de_Nacimiento: excelData.Departamento_de_Nacimiento,
+        Departamento_de_Nacimiento: "COLOMBIA",
         Municipio_nacimiento: excelData.Municipio_nacimiento,
         Lugar_expedicion: excelData.Lugar_expedicion,
         Fecha_expedicion: excelData.Fecha_expedicion,
