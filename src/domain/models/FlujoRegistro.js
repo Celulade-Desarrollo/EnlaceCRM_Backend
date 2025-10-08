@@ -36,13 +36,14 @@ export class FlujoRegistro {
     Cedula_Conyuge = "No aplica",
     Nombre_Conyuge = "No aplica",
     Apellido_Conyuge = "No aplica",
-    Valor_Bienes ,
+    Valor_Bienes,
     Valor_Deudas,
     Gastos_Mensuales,
     Deuda_Mensual ,
     Ingresos_Diferentes_Negocio,
     nbCliente,
-    nbAgenteComercial
+    nbAgenteComercial,
+    Monto_ingresos_diferentes_negocio
   }) {
     this.Numero_de_Cliente_Alpina = Numero_de_Cliente_Alpina;
     this.Cedula_Cliente = Cedula_Cliente;
@@ -87,6 +88,7 @@ export class FlujoRegistro {
     this.Ingresos_Diferentes_Negocio = Ingresos_Diferentes_Negocio;
     this.nbCliente = nbCliente;
     this.nbAgenteComercial = nbAgenteComercial;
+    this.Monto_ingresos_diferentes_negocio = Monto_ingresos_diferentes_negocio;
   }
   validarDatos() {
     // Aquí puedes agregar lógica para validar los datos de entrada
