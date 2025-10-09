@@ -1,5 +1,62 @@
 import { bancowService } from "../../services/bancowServiceInstance.js";
 
 export async function getExcelData() {
-    return await bancowService.obtenerDatosExcel()
+    const excelDataArray = await bancowService.obtenerDatosExcel();
+    
+    // Mapear cada registro del array a su respectivo DTO
+    const excelFullData = excelDataArray.map(excelData => ({
+        Id: excelData.Id,
+        Cedula_Cliente: excelData.Cedula_Cliente,
+        Autorizacion_Habeas_Data: excelData.Autorizacion_Habeas_Data,
+        Autorizacion_Medios_de_Contacto: excelData.Autorizacion_Medios_de_Contacto,
+        Numero_Celular: excelData.Numero_Celular,
+        Correo_Electronico: excelData.Correo_Electronico,
+        Nombres: excelData.Nombres,
+        Primer_Apellido: excelData.Primer_Apellido,
+        segundo_Apellido_opcional: excelData["2do_Apellido_opcional"],
+        Genero: excelData.Genero,
+        Estado_Civil: excelData.Estado_Civil,
+        Fecha_de_Nacimiento: excelData.Fecha_de_Nacimiento,
+        Pais_de_Nacimiento: "COLOMBIA" ,
+        Departamento_de_Nacimiento: excelData.Departamento_de_Nacimiento,
+        Municipio_nacimiento: excelData.Municipio_nacimiento,
+        Lugar_expedicion: excelData.Lugar_expedicion,
+        Fecha_expedicion: excelData.Fecha_expedicion,
+        Nivel_Educativo: excelData.Nivel_Educativo,
+        Estrato: excelData.Estrato,
+        Grupo_Etnico: excelData.Grupo_Etnico,
+        Cedula_Conyuge: excelData.Cedula_Conyuge,
+        Nombre_Conyuge: excelData.Nombre_Conyuge,
+        Apellido_Conyuge: excelData.Apellido_Conyuge,
+        Ubicacion_del_Negocio_Departamento: excelData.Ubicacion_del_Negocio_Departamento,
+        Ubicacion_del_Negocio_Ciudad: excelData.Ubicacion_del_Negocio_Ciudad,
+        Direccion: excelData.Direccion,
+        Detalles: excelData.Detalles,
+        Barrio: excelData.Barrio,
+        Numero_de_neveras: excelData.Numero_de_neveras,
+        Registrado_Camara_Comercio: excelData.Registrado_Camara_Comercio,
+        Rango_de_Ingresos: excelData.Rango_de_Ingresos,
+        Valor_Bienes: excelData.Valor_Bienes,
+        Valor_Deudas: excelData.Valor_Deudas,
+        Gastos_Mensuales: excelData.Gastos_Mensuales,
+        Deuda_Mensual: excelData.Deuda_Mensual,
+        Ingresos_Diferentes_Negocio: excelData.Ingresos_Diferentes_Negocio,
+        Monto_ingresos_diferentes_negocio: excelData.Monto_ingresos_diferentes_negocio,
+        Declara_Renta: excelData.Declara_Renta,
+        Esta_obligado_a_tener_RUT_por_tu_actividad_economica: excelData.Esta_obligado_a_tener_RUT_por_tu_actividad_economica,
+        Persona_expuesta_politicamente_PEP: excelData.Persona_expuesta_politicamente_PEP,
+        Familiar_expuesto_politicamente_PEP: excelData.Familiar_expuesto_politicamente_PEP,
+        Operaciones_moneda_extranjera: excelData.Operaciones_moneda_extranjera,
+        Declaracion_de_nacionalidad_y_residencia_fiscal_en_Colombia: excelData.Declaracion_de_nacionalidad_y_residencia_fiscal_en_Colombia,
+        Confirmacion_Identidad: excelData.Confirmacion_Identidad,
+        Cliente_Acepto: excelData.Cliente_Acepto,
+        Aprobacion_Cupo_sugerido: excelData.Aprobacion_Cupo_sugerido,
+        Pagare_Digital_Firmado: excelData.Pagare_Digital_Firmado,
+        Pagare_Digital_Enviado: excelData.Pagare_Digital_Enviado,
+        UsuarioAprobado: excelData.UsuarioAprobado,
+        Estatus: excelData.Estatus,
+        Estado: excelData.Estado,
+    }));
+
+    return excelFullData;
 }

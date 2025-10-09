@@ -60,7 +60,7 @@ const router = express.Router();
  *       500:
  *         description: Error interno del servidor
  */
-router.post("/api/movimientos", authMiddleware, registrarMovimientoController);
+router.post("/api/movimientos", registrarMovimientoController);
 
 /**
  * @swagger
@@ -216,6 +216,6 @@ router.get("/api/listar/enlace/movimientos", listarMovimientosParaEnlaceControll
  *       500:
  *         description: Error del servidor
  */
-router.post("/api/calcular-intereses", calcularInteresesController);
+router.put("/api/actualizarIntereses/:nroFacturaAlpina", calcularInteresesController);
 
 export default router;

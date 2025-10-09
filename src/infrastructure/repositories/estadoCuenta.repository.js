@@ -293,6 +293,7 @@ export const estadoCuentaRepository = {
                   ECM.Monto,
                   ECM.Descripcion,
                   ECM.FechaPagoProgramado,
+                  ECM.NroFacturaAlpina,
                   UF.Cedula_Usuario
               FROM 
                   EstadoCuentaMovimientos ECM
@@ -311,16 +312,16 @@ export const estadoCuentaRepository = {
       }
   },
   
-  async actualizarMontoMovimiento(idMovimiento, nuevoMonto) {
+  async actualizarMontoMovimiento(nroFacturaAlpina, nuevoMonto) {
       try {
           const pool = await poolPromise;
           const result = await pool.request()
-              .input("idMovimiento", sql.Int, idMovimiento)
+              .input("NroFacturaAlpina", sql.Int, nroFacturaAlpina)
               .input("monto", sql.Decimal(18,2), nuevoMonto)
               .query(`
                   UPDATE EstadoCuentaMovimientos 
                   SET Monto = @monto
-                  WHERE IdMovimiento = @idMovimiento;
+                  WHERE NroFacturaAlpina = @NroFacturaAlpina;
   
                   -- Retornar el registro actualizado
                   SELECT 
@@ -332,6 +333,7 @@ export const estadoCuentaRepository = {
                       ECM.Monto,
                       ECM.Descripcion,
                       ECM.FechaPagoProgramado,
+                      ECM.NroFacturaAlpina,
                       UF.Cedula_Usuario
                   FROM EstadoCuentaMovimientos ECM
                   INNER JOIN UsuarioFinal UF ON ECM.IdUsuarioFinal = UF.IdUsuarioFinal
