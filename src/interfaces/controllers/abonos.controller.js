@@ -12,14 +12,17 @@ export const getExcel = async (req, res) => {
 
 export const createAbono = async (req, res) => {
   try {
-    const { data } = req.body; 
+    const { data } = req.body;
     if (!data || !Array.isArray(data)) {
       return res.status(400).json({ error: "El body debe contener un array 'data'" });
     }
 
-    await createAbonoUseCase(data);
+    const resultado = await createAbonoUseCase(data);
 
-    res.status(201).json({ message: "Abonos cargados exitosamente" });
+    res.status(200).json({
+      message: `Se insertaron ${resultado.successCount} filas. ${resultado.errorCount} filas con error.`,
+      detalles: resultado.errores
+    });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
