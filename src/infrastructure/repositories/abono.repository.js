@@ -9,23 +9,18 @@ export const abonoRepository = {
       .input("persona", sql.NVarChar, abono.persona)
       .input("cuentacliente", sql.Int, abono.cuentacliente)
       .input("operacion", sql.Int, abono.operacion)
-      .input("VlrCuota", sql.Decimal(18, 2), abono.VlrCuota)
-      .input("VlrCuotalistadomora", sql.Decimal(18, 2), abono.VlrCuotalistadomora)
-      .input("fecproxima", sql.Date, abono.fecproxima)
-      .input("nrodiasmora", sql.Int, abono.nrodiasmora)
+      .input("AbonoTotal", sql.Decimal(18, 2), abono.AbonoTotal)
       .input("abonoIntereses", sql.Decimal(18, 2), abono.abonoIntereses)
       .input("AbonoFees", sql.Decimal(18, 2), abono.AbonoFees)
-      .input("CobroFees", sql.Decimal(18, 2), abono.CobroFees)
+      .input("AbonoCapital", sql.Decimal(18, 2), abono.AbonoCapital)
       .query(`
         INSERT INTO Abonos (
           numeroid, persona, cuentacliente, operacion,
-          VlrCuota, VlrCuotalistadomora, fecproxima,
-          nrodiasmora, abonoIntereses, AbonoFees, CobroFees
+          AbonoTotal, abonoIntereses, AbonoFees, AbonoCapital
         )
         SELECT
           @numeroid, @persona, @cuentacliente, @operacion,
-          @VlrCuota, @VlrCuotalistadomora, @fecproxima,
-          @nrodiasmora, @abonoIntereses, @AbonoFees, @CobroFees
+          @AbonoTotal, @abonoIntereses, @AbonoFees, @AbonoCapital
         WHERE NOT EXISTS (
           SELECT 1 FROM Abonos WHERE operacion = @operacion
         );
