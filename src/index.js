@@ -36,7 +36,7 @@ const app = express();
 
 // Configuración de CORS
 app.use(cors({
-  origin: ["*"], // Permite frontend dev y swagger
+  origin: ["http://localhost:5173"], // Permite frontend dev y swagger
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
   allowedHeaders: [
     "Content-Type",
@@ -82,7 +82,7 @@ app.get("/", (req, res) => {
 });
 
 // Puerto del servidor
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 async function startServer() {
   try {

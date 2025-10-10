@@ -4,25 +4,19 @@ export class Abono {
     persona,
     cuentacliente,
     operacion,
-    VlrCuota,
-    VlrCuotalistadomora,
-    fecproxima,
-    nrodiasmora,
+    AbonoTotal,
     abonoIntereses,
     AbonoFees,
-    CobroFees
+    AbonoCapital
   }) {
     this.numeroid = numeroid;
     this.persona = persona;
     this.cuentacliente = cuentacliente;
     this.operacion = operacion;
-    this.VlrCuota = VlrCuota;
-    this.VlrCuotalistadomora = VlrCuotalistadomora;
-    this.fecproxima = fecproxima;
-    this.nrodiasmora = nrodiasmora;
+    this.AbonoTotal = AbonoTotal;
     this.abonoIntereses = abonoIntereses;
     this.AbonoFees = AbonoFees;
-    this.CobroFees = CobroFees;
+    this.AbonoCapital = AbonoCapital;
   }
 
   validarDatos() {
