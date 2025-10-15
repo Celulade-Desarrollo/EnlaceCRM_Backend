@@ -1,6 +1,7 @@
 import { ValidationError } from "../../../errors/Validation.error.js";
 import { estadoCuentaService } from "../../services/estadoCuentaServiceInstance.js";
 import { Movimiento } from "../../../domain/models/Movimiento.js";
+import {registrarMovimientoTipoDosUseCase} from "./registrarMovimientoTipoDosUseCase.js"
 
 export const registrarMovimientoUseCase = async (datosMovimiento = {}) => {
   try {

@@ -2,6 +2,7 @@ import { registrarMovimientoUseCase } from "../../application/usecases/pagos/reg
 import { getMovimientosUseCase } from "../../application/usecases/movimientos/getMovimientosRefactorUseCase.js";
 import { listarMovimientosParaEnlace } from "../../application/usecases/movimientos/listarMovimientosParaEnlace.js";
 import { calcularInteresesUseCase } from "../../application/usecases/movimientos/calcularInteresesUseCase.js";
+import {registrarMovimientoTipoDosUseCase} from "../../application/usecases/pagos/registrarMovimientoTipoDosUseCase.js"
 
 import ValidationError from "../../errors/Validation.error.js";
 
@@ -69,15 +70,32 @@ export const listarMovimientosParaEnlaceController = async (req, res) => {
 
 export const calcularInteresesController = async (req, res) => {
   try {
-    const { nroFacturaAlpina } = req.params;
+    const { IdMovimiento } = req.params;
     const { nuevoMonto } = req.body;
-    if (!nroFacturaAlpina || !nuevoMonto) {
+    if (!IdMovimiento || !nuevoMonto) {
       return res.status(400).json({ error: "Faltan parámetros obligatorios: nroFacturaAlpina y nuevoMonto" });
     } 
-    const resultado = await calcularInteresesUseCase(nroFacturaAlpina, nuevoMonto);
+  
+    const resultado = await calcularInteresesUseCase(parseInt(IdMovimiento), nuevoMonto);
     res.json(resultado);
   } catch (error) {
     console.error("Error al calcular intereses:", error.message);
+    res.status(500).json({ error: "Error al calcular intereses" });
+  } 
+}
+
+export const actualizarAbonoMovimiento = async (req, res) => {
+  try {
+    const { IdMovimiento } = req.params;
+    const { nuevoMonto } = req.body;
+    if (!IdMovimiento || !nuevoMonto) {
+      return res.status(400).json({ error: "Faltan parámetros obligatorios: nroFacturaAlpina y nuevoMonto" });
+    } 
+
+    const resultado = await registrarMovimientoTipoDosUseCase((IdMovimiento), nuevoMonto);
+    res.json(resultado);
+  } catch (error) {
+    console.error("Error al actualizar el abono:", error.message);
     res.status(500).json({ error: "Error al calcular intereses" });
   } 
 }

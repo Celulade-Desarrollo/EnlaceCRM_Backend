@@ -43,5 +43,13 @@ export class EstadoCuentaPort {
     throw new Error("Method not implemented.");
   }
 
+
+  async registrarMovimientoAbono(IdMovimiento, AbonoUsuario){
+    throw new Error("Method not implemented")
+  }
+
+  async traerPorIdMovimiento(IdMovimiento){
+    throw new Error("Method not implemented")
+  }
 }
 

@@ -1,5 +1,5 @@
 import express from "express";
-import { registrarMovimientoController, getMovimientosByCliente, listarMovimientosParaEnlaceController, calcularInteresesController } from "../controllers/movimientoCuenta.controller.js";
+import { registrarMovimientoController, getMovimientosByCliente, listarMovimientosParaEnlaceController, calcularInteresesController, actualizarAbonoMovimiento } from "../controllers/movimientoCuenta.controller.js";
 
 import { authMiddleware } from "../middleware/token-middleware.js";
 
@@ -216,6 +216,62 @@ router.get("/api/listar/enlace/movimientos", listarMovimientosParaEnlaceControll
  *       500:
  *         description: Error del servidor
  */
-router.put("/api/actualizarIntereses/:nroFacturaAlpina", calcularInteresesController);
+router.put("/api/actualizarIntereses/:IdMovimiento", calcularInteresesController);
+
+/**
+ * @swagger
+ * /api/calcular-intereses:
+ *   post:
+ *     summary: Calcular intereses de un movimiento
+ *     description: Calcula los intereses basados en el monto y fechas del movimiento
+ *     tags: 
+ *       - Movimientos
+ *     security:
+ *       - bearerAuth: []
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               idMovimiento:
+ *                 type: integer
+ *                 description: ID del movimiento a calcular
+ *             required:
+ *               - idMovimiento
+ *     responses:
+ *       200:
+ *         description: Intereses calculados exitosamente
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 idMovimiento:
+ *                   type: integer
+ *                   description: ID del movimiento
+ *                 montoOriginal:
+ *                   type: number
+ *                   description: Monto original del movimiento
+ *                 intereses:
+ *                   type: number
+ *                   description: Monto de intereses calculados
+ *                 total:
+ *                   type: number
+ *                   description: Monto total (original + intereses)
+ *                 fechaCalculo:
+ *                   type: string
+ *                   format: date-time
+ *                   description: Fecha del cálculo
+ *       400:
+ *         description: Datos inválidos o movimiento no encontrado
+ *       401:
+ *         description: No autorizado
+ *       500:
+ *         description: Error del servidor
+ */
+router.put("/api/actualizarAbono/:IdMovimiento", actualizarAbonoMovimiento);
+
 
 export default router;

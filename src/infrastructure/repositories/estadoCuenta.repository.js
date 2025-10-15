@@ -294,6 +294,8 @@ export const estadoCuentaRepository = {
                   ECM.Descripcion,
                   ECM.FechaPagoProgramado,
                   ECM.NroFacturaAlpina,
+                  ECM.MontoMasIntereses,
+                  ECM.AbonoUsuario,
                   UF.Cedula_Usuario
               FROM 
                   EstadoCuentaMovimientos ECM
@@ -311,43 +313,54 @@ export const estadoCuentaRepository = {
           throw error;
       }
   },
+
+  async registrarMovimientoAbono(IdMovimiento, AbonoUsuario){
+  try {
+          const pool = await poolPromise;
+          const result = await pool.request()
+              .input("IdMovimiento", sql.Int, IdMovimiento)
+              .input("AbonoUsuario", sql.Int, AbonoUsuario)
+              .query(`
+                  UPDATE EstadoCuentaMovimientos 
+                  SET AbonoUsuario = @AbonoUsuario
+                  WHERE IdMovimiento = @IdMovimiento;`);
+          return result.recordset;
+      } catch (error) {
+          console.error("Error en registrarMovimientoAbono:", error.message);
+          throw error;
+      }
+  },
   
-  async actualizarMontoMovimiento(nroFacturaAlpina, nuevoMonto) {
+  async actualizarMontoMovimiento(IdMovimiento, nuevoMonto) {
       try {
           const pool = await poolPromise;
           const result = await pool.request()
-              .input("NroFacturaAlpina", sql.Int, nroFacturaAlpina)
-              .input("monto", sql.Decimal(18,2), nuevoMonto)
+              .input("IdMovimiento", sql.Int, IdMovimiento)
+              .input("monto", sql.Int, nuevoMonto)
               .query(`
                   UPDATE EstadoCuentaMovimientos 
-                  SET Monto = @monto
-                  WHERE NroFacturaAlpina = @NroFacturaAlpina;
-  
-                  -- Retornar el registro actualizado
-                  SELECT 
-                      ECM.IdMovimiento,
-                      ECM.IdUsuarioFinal,
-                      ECM.FechaHoraMovimiento,
-                      ECM.IdTipoMovimiento,
-                      ECM.IdEstadoMovimiento,
-                      ECM.Monto,
-                      ECM.Descripcion,
-                      ECM.FechaPagoProgramado,
-                      ECM.NroFacturaAlpina,
-                      UF.Cedula_Usuario
-                  FROM EstadoCuentaMovimientos ECM
-                  INNER JOIN UsuarioFinal UF ON ECM.IdUsuarioFinal = UF.IdUsuarioFinal
-                  WHERE ECM.IdMovimiento = @idMovimiento;
-              `);
-  
-          if (result.recordset.length === 0) {
-              throw new Error("No se encontró el movimiento especificado");
-          }
-  
-          return result.recordset[0];
+                  SET MontoMasIntereses = @monto
+                  WHERE IdMovimiento = @IdMovimiento;`);
+          return result.recordset;
       } catch (error) {
           console.error("Error en actualizarMontoMovimiento:", error.message);
           throw error;
       }
-  }
+  },
+
+  async traerPorIdMovimiento(IdMovimiento) {
+      try {
+          const pool = await poolPromise;
+          const result = await pool.request()
+              .input("IdMovimiento", sql.Int, IdMovimiento)
+              .query(`
+                  SELECT * FROM EstadoCuentaMovimientos 
+                  WHERE IdMovimiento = @IdMovimiento;`);
+          return result.recordset[0];
+      } catch (error) {
+          console.error("Error en traerPorIdMovimiento:", error.message);
+          throw error;
+      }
+  },
+  
 };
