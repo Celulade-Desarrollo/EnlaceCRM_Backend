@@ -1,29 +1,48 @@
 export class Abono {
-  constructor({
-    numeroid,
-    persona,
-    cuentacliente,
-    operacion,
-    AbonoTotal,
-    abonoIntereses,
-    AbonoFees,
-    AbonoCapital
+    constructor({
+    NumeroID,
+    Persona,
+    CuentaCliente,
+    Operacion,
+    TOTAL_PAGADO,
+    INTERESES,
+    SEGUROS,
+    CAPITAL,
+    IdEstadoProducto,
+    FecTransaccion,
+    INTERES_MORA,
+    DIAS_MORA
   }) {
-    this.numeroid = numeroid;
-    this.persona = persona;
-    this.cuentacliente = cuentacliente;
-    this.operacion = operacion;
-    this.AbonoTotal = AbonoTotal;
-    this.abonoIntereses = abonoIntereses;
-    this.AbonoFees = AbonoFees;
-    this.AbonoCapital = AbonoCapital;
+    this.NumeroID = NumeroID;
+    this.Persona = Persona;
+    this.CuentaCliente = CuentaCliente;
+    this.Operacion = Operacion;
+    this.TOTAL_PAGADO = TOTAL_PAGADO;
+    this.INTERESES = INTERESES;
+    this.SEGUROS = SEGUROS;
+    this.CAPITAL = CAPITAL;
+    this.IdEstadoProducto = IdEstadoProducto;
+    this.FecTransaccion = FecTransaccion;
+    this.INTERES_MORA = INTERES_MORA;
+    this.DIAS_MORA = DIAS_MORA;
   }
-
   validarDatos() {
-    if (!this.numeroid || !this.operacion) {
-      throw new Error("numeroid y operacion son obligatorios");
+    const camposObligatorios = [
+      "NumeroID",
+      "Operacion",
+      "CuentaCliente",
+      "Persona",
+      "IdEstadoProducto",
+      "FecTransaccion",
+      "CAPITAL",
+      "TOTAL_PAGADO"
+    ];
+
+    for (const campo of camposObligatorios) {
+      const valor = this[campo];
+      if (valor === undefined || valor === null || valor === "") {
+        throw new Error(`El campo '${campo}' es obligatorio.`);
+      }
     }
-    this.numeroid = Number(this.numeroid);
-    this.operacion = Number(this.operacion);
   }
 }
