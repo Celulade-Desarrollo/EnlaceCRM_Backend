@@ -3,33 +3,41 @@ import sql from "mssql";
 
 export const abonoRepository = {
   async insertarAbono(abono) {
-    const pool = await poolPromise;
-    await pool.request()
-      .input("numeroid", sql.Int, abono.numeroid)
-      .input("persona", sql.NVarChar, abono.persona)
-      .input("cuentacliente", sql.Int, abono.cuentacliente)
-      .input("operacion", sql.Int, abono.operacion)
-      .input("VlrCuota", sql.Decimal(18, 2), abono.VlrCuota)
-      .input("VlrCuotalistadomora", sql.Decimal(18, 2), abono.VlrCuotalistadomora)
-      .input("fecproxima", sql.Date, abono.fecproxima)
-      .input("nrodiasmora", sql.Int, abono.nrodiasmora)
-      .input("abonoIntereses", sql.Decimal(18, 2), abono.abonoIntereses)
-      .input("AbonoFees", sql.Decimal(18, 2), abono.AbonoFees)
-      .input("CobroFees", sql.Decimal(18, 2), abono.CobroFees)
-      .query(`
-        INSERT INTO Abonos (
-          numeroid, persona, cuentacliente, operacion,
-          VlrCuota, VlrCuotalistadomora, fecproxima,
-          nrodiasmora, abonoIntereses, AbonoFees, CobroFees
-        )
-        SELECT
-          @numeroid, @persona, @cuentacliente, @operacion,
-          @VlrCuota, @VlrCuotalistadomora, @fecproxima,
-          @nrodiasmora, @abonoIntereses, @AbonoFees, @CobroFees
-        WHERE NOT EXISTS (
-          SELECT 1 FROM Abonos WHERE operacion = @operacion
-        );
-      `);
+    try {
+      console.log("→ Entrando a insertarAbono con datos:", abono);
+
+      const pool = await poolPromise;
+      await pool.request()
+        .input("Operacion", sql.VarChar(50), String(abono.Operacion))
+        .input("CuentaCliente", sql.Int(50), abono.CuentaCliente)
+        .input("NumeroID", sql.Int(50), abono.NumeroID)
+        .input("Persona", sql.NVarChar(100), abono.Persona)
+        .input("IdEstadoProducto", sql.Int, abono.IdEstadoProducto)
+        .input("FecTransaccion", sql.Date, abono.FecTransaccion)
+        .input("CAPITAL", sql.Decimal(18, 2), abono.CAPITAL)
+        .input("INTERESES", sql.Decimal(18, 2), abono.INTERESES)
+        .input("INTERES_MORA", sql.Decimal(18, 2), abono.INTERES_MORA)
+        .input("SEGUROS", sql.Decimal(18, 2), abono.SEGUROS)
+        .input("TOTAL_PAGADO", sql.Decimal(18, 2), abono.TOTAL_PAGADO)
+        .input("DIAS_MORA", sql.Int, abono.DIAS_MORA)
+        .query(`
+          INSERT INTO Abonos (
+            Operacion, CuentaCliente, NumeroID, Persona, 
+            IdEstadoProducto, FecTransaccion, CAPITAL, INTERESES, 
+            INTERES_MORA, SEGUROS, TOTAL_PAGADO, DIAS_MORA
+          )
+          VALUES (
+            @Operacion, @CuentaCliente, @NumeroID, @Persona,
+            @IdEstadoProducto, @FecTransaccion, @CAPITAL, @INTERESES,
+            @INTERES_MORA, @SEGUROS, @TOTAL_PAGADO, @DIAS_MORA
+          );
+        `);
+
+      console.log("✅ Insert realizado con éxito en la base de datos.");
+    } catch (err) {
+      console.error("❌ Error al insertar abono en la base de datos:", err.message);
+      throw err;
+    }
   },
 
   async obtenerDatosExcel() {
