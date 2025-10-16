@@ -91,6 +91,7 @@ export const bancowRepository = {
             fre.*,  -- Todos los campos de FlujosRegistroEnlace
             fres.Estado AS Estado_Scoring,
             fres.Cliente_Acepto,  -- Campo nuevo de Scoring
+            fres.Scoring,
             frb.Aprobacion_Cupo_sugerido,
             frb.Pagare_Digital_Firmado,
             frb.Pagare_Digital_Enviado,
