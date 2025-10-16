@@ -4,7 +4,7 @@ import sql from "mssql";
 export const abonoRepository = {
   async insertarAbono(abono) {
     try {
-      console.log("→ Entrando a insertarAbono con datos:", abono);
+      console.log("Entrando a insertarAbono con datos:", abono);
 
       const pool = await poolPromise;
       await pool.request()
@@ -36,9 +36,9 @@ export const abonoRepository = {
       console.log("✅ Insert realizado con éxito en la base de datos.");
     } catch (err) {
       console.error("❌ Error al insertar abono en la base de datos:", err.message);
-      throw err;
+      throw new Error("Error al insertar abono: " + err.message);
     }
-  },
+  }, 
 
   async obtenerDatosExcel() {
     const pool = await poolPromise;
