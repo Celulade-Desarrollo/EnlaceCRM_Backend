@@ -56,8 +56,7 @@ app.use(express.urlencoded({ extended: true }));
 // Swagger
 swaggerDocs(app);
 
-// ✅ Registrar rutas
-app.use("/api/transacciones", transaccionesRoutes); // 👈 aquí queda bien montada
+app.use("/api/transacciones", transaccionesRoutes);
 
 app.use(flujoRegistroEnlace);
 app.use(bancoW);
@@ -82,7 +81,7 @@ app.get("/", (req, res) => {
 });
 
 // Puerto del servidor
-const PORT = process.env.PORT;
+const PORT = 3000;
 
 async function startServer() {
   try {

@@ -5,7 +5,7 @@ import { LOGS_TYPE } from "../../../constants/LogsType.js";
 import { tokenVerifierService } from "../../services/TokenVerifierService.js";
 
 export async function updateCoreBancarioUseCase(id, input, token) {
-    const estado = "completado"
+    const estado = "confirmado";
 
     const tokenData = await tokenVerifierService.verifyToken(token);
 
