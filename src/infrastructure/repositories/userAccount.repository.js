@@ -29,7 +29,7 @@ export const userAccountRepository = {
         const pool = await poolPromise;
         const result = await pool.request()
             .input("nbCliente", sql.VarChar(50), nbCliente)
-            .query(`SELECT * FROM FlujosRegistroEnlace WHERE nbCliente = @nbCliente AND Estado IN ('pendiente', 'aprobado')
+            .query(`SELECT * FROM FlujosRegistroEnlace WHERE nbCliente = @nbCliente AND Estado IN ('pendiente', 'aprobado','confirmado')
         `);
         return result.recordset[0];
     },
