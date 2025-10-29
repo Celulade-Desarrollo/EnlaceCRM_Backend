@@ -8,7 +8,7 @@ export class UbicacionesAdapter {
     try {
       const __filename = fileURLToPath(import.meta.url);
       const __dirname = path.dirname(__filename);
-      const pdfPath = path.join(__dirname, "../../../data/ubicaciones.pdf");
+      const pdfPath = path.join(__dirname, "../../data/ubicaciones.pdf");
 
       if (!fs.existsSync(pdfPath)) {
         throw new Error("El archivo PDF no existe en data/");
@@ -25,15 +25,30 @@ export class UbicacionesAdapter {
         const texto = content.items.map((item) => item.str).join(" ");
         textoCompleto += " " + texto;
       }
+      textoCompleto = textoCompleto
+        .replace(/\s+/g, " ")
+        .replace(/C ó digo/g, "Código")
+        .replace(/Direcci ó n/g, "Dirección")
+        .replace(/ANTIOQUIA /g, "ANTIOQUIA ")
+        .trim();
 
-      const direcciones = textoCompleto
-        .split(/\n|\r/)
-        .map((l) => l.trim())
-        .filter((l) => l && l.length > 5);
+      const bloques = textoCompleto.split(/\s0\d{5}\s/).slice(1);
 
-      console.log("📍 Direcciones extraídas:", direcciones.slice(0, 10));
+      const ubicaciones = bloques.map((bloque, index) => {
+        const matchDireccion = bloque.match(/MEDELLIN\s+([A-Z0-9#\-\.\s]+)/i);
+        const direccion = matchDireccion ? matchDireccion[1].trim() : "No encontrada";
 
-      return direcciones;
+        return {
+          id: index + 1,
+          nombre: "SERVIENTREGA",
+          municipio: "MEDELLIN",
+          departamento: "ANTIOQUIA",
+          direccion,
+        };
+      });
+
+      console.log("✅ Ubicaciones procesadas:", ubicaciones.slice(0, 3));
+      return ubicaciones;
     } catch (error) {
       console.error("Error al procesar PDF:", error);
       throw error;

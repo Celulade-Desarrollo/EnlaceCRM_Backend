@@ -1,4 +1,5 @@
-import { procesarUbicacionesUseCase, obtenerUbicacionesUseCase } from "../../application/usecases/ubicaciones/procesarUbicacionesUseCase.js";
+import { procesarUbicacionesUseCase } from "../../application/usecases/ubicacionMapa/procesarUbicacionesUseCase.js";
+import { obtenerUbicacionesUseCase } from "../../application/usecases/ubicacionMapa/obtenerUbicacionesUseCase.js";
 import { logger } from "../../config/logger.js";
 
 export const procesarUbicacionesController = async (req, res) => {
