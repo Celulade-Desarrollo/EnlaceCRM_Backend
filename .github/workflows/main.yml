@@ -1,27 +1,19 @@
-name: Deploy EnlaceCRM backend en servidor Ubuntu automático
+name: Auto deploy con Docker
 
 on:
   push:
-    branches: [main]
-
+    branches:
+      - main
 jobs:
   deploy:
-    runs-on: self-hosted
-
+    runs-on: ubuntu-latest
     steps:
-      - name: Actualizar repositorio en ruta real
+      - name: Clonar repositorio
+        uses: actions/checkout@v4
+
+      - name: Auto deploy con Docker
         run: |
           cd /home/s-appadm/EnlaceCRM_Backend
-          git reset --hard
           git pull origin main
-
-      - name: Instalar dependencias
-        run: |
-          cd /home/s-appadm/EnlaceCRM_Backend
-          npm install
-
-      - name: Reiniciar aplicación con PM2
-        run: |
-          cd /home/s-appadm/EnlaceCRM_Backend
-          pm2 restart production --update-env
-
+          docker compose down
+          docker compose up -d --build
