@@ -1,0 +1,14 @@
+services:
+  backend:
+    build: .
+    container_name: enlacecrm_backend
+    ports:
+      - "2000:3000"
+    env_file:
+      - .env
+    environment:
+      - PORT=3000
+    restart: always
+    volumes:
+      - .:/app
+    command: npm start

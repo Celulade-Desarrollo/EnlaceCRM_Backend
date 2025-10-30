@@ -15,13 +15,12 @@ jobs:
           git reset --hard
           git pull origin main
 
-      - name: Instalar dependencias
+      - name: Auto deploy con Docker
         run: |
           cd /home/s-appadm/EnlaceCRM_Backend
-          npm install
+          git pull origin main
+          docker compose down
+          docker compose up -d --build
 
-      - name: Reiniciar aplicación con PM2
-        run: |
-          cd /home/s-appadm/EnlaceCRM_Backend
-          pm2 restart production --update-env
+
 
