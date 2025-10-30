@@ -56,8 +56,7 @@ app.use(express.urlencoded({ extended: true }));
 // Swagger
 swaggerDocs(app);
 
-// ✅ Registrar rutas
-app.use("/api/transacciones", transaccionesRoutes); // 👈 aquí queda bien montada
+app.use("/api/transacciones", transaccionesRoutes);
 
 app.use(flujoRegistroEnlace);
 app.use(bancoW);
@@ -82,7 +81,7 @@ app.get("/", (req, res) => {
 });
 
 // Puerto del servidor
-const PORT = process.env.PORT;
+const PORT = 3000;
 
 async function startServer() {
   try {
@@ -97,6 +96,7 @@ async function startServer() {
     console.log(`📘 Swagger disponible en http://localhost:${PORT}/api-docs`);
     console.log(`Endpoint para login de Administrador (generar tu token): POST http://localhost:${PORT}/auth/admin/login`);
     console.log(`Endpoint para login de Usuario Externo (generar tu token interno): POST http://localhost:${PORT}/auth/user/login-external`);
+    console.log("Docker funcionando correctamente");
   });
 }
 
