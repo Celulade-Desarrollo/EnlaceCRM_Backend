@@ -1,19 +1,20 @@
 import * as pdfjsLib from "pdfjs-dist/legacy/build/pdf.mjs";
-import path from "path";
 import fs from "fs";
+import path from "path";
 import { fileURLToPath } from "url";
 
 export class UbicacionesAdapter {
-  static async extraerDireccionesDesdePDF() {
+  static async extraerUbicacionesDesdePDF() {
     try {
       const __filename = fileURLToPath(import.meta.url);
       const __dirname = path.dirname(__filename);
-      const pdfPath = path.join(__dirname, "../../data/ubicaciones.pdf");
+      const pdfPath = path.join(__dirname, "../../data/ubicaciones-1-498.pdf");
 
       if (!fs.existsSync(pdfPath)) {
-        throw new Error("El archivo PDF no existe en data/");
+        throw new Error("❌ No se encontró el archivo PDF en data/");
       }
 
+      // Leer PDF
       const data = new Uint8Array(fs.readFileSync(pdfPath));
       const pdf = await pdfjsLib.getDocument({ data }).promise;
 
@@ -25,32 +26,50 @@ export class UbicacionesAdapter {
         const texto = content.items.map((item) => item.str).join(" ");
         textoCompleto += " " + texto;
       }
+
+      // Limpiar texto básico
       textoCompleto = textoCompleto
         .replace(/\s+/g, " ")
-        .replace(/C ó digo/g, "Código")
-        .replace(/Direcci ó n/g, "Dirección")
-        .replace(/ANTIOQUIA /g, "ANTIOQUIA ")
+        .replace(/[^\wÁÉÍÓÚáéíóúÑñ#\-\.,]/g, " ")
+        .replace(/\s{2,}/g, " ")
         .trim();
 
-      const bloques = textoCompleto.split(/\s0\d{5}\s/).slice(1);
+      // Extraer bloques por palabra clave (ej. ANTIOQUIA MEDELLIN)
+      const bloques = textoCompleto.split(/ANTIOQUIA\s+MEDELLIN/i).slice(1);
 
       const ubicaciones = bloques.map((bloque, index) => {
-        const matchDireccion = bloque.match(/MEDELLIN\s+([A-Z0-9#\-\.\s]+)/i);
-        const direccion = matchDireccion ? matchDireccion[1].trim() : "No encontrada";
+        // Buscar dirección con regex que contenga números y guiones (formato típico de calles)
+        const matchDireccion = bloque.match(
+          /(CALLE|CARRERA|CRA|CR\.?|CLL|AVENIDA|TRANSVERSAL|DIAGONAL|KR|CL)\s*[A-Z0-9#\-\s\.]+?\d+\s*[-#]\s*\d+[A-Z0-9\-]*/i
+        );
+
+        const direccion = matchDireccion ? matchDireccion[0].trim() : "No encontrada";
+
+        // Buscar horario
+        const matchHorario = bloque.match(/(Jornada\s+Continua\s+[A-Z\s\-0-9:]+)/i);
+        const horario = matchHorario ? matchHorario[1].trim() : "No especificado";
 
         return {
           id: index + 1,
-          nombre: "SERVIENTREGA",
-          municipio: "MEDELLIN",
           departamento: "ANTIOQUIA",
+          municipio: "MEDELLIN",
           direccion,
+          horarioSemana: horario,
         };
       });
 
-      console.log("✅ Ubicaciones procesadas:", ubicaciones.slice(0, 3));
+      // Guardar JSON limpio
+      const dataDir = path.join(__dirname, "../../../data");
+      if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir);
+      const jsonPath = path.join(dataDir, "ubicaciones.json");
+      fs.writeFileSync(jsonPath, JSON.stringify(ubicaciones, null, 2), "utf-8");
+
+      console.log(`✅ Procesadas ${ubicaciones.length} ubicaciones (PDF limpio)`);
+      console.log("Ejemplo:", ubicaciones.slice(0, 3));
+
       return ubicaciones;
     } catch (error) {
-      console.error("Error al procesar PDF:", error);
+      console.error("❌ Error procesando el PDF:", error);
       throw error;
     }
   }
