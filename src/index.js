@@ -96,7 +96,6 @@ async function startServer() {
     console.log(`📘 Swagger disponible en http://localhost:${PORT}/api-docs`);
     console.log(`Endpoint para login de Administrador (generar tu token): POST http://localhost:${PORT}/auth/admin/login`);
     console.log(`Endpoint para login de Usuario Externo (generar tu token interno): POST http://localhost:${PORT}/auth/user/login-external`);
-    console.log("Docker funcionando correctamente");
   });
 }
 
