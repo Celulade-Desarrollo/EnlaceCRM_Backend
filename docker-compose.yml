@@ -12,3 +12,8 @@ services:
     volumes:
       - .:/app
     command: npm start
+    networks: 
+      - enlace-net
+networks:
+  enlace-net:
+    external: true
