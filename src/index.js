@@ -36,7 +36,7 @@ const app = express();
 
 // Configuración de CORS
 app.use(cors({
-  origin: ["*"], // Permite frontend dev y swagger
+  origin: ["http://localhost:5173"], // Permite frontend dev y swagger
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
   allowedHeaders: [
     "Content-Type",
@@ -96,7 +96,6 @@ async function startServer() {
     console.log(`📘 Swagger disponible en http://localhost:${PORT}/api-docs`);
     console.log(`Endpoint para login de Administrador (generar tu token): POST http://localhost:${PORT}/auth/admin/login`);
     console.log(`Endpoint para login de Usuario Externo (generar tu token interno): POST http://localhost:${PORT}/auth/user/login-external`);
-    console.log("Docker funcionando correctamente");
   });
 }
 

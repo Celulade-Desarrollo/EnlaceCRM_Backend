@@ -3,7 +3,7 @@ services:
     build: .
     container_name: enlacecrm_backend
     ports:
-      - "2000:3000"
+      - "3000:3000"
     env_file:
       - .env
     environment:
@@ -12,3 +12,8 @@ services:
     volumes:
       - .:/app
     command: npm start
+    networks: 
+      - enlace-net
+networks:
+  enlace-net:
+    external: true
