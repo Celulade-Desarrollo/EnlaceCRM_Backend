@@ -62,12 +62,10 @@ async marcarUsuarioEnMora(idUsuario, nroFactura) {
     return result.recordset[0].count > 0;
   },
 
-  // metodo para quitar mora cuando se paga
-async quitarMoraSiPago(idUsuario, nroFactura) {
+async quitarMoraSiPago(idUsuario) {
   const pool = await poolPromise;
   await pool.request()
     .input("idUsuario", sql.Int, idUsuario)
-    .input("nroFactura", sql.NVarChar, nroFactura)
     .query(`
       UPDATE UsuarioFinal
       SET BloqueoPorMora = 0
@@ -84,6 +82,29 @@ async obtenerUFacturasAbonadas() {
       FROM EstadoCuentaMovimientos
       WHERE IdTipoMovimiento = 2 -- tipo 2: pago/abonado
     `);
+  return result.recordset;
+},
+
+async obtenerUsuariosSinMoraPendiente() {
+  const pool = await poolPromise;
+  const result = await pool.request().query(`
+    SELECT DISTINCT u.IdUsuarioFinal AS id
+    FROM UsuarioFinal u
+    WHERE u.BloqueoPorMora = 1
+    AND NOT EXISTS (
+      SELECT 1
+      FROM EstadoCuentaMovimientos m1
+      WHERE m1.IdUsuarioFinal = u.IdUsuarioFinal
+      AND m1.IdTipoMovimiento = 1
+      AND NOT EXISTS (
+        SELECT 1
+        FROM EstadoCuentaMovimientos m2
+        WHERE m2.IdUsuarioFinal = u.IdUsuarioFinal
+        AND m2.NroFacturaAlpina = m1.NroFacturaAlpina
+        AND m2.IdTipoMovimiento = 2
+      )
+    )
+  `);
   return result.recordset;
 },
 };

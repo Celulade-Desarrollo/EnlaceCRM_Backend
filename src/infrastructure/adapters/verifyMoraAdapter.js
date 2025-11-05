@@ -13,6 +13,9 @@ export class VerifyMoraAdapter extends VerifyMoraPort {
     return await verifyMoraRepository.quitarMoraSiPago(idUsuario, nroFactura);
   }
 
+  async obtenerUsuariosSinMoraPendiente() {
+    return await verifyMoraRepository.obtenerUsuariosSinMoraPendiente();
+  }
 
   async existePagoParaFactura(idUsuario, nroFactura) {
     return await verifyMoraRepository.existePagoParaFactura(idUsuario, nroFactura);
