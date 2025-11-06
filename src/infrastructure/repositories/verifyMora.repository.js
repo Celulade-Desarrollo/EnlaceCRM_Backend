@@ -46,7 +46,7 @@ async marcarUsuarioEnMora(idUsuario, nroFactura) {
     `);
 },
 
-  // metodo para verificar si ya hay pago registrado para la factura
+  // verificar si ya hay pago registrado para la factura
   async existePagoParaFactura(idUsuario, nroFactura) {
     const pool = await poolPromise;
     const result = await pool.request()
