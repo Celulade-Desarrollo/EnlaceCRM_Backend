@@ -88,10 +88,12 @@ export const bancowRepository = {
         const pool = await poolPromise;
         const result = await pool.request().query(`
            SELECT 
-            fre.*,  -- Todos los campos de FlujosRegistroEnlace
+            fre.*,
             fres.Estado AS Estado_Scoring,
-            fres.Cliente_Acepto,  -- Campo nuevo de Scoring
             fres.Scoring,
+            fres.Cliente_Acepto,
+            fres.Latitud,
+            fres.Longitud,
             frb.Aprobacion_Cupo_sugerido,
             frb.Pagare_Digital_Firmado,
             frb.Pagare_Digital_Enviado,
@@ -105,7 +107,4 @@ export const bancowRepository = {
         return result.recordset;
     }
 
-
 };
-
-
