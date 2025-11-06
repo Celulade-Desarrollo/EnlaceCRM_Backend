@@ -101,7 +101,7 @@
   {
     "id": 12,
     "departamento": "ANTIOQUIA",
-    "municipio": "MEDELLIN",
+    "municipio": "No especificado",
     "direccion": "No encontrada",
     "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 040018 5001 16 SERVIENTREGA BELEN",
     "lat": "6.258485",
@@ -641,11 +641,11 @@
   {
     "id": 72,
     "departamento": "ANTIOQUIA",
-    "municipio": "MEDELLIN",
+    "municipio": "MEDELLIN CC MOLINO VIEJO",
     "direccion": "CALLE 49 # 56",
     "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903392 5001 16503 13 DE NOVIEMBRE CRA 23",
-    "lat": "6.2680867",
-    "lon": "-75.6141864"
+    "lat": null,
+    "lon": null
   },
   {
     "id": 73,
@@ -848,11 +848,11 @@
   {
     "id": 95,
     "departamento": "ANTIOQUIA",
-    "municipio": "MEDELLIN",
+    "municipio": "MEDELLIN CORREGIMIENTO SANTA ELENA VEREDA BARRO BLANCO",
     "direccion": "No encontrada",
     "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903956 5001 17101 BARRIO VERSALLES CRA 29",
-    "lat": "6.258485",
-    "lon": "-75.561618"
+    "lat": "6.247733",
+    "lon": "-75.541273"
   },
   {
     "id": 96,
@@ -884,7 +884,7 @@
   {
     "id": 99,
     "departamento": "ANTIOQUIA",
-    "municipio": "MEDELLIN",
+    "municipio": "No especificado",
     "direccion": "No encontrada",
     "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904125 5001 17279 LOPEZ DE MESA",
     "lat": "6.258485",
@@ -1127,7 +1127,7 @@
   {
     "id": 126,
     "departamento": "ANTIOQUIA",
-    "municipio": "MEDELLIN",
+    "municipio": "No especificado",
     "direccion": "No encontrada",
     "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905351 5001 18528 CENTRO COMERCIAL BOSQUE PLAZA",
     "lat": "6.258485",
@@ -1523,7 +1523,7 @@
   {
     "id": 170,
     "departamento": "ANTIOQUIA",
-    "municipio": "MEDELLIN",
+    "municipio": "No especificado",
     "direccion": "No encontrada",
     "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci",
     "lat": "6.258485",
@@ -1586,7 +1586,7 @@
   {
     "id": 177,
     "departamento": "ANTIOQUIA",
-    "municipio": "MEDELLIN",
+    "municipio": "No especificado",
     "direccion": "No encontrada",
     "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907024 5001 20279 ESTACION METRO PLUS U",
     "lat": "6.258485",
@@ -2000,11 +2000,11 @@
   {
     "id": 223,
     "departamento": "ANTIOQUIA",
-    "municipio": "MEDELLIN",
+    "municipio": "EFECTY BELEN GRANADA",
     "direccion": "No encontrada",
     "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908865 5001 31808 EFECTY BELEN GRANADA CRA 74",
-    "lat": "6.258485",
-    "lon": "-75.561618"
+    "lat": null,
+    "lon": null
   },
   {
     "id": 224,
@@ -2459,7 +2459,7 @@
   {
     "id": 274,
     "departamento": "ANTIOQUIA",
-    "municipio": "MEDELLIN",
+    "municipio": "BARRIO BOSTON",
     "direccion": "No encontrada",
     "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910476 5001 33239 BARRIO BOSTON CALLE 57 ARGENTINA",
     "lat": "6.258485",
@@ -2569,12 +2569,21 @@
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CALLE 63 # 131",
-    "horarioSemana": "Jornada Continua L - V 10 00AM a 7 00PM - 910628 5001 33460 BARRIO ANTIOQUIA CALLE 27 CON 65B",
+    "horarioSemana": "Jornada Continua L - V 10 00AM a 7 00PM - 910628 5001 33460 BARRIO",
     "lat": "6.2796931",
     "lon": "-75.6075079"
   },
   {
     "id": 287,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 288,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CALLE 27 # 65B",
@@ -2583,7 +2592,7 @@
     "lon": "-75.5729355"
   },
   {
-    "id": 288,
+    "id": 289,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CRA 64C # 78 - 344",
@@ -2592,7 +2601,7 @@
     "lon": "-75.571861"
   },
   {
-    "id": 289,
+    "id": 290,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CALLE 90 # 77",
@@ -2601,7 +2610,7 @@
     "lon": "-75.564386"
   },
   {
-    "id": 290,
+    "id": 291,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CALLE 62 # 105B",
@@ -2610,7 +2619,7 @@
     "lon": "-75.5604314"
   },
   {
-    "id": 291,
+    "id": 292,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CALLE 65A # 145 - 29",
@@ -2619,7 +2628,7 @@
     "lon": "-75.595975"
   },
   {
-    "id": 292,
+    "id": 293,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CRA 70 # 26A",
@@ -2628,7 +2637,7 @@
     "lon": "-75.5684497"
   },
   {
-    "id": 293,
+    "id": 294,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CALLE 106B # 67 - 11",
@@ -2637,7 +2646,7 @@
     "lon": "-75.5690815"
   },
   {
-    "id": 294,
+    "id": 295,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CARRERA 33 # 68",
@@ -2646,7 +2655,7 @@
     "lon": "-75.5622058"
   },
   {
-    "id": 295,
+    "id": 296,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CARRERA 34 # 102",
@@ -2655,7 +2664,7 @@
     "lon": "-75.5440351"
   },
   {
-    "id": 296,
+    "id": 297,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CARRERA 48 No 10 - 45",
@@ -2664,7 +2673,7 @@
     "lon": "-75.557643"
   },
   {
-    "id": 297,
+    "id": 298,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "No encontrada",
@@ -2673,7 +2682,7 @@
     "lon": "-75.561618"
   },
   {
-    "id": 298,
+    "id": 299,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "KR 30 # 41",
@@ -2682,7 +2691,7 @@
     "lon": "-75.585916"
   },
   {
-    "id": 299,
+    "id": 300,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "KR 54 # 44",
@@ -2691,7 +2700,7 @@
     "lon": "-75.573342"
   },
   {
-    "id": 300,
+    "id": 301,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "KR 46 # 47",
@@ -2700,7 +2709,7 @@
     "lon": "-75.555232"
   },
   {
-    "id": 301,
+    "id": 302,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CALLE 47 No 57 - 40",
@@ -2709,7 +2718,7 @@
     "lon": "-75.5611039"
   },
   {
-    "id": 302,
+    "id": 303,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "No encontrada",
@@ -2718,7 +2727,7 @@
     "lon": "-75.561618"
   },
   {
-    "id": 303,
+    "id": 304,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CL 75 # 64",
@@ -2727,7 +2736,7 @@
     "lon": "-75.5821568"
   },
   {
-    "id": 304,
+    "id": 305,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "Carrera 74 No. 52 - 105",
@@ -2736,7 +2745,7 @@
     "lon": "-75.5735976"
   },
   {
-    "id": 305,
+    "id": 306,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "KR 36 A # 40 - 100",
@@ -2745,7 +2754,7 @@
     "lon": "-75.576955"
   },
   {
-    "id": 306,
+    "id": 307,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CALLE 63 No. 128 - 53",
@@ -2754,7 +2763,7 @@
     "lon": "-75.6032538"
   },
   {
-    "id": 307,
+    "id": 308,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "KR 50 # 51",
@@ -2763,16 +2772,16 @@
     "lon": "-75.554631"
   },
   {
-    "id": 308,
+    "id": 309,
     "departamento": "ANTIOQUIA",
-    "municipio": "MEDELLIN",
+    "municipio": "No especificado",
     "direccion": "No encontrada",
     "horarioSemana": "Jornada Continua L - V 7 30AM a 6 00PM - 993131 5001 6669 CONSUMO FLORESTA",
     "lat": "6.258485",
     "lon": "-75.561618"
   },
   {
-    "id": 309,
+    "id": 310,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "No encontrada",
@@ -2781,7 +2790,7 @@
     "lon": "-75.561618"
   },
   {
-    "id": 310,
+    "id": 311,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "KR 50 D # 65 - 80",
@@ -2790,7 +2799,7 @@
     "lon": "-75.558965"
   },
   {
-    "id": 311,
+    "id": 312,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "KR 51 D # 60 - 57",
@@ -2799,7 +2808,7 @@
     "lon": "-75.565789"
   },
   {
-    "id": 312,
+    "id": 313,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CL 55 A # 57 - 80",
@@ -2808,7 +2817,7 @@
     "lon": "-75.576955"
   },
   {
-    "id": 313,
+    "id": 314,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CL 94 # 50",
@@ -2817,7 +2826,7 @@
     "lon": "-75.5644574"
   },
   {
-    "id": 314,
+    "id": 315,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CL 45 A # 60 - 13",
@@ -2826,7 +2835,7 @@
     "lon": "-75.6147059"
   },
   {
-    "id": 315,
+    "id": 316,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CARRERA 51 # 73",
@@ -2835,7 +2844,7 @@
     "lon": "-75.5638194"
   },
   {
-    "id": 316,
+    "id": 317,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "No encontrada",
@@ -2844,7 +2853,7 @@
     "lon": "-75.561618"
   },
   {
-    "id": 317,
+    "id": 318,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CL 52 # 47",
@@ -2853,7 +2862,7 @@
     "lon": "-75.56608"
   },
   {
-    "id": 318,
+    "id": 319,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CARRERA 85 A # 98 - 16",
@@ -2862,7 +2871,7 @@
     "lon": "-75.6083214"
   },
   {
-    "id": 319,
+    "id": 320,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "No encontrada",
@@ -2871,7 +2880,7 @@
     "lon": "-75.561618"
   },
   {
-    "id": 320,
+    "id": 321,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CL 80 B # 52 - 70",
@@ -2880,7 +2889,7 @@
     "lon": "-75.5803876"
   },
   {
-    "id": 321,
+    "id": 322,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CL 46 # 52",
@@ -2889,7 +2898,7 @@
     "lon": "-75.5659839"
   },
   {
-    "id": 322,
+    "id": 323,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "KR 40 # 65",
@@ -2898,7 +2907,7 @@
     "lon": "-75.553129"
   },
   {
-    "id": 323,
+    "id": 324,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "No encontrada",
@@ -2907,7 +2916,7 @@
     "lon": "-75.561618"
   },
   {
-    "id": 324,
+    "id": 325,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "DIAGONAL 74B No. 32 - 10",
@@ -2916,7 +2925,7 @@
     "lon": "-75.590968"
   },
   {
-    "id": 325,
+    "id": 326,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CALLE 44 No. 80 - 61",
@@ -2925,7 +2934,7 @@
     "lon": "-75.6140116"
   },
   {
-    "id": 326,
+    "id": 327,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "KR 51 # 50",
@@ -2934,7 +2943,7 @@
     "lon": "-75.374086"
   },
   {
-    "id": 327,
+    "id": 328,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CL 54 # 49",
@@ -2943,7 +2952,7 @@
     "lon": "-75.5716798"
   },
   {
-    "id": 328,
+    "id": 329,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "No encontrada",
@@ -2952,7 +2961,7 @@
     "lon": "-75.561618"
   },
   {
-    "id": 329,
+    "id": 330,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CALLE 52 N 49 - 28",
@@ -2961,7 +2970,7 @@
     "lon": "-75.576955"
   },
   {
-    "id": 330,
+    "id": 331,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CALLE 20 No 76 - 33",
@@ -2970,7 +2979,7 @@
     "lon": "-75.6012965"
   },
   {
-    "id": 331,
+    "id": 332,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CARRERA 80 No. 54 - 35",
@@ -2979,7 +2988,7 @@
     "lon": "-75.5785922"
   },
   {
-    "id": 332,
+    "id": 333,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "Carrera 70 No. 1 - 128",
@@ -2988,7 +2997,7 @@
     "lon": "-75.5684497"
   },
   {
-    "id": 333,
+    "id": 334,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CL 65 # 78",
@@ -2997,7 +3006,7 @@
     "lon": "-75.5876209"
   },
   {
-    "id": 334,
+    "id": 335,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "KR 42 B # 94 - 04",
@@ -3006,7 +3015,7 @@
     "lon": "-75.576955"
   },
   {
-    "id": 335,
+    "id": 336,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "KR 65 # 42",
@@ -3015,7 +3024,7 @@
     "lon": "-75.645997"
   },
   {
-    "id": 336,
+    "id": 337,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CALLE 2 # 79 - 09",
@@ -3024,7 +3033,7 @@
     "lon": "-75.5879387"
   },
   {
-    "id": 337,
+    "id": 338,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "No encontrada",
@@ -3033,7 +3042,7 @@
     "lon": "-75.561618"
   },
   {
-    "id": 338,
+    "id": 339,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "No encontrada",
@@ -3042,7 +3051,7 @@
     "lon": "-75.561618"
   },
   {
-    "id": 339,
+    "id": 340,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CL 80 # 36",
@@ -3051,7 +3060,7 @@
     "lon": "-75.5794607"
   },
   {
-    "id": 340,
+    "id": 341,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CARRERA 42 B N 107 - 54",
@@ -3060,7 +3069,7 @@
     "lon": "-75.527413"
   },
   {
-    "id": 341,
+    "id": 342,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "No encontrada",
@@ -3069,7 +3078,7 @@
     "lon": "-75.561618"
   },
   {
-    "id": 342,
+    "id": 343,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CALLE 52B SUR N. 67 - 167",
@@ -3078,7 +3087,7 @@
     "lon": "-75.576955"
   },
   {
-    "id": 343,
+    "id": 344,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CARRERA 51 N 48 - 31",
@@ -3087,7 +3096,7 @@
     "lon": "-75.576955"
   },
   {
-    "id": 344,
+    "id": 345,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CRA 52 No 82 - 36",
@@ -3096,7 +3105,7 @@
     "lon": "-75.5600877"
   },
   {
-    "id": 345,
+    "id": 346,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CALLE 42 N 101 - 71",
@@ -3105,7 +3114,7 @@
     "lon": "-75.576955"
   },
   {
-    "id": 346,
+    "id": 347,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "No encontrada",
@@ -3114,7 +3123,7 @@
     "lon": "-75.561618"
   },
   {
-    "id": 347,
+    "id": 348,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CARRERA 45 N 82 - 40",
@@ -3123,7 +3132,7 @@
     "lon": "-75.5734516"
   },
   {
-    "id": 348,
+    "id": 349,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CARRERA 49 No. 99 - 84",
@@ -3132,7 +3141,7 @@
     "lon": "-75.5588051"
   },
   {
-    "id": 349,
+    "id": 350,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "No encontrada",
@@ -3141,7 +3150,7 @@
     "lon": "-75.561618"
   },
   {
-    "id": 350,
+    "id": 351,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CALLE 95 # 52",
@@ -3150,7 +3159,7 @@
     "lon": "-75.5720423"
   },
   {
-    "id": 351,
+    "id": 352,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "No encontrada",
@@ -3159,7 +3168,7 @@
     "lon": "-75.561618"
   },
   {
-    "id": 352,
+    "id": 353,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CARRERA 56 N 61 - 30",
@@ -3168,7 +3177,7 @@
     "lon": "-75.576955"
   },
   {
-    "id": 353,
+    "id": 354,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "No encontrada",
@@ -3177,7 +3186,7 @@
     "lon": "-75.561618"
   },
   {
-    "id": 354,
+    "id": 355,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CARRERA 80 N 98 - 14",
@@ -3186,7 +3195,7 @@
     "lon": "-75.576955"
   },
   {
-    "id": 355,
+    "id": 356,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "No encontrada",
@@ -3195,7 +3204,7 @@
     "lon": "-75.561618"
   },
   {
-    "id": 356,
+    "id": 357,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CALLE 50 N 76 - 137",
@@ -3204,7 +3213,7 @@
     "lon": "-75.576955"
   },
   {
-    "id": 357,
+    "id": 358,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CALLE 33 N 78 - 178",
@@ -3213,7 +3222,7 @@
     "lon": "-75.5750003"
   },
   {
-    "id": 358,
+    "id": 359,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "No encontrada",
@@ -3222,7 +3231,7 @@
     "lon": "-75.561618"
   },
   {
-    "id": 359,
+    "id": 360,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CALLE 65 # 86",
@@ -3231,12 +3240,5043 @@
     "lon": "-75.5876209"
   },
   {
-    "id": 360,
+    "id": 361,
     "departamento": "ANTIOQUIA",
     "municipio": "MEDELLIN",
     "direccion": "CRA 42 # 50",
-    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 800053 5002 79 CRA 50 ANTIOQUIA ABEJORRAL KR 50",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 800053 5002 79 CRA 50",
     "lat": "6.2204231",
     "lon": "-75.5682012"
+  },
+  {
+    "id": 362,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ABEJORRAL",
+    "direccion": "KR 50 # 50",
+    "horarioSemana": "No especificado",
+    "lat": "5.7914673",
+    "lon": "-75.4265823"
+  },
+  {
+    "id": 363,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ABRIAQUI",
+    "direccion": "CARRERA 10 N 10 - 06",
+    "horarioSemana": "Jornada Continua L - V 7 00AM a 10 00PM - 994592 5021 8494 COOGRANADA ALEJANDRIA T",
+    "lat": "6.63148",
+    "lon": "-76.06444"
+  },
+  {
+    "id": 364,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ALEJANDRIA",
+    "direccion": "KR 20 # 20",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 800375 5030 2078 AMAGA",
+    "lat": "6.377285",
+    "lon": "-75.140326"
+  },
+  {
+    "id": 365,
+    "departamento": "ANTIOQUIA",
+    "municipio": "AMAGA",
+    "direccion": "KR 50 # 49",
+    "horarioSemana": "No especificado",
+    "lat": "5.963108",
+    "lon": "-75.733159"
+  },
+  {
+    "id": 366,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 367,
+    "departamento": "ANTIOQUIA",
+    "municipio": "AMALFI",
+    "direccion": "KR 22 # 19",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 9 00PM - 904787 5031 17938 AMALFI PARQUE PRINCIPAL",
+    "lat": "6.907375",
+    "lon": "-75.076125"
+  },
+  {
+    "id": 368,
+    "departamento": "ANTIOQUIA",
+    "municipio": "AMALFI",
+    "direccion": "CALLE 20 # 20",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909503 5031 32891 TELECOMUNICACIONES PUEBLO NUEVO",
+    "lat": "6.9080363",
+    "lon": "-75.07495495057205"
+  },
+  {
+    "id": 369,
+    "departamento": "ANTIOQUIA",
+    "municipio": "AMALFI",
+    "direccion": "CALLE 26 # 29",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 800228 5036 1769 PARQUE PRINCIPAL",
+    "lat": "6.9128919",
+    "lon": "-75.080529"
+  },
+  {
+    "id": 370,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ANGELOPOLIS",
+    "direccion": "CL 11 # 9",
+    "horarioSemana": "No especificado",
+    "lat": "6.1117771",
+    "lon": "-75.7105556"
+  },
+  {
+    "id": 371,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ANGOSTURA",
+    "direccion": "KR 10 # 9",
+    "horarioSemana": "No especificado",
+    "lat": "6.88493",
+    "lon": "-75.335548"
+  },
+  {
+    "id": 372,
+    "departamento": "ANTIOQUIA",
+    "municipio": "PUERTO CHARCON",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 7 00PM - 994578 5040 8566 PUERTO CHARCON CALLE PRINCIPAL",
+    "lat": "7.38126",
+    "lon": "-75.00203"
+  },
+  {
+    "id": 373,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ANORI",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "6.962786",
+    "lon": "-75.417469"
+  },
+  {
+    "id": 374,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ANZA",
+    "direccion": "CARRERA BOLIVAR # 9 - 65",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 002001 5045 84 SERVIENTREGA UNO CALLE 97",
+    "lat": "6.297508",
+    "lon": "-75.904197"
+  },
+  {
+    "id": 375,
+    "departamento": "ANTIOQUIA",
+    "municipio": "APARTADO",
+    "direccion": "CALLE 98 # 99",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 902620 5045 15758 EXPRESS DIMONEX EL SALVADOR APARTADO",
+    "lat": "7.8830137",
+    "lon": "-76.6346435"
+  },
+  {
+    "id": 376,
+    "departamento": "ANTIOQUIA",
+    "municipio": "APARTADO",
+    "direccion": "CALLE 87 # 114",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902390 5045 15508 EXPRESS EFECTY BARRIO SALVADOR APARTADO",
+    "lat": "7.8795696",
+    "lon": "-76.6484072"
+  },
+  {
+    "id": 377,
+    "departamento": "ANTIOQUIA",
+    "municipio": "APARTADO",
+    "direccion": "CRA 114 #80",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 901767 5045 14873 APARTADO FRENTE A LA PLAZA DE MERCADO",
+    "lat": "7.8785032",
+    "lon": "-76.6485283"
+  },
+  {
+    "id": 378,
+    "departamento": "ANTIOQUIA",
+    "municipio": "APARTADO",
+    "direccion": "CALLE 92 # 102",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904395 5045 17536 DIMONEX BARRIO VELEZ",
+    "lat": "7.87911605",
+    "lon": "-76.63511505570138"
+  },
+  {
+    "id": 379,
+    "departamento": "ANTIOQUIA",
+    "municipio": "APARTADO",
+    "direccion": "CARRERA 104 A N 100 - 31",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 904010 5045 17153 EXPRESS EFECTY APARTADO BARRIO OBRERO",
+    "lat": "7.886982",
+    "lon": "-76.6357"
+  },
+  {
+    "id": 380,
+    "departamento": "ANTIOQUIA",
+    "municipio": "APARTADO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905682 5045 18879 APARTADO VEREDA LOMA VERDE",
+    "lat": "7.884241",
+    "lon": "-76.635154"
+  },
+  {
+    "id": 381,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905703 5045 18961 ASOCIACION MUTUAL AMIGO REAL APARTADO",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 382,
+    "departamento": "ANTIOQUIA",
+    "municipio": "APARTADO",
+    "direccion": "CARRERA 99 # 96",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 905759 5045 18970 EXPRESS EFECTY APARTADO BARRIO ALFONSO LOPEZ",
+    "lat": "7.8847615",
+    "lon": "-76.6307247"
+  },
+  {
+    "id": 383,
+    "departamento": "ANTIOQUIA",
+    "municipio": "APARTADO",
+    "direccion": "CALLE 103 # 75",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908831 5045 31783 SERRANIA CL 118 APARTADO",
+    "lat": "7.8834102",
+    "lon": "-76.6209482"
+  },
+  {
+    "id": 384,
+    "departamento": "ANTIOQUIA",
+    "municipio": "APARTADO",
+    "direccion": "CL 118 #114B",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908551 5045 21563 ALMACEN LUMA APARTADO",
+    "lat": "7.886982",
+    "lon": "-76.6357"
+  },
+  {
+    "id": 385,
+    "departamento": "ANTIOQUIA",
+    "municipio": "APARTADO",
+    "direccion": "CALLE 97 # 99",
+    "horarioSemana": "No especificado",
+    "lat": "7.8816866",
+    "lon": "-76.6329167"
+  },
+  {
+    "id": 386,
+    "departamento": "ANTIOQUIA",
+    "municipio": "APARTADO",
+    "direccion": "CALLE 46 CRA 50 # 50",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907317 5045 20606 APARTADO BARRIO FUNDADORES PARQUE LA MARTINA",
+    "lat": "7.880051",
+    "lon": "-76.607645"
+  },
+  {
+    "id": 387,
+    "departamento": "ANTIOQUIA",
+    "municipio": "APARTADO",
+    "direccion": "CRA 96 # 97",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907119 5045 20406 EXPRESS DIMONEX RENOVA CAPILAR",
+    "lat": "7.8879351",
+    "lon": "-76.6266393"
+  },
+  {
+    "id": 388,
+    "departamento": "ANTIOQUIA",
+    "municipio": "APARTADO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906400 5045 19638 EXPRESS DIMONEX CRAZZY CELL",
+    "lat": "7.884241",
+    "lon": "-76.635154"
+  },
+  {
+    "id": 389,
+    "departamento": "ANTIOQUIA",
+    "municipio": "APARTADO",
+    "direccion": "CALLE 103# 71",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci",
+    "lat": "7.8834102",
+    "lon": "-76.6209482"
+  },
+  {
+    "id": 390,
+    "departamento": "ANTIOQUIA",
+    "municipio": "APARTADO",
+    "direccion": "CALLE 98 # 100",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906003 5045 19179 APARTADO BARRIO FUNDADORES CALLE 98",
+    "lat": "7.8740432",
+    "lon": "-76.6119158"
+  },
+  {
+    "id": 391,
+    "departamento": "ANTIOQUIA",
+    "municipio": "APARTADO",
+    "direccion": "CALLE 98 # 95",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 994009 5045 7837 CORREGIMIENTO EL REPOSO APARTADO",
+    "lat": "7.8830137",
+    "lon": "-76.6346435"
+  },
+  {
+    "id": 392,
+    "departamento": "ANTIOQUIA",
+    "municipio": "APARTADO",
+    "direccion": "CL 30 # 10",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 995554 5045 10338 TEMCEL COMUNICACIONES LTDA",
+    "lat": "7.8008758",
+    "lon": "-76.654489"
+  },
+  {
+    "id": 393,
+    "departamento": "ANTIOQUIA",
+    "municipio": "APARTADO",
+    "direccion": "KR 101 # 99",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 995224 5045 9360 APARTADO BARRIO CONCEJO T",
+    "lat": "7.885845",
+    "lon": "-76.631119"
+  },
+  {
+    "id": 394,
+    "departamento": "ANTIOQUIA",
+    "municipio": "APARTADO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 6 00AM a 9 00AM - 996483 5045 10679 CYBER LA PAZ",
+    "lat": "7.884241",
+    "lon": "-76.635154"
+  },
+  {
+    "id": 395,
+    "departamento": "ANTIOQUIA",
+    "municipio": "APARTADO",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "7.884241",
+    "lon": "-76.635154"
+  },
+  {
+    "id": 396,
+    "departamento": "ANTIOQUIA",
+    "municipio": "APARTADO",
+    "direccion": "CL 96 # 99",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 999224 5045 13732 SERVIENTREGA NUEVO APARTADO",
+    "lat": "7.8822764",
+    "lon": "-76.6363955"
+  },
+  {
+    "id": 397,
+    "departamento": "ANTIOQUIA",
+    "municipio": "APARTADO",
+    "direccion": "CALLE 98 - 97",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 998241 5045 12521 EFECTY CENTRO COMERCIAL NUESTRO URABA",
+    "lat": "7.8830137",
+    "lon": "-76.6346435"
+  },
+  {
+    "id": 398,
+    "departamento": "ANTIOQUIA",
+    "municipio": "APARTADO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 7 30AM a 7 00PM - 997287 5045 11611 BARRIO PRIMERO DE MAYO",
+    "lat": "7.884241",
+    "lon": "-76.635154"
+  },
+  {
+    "id": 399,
+    "departamento": "ANTIOQUIA",
+    "municipio": "APARTADO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 7 00AM a 6 00PM - 902799 5051 15924 EDS EL PUENTE ARBOLETE NUEVO",
+    "lat": "7.884241",
+    "lon": "-76.635154"
+  },
+  {
+    "id": 400,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ARBOLETES",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 901326 5051 2839 CALLE 20 JULIO",
+    "lat": "8.854716",
+    "lon": "-76.426778"
+  },
+  {
+    "id": 401,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ARBOLETES",
+    "direccion": "CRA 30 # 30",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 910081 5051 33012 ARBOLETES EL SILENCIO",
+    "lat": "8.8515393",
+    "lon": "-76.426686"
+  },
+  {
+    "id": 402,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ARBOLETES",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 800029 5055 88 CALLE 31",
+    "lat": "8.854716",
+    "lon": "-76.426778"
+  },
+  {
+    "id": 403,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ARGELIA",
+    "direccion": "CL 31 # 29",
+    "horarioSemana": "No especificado",
+    "lat": "5.732091",
+    "lon": "-75.146377"
+  },
+  {
+    "id": 404,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ARMENIA",
+    "direccion": "CALLE 10 # 8",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905409 5079 18628 EURO BARBOSA",
+    "lat": "6.160289",
+    "lon": "-75.7856984"
+  },
+  {
+    "id": 405,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BARBOSA",
+    "direccion": "CARRERA 14 CALLE 15 - 39",
+    "horarioSemana": "Jornada Continua L - V 7 00AM a 8 00PM - 992614 5079 5455 BARBOSA PARQUE PRINCIPAL",
+    "lat": "6.368787",
+    "lon": "-75.451848"
+  },
+  {
+    "id": 406,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BARBOSA",
+    "direccion": "KR 15 # 13",
+    "horarioSemana": "No especificado",
+    "lat": "6.437323",
+    "lon": "-75.331728"
+  },
+  {
+    "id": 407,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BARBOSA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 7 00AM a 11 00PM - 905381 5088 18548 BELLO SERRAMONTE CRA 60",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 408,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CRA 60 # 40",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905625 5088 18884 BARRIO NUEVO BELLO",
+    "lat": "6.3457727",
+    "lon": "-75.5642338"
+  },
+  {
+    "id": 409,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CRA 60 # 22",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905149 5088 18287 BELLO LA CABA",
+    "lat": "6.311518",
+    "lon": "-75.5698711"
+  },
+  {
+    "id": 410,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 411,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 100001 5088 91 SERVIENTREGA CALLE 49",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 412,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CALLE 49 NO. 49 - 55",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 900246 5088 92 EFECTY PARQUE PRINCIPAL",
+    "lat": "6.254769",
+    "lon": "-75.582065"
+  },
+  {
+    "id": 413,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CALLE 49 NO 49 - 53",
+    "horarioSemana": "Jornada Continua L - V 7 30AM a 7 00PM - 903310 5088 16471 EXPRESS DIMONEX BELLO BARRIO PRADO",
+    "lat": "6.241545",
+    "lon": "-75.554266"
+  },
+  {
+    "id": 414,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902211 5088 15341 BELLO MALL MADERA",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 415,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CALLE 26 B 49 - 104",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902521 5088 15643 ELECTROBELLO BELLO",
+    "lat": "6.3153731",
+    "lon": "-75.5635229"
+  },
+  {
+    "id": 416,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CARRERA 50 N 49 - 29",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902254 5088 15384 BELLO CRA 59 CLL 27B",
+    "lat": "6.33732",
+    "lon": "-75.55795"
+  },
+  {
+    "id": 417,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902697 5088 15835 BARRIO PEREZ",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 418,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CALLE 51 N 58 - 20",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908996 5088 31927 ZAMORA DIMARY",
+    "lat": "6.33732",
+    "lon": "-75.55795"
+  },
+  {
+    "id": 419,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909082 5088 32098 ZOONAPET NIQUIA BELLO DG 56",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 420,
+    "departamento": "ANTIOQUIA",
+    "municipio": "PARIS",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909244 5088 32136 PARIS CRA 76 DROGUERIA MAXTONY",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 421,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CRA 76 # 20F",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909201 5088 32110 DISTRI CARRETERO BELLO",
+    "lat": "6.3154947",
+    "lon": "-75.5810703"
+  },
+  {
+    "id": 422,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO MACHADO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908712 5088 31737 BELLO MACHADO DIAGONAL 44",
+    "lat": "6.337471",
+    "lon": "-75.545944"
+  },
+  {
+    "id": 423,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "DIAGONAL 44 # 30C",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908705 5088 31714 BELLO OBRERO ELECTRO VIRTUAL CL 34",
+    "lat": "6.3313851",
+    "lon": "-75.5400236"
+  },
+  {
+    "id": 424,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CL 34 # 55",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907797 5088 21079 BELLO LA SELVA CR 50",
+    "lat": "6.3216071",
+    "lon": "-75.5615276"
+  },
+  {
+    "id": 425,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CR 50 # 63B",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907747 5088 20999 BELLO SECTOR TULIPANES CRA 66BB",
+    "lat": "6.344326",
+    "lon": "-75.559652"
+  },
+  {
+    "id": 426,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906007 5088 19186 ZONA INTERACTIVA LA GABRIELA",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 427,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CL 31# 44",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905894 5088 19090 BELLO BARRIO LAS VEGAS",
+    "lat": "6.3196661",
+    "lon": "-75.5593711"
+  },
+  {
+    "id": 428,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "DIAGONAL 44 # 37C",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905903 5088 19103 BELLO BARRIO PARIS CALLE 21 CON 78",
+    "lat": "6.3313851",
+    "lon": "-75.5400236"
+  },
+  {
+    "id": 429,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "calle 21 # 78",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906150 5088 19380 EXPRESS EFECTY OSOQUIN BUCAROS",
+    "lat": "6.3128512",
+    "lon": "-75.578143"
+  },
+  {
+    "id": 430,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906165 5088 19379 BARRIO LA MILAGROSA BELLO",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 431,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CALLE 62B # 48 - 59",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906655 5088 19887 ESTACION METRO BELLO",
+    "lat": "6.3446978",
+    "lon": "-75.5650787"
+  },
+  {
+    "id": 432,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CRA 49 # 50",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 9 00PM - 906810 5088 20063 EXPRESS EFECTY BELLO NAVARRA PAPELERIA UTOPIA",
+    "lat": "6.3384641",
+    "lon": "-75.5581226"
+  },
+  {
+    "id": 433,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 434,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "DIAGONAL 55 #31",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907336 5088 20605 BELLO LA 2000 CELLPOINS N S",
+    "lat": "6.3388792",
+    "lon": "-75.5497056"
+  },
+  {
+    "id": 435,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CL 58 # 61",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907206 5088 20459 EFECTY CC PUERTA DEL NORTE TORRE 1",
+    "lat": "6.3400629",
+    "lon": "-75.5632737"
+  },
+  {
+    "id": 436,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "DIAGONAL 55 # 34",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 8 00PM - 907579 5088 20853 EXPRESS EFECTY BELLO SAN MARTIN",
+    "lat": "6.3388792",
+    "lon": "-75.5497056"
+  },
+  {
+    "id": 437,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CRA 65A # 77 - 28",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907407 5088 20672 EXPRESS EFECTY BELLO ALTOS DE NIQUIA",
+    "lat": "6.3564882",
+    "lon": "-75.5688968"
+  },
+  {
+    "id": 438,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "DIAGONAL 65 # 46B",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907465 5088 20736 BELLO VEREDA LA UNION",
+    "lat": "6.3461684",
+    "lon": "-75.5463254"
+  },
+  {
+    "id": 439,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO BARRIO PARIS",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907493 5088 20749 BELLO BARRIO PARIS CALLE 20C",
+    "lat": "6.337471",
+    "lon": "-75.545944"
+  },
+  {
+    "id": 440,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CALLE 20C # 74 - 39",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910136 5088 32933 ARAUCARIAS",
+    "lat": "6.3105742",
+    "lon": "-75.5823363"
+  },
+  {
+    "id": 441,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CRA 58 # 73",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909902 5088 32702 LA 2000 CL 58 BELLO",
+    "lat": "6.3135418",
+    "lon": "-75.5635468"
+  },
+  {
+    "id": 442,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CL 58 # 57",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909907 5088 32706 DIMONEX CACIQUE NIQUIA DG 57",
+    "lat": "6.3400629",
+    "lon": "-75.5632737"
+  },
+  {
+    "id": 443,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909892 5088 32686 EFECTY CURAZAO BELLO",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 444,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909807 5088 32636 EFECTY GORETI BELLO",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 445,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CLL 69 CR 60 - 274",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909839 5088 32647 DIMONEX AV 42 BARRIO NIQUIA",
+    "lat": "6.225516",
+    "lon": "-75.583258"
+  },
+  {
+    "id": 446,
+    "departamento": "ANTIOQUIA",
+    "municipio": "LA GABRIELA BELLO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909618 5088 32482 LA GABRIELA BELLO CL 37",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 447,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CL 37 # 42B",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909621 5088 32486 DIMONEX CABA",
+    "lat": "6.3231969",
+    "lon": "-75.5613801"
+  },
+  {
+    "id": 448,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CARRERA 58DD # 25 - 19",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910842 5088 33603 REGALARTES BELLO CALLE 33",
+    "lat": "6.3140635",
+    "lon": "-75.5673074"
+  },
+  {
+    "id": 449,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CALLE 33 # 50",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910626 5088 33342 EFECTY BELLAVISTA CALLE 65",
+    "lat": "6.3208749",
+    "lon": "-75.5632622"
+  },
+  {
+    "id": 450,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CALLE 65 # 64",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910646 5088 33428 EFECTY LA FLORIDA BELLO CALLE 31",
+    "lat": "6.3468324",
+    "lon": "-75.5667262"
+  },
+  {
+    "id": 451,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CALLE 31 #55B",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910442 5088 33207 CELU - ACCESORIOS NIQUIA DG 65",
+    "lat": "6.3196661",
+    "lon": "-75.5593711"
+  },
+  {
+    "id": 452,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "DIAGONAL 65 # 41C",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910397 5088 33168 DIMONEX AVELLANEDA CRA 63",
+    "lat": "6.3461684",
+    "lon": "-75.5463254"
+  },
+  {
+    "id": 453,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CRA 63A # 77 - 20",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910398 5088 33256 FERRIMALLAS BELLO LA 51",
+    "lat": "6.3541749",
+    "lon": "-75.5675734"
+  },
+  {
+    "id": 454,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CALLE 51 # 47",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 911058 5088 33779 ARMONIA CRA 58 CABA",
+    "lat": "6.3346158",
+    "lon": "-75.5635434"
+  },
+  {
+    "id": 455,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CRA 58 # 27",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 911059 5088 33793 MIRASOL CAMPESTRE BELLO",
+    "lat": "6.3135418",
+    "lon": "-75.5635468"
+  },
+  {
+    "id": 456,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CARRERA 49A # 75 - 36",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci",
+    "lat": "6.3476256",
+    "lon": "-75.5583811"
+  },
+  {
+    "id": 457,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CALLE 62 # 64",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 992247 5088 4661 BELLO ANDALUCIA",
+    "lat": "6.3432884",
+    "lon": "-75.5641894"
+  },
+  {
+    "id": 458,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "KR 50 # 56",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 9 00PM - 996110 5088 10347 BELLO BARRIO CENTRAL",
+    "lat": "6.468866",
+    "lon": "-75.556433"
+  },
+  {
+    "id": 459,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CL 50 # 51",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 995456 5088 9566 NIQUIA AV 35",
+    "lat": "6.3341702",
+    "lon": "-75.5353345"
+  },
+  {
+    "id": 460,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 9 00PM - 994346 5088 8138 SERVIENTREGA CENTRO COMERCIAL NIQUIA",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 461,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "DIAGONAL 55 No 37 - 41",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 997551 5088 11878 FLAMINGO BELLO",
+    "lat": "6.338704",
+    "lon": "-75.551283"
+  },
+  {
+    "id": 462,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "DIAGONAL 55 N 34 LOCAL 1 - 010",
+    "horarioSemana": "No especificado",
+    "lat": "6.33732",
+    "lon": "-75.55795"
+  },
+  {
+    "id": 463,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "CALLE 63 N 59 - 60",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 999020 5088 13516 BELLO BARRIO CIUDAD NIQUIA",
+    "lat": "6.33732",
+    "lon": "-75.55795"
+  },
+  {
+    "id": 464,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "DIAGONAL 55 N 42 - 125",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 999414 5088 13951 BARRIO PARIS PRINCIPAL LA 72",
+    "lat": "6.3388792",
+    "lon": "-75.5497056"
+  },
+  {
+    "id": 465,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BELLO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 911144 5093 33872 BETULIA AL LADO COMANDO POLICIA",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 466,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BETULIA",
+    "direccion": "CRA 20 # 21",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 198001 5101 97 CIUDAD BOLIVAR PARQUE PRINCIPAL",
+    "lat": "6.1141354",
+    "lon": "-75.9841806"
+  },
+  {
+    "id": 467,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CIUDAD BOLIVAR",
+    "direccion": "CALLE 49 NO 50 - 48",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 910850 5101 33659 BOLIVAR ANT EL OLIMPO CALLE 50",
+    "lat": "5.8461642",
+    "lon": "-76.0117221"
+  },
+  {
+    "id": 468,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CIUDAD BOLIVAR",
+    "direccion": "CALLE 50 # 69",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 996033 5101 10244 AUTOSERVICIO EL MAYORISTA G",
+    "lat": "5.8497107",
+    "lon": "-76.0187705"
+  },
+  {
+    "id": 469,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CIUDAD BOLIVAR",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "5.962581",
+    "lon": "-75.979716"
+  },
+  {
+    "id": 470,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BRICE Ñ O",
+    "direccion": "CARRERA 10 N 9 - 47",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 908765 5113 32008 ALMACEN LUMA BURITICA",
+    "lat": "6.257335",
+    "lon": "-75.609158"
+  },
+  {
+    "id": 471,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BURITICA",
+    "direccion": "Calle 8 # 1 - 71",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 7 00PM - 997403 5113 11784 BURITICA PARQUE PRINCIPAL",
+    "lat": "6.71873",
+    "lon": "-75.90734"
+  },
+  {
+    "id": 472,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BURITICA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 7 00AM a 7 00PM - 905020 5120 18179 CACERES BARRIO LA MAGDALENA",
+    "lat": "6.808769",
+    "lon": "-76.152275"
+  },
+  {
+    "id": 473,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907349 5120 20625 DIMONEX FERROMATERIALES LA ECONOMIA RG",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 474,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910543 5120 33303 BATALLON RIFLES KM 7",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 475,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CACERES",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 996788 5120 11037 CACERES CALLE SANTANDER",
+    "lat": "7.290067",
+    "lon": "-75.393512"
+  },
+  {
+    "id": 476,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CACERES",
+    "direccion": "KR 49 # 50",
+    "horarioSemana": "No especificado",
+    "lat": "7.582734",
+    "lon": "-75.347092"
+  },
+  {
+    "id": 477,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CACERES",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "7.290067",
+    "lon": "-75.393512"
+  },
+  {
+    "id": 478,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAICEDO",
+    "direccion": "KR 5 # 4 - 34",
+    "horarioSemana": "Jornada Continua L - V 7 00AM a 9 00PM - 904464 5129 17611 FLAMINGO CALDAS",
+    "lat": "6.40511",
+    "lon": "-75.98255"
+  },
+  {
+    "id": 479,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CALDAS",
+    "direccion": "CALLE 131 SUR N 48 - 81",
+    "horarioSemana": "Jornada Continua L - V 10 00AM a 8 00PM - 901963 5129 15095 CALDAS PAPELERIA RAPIFLAZ",
+    "lat": "6.054654",
+    "lon": "-75.626868"
+  },
+  {
+    "id": 480,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CALDAS",
+    "direccion": "CALLE 130 SUR N 51 - 43",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 12 00PM - 12 00PM a 8 00PM 910621 5129 33467 CALDAS CALLE 124 SUR CON 50",
+    "lat": "6.054654",
+    "lon": "-75.626868"
+  },
+  {
+    "id": 481,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CALDAS",
+    "direccion": "CALLE 124 SUR # 50 - 22",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907539 5129 20834 CALDAS MANDALAY CALLE 140 SUR CON 51",
+    "lat": "6.0953887",
+    "lon": "-75.6378539"
+  },
+  {
+    "id": 482,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CALDAS",
+    "direccion": "CALLE 140 SUR No 51 - 46",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906314 5129 19601 DIMONEX VEREDA LA CORRALA",
+    "lat": "6.082285",
+    "lon": "-75.635955"
+  },
+  {
+    "id": 483,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908014 5129 21159 EFECTY PARQUE CALDAS INT 101",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 484,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CALDAS",
+    "direccion": "CLL 129 SUR # 49 - 56",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908731 5129 31712 CALDAS FELIPE ECHAVARRIA CRA 48",
+    "lat": "6.054654",
+    "lon": "-75.626868"
+  },
+  {
+    "id": 485,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CALDAS",
+    "direccion": "CRA 48 # 138",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 997042 5129 11260 CALDAS SERVIPUNTO",
+    "lat": "6.0906404",
+    "lon": "-75.6344784"
+  },
+  {
+    "id": 486,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CALDAS",
+    "direccion": "CL 134 SUR # 48 - 09",
+    "horarioSemana": "No especificado",
+    "lat": "6.0881333",
+    "lon": "-75.6351231"
+  },
+  {
+    "id": 487,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAMPAMENTO",
+    "direccion": "CALLE 11 N 12 - 08",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 998115 5134 12481 CAMPAMENTO CALLE PPAL",
+    "lat": "6.9792",
+    "lon": "-75.29724"
+  },
+  {
+    "id": 488,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAMPAMENTO",
+    "direccion": "CARRERA 11 N 10 - 66",
+    "horarioSemana": "No especificado",
+    "lat": "6.9792",
+    "lon": "-75.29724"
+  },
+  {
+    "id": 489,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CA Ñ ASGORDAS",
+    "direccion": "CRA.BOLIVAR NO. 27 - 17",
+    "horarioSemana": "No especificado",
+    "lat": "10.404117",
+    "lon": "-75.510814"
+  },
+  {
+    "id": 490,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CA Ñ ASGORDAS",
+    "direccion": "CARRERA 30 # 25",
+    "horarioSemana": "No especificado",
+    "lat": "6.171591",
+    "lon": "-75.331042"
+  },
+  {
+    "id": 491,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CARACOLI",
+    "direccion": "CRA 21 # 20",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902107 5145 15209 TELECOMUNICACIONES CARAMANTA",
+    "lat": "6.4096739",
+    "lon": "-74.75684212288401"
+  },
+  {
+    "id": 492,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CARAMANTA",
+    "direccion": "CARRERA BOLIVAQR N 19 - 67",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910593 5147 33324 PIEDRAS BLANCAS CAREPA",
+    "lat": "5.531981",
+    "lon": "-75.460088"
+  },
+  {
+    "id": 493,
+    "departamento": "ANTIOQUIA",
+    "municipio": "DISTRIVELEZ CAREPA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 911092 5147 33865 DISTRIVELEZ CAREPA CALLE 80",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": 494,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAREPA",
+    "direccion": "CALLE 80 # 74",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908159 5147 21187 CAREPA PAPER HOUSE SECTOR ESTADIO",
+    "lat": "7.7531258",
+    "lon": "-76.65857"
+  },
+  {
+    "id": 495,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAREPA",
+    "direccion": "CRA 73 # 70",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908818 5147 31811 CAREPA MARIA CANO CLL 77",
+    "lat": "7.752721",
+    "lon": "-76.656182"
+  },
+  {
+    "id": 496,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAREPA",
+    "direccion": "CALLE 77 # 76",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci",
+    "lat": "7.7531258",
+    "lon": "-76.65857"
+  },
+  {
+    "id": 497,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAREPA",
+    "direccion": "CRA 52 # 80",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 996162 5147 10411 ALMACEN MARY STILOS",
+    "lat": "7.877519",
+    "lon": "-76.609705"
+  },
+  {
+    "id": 498,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAREPA",
+    "direccion": "KR 78 A # 77 - 45",
+    "horarioSemana": "No especificado",
+    "lat": "7.75849",
+    "lon": "-76.65254"
+  },
+  {
+    "id": 499,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAREPA",
+    "direccion": "CL 77 # 78",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 992668 5147 5551 BRIGADA 17 CAREPA",
+    "lat": "7.756584",
+    "lon": "-76.658843"
+  },
+  {
+    "id": 500,
+    "departamento": "ANTIOQUIA",
+    "municipio": "EFECTY EL CARMEN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 905083 5148 18223 EFECTY EL CARMEN CRA 31",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": 501,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CARMEN DE VIBORAL",
+    "direccion": "CRA 31 # 24",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905241 5148 18378 EFECTY CALLE DEL COMERCIO",
+    "lat": "6.0872758",
+    "lon": "-75.3374075"
+  },
+  {
+    "id": 502,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CARMEN DE VIBORAL",
+    "direccion": "CARRERA 31 # 27",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907600 5148 20904 ALMACEN LUMA EL CARMEN",
+    "lat": "6.0723452",
+    "lon": "-75.3305436"
+  },
+  {
+    "id": 503,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CARMEN DE VIBORAL",
+    "direccion": "CARRERA 31 # 32",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 7 00PM - 993119 5148 6743 EL CARMEN DE VIBORAL T",
+    "lat": "6.0872758",
+    "lon": "-75.3374075"
+  },
+  {
+    "id": 504,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CARMEN DE VIBORAL",
+    "direccion": "CL 30 # 33",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 800380 5150 2169 CAROLINA DEL PRINCIPE",
+    "lat": "6.0818626",
+    "lon": "-75.3372631"
+  },
+  {
+    "id": 505,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAROLINA",
+    "direccion": "CL 50 # 48",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 9 00PM - 014001 5154 106 SERVIENTREGA CRA 3",
+    "lat": "6.7238572",
+    "lon": "-75.2824818"
+  },
+  {
+    "id": 506,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "CARRERA 3 NO. 17 - 75",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 902073 5154 15184 CRA 20 TRONCAL 5A",
+    "lat": "7.9856725",
+    "lon": "-75.4230633"
+  },
+  {
+    "id": 507,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 901803 5154 14913 CAUCASIA PUEBLO NUEVO",
+    "lat": "7.965231",
+    "lon": "-75.204246"
+  },
+  {
+    "id": 508,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "CRA 15 No 11 - 65",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902641 5154 15775 CAUCASIA LAS MALVINAS MAZ D",
+    "lat": "7.98558",
+    "lon": "-75.200236"
+  },
+  {
+    "id": 509,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902593 5154 15729 CAUCASIA EL PARAISO",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 510,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "CARRERA 11 N 25 - 63",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902346 5154 15468 CAUCASIA BARRIO EL BOSQUE",
+    "lat": "7.98654",
+    "lon": "-75.19349"
+  },
+  {
+    "id": 511,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "CARRERA 17 N 31 - 21",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903118 5154 16269 EXPRESS DIMONEX EL GRAN TEMPLO CAUCASIA",
+    "lat": "7.98654",
+    "lon": "-75.19349"
+  },
+  {
+    "id": 512,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903081 5154 16230 EXPRESS EFECTY SAN MIGUEL CAUCASIA",
+    "lat": "7.965231",
+    "lon": "-75.204246"
+  },
+  {
+    "id": 513,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903211 5154 16367 CAUCASIA VILLA ARABIA 1",
+    "lat": "7.965231",
+    "lon": "-75.204246"
+  },
+  {
+    "id": 514,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905148 5154 18283 CAUCASIA BARRIO KENNEDY",
+    "lat": "7.965231",
+    "lon": "-75.204246"
+  },
+  {
+    "id": 515,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "CRA 5 # 22 - 43",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904914 5154 18125 ASOCIACION MUTUAL AMIGO REAL CAUCASIA",
+    "lat": "7.9716734",
+    "lon": "-75.1957484"
+  },
+  {
+    "id": 516,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "CALLE 13T # 20 - 9",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 4 00PM - 905573 5154 18750 EXPRESS EFECTY EL TRIANGULO CAUCASIA",
+    "lat": "7.983434",
+    "lon": "-75.197704"
+  },
+  {
+    "id": 517,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "CALLE 8 A N 23 - 05",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904148 5154 17301 CAUCASIA ALCALDIA CALLE 20",
+    "lat": "7.98654",
+    "lon": "-75.19349"
+  },
+  {
+    "id": 518,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "CALLE 20 # 10",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci",
+    "lat": "7.9878018",
+    "lon": "-75.199464"
+  },
+  {
+    "id": 519,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "CALLE 28 CRA 23 # 23",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910401 5154 33399 CAUCASIA CR 15 BR CENTENARIO",
+    "lat": "7.991288",
+    "lon": "-75.206673"
+  },
+  {
+    "id": 520,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "CR 15 # 15",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910259 5154 33071 CAUCASIA CRA 20 TRONCAL VIA MEDELLIN",
+    "lat": "7.98558",
+    "lon": "-75.200236"
+  },
+  {
+    "id": 521,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "CRA 20 No 24 - 19",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908130 5154 21151 EFECTY SAN RAFAEL",
+    "lat": "7.9773463",
+    "lon": "-75.2025158"
+  },
+  {
+    "id": 522,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908126 5154 21152 EFECTY LA WED CARACOLI",
+    "lat": "7.965231",
+    "lon": "-75.204246"
+  },
+  {
+    "id": 523,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908196 5154 21259 EFECTY TRONCAL LA YE CL 30 VIA MEDELLIN",
+    "lat": "7.965231",
+    "lon": "-75.204246"
+  },
+  {
+    "id": 524,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "CALLE 30 # 22",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908727 5154 31715 EFECTY BR EL PALMAR CL 36",
+    "lat": "7.9951221",
+    "lon": "-75.1998937"
+  },
+  {
+    "id": 525,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "CALLE 36 # 19",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908665 5154 31693 EFECTY CL 29 BR SANTA ELENA",
+    "lat": "7.9981661",
+    "lon": "-75.1988664"
+  },
+  {
+    "id": 526,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "Calle 29 # 28A",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908370 5154 21334 EFECTY CAUCASIA VEREDA VILLA DEL SOCORRO VIA NECHI",
+    "lat": "7.9939065",
+    "lon": "-75.1979715"
+  },
+  {
+    "id": 527,
+    "departamento": "ANTIOQUIA",
+    "municipio": "EFECTY",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908902 5154 31852 EFECTY CR 3 BR EL AGUILA",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 528,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "CRA 3 # 13 - 06",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908929 5154 31867 EFECTY BUENOS AIRES CL 5",
+    "lat": "7.9756566",
+    "lon": "-75.1934478"
+  },
+  {
+    "id": 529,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909162 5154 32087 EFECTY CL 10 ESTADIO DE SOFTBOL",
+    "lat": "7.965231",
+    "lon": "-75.204246"
+  },
+  {
+    "id": 530,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "CALLE 10 # 13",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909460 5154 32363 CAUCASIA BR PARAGUAY MZ 28",
+    "lat": "7.9804436",
+    "lon": "-75.2040594"
+  },
+  {
+    "id": 531,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909440 5154 32298 CAUCASIA CAMELLO 2 AV PRINCIPAL",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 532,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "CL 28 # 26A",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907563 5154 20849 EFECTY EL TRIANGULO CLL 11",
+    "lat": "7.9933941",
+    "lon": "-75.2040687"
+  },
+  {
+    "id": 533,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "CLL 11 #21A",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907203 5154 20489 CELUVARIEDADES LA TRONCAL",
+    "lat": "7.974937",
+    "lon": "-75.425198"
+  },
+  {
+    "id": 534,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "CRA 20 # 27",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907277 5154 20581 EXPRESS EFECTY CL 19 LOMA FRESCA",
+    "lat": "7.9928481",
+    "lon": "-75.1982457"
+  },
+  {
+    "id": 535,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906944 5154 20129 EXPRESS EFECTY PAPELERIA Y CACHARRERIA CATALEYA",
+    "lat": "7.965231",
+    "lon": "-75.204246"
+  },
+  {
+    "id": 536,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "CR 14 # 21",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906946 5154 20127 EXPRESS EFECTY CELUJHONIS",
+    "lat": "8.047121",
+    "lon": "-75.334132"
+  },
+  {
+    "id": 537,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 992409 5154 5169 CAUCASIA COMANDO",
+    "lat": "7.965231",
+    "lon": "-75.204246"
+  },
+  {
+    "id": 538,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 991503 5154 3789 SERVIENTREGA CAUCASIA TRONCAL CRA 20",
+    "lat": "7.965231",
+    "lon": "-75.204246"
+  },
+  {
+    "id": 539,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "CRA 20 No 11 - 64",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 996148 5154 10388 CAUCASIA BARRIO LAS GAVIOTAS",
+    "lat": "8.048151",
+    "lon": "-75.336192"
+  },
+  {
+    "id": 540,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "CL 28 # 11",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 7 00PM - Directorio Puntos de Atenci",
+    "lat": "7.9933941",
+    "lon": "-75.2040687"
+  },
+  {
+    "id": 541,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "CL 21 # 8",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 7 00PM - 996591 5154 10834 CAUCASIA CARACOLI CLL 10",
+    "lat": "7.9885566",
+    "lon": "-75.1952262"
+  },
+  {
+    "id": 542,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "CLL 10 CRA 3 # 9A",
+    "horarioSemana": "No especificado",
+    "lat": "4.852674",
+    "lon": "-74.062464"
+  },
+  {
+    "id": 543,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CAUCASIA",
+    "direccion": "CALLE 20 # 13",
+    "horarioSemana": "Jornada Continua L - V 7 00AM a 6 00PM - 999668 5154 14201 CORREGIMIENTO CUTURU",
+    "lat": "7.9878018",
+    "lon": "-75.199464"
+  },
+  {
+    "id": 544,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SERVIENTREGA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 126001 5172 115 SERVIENTREGA CALLE 97",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 545,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CHIGORODO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 901347 5172 2851 CHIGORODO CREDIJAPON",
+    "lat": "7.884241",
+    "lon": "-76.635154"
+  },
+  {
+    "id": 546,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CHIGORODO",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "7.884241",
+    "lon": "-76.635154"
+  },
+  {
+    "id": 547,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CHIGORODO",
+    "direccion": "CALLE 97 # 96C",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906626 5172 19853 EXPRESS DIMONEX BISUTERIA AYTAN",
+    "lat": "7.6703118",
+    "lon": "-76.6905136"
+  },
+  {
+    "id": 548,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CHIGORODO EL BOSQUE",
+    "direccion": "CALLE 87 # 96",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909228 5172 32193 ZHARIFT CL 98 CHIGORODO",
+    "lat": "7.669251",
+    "lon": "-76.686866"
+  },
+  {
+    "id": 549,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CHIGORODO",
+    "direccion": "CL 98 # 101",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909551 5172 32464 CHIGORODO EL BOSQUE CALLE 89 CON 97",
+    "lat": "7.6711138",
+    "lon": "-76.6796779"
+  },
+  {
+    "id": 550,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CHIGORODO",
+    "direccion": "CALLE 89 # 97",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909573 5172 32416 ALMERKAR SIMON BOLIVAR CHIGORODO",
+    "lat": "7.664716",
+    "lon": "-76.6793465"
+  },
+  {
+    "id": 551,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CHIGORODO",
+    "direccion": "CRA 98C # 96 - 44",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 995727 5172 9949 PAPELERIA SERVICIOS INTEGRADOS LINA",
+    "lat": "7.6695837",
+    "lon": "-76.6777746"
+  },
+  {
+    "id": 552,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CHIGORODO",
+    "direccion": "CARRERA 102 N 92 - 39",
+    "horarioSemana": "No especificado",
+    "lat": "7.66638",
+    "lon": "-76.68106"
+  },
+  {
+    "id": 553,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CISNEROS LA",
+    "direccion": "AVENIDA FERROCARRIL NO 16 - 72",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 908820 5190 31785 CALLE BOLIVAR CISNEROS",
+    "lat": "4.825473",
+    "lon": "-75.684404"
+  },
+  {
+    "id": 554,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CISNEROS",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 993980 5190 7805 CISNEROS AV FERROCARRIL T",
+    "lat": "6.681944",
+    "lon": "-75.220413"
+  },
+  {
+    "id": 555,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 556,
+    "departamento": "ANTIOQUIA",
+    "municipio": "COCORNA",
+    "direccion": "CL 21 # 22",
+    "horarioSemana": "No especificado",
+    "lat": "6.0585876",
+    "lon": "-75.1864492"
+  },
+  {
+    "id": 557,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CONCEPCION",
+    "direccion": "Avenida Tulio Ospina Nro 19 - 74",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 994593 5206 8516 COOGRANADA CONCEPCION T",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": 558,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CONCEPCION",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 903129 5209 16283 CONCORDIA CARRERA 20",
+    "lat": "6.308657",
+    "lon": "-75.559626"
+  },
+  {
+    "id": 559,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CONCORDIA",
+    "direccion": "CARRERA 20 # 20",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci",
+    "lat": "6.0464503",
+    "lon": "-75.9080561"
+  },
+  {
+    "id": 560,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CONCORDIA",
+    "direccion": "CALLE 18 # 20",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904309 5212 17433 BARRIO MACHADO LA 43",
+    "lat": "6.0458605",
+    "lon": "-75.9061476"
+  },
+  {
+    "id": 561,
+    "departamento": "ANTIOQUIA",
+    "municipio": "COPACABANA",
+    "direccion": "CALLE 43 N 83 - 79",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910783 5212 33525 CARRRERA 49 BARRIO SIMON BOLIVAR COPACABANA",
+    "lat": "6.34633",
+    "lon": "-75.50888"
+  },
+  {
+    "id": 562,
+    "departamento": "ANTIOQUIA",
+    "municipio": "COPACABANA",
+    "direccion": "CARRERA 49 # 51",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906375 5212 19541 FLAMINGO COPACABANA",
+    "lat": "6.3476483",
+    "lon": "-75.5075717"
+  },
+  {
+    "id": 563,
+    "departamento": "ANTIOQUIA",
+    "municipio": "COPACABANA",
+    "direccion": "CALLE 50 # 48",
+    "horarioSemana": "Jornada Continua L - V 7 00AM a 9 00PM - 992343 5212 4785 CENTRO COMERCIAL MANHATTAN",
+    "lat": "6.3457439",
+    "lon": "-75.5105491"
+  },
+  {
+    "id": 564,
+    "departamento": "ANTIOQUIA",
+    "municipio": "COPACABANA",
+    "direccion": "CL 49 # 49",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 7 00PM - 999151 5212 13671 CENTRO COMERCIAL EL CASTILLO",
+    "lat": "6.3415283",
+    "lon": "-75.5194609"
+  },
+  {
+    "id": 565,
+    "departamento": "ANTIOQUIA",
+    "municipio": "COPACABANA",
+    "direccion": "CALLE 50 N 51 - 15",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 8 00PM - 992133 5234 4483 DABEIBA PARQUE PRINCIPAL",
+    "lat": "6.34633",
+    "lon": "-75.50888"
+  },
+  {
+    "id": 566,
+    "departamento": "ANTIOQUIA",
+    "municipio": "DABEIBA PARQUE PRINCIPAL",
+    "direccion": "CALLE JUAN CORRAL No 10 - 57",
+    "horarioSemana": "No especificado",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": 567,
+    "departamento": "ANTIOQUIA",
+    "municipio": "DONMATIAS",
+    "direccion": "CARRERA 30 N 29 - 19",
+    "horarioSemana": "No especificado",
+    "lat": "6.48568",
+    "lon": "-75.39496"
+  },
+  {
+    "id": 568,
+    "departamento": "ANTIOQUIA",
+    "municipio": "EBEJICO",
+    "direccion": "CARRERA 17 N 20 - 15",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902590 5240 15728 CORREGIMIENTO SEVILLA PARQUE PRINCIPAL",
+    "lat": "6.32598",
+    "lon": "-75.76835"
+  },
+  {
+    "id": 569,
+    "departamento": "ANTIOQUIA",
+    "municipio": "EBEJICO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 800335 5240 2011 EBEJICO CALLE 18",
+    "lat": "6.157353",
+    "lon": "-75.787209"
+  },
+  {
+    "id": 570,
+    "departamento": "ANTIOQUIA",
+    "municipio": "EBEJICO",
+    "direccion": "CL 18 # 18",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 900295 5250 121 PRINCIPAL LICEO",
+    "lat": "6.3261401",
+    "lon": "-75.768162"
+  },
+  {
+    "id": 571,
+    "departamento": "ANTIOQUIA",
+    "municipio": "EFECTY PUERTO",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": 572,
+    "departamento": "ANTIOQUIA",
+    "municipio": "EL BAGRE CORREGIMIENTO DE PUERTO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908738 5250 31755 EFECTY BR 20 DE JULIO",
+    "lat": "2.571922",
+    "lon": "-72.751558"
+  },
+  {
+    "id": 573,
+    "departamento": "ANTIOQUIA",
+    "municipio": "EL BAGRE",
+    "direccion": "CL 48D # 41 - 02",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909170 5250 32106 EL BAGRE BR PORTUGAL",
+    "lat": "7.597282",
+    "lon": "-74.806788"
+  },
+  {
+    "id": 574,
+    "departamento": "ANTIOQUIA",
+    "municipio": "EL BAGRE Barrio Portugal",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909333 5250 32255 EL BAGRE AV PRINCIPAL BR BIJAO",
+    "lat": "6.29444",
+    "lon": "-74.72639"
+  },
+  {
+    "id": 575,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 576,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910241 5250 33053 EL BAGRE BR EL PORVENIR",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 577,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 991243 5250 3436 EL BAGRE BARRIO PROVIVIENDA",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 578,
+    "departamento": "ANTIOQUIA",
+    "municipio": "EL BAGRE",
+    "direccion": "CL 53 # 47",
+    "horarioSemana": "No especificado",
+    "lat": "7.5922376",
+    "lon": "-74.8022973"
+  },
+  {
+    "id": 579,
+    "departamento": "ANTIOQUIA",
+    "municipio": "EL BAGRE",
+    "direccion": "KR 48 # 57",
+    "horarioSemana": "No especificado",
+    "lat": "7.603934",
+    "lon": "-74.809663"
+  },
+  {
+    "id": 580,
+    "departamento": "ANTIOQUIA",
+    "municipio": "EL BAGRE puerto claver",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "7.479729",
+    "lon": "-74.859341"
+  },
+  {
+    "id": 581,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902307 5264 15429 ENTRERRIOS COPYNET",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 582,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ENTRERRIOS",
+    "direccion": "CARRERA 12 N 9 - 33",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902522 5266 15644 ELECTROBELLO ENVIGADO",
+    "lat": "6.5654",
+    "lon": "-75.5169"
+  },
+  {
+    "id": 583,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ENVIGADO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 901994 5266 15113 ENVIGADO TRANSVERSAL 36",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 584,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ENVIGADO",
+    "direccion": "TRANSVERSAL 36 SUR N 29 - 48",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 12 00PM - 12 00PM a 8 00PM 900235 5266 124 EFECTY PRINCIPAL",
+    "lat": "6.17591",
+    "lon": "-75.59174"
+  },
+  {
+    "id": 585,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ENVIGADO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 7 30AM a 7 00PM - 900452 5266 126 SERVIENTREGA PARQUE CRA 42",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 586,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ENVIGADO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 087001 5266 122 SERVIENTREGA CRA 43",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 587,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ENVIGADO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 904426 5266 17578 EXPRESS EFECTY ALTO DE LAS PALMAS",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 588,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904112 5266 17294 ENVIGADO METROSUR 2",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 589,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ENVIGADO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905403 5266 18621 EURO GUADACANAL",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 590,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ENVIGADO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 6 00AM a 9 00PM - 905081 5266 18307 EURO FRONTERA",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 591,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ENVIGADO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 6 00AM a 10 00PM - 909606 5266 32485 ENVIGADO SEBASTIANA DG 31",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 592,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ENVIGADO SE Ñ ORIAL",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910710 5266 33452 ENVIGADO SE",
+    "lat": "6.167303",
+    "lon": "-75.581301"
+  },
+  {
+    "id": 593,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ENVIGADO",
+    "direccion": "CALLE 48C SUR # 40 - 56",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908714 5266 31691 ENVIGADO ALCALA PAPELERIA INTELPA",
+    "lat": "6.1621362",
+    "lon": "-75.5975391"
+  },
+  {
+    "id": 594,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ENVIGADO",
+    "direccion": "CRA 46 # 38B",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908694 5266 31674 ENVIGADO DORADO PAPELERIA BELINA",
+    "lat": "6.1865599",
+    "lon": "-75.5804941"
+  },
+  {
+    "id": 595,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ENVIGADO",
+    "direccion": "CRA 41 # 40G",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908614 5266 31631 ENVIGADO SE",
+    "lat": "6.1649507",
+    "lon": "-75.5902267"
+  },
+  {
+    "id": 596,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ENVIGADO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906940 5266 20123 EFECTY ENVIGADO PARQUE PPAL",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 597,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ENVIGADO",
+    "direccion": "CALLE 38 SUR # 42 - 27",
+    "horarioSemana": "Jornada Continua L - V 7 00AM a 8 00PM - 995703 5266 9681 CENTRO COMERCIAL CITY PLAZA LOCAL 145",
+    "lat": "6.1729099",
+    "lon": "-75.5928209"
+  },
+  {
+    "id": 598,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ENVIGADO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 7 00PM - 904661 5282 17798 FREDONIA LUPENCIA",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 599,
+    "departamento": "ANTIOQUIA",
+    "municipio": "FREDONIA",
+    "direccion": "CALLE 50 # 49",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907501 5282 20752 FREDONIA CALLE 50",
+    "lat": "5.9275737",
+    "lon": "-75.6717158"
+  },
+  {
+    "id": 600,
+    "departamento": "ANTIOQUIA",
+    "municipio": "FREDONIA",
+    "direccion": "CALLE 50 # 48",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908303 5282 21291 FREDONIA PARQUE PRINCIPAL",
+    "lat": "5.9275737",
+    "lon": "-75.6717158"
+  },
+  {
+    "id": 601,
+    "departamento": "ANTIOQUIA",
+    "municipio": "FREDONIA",
+    "direccion": "CALLE 50 # 50",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci",
+    "lat": "5.9275737",
+    "lon": "-75.6717158"
+  },
+  {
+    "id": 602,
+    "departamento": "ANTIOQUIA",
+    "municipio": "FRONTINO",
+    "direccion": "CARRERA 32 # 30",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 7 00PM - 630001 5284 127 FRONTINO",
+    "lat": "6.780646",
+    "lon": "-76.128881"
+  },
+  {
+    "id": 603,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 604,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 12 00PM - 12 00PM a 8 00PM 905059 5306 18187 CORREGIMIENTO MANGLAR",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 605,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 996422 5306 10617 COMUNICACIONES GIRALDO",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 606,
+    "departamento": "ANTIOQUIA",
+    "municipio": "GIRALDO",
+    "direccion": "CL 10 NORTE 9 - 19",
+    "horarioSemana": "No especificado",
+    "lat": "6.68306",
+    "lon": "-75.98917"
+  },
+  {
+    "id": 607,
+    "departamento": "ANTIOQUIA",
+    "municipio": "GIRARDOTA",
+    "direccion": "KR 15 # 5",
+    "horarioSemana": "No especificado",
+    "lat": "6.378443",
+    "lon": "-75.445239"
+  },
+  {
+    "id": 608,
+    "departamento": "ANTIOQUIA",
+    "municipio": "GIRARDOTA",
+    "direccion": "CALLE 6 # 17 - 43",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910517 5308 33180 SERVIENTREGA CPL GIRARDOTA",
+    "lat": "6.3801217",
+    "lon": "-75.4478562"
+  },
+  {
+    "id": 609,
+    "departamento": "ANTIOQUIA",
+    "municipio": "DIMONEX GIRARDOTA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 909703 5308 32578 DIMONEX GIRARDOTA CLL 7 AV PRINCIPAL",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": 610,
+    "departamento": "ANTIOQUIA",
+    "municipio": "GIRARDOTA",
+    "direccion": "CALLE 7 # 17 - 34",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903249 5310 16421 CORREGIMIENTO EL SALTO GOMEZ PLATA",
+    "lat": "6.3769559",
+    "lon": "-75.4461815"
+  },
+  {
+    "id": 611,
+    "departamento": "ANTIOQUIA",
+    "municipio": "GOMEZ PLATA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 996224 5310 10438 ZONA PLAY GOMEZ PLATA",
+    "lat": "6.681944",
+    "lon": "-75.220413"
+  },
+  {
+    "id": 612,
+    "departamento": "ANTIOQUIA",
+    "municipio": "GOMEZ PLATA",
+    "direccion": "KR 50 NORTE 51 - 58",
+    "horarioSemana": "No especificado",
+    "lat": "6.68178",
+    "lon": "-75.21906"
+  },
+  {
+    "id": 613,
+    "departamento": "ANTIOQUIA",
+    "municipio": "GRANADA",
+    "direccion": "CARRERA 22 A N 21 - 35",
+    "horarioSemana": "No especificado",
+    "lat": "6.144685",
+    "lon": "-75.1872043"
+  },
+  {
+    "id": 614,
+    "departamento": "ANTIOQUIA",
+    "municipio": "GRANADA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 999547 5313 14474 COOGRANADA CORREGIMIENTO SANTA ANA - GRANADA",
+    "lat": "6.265072",
+    "lon": "-75.43729"
+  },
+  {
+    "id": 615,
+    "departamento": "ANTIOQUIA",
+    "municipio": "GUADALUPE",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 800377 5315 2124 GUADALUPE CR 50",
+    "lat": "6.681944",
+    "lon": "-75.220413"
+  },
+  {
+    "id": 616,
+    "departamento": "ANTIOQUIA",
+    "municipio": "GUADALUPE",
+    "direccion": "KR 50 # 51",
+    "horarioSemana": "No especificado",
+    "lat": "6.816137",
+    "lon": "-75.24092"
+  },
+  {
+    "id": 617,
+    "departamento": "ANTIOQUIA",
+    "municipio": "GUARNE",
+    "direccion": "CRA 51 NO 51 - 11",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 7 00PM - 903113 5318 16270 EXPRESS DIMONEX GUARNE BARRIO SAN ANTONIO",
+    "lat": "6.251285",
+    "lon": "-75.568664"
+  },
+  {
+    "id": 618,
+    "departamento": "ANTIOQUIA",
+    "municipio": "GUARNE",
+    "direccion": "CARRERA 50 # 38",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905321 5318 18457 EXPRESS EFECTY BARRIO SANTO TOMAS",
+    "lat": "6.2769081",
+    "lon": "-75.4405305"
+  },
+  {
+    "id": 619,
+    "departamento": "ANTIOQUIA",
+    "municipio": "GUARNE",
+    "direccion": "CRA 54 # 51",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci",
+    "lat": "6.2833729",
+    "lon": "-75.4451478"
+  },
+  {
+    "id": 620,
+    "departamento": "ANTIOQUIA",
+    "municipio": "GUARNE",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 999875 5318 14420 GUARNE CALLE DEL BOLSILLO",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 621,
+    "departamento": "ANTIOQUIA",
+    "municipio": "GUARNE",
+    "direccion": "CARRERA 50 # 49",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909833 5321 32892 GUATAPE PARQUE PRINCIPAL",
+    "lat": "6.2769081",
+    "lon": "-75.4405305"
+  },
+  {
+    "id": 622,
+    "departamento": "ANTIOQUIA",
+    "municipio": "GUATAPE",
+    "direccion": "CALLE 31 # 29",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 901732 5347 14838 HELICONIA PARQUE PRINCIPAL",
+    "lat": "6.2342083",
+    "lon": "-75.1602883"
+  },
+  {
+    "id": 623,
+    "departamento": "ANTIOQUIA",
+    "municipio": "HELICONIA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904259 5353 17410 HISPANIA LIMARO",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 624,
+    "departamento": "ANTIOQUIA",
+    "municipio": "HISPANIA",
+    "direccion": "CALLE 50 TOLEDO # 49 - 46",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905257 5360 18388 EXPRESS EFECTY ITAGUI COLMENAR",
+    "lat": "5.8000118",
+    "lon": "-75.9047116"
+  },
+  {
+    "id": 625,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CRA 50 # 74",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905405 5360 18625 EURO GRAN MANZANA",
+    "lat": "6.1738974",
+    "lon": "-75.6053887"
+  },
+  {
+    "id": 626,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CALLE 51 # 48",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905407 5360 18620 EURO MAYORISTA",
+    "lat": "6.1678164",
+    "lon": "-75.606356"
+  },
+  {
+    "id": 627,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CARRERA 47 # 83",
+    "horarioSemana": "Jornada Continua L - V 6 00AM a 8 00PM - 905218 5360 18390 ITAGUI LA RAYA",
+    "lat": "6.1706082",
+    "lon": "-75.6063124"
+  },
+  {
+    "id": 628,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CRA 51 # 86",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902523 5360 15645 ELECTROBELLO ITAGUI",
+    "lat": "6.1924631",
+    "lon": "-75.5905477"
+  },
+  {
+    "id": 629,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CARRERA 51 N 50 - 43",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902834 5360 16022 ITAGUI VILLA PAULA",
+    "lat": "6.18461",
+    "lon": "-75.59913"
+  },
+  {
+    "id": 630,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CARRERA 52 N 55 - 39",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 12 00PM - 12 00PM a 8 00PM 075001 5360 132 SERVIENTREGA PARQUE ITAGUI",
+    "lat": "6.18461",
+    "lon": "-75.59913"
+  },
+  {
+    "id": 631,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CARRERA 49 NO. 51 - 47",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 075002 5360 133 SERVIENTREGA SANTA MARIA 1",
+    "lat": "6.2720773",
+    "lon": "-75.5582612"
+  },
+  {
+    "id": 632,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CALLE 81 # 52",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 909692 5360 32547 EFECTY ITAGUI SAN FRANCISCO CALLE 27",
+    "lat": "6.1891341",
+    "lon": "-75.5938541"
+  },
+  {
+    "id": 633,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CALLE 27 # 65",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909623 5360 32588 DIMONEX AJIZAL POR LA IGLESIA",
+    "lat": "6.1700216",
+    "lon": "-75.6406682"
+  },
+  {
+    "id": 634,
+    "departamento": "ANTIOQUIA",
+    "municipio": "GLORIETA PILSEN ITAGUI",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910087 5360 32972 GLORIETA PILSEN ITAGUI CALLE 34",
+    "lat": "6.18461",
+    "lon": "-75.59913"
+  },
+  {
+    "id": 635,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CALLE 34# 50A",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910418 5360 33220 EL ROSARIO ITAGUI CALLE 47",
+    "lat": "6.1686825",
+    "lon": "-75.6316496"
+  },
+  {
+    "id": 636,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CALLE 47C # 61 - 077",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910454 5360 33170 EFECTY BRR YARUMITO",
+    "lat": "6.1796663",
+    "lon": "-75.6123362"
+  },
+  {
+    "id": 637,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CRA 50A # 26 - 21",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910459 5360 33418 CENTRAL MAYORISTA ENTRADA PRINCIPAL",
+    "lat": "6.1678587",
+    "lon": "-75.6201001"
+  },
+  {
+    "id": 638,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CALLE 85 # 48",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 911024 5360 33774 EFECTY ITAGUI BARRIO LA INDEPENDENCIA",
+    "lat": "6.1873503",
+    "lon": "-75.5859016"
+  },
+  {
+    "id": 639,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CALLE 37 # 42",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910939 5360 33694 SERVIWIN ITAGUI",
+    "lat": "6.1752453",
+    "lon": "-75.6334459"
+  },
+  {
+    "id": 640,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CALLE 51 # 50",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 7 00PM - 910957 5360 33649 EFECTY ITAGUI SAN PIO CALLE 32A",
+    "lat": "6.1678164",
+    "lon": "-75.606356"
+  },
+  {
+    "id": 641,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CALLE 32A # 44 - 04",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci",
+    "lat": "6.1645305",
+    "lon": "-75.6187771"
+  },
+  {
+    "id": 642,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 911116 5360 33845 EFECTY ITAGUI CALATRABA CALLE 56",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 643,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CALLE 56 # 59",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909505 5360 32410 EFECTY CENTRAL MAYORISTA PISO 2",
+    "lat": "6.17967155",
+    "lon": "-75.60984501902584"
+  },
+  {
+    "id": 644,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CALLE 85 SUR # 48 - 01",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907337 5360 20608 EXPRESS EFECTY ITAGUI BARRIO SAN GABRIEL",
+    "lat": "6.18461",
+    "lon": "-75.59913"
+  },
+  {
+    "id": 645,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907504 5360 20788 EFECTY C",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 646,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907420 5360 20687 EXPRESS EFECTY ITAGUI SANTA MARIA N 2",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 647,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CRA 50 # 77",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906336 5360 19576 SANTA MARIA CRA 52 CON 80",
+    "lat": "6.1738974",
+    "lon": "-75.6053887"
+  },
+  {
+    "id": 648,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CRA 52 No 80 - 53",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905959 5360 19149 EFECTY CALLE 69 ITAGUI",
+    "lat": "6.284502",
+    "lon": "-75.446742"
+  },
+  {
+    "id": 649,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CALLE 69 # 53",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906040 5360 19238 EFECTY SAN PIO CALLE 32",
+    "lat": "6.1840651",
+    "lon": "-75.60172075"
+  },
+  {
+    "id": 650,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CALLE 32 # 48",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906046 5360 19259 EFECTY CALLE 54 ITAGUI",
+    "lat": "6.1711048",
+    "lon": "-75.636062"
+  },
+  {
+    "id": 651,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CALLE 54 # 50",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 999627 5360 14122 ITAGUI SAN FRANCISCO CALLE 27",
+    "lat": "6.19065785",
+    "lon": "-75.5968538326103"
+  },
+  {
+    "id": 652,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CALLE 27 N 68 - 15",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 998935 5360 13414 ITAGUI SECTOR LAS ESMERALDAS",
+    "lat": "6.18461",
+    "lon": "-75.59913"
+  },
+  {
+    "id": 653,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 997553 5360 11876 FLAMINGO ITAGUI",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 654,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CALLE 49 N 50 - 01",
+    "horarioSemana": "No especificado",
+    "lat": "6.18461",
+    "lon": "-75.59913"
+  },
+  {
+    "id": 655,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CL 85 # 48",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 992636 5360 5421 DITAIRES CENTRO COMERCIAL COMPLEX",
+    "lat": "6.1873503",
+    "lon": "-75.5859016"
+  },
+  {
+    "id": 656,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CALLE 35 No 61 - 12",
+    "horarioSemana": "No especificado",
+    "lat": "6.243833",
+    "lon": "-75.609167"
+  },
+  {
+    "id": 657,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CARRERA 52D No 76 - 67",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 7 00PM - 911147 5360 33882 EFECTY ITAGUI BARRIO PLAYA RICA CALLE 46",
+    "lat": "6.182363",
+    "lon": "-75.6004214"
+  },
+  {
+    "id": 658,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITAGUI",
+    "direccion": "CALLE 46 # 53",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902489 5361 15622 EXPRESS EFECTY ITUANGO CALLE SANTA BARBARA6",
+    "lat": "6.1673628",
+    "lon": "-75.6111738"
+  },
+  {
+    "id": 659,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITUANGO",
+    "direccion": "CALLE SANTA BARBARA # 18 - 44",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904244 5361 17395 CORREGIMIENTO LA GRANJA ITUANGO",
+    "lat": "7.1715143",
+    "lon": "-75.7627247"
+  },
+  {
+    "id": 660,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906542 5361 19772 EXPRESS EFECTY ITUANGO PARQUE",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 661,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ITUANGO",
+    "direccion": "CARRERA 20 SANTANDER 19 - 09",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 998758 5361 13110 SANTA RITA PARQUE PPAL",
+    "lat": "7.17117",
+    "lon": "-75.76404"
+  },
+  {
+    "id": 662,
+    "departamento": "ANTIOQUIA",
+    "municipio": "JARDIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "5.596509",
+    "lon": "-75.818596"
+  },
+  {
+    "id": 663,
+    "departamento": "ANTIOQUIA",
+    "municipio": "JARDIN",
+    "direccion": "CALLE 11 # 3",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 995635 5364 9744 JARDIN PARQUE PRINCIPAL",
+    "lat": "5.5985261",
+    "lon": "-75.8180974"
+  },
+  {
+    "id": 664,
+    "departamento": "ANTIOQUIA",
+    "municipio": "JARDIN",
+    "direccion": "CL 9 # 3 - 19",
+    "horarioSemana": "No especificado",
+    "lat": "5.5991478",
+    "lon": "-75.8195838"
+  },
+  {
+    "id": 665,
+    "departamento": "ANTIOQUIA",
+    "municipio": "JERICO",
+    "direccion": "CARRERA 5 N 2 - 134",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 800159 5368 141 CRA 5",
+    "lat": "5.79211",
+    "lon": "-75.78601"
+  },
+  {
+    "id": 666,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 667,
+    "departamento": "ANTIOQUIA",
+    "municipio": "JERICO",
+    "direccion": "KR 5 # 7 - 37",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 135001 5376 142 SERVIENTREGA CALLE 20",
+    "lat": "5.79211",
+    "lon": "-75.78601"
+  },
+  {
+    "id": 668,
+    "departamento": "ANTIOQUIA",
+    "municipio": "LA CEJA",
+    "direccion": "CALLE 19 # 22",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 905495 5376 18807 MUTUAL BIENESTAR LA CEJA CALLE COMERCIAL",
+    "lat": "6.0306527",
+    "lon": "-75.4331048"
+  },
+  {
+    "id": 669,
+    "departamento": "ANTIOQUIA",
+    "municipio": "LA CEJA",
+    "direccion": "CARRERA 20 No. 17 - 57",
+    "horarioSemana": "No especificado",
+    "lat": "6.0357464",
+    "lon": "-75.4297202"
+  },
+  {
+    "id": 670,
+    "departamento": "ANTIOQUIA",
+    "municipio": "LA CEJA",
+    "direccion": "CRA 20 # 24",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909425 5376 32260 LA CEJA PARQUE PRINCIPAL CRA 21",
+    "lat": "6.0245809",
+    "lon": "-75.4330046"
+  },
+  {
+    "id": 671,
+    "departamento": "ANTIOQUIA",
+    "municipio": "LA CEJA",
+    "direccion": "CARRERA 21 # 20",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910885 5376 33636 BARRIO PAYUCO CRA 22 LA CEJA",
+    "lat": "6.0309007",
+    "lon": "-75.4320955"
+  },
+  {
+    "id": 672,
+    "departamento": "ANTIOQUIA",
+    "municipio": "LA CEJA",
+    "direccion": "CRA 22 # 5",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 995650 5376 9674 MUTUAL BIENESTAR LA CEJA",
+    "lat": "6.0211353",
+    "lon": "-75.4374178"
+  },
+  {
+    "id": 673,
+    "departamento": "ANTIOQUIA",
+    "municipio": "LA CEJA",
+    "direccion": "CL 24 # 17",
+    "horarioSemana": "No especificado",
+    "lat": "6.0349805",
+    "lon": "-75.4342987"
+  },
+  {
+    "id": 674,
+    "departamento": "ANTIOQUIA",
+    "municipio": "LA CEJA",
+    "direccion": "CARRERA 17 # 21",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 904538 5380 17741 QUEBRADA GRANDE LA ESTRELLA",
+    "lat": "6.0294318",
+    "lon": "-75.4290422"
+  },
+  {
+    "id": 675,
+    "departamento": "ANTIOQUIA",
+    "municipio": "LA ESTRELLA",
+    "direccion": "CRA 55 #84",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910983 5380 33725 LA ESTRELLA VIA CALDAS",
+    "lat": "6.1538621",
+    "lon": "-75.6363587"
+  },
+  {
+    "id": 676,
+    "departamento": "ANTIOQUIA",
+    "municipio": "LA ESTRELLA",
+    "direccion": "CALLE 96 SUR # 50 - 01",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910795 5380 33539 LA ESTRELLA CALLE 75 SUR CON 52G",
+    "lat": "6.1366355",
+    "lon": "-75.6394405"
+  },
+  {
+    "id": 677,
+    "departamento": "ANTIOQUIA",
+    "municipio": "LA ESTRELLA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910124 5380 32943 EFECTY LA ESTRELLA CLL 80 SUR",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 678,
+    "departamento": "ANTIOQUIA",
+    "municipio": "LA ESTRELLA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909872 5380 32868 EFECTY LA TABLAZA CALLE 100B SUR CON 49D",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 679,
+    "departamento": "ANTIOQUIA",
+    "municipio": "LA ESTRELLA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907573 5380 20851 PARQUE PRINCIPAL LA ESTRELLA",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 680,
+    "departamento": "ANTIOQUIA",
+    "municipio": "LA ESTRELLA",
+    "direccion": "CALLE 80 SUR # 60 - 38",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907278 5380 20549 EXPRESS EFECTY BARRIO LAS BRISAS CRA 55 LA ESTRELL",
+    "lat": "6.1580198",
+    "lon": "-75.6434022"
+  },
+  {
+    "id": 681,
+    "departamento": "ANTIOQUIA",
+    "municipio": "LA ESTRELLA",
+    "direccion": "CRA 55 # 79",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904658 5390 17797 MALL LA PINTADA",
+    "lat": "6.1538621",
+    "lon": "-75.6363587"
+  },
+  {
+    "id": 682,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MUTUAL BIENESTAR LA PINTADA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905493 5390 18804 MUTUAL BIENESTAR LA PINTADA CRUCERO",
+    "lat": "6.222427",
+    "lon": "-75.600055"
+  },
+  {
+    "id": 683,
+    "departamento": "ANTIOQUIA",
+    "municipio": "LA PINTADA",
+    "direccion": "AVENIDA 30 No. 30 - 33",
+    "horarioSemana": "No especificado",
+    "lat": "5.741171",
+    "lon": "-75.6067746"
+  },
+  {
+    "id": 684,
+    "departamento": "ANTIOQUIA",
+    "municipio": "LA UNION",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "6.167303",
+    "lon": "-75.581301"
+  },
+  {
+    "id": 685,
+    "departamento": "ANTIOQUIA",
+    "municipio": "LA UNION",
+    "direccion": "CALLE 10 N 8 - 59",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 993166 5400 6877 MUTUAL BIENESTAR LA UNION HOSPITAL",
+    "lat": "5.973269",
+    "lon": "-75.3615654"
+  },
+  {
+    "id": 686,
+    "departamento": "ANTIOQUIA",
+    "municipio": "LA UNION",
+    "direccion": "KR 12 # 12",
+    "horarioSemana": "No especificado",
+    "lat": "5.974395",
+    "lon": "-75.363615"
+  },
+  {
+    "id": 687,
+    "departamento": "ANTIOQUIA",
+    "municipio": "LIBORINA",
+    "direccion": "CALLE 9 # 9 - 20",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 7 00PM - 997611 5411 11998 LIBORINA PARQUE",
+    "lat": "6.6777817",
+    "lon": "-75.812253"
+  },
+  {
+    "id": 688,
+    "departamento": "ANTIOQUIA",
+    "municipio": "LIBORINA",
+    "direccion": "CARRERA 9 N 8 - 4",
+    "horarioSemana": "No especificado",
+    "lat": "6.6779",
+    "lon": "-75.81218"
+  },
+  {
+    "id": 689,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MACEO",
+    "direccion": "KR 30 # 29",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 137001 5440 147 MARINILLA CENTRO PRINCIPAL",
+    "lat": "6.552551",
+    "lon": "-74.787562"
+  },
+  {
+    "id": 690,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MARINILLA",
+    "direccion": "CARRERA 30 B 32 - 39",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 902147 5440 15261 MARINILLA CARRERA 31",
+    "lat": "6.17358",
+    "lon": "-75.33621"
+  },
+  {
+    "id": 691,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MARINILLA",
+    "direccion": "CARRERA 31 N 24 - 49",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905182 5440 18318 MARINILLA CALLE PEATONAL",
+    "lat": "6.17358",
+    "lon": "-75.33621"
+  },
+  {
+    "id": 692,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MARINILLA",
+    "direccion": "CL 30 # 32B",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905150 5440 18295 PREVENSERVICIOS MARINILLA PARQUE PRINCIPAL",
+    "lat": "6.1763492",
+    "lon": "-75.3405525"
+  },
+  {
+    "id": 693,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MARINILLA",
+    "direccion": "CALLE 30 N 29 - 43",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904928 5440 18258 ALMACEN LUMA MARINILLA",
+    "lat": "6.17358",
+    "lon": "-75.33621"
+  },
+  {
+    "id": 694,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MARINILLA",
+    "direccion": "CALLE SAN JOSE No. 30 # 31",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 7 00PM - 908618 5440 31849 LA NUEVA AVENIDA MARINILLA CARRERA 30",
+    "lat": "6.17358",
+    "lon": "-75.33621"
+  },
+  {
+    "id": 695,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MARINILLA",
+    "direccion": "CRA 30 # 22",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910027 5440 32930 EFECTY LAS MARGARITAS CARRERA 38",
+    "lat": "6.1709452",
+    "lon": "-75.3356337"
+  },
+  {
+    "id": 696,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MARINILLA",
+    "direccion": "CARRERA 38 # 29",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910683 5440 33506 MARINILLA CALLE 30 BARRIO LAS MARGARITAS",
+    "lat": "6.1725072",
+    "lon": "-75.3343689"
+  },
+  {
+    "id": 697,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MARINILLA",
+    "direccion": "CALLE 30 # 38",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 999839 5440 14475 COOGRANADA MARINILLA",
+    "lat": "6.1763492",
+    "lon": "-75.3405525"
+  },
+  {
+    "id": 698,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MARINILLA",
+    "direccion": "CARRERA 29 # 30",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 995651 5467 9675 MUTUAL BIENESTAR MONTEBELLO",
+    "lat": "6.1729807",
+    "lon": "-75.3338258"
+  },
+  {
+    "id": 699,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MONTEBELLO",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 700,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MONTEBELLO",
+    "direccion": "CALLE BOLIVAR No 19 - 06",
+    "horarioSemana": "No especificado",
+    "lat": "5.792048",
+    "lon": "-75.426958"
+  },
+  {
+    "id": 701,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MUTATA CORREGIMIENTO BAJIRA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909202 5480 32393 MUTATA CALLE 9 CON 33",
+    "lat": "7.001776",
+    "lon": "-76.26755"
+  },
+  {
+    "id": 702,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MUTATA",
+    "direccion": "CALLE 9 # 10 - 33",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906550 5480 19828 MUTATA VEREDA CAUCHERA",
+    "lat": "7.2418246",
+    "lon": "-76.4379958"
+  },
+  {
+    "id": 703,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BAJIRA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci",
+    "lat": "42.9153294",
+    "lon": "-2.8664115"
+  },
+  {
+    "id": 704,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MUTATA",
+    "direccion": "CL 6 # 7 - 32",
+    "horarioSemana": "No especificado",
+    "lat": "7.2394503",
+    "lon": "-76.4377767"
+  },
+  {
+    "id": 705,
+    "departamento": "ANTIOQUIA",
+    "municipio": "NARI Ñ O",
+    "direccion": "KR 10 # 11",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 994008 5483 8013 CORREGIMIENTO PUERTO VENUS NARI",
+    "lat": "6.679237",
+    "lon": "-75.812209"
+  },
+  {
+    "id": 706,
+    "departamento": "ANTIOQUIA",
+    "municipio": "EXPRESS EFECTY TEMCEL NECOCLI",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 5 00PM - 903284 5490 16428 EXPRESS EFECTY TEMCEL NECOCLI CRA 45",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": 707,
+    "departamento": "ANTIOQUIA",
+    "municipio": "NECOCLI",
+    "direccion": "CLI CRA 45 N 52 - 09",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904929 5490 18259 ALMACEN LUMA NECOCLI",
+    "lat": "8.42342",
+    "lon": "-76.78597"
+  },
+  {
+    "id": 708,
+    "departamento": "ANTIOQUIA",
+    "municipio": "NECOCLI",
+    "direccion": "CLI CALLE 51 # 44",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 904994 5490 18135 CORREGIMIENTO EL MELLO VILLAVICENCIO",
+    "lat": "8.424518",
+    "lon": "-76.784456"
+  },
+  {
+    "id": 709,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904966 5490 18098 CORREGIMIENTO SAN SEBASTIAN",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 710,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904378 5490 17531 CORREGIMIENTO EL MELLITO NECOCLI",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 711,
+    "departamento": "ANTIOQUIA",
+    "municipio": "NECOCLI",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906933 5490 20115 NECOCLI CALLE LA TRILLADORA",
+    "lat": "8.42342",
+    "lon": "-76.78597"
+  },
+  {
+    "id": 712,
+    "departamento": "ANTIOQUIA",
+    "municipio": "NECOCLI",
+    "direccion": "CLI CALLE 51 # 47",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908943 5490 31881 CORREGIMIENTO MULATOS NECOCLI",
+    "lat": "8.424518",
+    "lon": "-76.784456"
+  },
+  {
+    "id": 713,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907699 5490 20969 NECOCLI VEREDA ALTO ROSARIO",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 714,
+    "departamento": "ANTIOQUIA",
+    "municipio": "PUEBLO NUEVO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 998864 5490 13239 PUEBLO NUEVO CALLE PPAL",
+    "lat": "6.962786",
+    "lon": "-75.417469"
+  },
+  {
+    "id": 715,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 716,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 717,
+    "departamento": "ANTIOQUIA",
+    "municipio": "NECHI",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904135 5495 17286 DIMONEX NECHI CALLE 30",
+    "lat": "8.173957",
+    "lon": "-74.751958"
+  },
+  {
+    "id": 718,
+    "departamento": "ANTIOQUIA",
+    "municipio": "NECHI",
+    "direccion": "CALLE 30 # 30",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 800324 5495 2009 CALLE BANCO AGRARIO",
+    "lat": "8.0942851",
+    "lon": "-74.7749357"
+  },
+  {
+    "id": 719,
+    "departamento": "ANTIOQUIA",
+    "municipio": "NECHI",
+    "direccion": "CRA 30 NO 30 - 55",
+    "horarioSemana": "No especificado",
+    "lat": "8.095915",
+    "lon": "-74.773614"
+  },
+  {
+    "id": 720,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CORREGIMIENTO LA CONCHA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910546 5495 33283 CORREGIMIENTO LA CONCHA CL PRINCIPAL",
+    "lat": "7.21194",
+    "lon": "-75.08361"
+  },
+  {
+    "id": 721,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 998513 5495 12830 BARRIO 20 DE ENERO",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 722,
+    "departamento": "ANTIOQUIA",
+    "municipio": "NECHI",
+    "direccion": "CALLE 28 N 37 - 12",
+    "horarioSemana": "No especificado",
+    "lat": "8.09419",
+    "lon": "-74.77573"
+  },
+  {
+    "id": 723,
+    "departamento": "ANTIOQUIA",
+    "municipio": "PE Ñ OL",
+    "direccion": "TRANSVERSAL 6 # 18 - 57",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci",
+    "lat": "7.7477",
+    "lon": "-76.656869"
+  },
+  {
+    "id": 724,
+    "departamento": "ANTIOQUIA",
+    "municipio": "PE Ñ OL",
+    "direccion": "CARRERA 19 N 2 - 21",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908633 5541 31756 EL PE",
+    "lat": "8.09819",
+    "lon": "-76.721284"
+  },
+  {
+    "id": 725,
+    "departamento": "ANTIOQUIA",
+    "municipio": "PE Ñ OL",
+    "direccion": "CRA 16 # 2",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 999947 5576 14497 PUEBLO RICO PARQUE PPAL",
+    "lat": "5.704758",
+    "lon": "-75.309412"
+  },
+  {
+    "id": 726,
+    "departamento": "ANTIOQUIA",
+    "municipio": "PUEBLORRICO",
+    "direccion": "CALLE 30 30 - 51",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 5 00PM - 117001 5579 153 SERVIENTREGA PUERTO BERRIO CENTRO",
+    "lat": "5.7914611",
+    "lon": "-75.8376772"
+  },
+  {
+    "id": 727,
+    "departamento": "ANTIOQUIA",
+    "municipio": "PUERTO BERRIO",
+    "direccion": "CALLE 53 No. 4 - 25",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 903096 5579 16242 PUERTO BERRIO BATALLON BOMBONA - VEREDA GUASIMAL",
+    "lat": "6.490773",
+    "lon": "-74.4027592"
+  },
+  {
+    "id": 728,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902909 5579 16043 CUATRO ESQUINAS",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 729,
+    "departamento": "ANTIOQUIA",
+    "municipio": "PUERTO BERRIO",
+    "direccion": "CALLE 50 N 7 - 20",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903835 5579 17007 VEREDA MINAL DEL VAPOR",
+    "lat": "6.4899723",
+    "lon": "-74.4046426"
+  },
+  {
+    "id": 730,
+    "departamento": "ANTIOQUIA",
+    "municipio": "PUERTO BERRIO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902187 5579 15315 PUERTO BERRIO CRA 5 CLL 11",
+    "lat": "6.493722",
+    "lon": "-74.408513"
+  },
+  {
+    "id": 731,
+    "departamento": "ANTIOQUIA",
+    "municipio": "PUERTO BERRIO",
+    "direccion": "CARRERA 5 CALLE 11 N 55 - 5",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906407 5579 19673 COOTRANSMAGDALENA PUERTO BERRIO",
+    "lat": "4.44309",
+    "lon": "-75.160067"
+  },
+  {
+    "id": 732,
+    "departamento": "ANTIOQUIA",
+    "municipio": "PUERTO BERRIO",
+    "direccion": "CALLE 51 # 4",
+    "horarioSemana": "Jornada Continua L - V 4 00AM a 7 00PM - 906650 5579 19904 PUERTO BERRIO CORREGIMIENTO VIRGINIAS",
+    "lat": "6.4902667",
+    "lon": "-74.4039237"
+  },
+  {
+    "id": 733,
+    "departamento": "ANTIOQUIA",
+    "municipio": "PUERTO BERRIO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909959 5579 32867 PUERTO BERRIO CALLE 50 CON 11",
+    "lat": "6.493722",
+    "lon": "-74.408513"
+  },
+  {
+    "id": 734,
+    "departamento": "ANTIOQUIA",
+    "municipio": "PUERTO BERRIO",
+    "direccion": "CALLE 50 # 11",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909758 5579 32799 PUERTO BERRIO EL CARMELO",
+    "lat": "6.4899723",
+    "lon": "-74.4046426"
+  },
+  {
+    "id": 735,
+    "departamento": "ANTIOQUIA",
+    "municipio": "PUERTO BERRIO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 991927 5579 4330 EDS D1 PASO NIVEL PUERTO BERRIO",
+    "lat": "6.493722",
+    "lon": "-74.408513"
+  },
+  {
+    "id": 736,
+    "departamento": "ANTIOQUIA",
+    "municipio": "PUERTO BERRIO",
+    "direccion": "CL 9 # 7 - 20",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 992216 5585 4597",
+    "lat": "6.4580592",
+    "lon": "-74.4221997"
+  },
+  {
+    "id": 737,
+    "departamento": "ANTIOQUIA",
+    "municipio": "CENTRO",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "6.930914",
+    "lon": "-73.770997"
+  },
+  {
+    "id": 738,
+    "departamento": "ANTIOQUIA",
+    "municipio": "PUERTO NARE",
+    "direccion": "CRA 5 No.44 - 58",
+    "horarioSemana": "No especificado",
+    "lat": "6.18762",
+    "lon": "-74.59972"
+  },
+  {
+    "id": 739,
+    "departamento": "ANTIOQUIA",
+    "municipio": "REMEDIOS",
+    "direccion": "CALLE 10 # 13",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 800296 5604 1923 REMEDIOS PLAZA PRINCIPAL",
+    "lat": "7.028291",
+    "lon": "-74.6944252"
+  },
+  {
+    "id": 740,
+    "departamento": "ANTIOQUIA",
+    "municipio": "REMEDIOS",
+    "direccion": "CL 10 # 10",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 9 00PM - 907533 5604 20828 REMEDIOS SECTOR EL MATADERO",
+    "lat": "7.028291",
+    "lon": "-74.6944252"
+  },
+  {
+    "id": 741,
+    "departamento": "ANTIOQUIA",
+    "municipio": "REMEDIOS",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907396 5604 20670 REMEDIOS VEREDA CARRIZAL",
+    "lat": "7.107498",
+    "lon": "-74.765793"
+  },
+  {
+    "id": 742,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908695 5604 31732 VEREDA MINA NUEVA REMEDIOS",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 743,
+    "departamento": "ANTIOQUIA",
+    "municipio": "LA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 998869 5604 13234 LA CRUZADA FOTOCOPIA Y PAPELERIA YULI",
+    "lat": "6.4",
+    "lon": "-75.833333"
+  },
+  {
+    "id": 744,
+    "departamento": "ANTIOQUIA",
+    "municipio": "REMEDIOS CORREGIMIENTO LA",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "6.276949",
+    "lon": "-75.576955"
+  },
+  {
+    "id": 745,
+    "departamento": "ANTIOQUIA",
+    "municipio": "RETIRO",
+    "direccion": "CARRERA 21 No. 20 - 37",
+    "horarioSemana": "No especificado",
+    "lat": "6.2282423",
+    "lon": "-75.5484573"
+  },
+  {
+    "id": 746,
+    "departamento": "ANTIOQUIA",
+    "municipio": "RETIRO",
+    "direccion": "CALLE 21 N 22 - 54",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910761 5607 33521 CARRERA 20 EL RETIRO SEC LA CAPILLA",
+    "lat": "6.05861",
+    "lon": "-75.50306"
+  },
+  {
+    "id": 747,
+    "departamento": "ANTIOQUIA",
+    "municipio": "RETIRO",
+    "direccion": "CRA 20 # 24",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 992079 5607 4467 RETIRO PARQUE",
+    "lat": "6.0685707",
+    "lon": "-75.5000832"
+  },
+  {
+    "id": 748,
+    "departamento": "ANTIOQUIA",
+    "municipio": "RETIRO",
+    "direccion": "KR 21 # 18",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 5 00PM - 905496 5615 18803 MUTUAL BIENESTAR SAN ANTONIO DE PEREIRA",
+    "lat": "6.056492",
+    "lon": "-75.503046"
+  },
+  {
+    "id": 749,
+    "departamento": "ANTIOQUIA",
+    "municipio": "RIONEGRO",
+    "direccion": "CALLE 23 # 55B",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 12 30PM - 12 30PM a 1 30PM 904872 5615 18005 OLIMPICA RIONEGRO",
+    "lat": "6.1297692",
+    "lon": "-75.3805976"
+  },
+  {
+    "id": 750,
+    "departamento": "ANTIOQUIA",
+    "municipio": "RIONEGRO",
+    "direccion": "CARRERA 47 # 52",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 7 00PM - 900477 5615 1774 SERVIENTREGA PARQUE RIONEGRO",
+    "lat": "6.1538857",
+    "lon": "-75.3715436"
+  },
+  {
+    "id": 751,
+    "departamento": "ANTIOQUIA",
+    "municipio": "RIONEGRO",
+    "direccion": "CRA 50 # 45",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 043001 5615 159 SERVIENTREGA CALLE 48",
+    "lat": "6.1484724",
+    "lon": "-75.3718576"
+  },
+  {
+    "id": 752,
+    "departamento": "ANTIOQUIA",
+    "municipio": "RIONEGRO",
+    "direccion": "CRA 52 NO 47 - 35",
+    "horarioSemana": "No especificado",
+    "lat": "6.284502",
+    "lon": "-75.446742"
+  },
+  {
+    "id": 753,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 901993 5615 15105 BARRIO EL PORVENIR",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 754,
+    "departamento": "ANTIOQUIA",
+    "municipio": "RIONEGRO",
+    "direccion": "CARRERA 70 N 40 - 57",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 12 00PM - 12 00PM a 8 00PM 902383 5615 15507 BARRIO SANTA ANA",
+    "lat": "6.15515",
+    "lon": "-75.37371"
+  },
+  {
+    "id": 755,
+    "departamento": "ANTIOQUIA",
+    "municipio": "RIONEGRO",
+    "direccion": "CALLE 41 N 47 - 16",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910733 5615 33656 C",
+    "lat": "6.15515",
+    "lon": "-75.37371"
+  },
+  {
+    "id": 756,
+    "departamento": "ANTIOQUIA",
+    "municipio": "RIONEGRO",
+    "direccion": "CRA 49 # 50",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910409 5615 33173 RIONEGRO BARRIO ALTO CALLE 51",
+    "lat": "6.1539616",
+    "lon": "-75.3726958"
+  },
+  {
+    "id": 757,
+    "departamento": "ANTIOQUIA",
+    "municipio": "RIONEGRO",
+    "direccion": "CALLE 51 # 54",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910108 5615 33211 CRA 55 A SAN ANTONIO DE PEREIRA RIONEGRO",
+    "lat": "6.1524154",
+    "lon": "-75.3896792"
+  },
+  {
+    "id": 758,
+    "departamento": "ANTIOQUIA",
+    "municipio": "RIONEGRO",
+    "direccion": "CRA 55A # 26 - 38",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907599 5615 20903 ALMACEN LUMA RIONEGRO",
+    "lat": "6.1402948",
+    "lon": "-75.3784989"
+  },
+  {
+    "id": 759,
+    "departamento": "ANTIOQUIA",
+    "municipio": "RIONEGRO",
+    "direccion": "CALLE 51 # 48",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 7 00PM - 909034 5615 32061 PARQUE EMPRESARIAL RIONEGRO CARRERA 47",
+    "lat": "6.1524154",
+    "lon": "-75.3896792"
+  },
+  {
+    "id": 760,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909380 5615 32259 EFECTY LLANOGRANDE",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 761,
+    "departamento": "ANTIOQUIA",
+    "municipio": "BRR QUEBRADA ARRIBA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909348 5615 32228 BRR QUEBRADA ARRIBA CLL 52 RIONEGRO",
+    "lat": "5.64615",
+    "lon": "-75.95118"
+  },
+  {
+    "id": 762,
+    "departamento": "ANTIOQUIA",
+    "municipio": "RIONEGRO",
+    "direccion": "CALLE 52 # 57A",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907022 5615 20261 MALL LLANO GRANDE KM7",
+    "lat": "6.1551766",
+    "lon": "-75.3716502"
+  },
+  {
+    "id": 763,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 993164 5615 6874 MUTUAL BIENESTAR RIONERO PORVENIR",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 764,
+    "departamento": "ANTIOQUIA",
+    "municipio": "RIONEGRO",
+    "direccion": "KR 65 # 41",
+    "horarioSemana": "No especificado",
+    "lat": "6.149447",
+    "lon": "-75.386145"
+  },
+  {
+    "id": 765,
+    "departamento": "ANTIOQUIA",
+    "municipio": "RIONEGRO",
+    "direccion": "CL 49 # 50",
+    "horarioSemana": "No especificado",
+    "lat": "6.1532573",
+    "lon": "-75.3719052"
+  },
+  {
+    "id": 766,
+    "departamento": "ANTIOQUIA",
+    "municipio": "RIONEGRO",
+    "direccion": "CL 51 # 48",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - Directorio Puntos de Atenci",
+    "lat": "6.1524154",
+    "lon": "-75.3896792"
+  },
+  {
+    "id": 767,
+    "departamento": "ANTIOQUIA",
+    "municipio": "RIONEGRO",
+    "direccion": "KR 51 # 50",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 996870 5615 11213 BATALLON JUAN DEL CORRAL",
+    "lat": "6.154382",
+    "lon": "-75.374086"
+  },
+  {
+    "id": 768,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 769,
+    "departamento": "ANTIOQUIA",
+    "municipio": "RIONEGRO",
+    "direccion": "CALLE 52 N 45 - 70",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 997550 5615 11872 FLAMINGO RIONEGRO - C",
+    "lat": "6.15515",
+    "lon": "-75.37371"
+  },
+  {
+    "id": 770,
+    "departamento": "ANTIOQUIA",
+    "municipio": "RIONEGRO",
+    "direccion": "CALLE 43 N 54 - 13",
+    "horarioSemana": "No especificado",
+    "lat": "6.15515",
+    "lon": "-75.37371"
+  },
+  {
+    "id": 771,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 800318 5543 1926 PEQUE ZONA URBANA",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 772,
+    "departamento": "ANTIOQUIA",
+    "municipio": "PEQUE",
+    "direccion": "CRA BOLIVAR NO 9 - 38",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907392 8638 21047 TECNOMOVIL SABANALARGA ATLANTICO SABANALARGA CALLE 21",
+    "lat": "7.166455",
+    "lon": "-75.765989"
+  },
+  {
+    "id": 773,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SABANETA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci",
+    "lat": "6.154711",
+    "lon": "-75.607342"
+  },
+  {
+    "id": 774,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SABANETA",
+    "direccion": "CARRERA 48 # 76",
+    "horarioSemana": "Jornada Continua L - V 7 00AM a 9 00PM - 904536 5631 17843 SABANETA CALLE LARGA",
+    "lat": "6.1617578",
+    "lon": "-75.6044531"
+  },
+  {
+    "id": 775,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SABANETA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 999469 5631 13965 FLAMINGO MAYORCA PLAZA",
+    "lat": "6.154711",
+    "lon": "-75.607342"
+  },
+  {
+    "id": 776,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SABANETA",
+    "direccion": "CALLE 51 SUR N 48 - 57",
+    "horarioSemana": "No especificado",
+    "lat": "40.766347",
+    "lon": "-97.448995"
+  },
+  {
+    "id": 777,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SABANETA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 997717 5631 11959 SERVIENTREGA SABANETA MAYORCA",
+    "lat": "6.154711",
+    "lon": "-75.607342"
+  },
+  {
+    "id": 778,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SABANETA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 994408 5642 8321 CELUPI",
+    "lat": "6.154711",
+    "lon": "-75.607342"
+  },
+  {
+    "id": 779,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SALGAR",
+    "direccion": "CALLE 31 N 30 - 76",
+    "horarioSemana": "No especificado",
+    "lat": "5.96502",
+    "lon": "-75.96541"
+  },
+  {
+    "id": 780,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SAN ANDRES DE CUERQUIA",
+    "direccion": "CARRERA 28 N 30 - 05",
+    "horarioSemana": "No especificado",
+    "lat": "6.90333",
+    "lon": "-75.6825"
+  },
+  {
+    "id": 781,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SAN CARLOS",
+    "direccion": "CL 20 20 - 47",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 7 00PM - 994597 5649 8535 COOGRANADA SAN CARLOS PLAZA PRINCIPAL T",
+    "lat": "6.9606684",
+    "lon": "-75.4193253"
+  },
+  {
+    "id": 782,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SAN CARLOS",
+    "direccion": "KR 19 20 - 76",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 904393 5656 17518 SAN JERONIMO LA PLAYA",
+    "lat": "6.189229",
+    "lon": "-74.991624"
+  },
+  {
+    "id": 783,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SAN JERONIMO",
+    "direccion": "CARRERA 12 # 23A",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904934 5656 18264 ALMACEN LUMA SAN JERONIMO",
+    "lat": "6.4436617",
+    "lon": "-75.7289705"
+  },
+  {
+    "id": 784,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SAN JERONIMO",
+    "direccion": "CARRERA 10 # 21",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 7 00PM - 910481 5656 33359 SAN JERONIMO CALLE 23",
+    "lat": "6.434848",
+    "lon": "-75.7221211"
+  },
+  {
+    "id": 785,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SAN JERONIMO",
+    "direccion": "CALLE 23A # 11 - 05",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908894 5658 31863 SAN JOSE DE LA MONTA",
+    "lat": "6.224878",
+    "lon": "-75.584824"
+  },
+  {
+    "id": 786,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SAN JOSE DE LA MONTA Ñ A",
+    "direccion": "CL 19 # 20",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 800328 5660 2039 PARQUE PRINCIPAL",
+    "lat": "6.304204",
+    "lon": "-75.64177"
+  },
+  {
+    "id": 787,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SAN LUIS",
+    "direccion": "KR 19 # 20",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 9 00PM - 997063 5660 11306 SAN LUIS CALLE ESPERANZA",
+    "lat": "6.144769",
+    "lon": "-75.184014"
+  },
+  {
+    "id": 788,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SAN LUIS",
+    "direccion": "CALLE ESPERANZA N 18 - 29",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907605 5664 20912 ALMACEN LUMA SAN PEDRO DE LOS MILAGROS",
+    "lat": "6.040227",
+    "lon": "-74.996259"
+  },
+  {
+    "id": 789,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SAN PEDRO DE LOS MILAGROS",
+    "direccion": "CALLE 49 # 49",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 7 00PM - 998462 5664 12740 SAN PEDRO DE LOS MILAGROS PARQUE PPAL",
+    "lat": "6.4608734",
+    "lon": "-75.5568979"
+  },
+  {
+    "id": 790,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SAN PEDRO DE LOS MILAGROS",
+    "direccion": "CARRERA 49 A N 49 - 54",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 8 00PM - 991498 5664 3804 SAN PEDRO DE LOS MILAGROS",
+    "lat": "8.427565",
+    "lon": "-76.785958"
+  },
+  {
+    "id": 791,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SAN PEDRO DE LOS MILAGROS",
+    "direccion": "CALLE 49 N 50 - 11",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 9 00AM - 311001 5665 174 SAN PEDRO DE URABA",
+    "lat": "6.461613",
+    "lon": "-75.555232"
+  },
+  {
+    "id": 792,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SAN PEDRO DE URABA",
+    "direccion": "CARRERA 49 No 50 - 42",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 7 00PM - 992894 5665 6036 SAN PEDRO DE URABA CALLE DEL COMERCIO",
+    "lat": "8.278692",
+    "lon": "-76.382768"
+  },
+  {
+    "id": 793,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SAN PEDRO DE URABA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 998853 5667 13215 SAN RAFAEL CALLE 19",
+    "lat": "8.262492",
+    "lon": "-76.15285"
+  },
+  {
+    "id": 794,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SAN RAFAEL",
+    "direccion": "CALLE 19 N 20 - 12",
+    "horarioSemana": "Jornada Continua L - V 7 00AM a 9 00PM - Directorio Puntos de Atenci",
+    "lat": "6.2945141",
+    "lon": "-75.02649"
+  },
+  {
+    "id": 795,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SAN RAFAEL",
+    "direccion": "CARRERA 21 N 21 - 48",
+    "horarioSemana": "No especificado",
+    "lat": "6.29436",
+    "lon": "-75.02589"
+  },
+  {
+    "id": 796,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SAN ROQUE",
+    "direccion": "KR 20 # 19",
+    "horarioSemana": "No especificado",
+    "lat": "6.440928",
+    "lon": "-75.331085"
+  },
+  {
+    "id": 797,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905304 5670 18517 CORREGIMIENTO PROVIDENCIA",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 798,
+    "departamento": "ANTIOQUIA",
+    "municipio": "EXPRESS EFECTY SAN ROQUE",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907454 5670 20740 EXPRESS EFECTY SAN ROQUE CALLE REAL",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": 799,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SAN ROQUE",
+    "direccion": "CALLE 19 # 20",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903863 5674 17017 EXPRESS EFECTY SAN VICENTE AVENIDA 20 DE JULIO",
+    "lat": "6.484375",
+    "lon": "-75.0180369"
+  },
+  {
+    "id": 800,
+    "departamento": "ANTIOQUIA",
+    "municipio": "DE JULIO CRUCE CON",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907471 5674 20769 EXPRESS EFECTY SAN VICENTE P",
+    "lat": "6.276949",
+    "lon": "-75.576955"
+  },
+  {
+    "id": 801,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SAN VICENTE",
+    "direccion": "CALLE 31 # 29",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908024 5674 21137 SAN VICENTE KILOMETRO 6",
+    "lat": "6.2828632",
+    "lon": "-75.3319068"
+  },
+  {
+    "id": 802,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 901360 5679 2849 CALLE SALGAR",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 803,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SANTA BARBARA",
+    "direccion": "CALLE SALGAR NO 50 - 19",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 9 00PM - 993188 5679 6883 MUTUAL BIENESTAR VERSALLES PARQUE PRINCIPAL",
+    "lat": "6.062801",
+    "lon": "-75.792468"
+  },
+  {
+    "id": 804,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 805,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SANTA BARBARA",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "6.187653",
+    "lon": "-75.541644"
+  },
+  {
+    "id": 806,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SANTO DOMINGO",
+    "direccion": "CL 16 # 17",
+    "horarioSemana": "No especificado",
+    "lat": "6.4741361",
+    "lon": "-75.165375"
+  },
+  {
+    "id": 807,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SANTO DOMINGO",
+    "direccion": "KR 5 # 5 - 22",
+    "horarioSemana": "No especificado",
+    "lat": "6.47222",
+    "lon": "-75.16472"
+  },
+  {
+    "id": 808,
+    "departamento": "ANTIOQUIA",
+    "municipio": "EL SANTUARIO",
+    "direccion": "CARRERA 50 No. 49 - 33",
+    "horarioSemana": "No especificado",
+    "lat": "6.2730984",
+    "lon": "-75.4374222"
+  },
+  {
+    "id": 809,
+    "departamento": "ANTIOQUIA",
+    "municipio": "EL SANTUARIO",
+    "direccion": "CL 51 # 49",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 996695 5697 10921 EL SANTUARIO CALLE 49",
+    "lat": "6.138692",
+    "lon": "-75.26196"
+  },
+  {
+    "id": 810,
+    "departamento": "ANTIOQUIA",
+    "municipio": "EL SANTUARIO",
+    "direccion": "CL 49 # 44",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 7 00PM - 995821 5697 10052 CARRERA 49",
+    "lat": "6.1391778",
+    "lon": "-75.2679942"
+  },
+  {
+    "id": 811,
+    "departamento": "ANTIOQUIA",
+    "municipio": "EL SANTUARIO",
+    "direccion": "KR 49 # 49",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 910064 5659 32877 SAN JUAN DE URABA CR 21",
+    "lat": "6.279995",
+    "lon": "-75.441377"
+  },
+  {
+    "id": 812,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SAN JUAN DE URABA",
+    "direccion": "CR 21 18 - 33",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci",
+    "lat": "8.759944",
+    "lon": "-76.529367"
+  },
+  {
+    "id": 813,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SAN JUAN DE URABA",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "8.854716",
+    "lon": "-76.426778"
+  },
+  {
+    "id": 814,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SEGOVIA",
+    "direccion": "CARRERA 52 A 46 - 150",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 12 00PM - 12 00PM a 8 00PM 910671 5736 33424 CC LA ROCA SEGOVIA",
+    "lat": "7.0797935",
+    "lon": "-74.7029114"
+  },
+  {
+    "id": 815,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SEGOVIA",
+    "direccion": "CALLE 50 # 48",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910718 5736 33448 EFECTY FRAGUAS SEGOVIA",
+    "lat": "7.0813799",
+    "lon": "-74.7022757"
+  },
+  {
+    "id": 816,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SEGOVIA",
+    "direccion": "CRA 10 # 12",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906096 5736 19299 SEGOVIA CALLE LOZADA 2",
+    "lat": "7.0797935",
+    "lon": "-74.7029114"
+  },
+  {
+    "id": 817,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SEGOVIA",
+    "direccion": "CRA 51# 51",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906097 5736 19405 SEGOVIA SECTOR ELECTRIFICADORA",
+    "lat": "7.0825056",
+    "lon": "-74.7010979"
+  },
+  {
+    "id": 818,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SEGOVIA",
+    "direccion": "CALLE 47 # 54C",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 995913 5736 10325 ASOCIACION MUTUAL AMIGO REAL SEGOVIA",
+    "lat": "7.078607",
+    "lon": "-74.704263"
+  },
+  {
+    "id": 819,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SEGOVIA",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "7.107498",
+    "lon": "-74.765793"
+  },
+  {
+    "id": 820,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SONSON",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909821 5756 32646 EFECTY SONSON DIAGONAL 8",
+    "lat": "5.531632",
+    "lon": "-75.460661"
+  },
+  {
+    "id": 821,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SONSON",
+    "direccion": "DIAGONAL 8 # 16 - 68",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 996043 5756 10273 SONSON CORREGIMIENTO LA DANTA",
+    "lat": "5.71062",
+    "lon": "-75.31068"
+  },
+  {
+    "id": 822,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SONSON CENTRO",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "6.9258",
+    "lon": "-73.74204"
+  },
+  {
+    "id": 823,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SONSON",
+    "direccion": "KR 7 # 7 - 45",
+    "horarioSemana": "No especificado",
+    "lat": "5.71062",
+    "lon": "-75.31068"
+  },
+  {
+    "id": 824,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SONSON",
+    "direccion": "KR 2 # 31 - 57",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 9 00PM - 900300 5034 82 ANDES PARQUE PRINCIPAL",
+    "lat": "5.531311",
+    "lon": "-75.525183"
+  },
+  {
+    "id": 825,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ANDES",
+    "direccion": "KR 50 48 - 52",
+    "horarioSemana": "No especificado",
+    "lat": "5.654333",
+    "lon": "-75.876925"
+  },
+  {
+    "id": 826,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ANDES",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902613 5761 15832 SOPETRAN MERCADO OSMO",
+    "lat": "5.596509",
+    "lon": "-75.818596"
+  },
+  {
+    "id": 827,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SOPETRAN",
+    "direccion": "CARRERA 9 N 8 - 50",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904933 5761 18263 ALMACEN LUMA SOPETRAN",
+    "lat": "40.868946",
+    "lon": "-97.546406"
+  },
+  {
+    "id": 828,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SOPETRAN",
+    "direccion": "CALLE 9 # 9 - 73",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 7 00PM - 996039 5761 10272 TECNOSERVICIOS P Y P",
+    "lat": "6.5010784",
+    "lon": "-75.7421935"
+  },
+  {
+    "id": 829,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SOPETRAN",
+    "direccion": "KR 10 # 8",
+    "horarioSemana": "No especificado",
+    "lat": "6.67028",
+    "lon": "-75.7475"
+  },
+  {
+    "id": 830,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TAMESIS",
+    "direccion": "CARRERA 11 N 12 - 53",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902215 5789 15342 TAMESIS CALLE 13",
+    "lat": "5.66462",
+    "lon": "-75.71339"
+  },
+  {
+    "id": 831,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TAMESIS",
+    "direccion": "CALLE 13 N 14 - 56",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci",
+    "lat": "5.66462",
+    "lon": "-75.71339"
+  },
+  {
+    "id": 832,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TAMESIS",
+    "direccion": "CALLE 11 # 10",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 992549 5789 5393 PALERMO",
+    "lat": "5.662997",
+    "lon": "-75.714976"
+  },
+  {
+    "id": 833,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TAMESIS",
+    "direccion": "CL 10 # 10",
+    "horarioSemana": "No especificado",
+    "lat": "5.6625955",
+    "lon": "-75.7122027"
+  },
+  {
+    "id": 834,
+    "departamento": "ANTIOQUIA",
+    "municipio": "EXPRESS EFECTY TARAZA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903277 5790 16422 EXPRESS EFECTY TARAZA CARRERA 30",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": 835,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TARAZA",
+    "direccion": "CARRERA 30 N 34 - 13",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903184 5790 16353 EXPRESS EFECTY TARAZA CRA 28",
+    "lat": "7.58358",
+    "lon": "-75.40068"
+  },
+  {
+    "id": 836,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TARAZA",
+    "direccion": "CRA 28 # 36",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 901745 5790 14845 TARAZA BARRIO LA BOMBA",
+    "lat": "7.590429",
+    "lon": "-75.4032958"
+  },
+  {
+    "id": 837,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902587 5790 15742 TARAZA TRONCAL",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 838,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TARAZA",
+    "direccion": "CRA 28 # 32",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905012 5790 18148 EXPRESS EFECTY AVENIDA PRINCIPAL",
+    "lat": "7.590429",
+    "lon": "-75.4032958"
+  },
+  {
+    "id": 839,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TARAZA",
+    "direccion": "CALLE 36 # 30",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 992709 5790 5721 TARAZA EL DOCE",
+    "lat": "7.5855342",
+    "lon": "-75.4004649"
+  },
+  {
+    "id": 840,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TARAZA",
+    "direccion": "CARRERA 5 # 11",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 993011 5790 6511 PARQUE PRINCIPAL TARAZA",
+    "lat": "7.5877441",
+    "lon": "-75.4021199"
+  },
+  {
+    "id": 841,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TARAZA",
+    "direccion": "CL 29 # 29",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 7 00PM - 902132 5809 15230 TITIRIBI CALLE DEL COMERCIO",
+    "lat": "7.5804231",
+    "lon": "-75.399508"
+  },
+  {
+    "id": 842,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TITIRIBI",
+    "direccion": "CARRERA 21 N 18 - 70",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906554 5809 19774 EFECTY CALLE 20 TITIRIBI",
+    "lat": "6.06276",
+    "lon": "-75.7937"
+  },
+  {
+    "id": 843,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TITIRIBI",
+    "direccion": "CALLE 20 # 21",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 800300 5819 1885 TOLEDO PARQUE PRINCIPAL",
+    "lat": "6.062672",
+    "lon": "-75.793841"
+  },
+  {
+    "id": 844,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TOLEDO",
+    "direccion": "CL 19 20 - 39",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 900715 5837 2021 CURRULAO",
+    "lat": "6.850684",
+    "lon": "-75.682519"
+  },
+  {
+    "id": 845,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 846,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TURBO",
+    "direccion": "KR 50 # 48",
+    "horarioSemana": "No especificado",
+    "lat": "7.884235",
+    "lon": "-76.562464"
+  },
+  {
+    "id": 847,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TURBO",
+    "direccion": "CL 101 # 14",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 902654 5837 15831 EXPRESS DIMONEX CORREGIMIENTO CURRULAO",
+    "lat": "8.0917719",
+    "lon": "-76.7307592"
+  },
+  {
+    "id": 848,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TURBO",
+    "direccion": "CALLE 51 N 46 - 93",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902832 5837 15994 DIMONEX NUEVO",
+    "lat": "8.09368",
+    "lon": "-76.72691"
+  },
+  {
+    "id": 849,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 850,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TURBO",
+    "direccion": "CARRERA 6 N 11 - 14",
+    "horarioSemana": "No especificado",
+    "lat": "8.09368",
+    "lon": "-76.72691"
+  },
+  {
+    "id": 851,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903716 5837 16849 EFECTY TURBO CORREGIMIENTO PUEBLO BELLO",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 852,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903393 5837 16501 CORREGIMIENTO RIOGRANDE",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 853,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TURBO",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci",
+    "lat": "7.884241",
+    "lon": "-76.635154"
+  },
+  {
+    "id": 854,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TURBO",
+    "direccion": "CARRERA 14 # 100",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 905295 5837 18516 TURBO CORREGIMIENTO EL TRES",
+    "lat": "8.0927971",
+    "lon": "-76.7278382"
+  },
+  {
+    "id": 855,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TURBO",
+    "direccion": "CALLE 30 # 30",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906596 5837 19817 EXPRESS EFECTY TURBO BARRIO CENTRO",
+    "lat": "8.0971523",
+    "lon": "-76.729206"
+  },
+  {
+    "id": 856,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TURBO",
+    "direccion": "CALLE 100 # 14B",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906987 5837 20168 TURBO BARRIO JESUS MORA",
+    "lat": "8.0935327",
+    "lon": "-76.7212722"
+  },
+  {
+    "id": 857,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TURBO",
+    "direccion": "CALLE 114 # 15",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908877 5837 31810 TURBO 24 DE DICIEMBRE CRA 29",
+    "lat": "8.1017517",
+    "lon": "-76.7260102"
+  },
+  {
+    "id": 858,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TURBO",
+    "direccion": "CRA 29 # 31A",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908190 5837 21186 CURRULAO 24 DE DICIEMBRE",
+    "lat": "8.09368",
+    "lon": "-76.72691"
+  },
+  {
+    "id": 859,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TURBO",
+    "direccion": "CL 56B # 60 - 43",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909861 5837 32701 JESUS MORA CRA 14 TURBO",
+    "lat": "8.099563",
+    "lon": "-76.730769"
+  },
+  {
+    "id": 860,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TURBO",
+    "direccion": "CRA 14 # 112",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 993071 5837 6566 TURBO NOTARIA",
+    "lat": "8.0905609",
+    "lon": "-76.7271755"
+  },
+  {
+    "id": 861,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TURBO",
+    "direccion": "CL 107 # 20",
+    "horarioSemana": "No especificado",
+    "lat": "8.0967322",
+    "lon": "-76.7306463"
+  },
+  {
+    "id": 862,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TURBO",
+    "direccion": "CALLE 101 No 13 - 60",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 996646 5837 10879 SAN JOSE DE MULATOS",
+    "lat": "7.8771859",
+    "lon": "-76.6122919"
+  },
+  {
+    "id": 863,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TURBO",
+    "direccion": "CALLE 7 - 15",
+    "horarioSemana": "No especificado",
+    "lat": "8.0971523",
+    "lon": "-76.729206"
+  },
+  {
+    "id": 864,
+    "departamento": "ANTIOQUIA",
+    "municipio": "TURBO",
+    "direccion": "CRA 35 N 30 - 77",
+    "horarioSemana": "No especificado",
+    "lat": "8.09368",
+    "lon": "-76.72691"
+  },
+  {
+    "id": 865,
+    "departamento": "ANTIOQUIA",
+    "municipio": "URAMITA",
+    "direccion": "CALLE 20 # 17",
+    "horarioSemana": "No especificado",
+    "lat": "6.9001578",
+    "lon": "-76.1769007"
+  },
+  {
+    "id": 866,
+    "departamento": "ANTIOQUIA",
+    "municipio": "URAMITA",
+    "direccion": "CL 20 NORTE 20 - 90",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 993842 5847 7695 URRAO PARQUE DOS",
+    "lat": "6.89944",
+    "lon": "-76.17417"
+  },
+  {
+    "id": 867,
+    "departamento": "ANTIOQUIA",
+    "municipio": "URRAO",
+    "direccion": "CL 29 30 - 03",
+    "horarioSemana": "Jornada Continua L - V 7 00AM a 9 00PM - 992643 5847 5759 URRAO PARQUE PRINCIPAL",
+    "lat": "6.3169693",
+    "lon": "-76.1331558"
+  },
+  {
+    "id": 868,
+    "departamento": "ANTIOQUIA",
+    "municipio": "URRAO",
+    "direccion": "CL 29 30 - 75",
+    "horarioSemana": "Jornada Continua L - V 7 00AM a 9 00PM - 909751 5854 32596 VALDIVIA PLAZA PRINCIPAL",
+    "lat": "6.3169693",
+    "lon": "-76.1331558"
+  },
+  {
+    "id": 869,
+    "departamento": "ANTIOQUIA",
+    "municipio": "VALDIVIA",
+    "direccion": "CRA 10 # 6",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909423 5854 32245 EFECTY VALDIVIA CR 10",
+    "lat": "7.1652905",
+    "lon": "-75.4386199"
+  },
+  {
+    "id": 870,
+    "departamento": "ANTIOQUIA",
+    "municipio": "VALDIVIA",
+    "direccion": "CRA 10 # 9",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906023 5854 19196 CORREGIMIENTO RAUDAL",
+    "lat": "7.1652905",
+    "lon": "-75.4386199"
+  },
+  {
+    "id": 871,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 996787 5854 11015 PUERTO VALDIVIA LA TRONCAL",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 872,
+    "departamento": "ANTIOQUIA",
+    "municipio": "VALDIVIA",
+    "direccion": "CALLE 10 N 8 - 889",
+    "horarioSemana": "No especificado",
+    "lat": "7.28889",
+    "lon": "-75.39778"
+  },
+  {
+    "id": 873,
+    "departamento": "ANTIOQUIA",
+    "municipio": "VALPARAISO",
+    "direccion": "CARRERA BOLIVAR N 10 - 51",
+    "horarioSemana": "No especificado",
+    "lat": "5.6158964",
+    "lon": "-75.6245619"
+  },
+  {
+    "id": 874,
+    "departamento": "ANTIOQUIA",
+    "municipio": "VEGACHI",
+    "direccion": "CRA 50 # 52",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 911034 5858 33787 TIENDA VARIEDADES LA 56 VEGACHI",
+    "lat": "6.7720804",
+    "lon": "-74.7986993"
+  },
+  {
+    "id": 875,
+    "departamento": "ANTIOQUIA",
+    "municipio": "VEGACHI",
+    "direccion": "CALLE 56 # 51B",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 995963 5861 10263 VENECIA PARQUE PRINCIPAL",
+    "lat": "6.7752407",
+    "lon": "-74.7998544"
+  },
+  {
+    "id": 876,
+    "departamento": "ANTIOQUIA",
+    "municipio": "VENECIA",
+    "direccion": "CL 50 # 51",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905749 5885 18933 YALI BARRIO LA CITA",
+    "lat": "6.042244",
+    "lon": "-75.698869"
+  },
+  {
+    "id": 877,
+    "departamento": "ANTIOQUIA",
+    "municipio": "YALI",
+    "direccion": "CRA 19 # 20",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903767 5885 16892 EXPRESS EFECTY YALI",
+    "lat": "6.486933",
+    "lon": "-75.018918"
+  },
+  {
+    "id": 878,
+    "departamento": "ANTIOQUIA",
+    "municipio": "YALI",
+    "direccion": "CALLE 20 # 19",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903037 5887 16182 EXPRESS DIMONEX LA INMACULADA",
+    "lat": "6.6743348",
+    "lon": "-74.8431361"
+  },
+  {
+    "id": 879,
+    "departamento": "ANTIOQUIA",
+    "municipio": "YARUMAL",
+    "direccion": "CARRERA 19 N 23 - 31",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 140501 5887 189 CENTRO SERVIENTREGA",
+    "lat": "6.96321",
+    "lon": "-75.41738"
+  },
+  {
+    "id": 880,
+    "departamento": "ANTIOQUIA",
+    "municipio": "YARUMAL",
+    "direccion": "KR 20 # 21",
+    "horarioSemana": "No especificado",
+    "lat": "6.852915",
+    "lon": "-75.682819"
+  },
+  {
+    "id": 881,
+    "departamento": "ANTIOQUIA",
+    "municipio": "YARUMAL",
+    "direccion": "CALLE 18 NO 22 - 31",
+    "horarioSemana": "No especificado",
+    "lat": "6.9608416",
+    "lon": "-75.417314"
+  },
+  {
+    "id": 882,
+    "departamento": "ANTIOQUIA",
+    "municipio": "YARUMAL",
+    "direccion": "CALLE 19 # 20",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 7 00PM - 905234 5887 18368 CORREGIMIENTO CEDE",
+    "lat": "6.9618841",
+    "lon": "-75.4174436"
+  },
+  {
+    "id": 883,
+    "departamento": "ANTIOQUIA",
+    "municipio": "DIMONEX",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909231 5887 32151 DIMONEX CALLE 19",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 884,
+    "departamento": "ANTIOQUIA",
+    "municipio": "YARUMAL",
+    "direccion": "CALLE 19 # 18",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 993010 5887 6663 YARUMAL LA ESTACION",
+    "lat": "6.9618841",
+    "lon": "-75.4174436"
+  },
+  {
+    "id": 885,
+    "departamento": "ANTIOQUIA",
+    "municipio": "YARUMAL",
+    "direccion": "Carrera 19 # 26",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 991631 5887 3978 CALLE DEL COLEGIO LLANOS DE CUIVA",
+    "lat": "6.9621017",
+    "lon": "-75.4143696"
+  },
+  {
+    "id": 886,
+    "departamento": "ANTIOQUIA",
+    "municipio": "YARUMAL",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "6.962786",
+    "lon": "-75.417469"
+  },
+  {
+    "id": 887,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 888,
+    "departamento": "ANTIOQUIA",
+    "municipio": "YOLOMBO",
+    "direccion": "CL 20 NORTE 20 - 109",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902006 5895 15120 ZARAGOZA CALLE OLAYA HERRERA",
+    "lat": "6.59841",
+    "lon": "-75.0114"
+  },
+  {
+    "id": 889,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ZARAGOZA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904367 5895 17502 CORREGIMIENTO EL PATO",
+    "lat": "7.268555",
+    "lon": "-74.827035"
+  },
+  {
+    "id": 890,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ZARAGOZA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904245 5895 17396 ZARAGOZA CALLE 1 MAYO",
+    "lat": "7.268555",
+    "lon": "-74.827035"
+  },
+  {
+    "id": 891,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ZARAGOZA",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci",
+    "lat": "7.268555",
+    "lon": "-74.827035"
+  },
+  {
+    "id": 892,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ZARAGOZA",
+    "direccion": "CALLE CORDOBA N 41 - 19",
+    "horarioSemana": "No especificado",
+    "lat": "7.493084",
+    "lon": "-74.868586"
+  },
+  {
+    "id": 893,
+    "departamento": "ANTIOQUIA",
+    "municipio": "ZARAGOZA",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "7.268555",
+    "lon": "-74.827035"
+  },
+  {
+    "id": 894,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 895,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "CALLE 9 # 10 - 65",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904926 5042 18256 ALMACEN LUMA SANTAFE 1",
+    "lat": "6.281476",
+    "lon": "-75.599376"
+  },
+  {
+    "id": 896,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 897,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "CALLE 9 # 10 - 25",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 7 00PM - 907594 5042 20899 ALMACEN LUMA SANTAFE",
+    "lat": "9.79944",
+    "lon": "-74.78945"
+  },
+  {
+    "id": 898,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 899,
+    "departamento": "ANTIOQUIA",
+    "municipio": "EFECTY YONDO",
+    "direccion": "CALLE 13 # 7",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 7 00PM - 905294 5893 18427 EFECTY YONDO CALLE 50",
+    "lat": "6.832595",
+    "lon": "-73.711514"
+  },
+  {
+    "id": 900,
+    "departamento": "ANTIOQUIA",
+    "municipio": "YONDO",
+    "direccion": "CALLE 50 NO.55 - 25",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 900154 5893 194 BARRIO CENTRAL",
+    "lat": "7.0620819",
+    "lon": "-73.8333921"
+  },
+  {
+    "id": 901,
+    "departamento": "ANTIOQUIA",
+    "municipio": "YONDO",
+    "direccion": "CL 49 # 54",
+    "horarioSemana": "No especificado",
+    "lat": "7.059767",
+    "lon": "-73.827717"
+  },
+  {
+    "id": 902,
+    "departamento": "ANTIOQUIA",
+    "municipio": "YONDO",
+    "direccion": "CRA 18 A NRO 20 - 10",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910109 5893 32898 YONDO BATALLON",
+    "lat": "7.00621",
+    "lon": "-73.90972"
+  },
+  {
+    "id": 903,
+    "departamento": "ANTIOQUIA",
+    "municipio": "YONDO",
+    "direccion": "CALLE 47 # 54",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 994612 5893 8531 NAVARRA REAL",
+    "lat": "7.0064873",
+    "lon": "-73.9071778"
+  },
+  {
+    "id": 904,
+    "departamento": "ANTIOQUIA",
+    "municipio": "YONDO",
+    "direccion": "CL 51 # 43",
+    "horarioSemana": "No especificado",
+    "lat": "7.0070768",
+    "lon": "-73.911259"
+  },
+  {
+    "id": 905,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SANTA ROSA DE OSOS",
+    "direccion": "CALLE CALDAS NO 30 - 35",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 7 00PM - 800500 5686 2550 CALDAS CRA",
+    "lat": "6.652801",
+    "lon": "-75.45953"
+  },
+  {
+    "id": 906,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SANTA ROSA DE OSOS",
+    "direccion": "KR 29 # 30",
+    "horarioSemana": "No especificado",
+    "lat": "6.647565",
+    "lon": "-75.459487"
+  },
+  {
+    "id": 907,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SANTA ROSA DE OSOS",
+    "direccion": "CARRERA 30 # 30",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 7 00PM - 904915 8001 18126 ASOCIACION MUTUAL AMIGO REAL BARRANQUILLA ATLANTICO BARRANQUILLA CRA 44",
+    "lat": "6.6482071",
+    "lon": "-75.4608357"
+  },
+  {
+    "id": 908,
+    "departamento": "ANTIOQUIA",
+    "municipio": "No especificado",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "6.258485",
+    "lon": "-75.561618"
+  },
+  {
+    "id": 909,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SABANALARGA",
+    "direccion": "CARRERA 18 # 17",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 992805 8675 5884 SANTA LUCIA CL 5 ATLANTICO SANTA LUCIA CL 5",
+    "lat": "6.8533858",
+    "lon": "-75.8175744"
+  },
+  {
+    "id": 910,
+    "departamento": "ANTIOQUIA",
+    "municipio": "EXPRESS EFECTY CARTAGENA DEL CHAIRA CAQUETA CARTAGENA DEL CHAIRA",
+    "direccion": "CALLE 4 N 9 - 06",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907696 18150 20961 EXPRESS EFECTY CARTAGENA DEL CHAIRA CAQUETA CARTAGENA DEL CHAIRA CALLE 4 N 9 - 06 ALT Jornada Continua L - V 8 00AM a 8 00PM - 906050 18150 19262 BRR CAMILO TORRES CAQUETA CARTAGENA DEL CHAIRA CALLE 6",
+    "lat": "1.335719",
+    "lon": "-74.842923"
+  },
+  {
+    "id": 911,
+    "departamento": "ANTIOQUIA",
+    "municipio": "DOS CAQUETA EL DONCELLO",
+    "direccion": "CALLE 5 DOS CAQUETA EL DONCELLO CL 5 # 2",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 905598 18247 18772 EL DONCELLO CARRERA 4 CAQUETA EL DONCELLO CARRERA 4",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": 912,
+    "departamento": "ANTIOQUIA",
+    "municipio": "NARI Ñ O TUMACO",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado",
+    "lat": "6.276949",
+    "lon": "-75.576955"
+  },
+  {
+    "id": 913,
+    "departamento": "ANTIOQUIA",
+    "municipio": "NARI Ñ O TUMACO",
+    "direccion": "CALLE MOSQUERA DE TUMACO No 11 - 55",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 909458 52835 32319 BARRIO EXPORTADORA TIENDA DON JACOB NARI",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": 914,
+    "departamento": "ANTIOQUIA",
+    "municipio": "PUERTO TRIUNFO",
+    "direccion": "CLL 20 # 20",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905217 5591 18352 CORREGIMIENTO PUERTO PERALES PARQUE",
+    "lat": "5.876977",
+    "lon": "-74.638431"
+  },
+  {
+    "id": 915,
+    "departamento": "ANTIOQUIA",
+    "municipio": "PUERTO TRIUNFO",
+    "direccion": "CRA 19A # 16 - 04",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 800519 5591 2576 CALLE PRINCIPAL CRA",
+    "lat": "5.876377",
+    "lon": "-74.638259"
+  },
+  {
+    "id": 916,
+    "departamento": "ANTIOQUIA",
+    "municipio": "PUERTO TRIUNFO CALLE PRINCIPAL",
+    "direccion": "CALLE PRINCIPAL CRA 10 N 11 - 47",
+    "horarioSemana": "No especificado",
+    "lat": null,
+    "lon": null
+  },
+  {
+    "id": 917,
+    "departamento": "ANTIOQUIA",
+    "municipio": "PUERTO TRIUNFO",
+    "direccion": "CRA 21 No. 20 - 24",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 996308 5591 10530 DORADAL CALLE 20 TRONCAL",
+    "lat": "5.97079",
+    "lon": "-74.576676"
+  },
+  {
+    "id": 918,
+    "departamento": "ANTIOQUIA",
+    "municipio": "PUERTO TRIUNFO",
+    "direccion": "CL 20 # 20",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 900939 63001 2344 CARRERA 14 UNIVERSIDAD DEL QUINDIO QUINDIO ARMENIA KR 14",
+    "lat": "5.876977",
+    "lon": "-74.638431"
+  },
+  {
+    "id": 919,
+    "departamento": "ANTIOQUIA",
+    "municipio": "SAN FRANCISCO",
+    "direccion": "CALLE 10 N 10 - 17",
+    "horarioSemana": "No especificado",
+    "lat": "40.647099",
+    "lon": "-97.287263"
+  },
+  {
+    "id": 920,
+    "departamento": "ANTIOQUIA",
+    "municipio": "VIGIA DEL FUERTE",
+    "direccion": "CARRERA 2 N 18 - 18",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 901780 68255 14882 CALLE 14 EL PLAYON SANTANDER EL PLAYON CALLE 14",
+    "lat": "6.590059",
+    "lon": "-76.896336"
   }
 ]
