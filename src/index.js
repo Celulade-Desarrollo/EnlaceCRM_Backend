@@ -35,7 +35,7 @@ const app = express();
 
 // Configuración de CORS
 app.use(cors({
-  origin: ["*"], // Permite frontend dev y swagger
+  origin: ["http://localhost:5173"], // Permite frontend dev y swagger
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
   allowedHeaders: [
     "Content-Type",
@@ -71,7 +71,7 @@ app.use(adminRouter);
 app.use(movimientoCuentaRouter);
 app.use(validarMoraRouter);
 app.use(ubicaionesRoutes);
-app.use("/api/movimiento", movimientoRouter); // Registrar la nueva ruta en la aplicación
+app.use("/api/movimiento", movimientoRouter);
 // app.use(movimientoGetRouter);
 app.use(LogsRouter)
 app.use(abonoRouter);
