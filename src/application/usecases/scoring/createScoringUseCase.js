@@ -8,6 +8,8 @@ export async function createScoringUseCase(input) {
     Numero_Cliente,
     Cedula_Cliente,
     Estado,
+    Latitud,   // 🆕 agregado
+    Longitud,  // 🆕 agregado
   } = input;
 
   // Validación básica
@@ -30,6 +32,8 @@ export async function createScoringUseCase(input) {
     Numero_Cliente,
     Cedula_Cliente,
     Estado: Estado || "pendiente",
+    Latitud,   // 🆕 agregado
+    Longitud,  // 🆕 agregado
   });
 
   return { mensaje: "Registro creado correctamente" };

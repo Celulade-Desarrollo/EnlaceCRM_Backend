@@ -57,6 +57,8 @@ export async function getExcelData() {
         UsuarioAprobado: excelData.UsuarioAprobado,
         Estatus: excelData.Estatus,
         Estado: excelData.Estado,
+        Latitud: excelData.Latitud,
+        Longitud: excelData.Longitud,
     }));
 
     return excelFullData;
