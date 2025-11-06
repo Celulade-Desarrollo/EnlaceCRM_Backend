@@ -1,0 +1,2522 @@
+[
+  {
+    "id": 1,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 46 # 53",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 040004 5001 3 SERVIENTREGA AVENIDA 33"
+  },
+  {
+    "id": 2,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 040005 5001 4 SERVIENTREGA AVENIDA COLOMBIA"
+  },
+  {
+    "id": 3,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 50 N 65 - 91",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 040006 5001 5 SERVIENTREGA FERROCARRIL"
+  },
+  {
+    "id": 4,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 57 NO. 48 - 95",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 6 00PM - 040007 5001 6 SERVIENTREGA POBLADO PARQUE"
+  },
+  {
+    "id": 5,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 43A NO.9 - 12",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 040010 5001 9 SERVIENTREGA NUTIBARA"
+  },
+  {
+    "id": 6,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 040011 5001 10 SERVIENTREGA ESTACION DEL FERROCARRIL"
+  },
+  {
+    "id": 7,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 52 NO.43 - 31",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 040012 5001 11 SERVIENTREGA PALACE"
+  },
+  {
+    "id": 8,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 50 NO. 35 - 90",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 7 00PM - 040013 5001 12 SERVIENTREGA SAN DIEGO"
+  },
+  {
+    "id": 9,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 43 n. 33 - 57",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 040014 5001 13 SERVIENTREGA SAN JUAN"
+  },
+  {
+    "id": 10,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 44 NO. 79 - 19",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 040015 5001 14 SERVIENTREGA VERACRUZ UNO"
+  },
+  {
+    "id": 11,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 040016 5001 15 SERVIENTREGA LA 70"
+  },
+  {
+    "id": 12,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 040018 5001 16 SERVIENTREGA BELEN"
+  },
+  {
+    "id": 13,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA.77 No. 28 - 22",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 040019 5001 17 SERVIENTREGA POBLADO CENTRO AUTOMOTRIZ"
+  },
+  {
+    "id": 14,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 43 A NO.23 - 44",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 040020 5001 18 SERVIENTREGA TERMINAL NORTE"
+  },
+  {
+    "id": 15,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 64C NO 78 - 660",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 040021 5001 19 SERVIENTREGA POBLADO PATIO BONITO"
+  },
+  {
+    "id": 16,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 47 # 7",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 040031 5001 22 SERVIENTREGA HOME CENTER SAN JUAN"
+  },
+  {
+    "id": 17,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 44 NO.64 - 10",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 7 00PM - Directorio Puntos de Atenci"
+  },
+  {
+    "id": 18,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 65A NO. 10 - 15",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 040035 5001 26 SERVIENTREGA PARQUE BERRIO"
+  },
+  {
+    "id": 19,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 50 N. 51 - 13",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 040084 5001 27 SERVIENTREGA CALLE ALHAMBRA"
+  },
+  {
+    "id": 20,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 52A#45 - 02",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 040086 5001 28 SERVIENTREGA MALL EL RODEO"
+  },
+  {
+    "id": 21,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 6 SUR NO. 52 - 92",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 040088 5001 30 SERVIENTREGA LA SETENTA Y SEIS"
+  },
+  {
+    "id": 22,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 040089 5001 31 CIR SAN IGNACIO"
+  },
+  {
+    "id": 23,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 48 No 44 - 30",
+    "horarioSemana": "Jornada Continua L - V 7 30AM a 7 00PM - 040091 5001 32 LAURELES EFECTY PRINCIPAL"
+  },
+  {
+    "id": 24,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 7 30AM a 7 00PM - 040094 5001 34 SERVIENTREGA INDUSTRIALES"
+  },
+  {
+    "id": 25,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CR. 48 NO 18 - 41",
+    "horarioSemana": "Jornada Continua L - V 7 00AM a 12 00PM - 040103 5001 2475 SERVIENTREGA LOS MOLINOS"
+  },
+  {
+    "id": 26,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 040104 5001 2486 SERVIENTREGA UNICENTRO MEDELL"
+  },
+  {
+    "id": 27,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 040739 5001 43 SERVIENTREGA BARRIO COLOMBIA"
+  },
+  {
+    "id": 28,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 43 A NO.30 - 104",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 040901 5001 46 PRINCIPAL EFECTY LA PLAYA"
+  },
+  {
+    "id": 29,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CLL 52 NO. 43 - 124",
+    "horarioSemana": "Jornada Continua L - V 7 30AM a 7 00PM - 900450 5001 98 SERVIENTREGA BUENOS AIRES CALLE 49"
+  },
+  {
+    "id": 30,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 49 NO 36 - 40",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 900839 5001 2179 SAN JAVIER"
+  },
+  {
+    "id": 31,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CL 45 # 98",
+    "horarioSemana": "No especificado"
+  },
+  {
+    "id": 32,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 9 00PM - 901204 5001 2710 CENTRO COMERCIAL OBELISCO"
+  },
+  {
+    "id": 33,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 74 NO 48 - 37",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 901391 5001 2894 BARRIO CASTILLA"
+  },
+  {
+    "id": 34,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CL 97 # 68",
+    "horarioSemana": "No especificado"
+  },
+  {
+    "id": 35,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 25 N 3 - 45",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 901676 5001 14780 EXPRESS EFECTY VARIEDADES LA 27"
+  },
+  {
+    "id": 36,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 27 C N 77 - 80",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 901689 5001 14795 EXPRESS DIMONEX TERRITORIO ROBLEDO"
+  },
+  {
+    "id": 37,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 70 G N 95 - 66",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 901715 5001 14822 BARRIO CRISTOBAL LA AMERICA"
+  },
+  {
+    "id": 38,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 37 #86A",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci"
+  },
+  {
+    "id": 39,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 901770 5001 14875 EXPRESS DIMONEX MANRIQUE SECTOR LA CRUZ"
+  },
+  {
+    "id": 40,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 901861 5001 14975 EXPRESS DIMONEX POPULAR NUMERO 1"
+  },
+  {
+    "id": 41,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 42 B N 111 - 7",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 901863 5001 14987 BARRIO GERONA"
+  },
+  {
+    "id": 42,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 33 A N 42 - 7",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 901958 5001 15087 BELEN CALLE 30 DIAGONAL UNIVERSIDAD DE MEDELLIN"
+  },
+  {
+    "id": 43,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 30 85 - 70",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 12 00PM - 12 00PM a 8 00PM 901982 5001 15094 BELEN ROSALES CRA 70"
+  },
+  {
+    "id": 44,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 12 00PM - 12 00PM a 8 00PM 901992 5001 15106 SANTA ELENA PARQUE PRINCIPAL"
+  },
+  {
+    "id": 45,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 40 ESTE N 10 - 12",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 12 00PM - 12 00PM a 8 00PM 902045 5001 15154 12 DE OCTUBRE CARRERA 81"
+  },
+  {
+    "id": 46,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 12 00PM - 12 00PM a 8 00PM 902067 5001 15182 CENTRO COMERCIAL 3 VIAS"
+  },
+  {
+    "id": 47,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 53 N 48 - 47",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902104 5001 15206 MEDELLIN TRANVIA PLAZA"
+  },
+  {
+    "id": 48,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 49 N 40 - 11",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902137 5001 15238 VILLA SOFIA GOMEZ G"
+  },
+  {
+    "id": 49,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 92 B No 83 - 45",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902196 5001 15321 BARRIO EL VELODROMO CALLE 45"
+  },
+  {
+    "id": 50,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 45 N 77 - 91",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902207 5001 15404 LA CASTELLANA MEDELLIN"
+  },
+  {
+    "id": 51,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 33 N 83 - 08",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902295 5001 15439 BUENOS AIRES MIRAFLORES SECTOR BATALLON"
+  },
+  {
+    "id": 52,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 21 N 45 - 34",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902322 5001 15446 EXPRESS DIMONEX LA FRANCIA"
+  },
+  {
+    "id": 53,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 49 A N 107 - 94",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902371 5001 15498 EXPRESS DIMONEX 8 DE MARZO"
+  },
+  {
+    "id": 54,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902497 5001 15620 BUENOS AIRES CALLE 49 DIAGONAL AL COMANDO"
+  },
+  {
+    "id": 55,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902498 5001 15699 EXPRESS DIMONEX BARICHARA CALLE 52 SUR CON 70"
+  },
+  {
+    "id": 56,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 52 SUR No 70 - 30",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902520 5001 15642 ELECTROBELLO BELEN"
+  },
+  {
+    "id": 57,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 31 N 76 - 60",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci"
+  },
+  {
+    "id": 58,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 49 N 76 - 44",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902737 5001 15932 PLACITA DE FLORES"
+  },
+  {
+    "id": 59,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 50 A N 39 - 82",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 902953 5001 16073 CENTRO COMERCIAL VERACRUZ"
+  },
+  {
+    "id": 60,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 51 N 51 LOCAL 33 - 23",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903001 5001 16124 EXPRESS EFECTY BARRIO SANTA FE"
+  },
+  {
+    "id": 61,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903005 5001 16126 PLAZA MINORISTA LOCAL 16"
+  },
+  {
+    "id": 62,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 55 A CARRERA 57 - 80",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903032 5001 16176 DIMONEX ROBLEDO ALTAMIRA"
+  },
+  {
+    "id": 63,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 80 # 72",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903060 5001 16208 EXPRESS DIMONEX BARRIO BLANQUIZAL"
+  },
+  {
+    "id": 64,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903077 5001 16220 BARRIO LA ISLA CALLE 123 MED"
+  },
+  {
+    "id": 65,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 123 # 49B",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903120 5001 16272 LLAMAME COLOMBIA CC FLORIDA"
+  },
+  {
+    "id": 66,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 71 N 65 - 150",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903146 5001 16292 EXPRESS DIMONEX EL 12"
+  },
+  {
+    "id": 67,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903159 5001 16313 12 OCTUBRE INTERMEDIA"
+  },
+  {
+    "id": 68,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903172 5001 16323 EXPRESS DIMONEX KENEDY"
+  },
+  {
+    "id": 69,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 75A N 89 - 65",
+    "horarioSemana": "Jornada Continua L - V 7 00AM a 11 00PM - 903206 5001 16358 SANTA LUCIA ESTACION"
+  },
+  {
+    "id": 70,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 47DD N 88 - 34",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903296 5001 16453 EXPRESS EFECTY BARRIO LORENA"
+  },
+  {
+    "id": 71,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "Transversal 39b #79 - 11",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903320 5001 16488 EXPRESS DIMONEX CLL 49 CENTRO"
+  },
+  {
+    "id": 72,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 49 # 56",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903392 5001 16503 13 DE NOVIEMBRE CRA 23"
+  },
+  {
+    "id": 73,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903425 5001 16550 EXPRESS DIMONEX MANRIQUE CENTRAL"
+  },
+  {
+    "id": 74,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 81 # 42",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 9 00PM - 903464 5001 16598 EXPRESS EFECTY EL PROGRESO"
+  },
+  {
+    "id": 75,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903513 5001 16648 CAMPO VALDES CRA 48A"
+  },
+  {
+    "id": 76,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 48A # 83 - 03",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903510 5001 16633 LLAMAME COLOMBIA OVIEDO"
+  },
+  {
+    "id": 77,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 10 00AM a 8 00PM - 903511 5001 16634 LLAMAME COLOMBIA UNICENTRO"
+  },
+  {
+    "id": 78,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 10 00AM a 8 00PM - 903551 5001 16706 EXPRESS DIMONEX MIRAMAR"
+  },
+  {
+    "id": 79,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 79 # 92",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci"
+  },
+  {
+    "id": 80,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 102 # 47C",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903595 5001 16730 EFECTY BELEN LAS VIOLETAS"
+  },
+  {
+    "id": 81,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903596 5001 16722 ROBLEDO SANTA MARIA"
+  },
+  {
+    "id": 82,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903680 5001 16802 BARRIO MORAVIO CRA 58CC"
+  },
+  {
+    "id": 83,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903684 5001 16822 DIMONEX SANTO DOMINGO"
+  },
+  {
+    "id": 84,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 107 # 32",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903721 5001 16856 SAN MARTIN DE PORRES 12 OCTUBRE"
+  },
+  {
+    "id": 85,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 94 # 76A",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903730 5001 16853 EXPRESS DIMONEX CRISTO REY"
+  },
+  {
+    "id": 86,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903746 5001 16982 EXPRESS DIMONEX BOMBONA"
+  },
+  {
+    "id": 87,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 48 # 42",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903792 5001 16902 EXPRESS EFECTY VILLA HERMOSA SECTOR LA LADERA"
+  },
+  {
+    "id": 88,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 58 N 21 - 96",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903797 5001 16909 SANTA CRUZ BARRIO PABLO IV CRA 50 MRD"
+  },
+  {
+    "id": 89,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 50 A N 118 - 19",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903798 5001 16905 EFECTY EXPRESS MANRIQUE ORIENTAL PARQUE PRINCIPAL"
+  },
+  {
+    "id": 90,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 36 A N 69 - 90",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903799 5001 16910 EXPRESS EFECTY MALL PROVIDENCIA"
+  },
+  {
+    "id": 91,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903817 5001 16983 EXPRESS EFECTY MOLINOS ALTAVISTA PARTE BAJA"
+  },
+  {
+    "id": 92,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903902 5001 17044 EXPRESS DIMONEX CAMPO AMOR GUAYABAL"
+  },
+  {
+    "id": 93,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 7 # 54 - 13",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903930 5001 17080 EXPRESS EFECTY MANRIQUE ORIENTAL CALLE 71"
+  },
+  {
+    "id": 94,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 34 # 70",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903948 5001 17105 CORREGIMIENTO SANTA ELENA VEREDA BARRO BLANCO"
+  },
+  {
+    "id": 95,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903956 5001 17101 BARRIO VERSALLES CRA 29"
+  },
+  {
+    "id": 96,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 29 # 71A",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 903996 5001 17140 LAS GRANJAS CLL 85"
+  },
+  {
+    "id": 97,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904018 5001 17161 EXPRESS EFECTY EL TEMPLO DE LAS COMUNICACIONES"
+  },
+  {
+    "id": 98,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904025 5001 17199 EXPRESS DIMONEX LAURELES CIRCULAR 71"
+  },
+  {
+    "id": 99,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904125 5001 17279 LOPEZ DE MESA"
+  },
+  {
+    "id": 100,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 84 # 71A",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904126 5001 17280 EXPRESS EFECTY ESTACION CISNEROS"
+  },
+  {
+    "id": 101,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 46# 55",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci"
+  },
+  {
+    "id": 102,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 103 # 63E",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904208 5001 17349 EXPRESS EFECTY BARRIO VILLATINA CRA 16"
+  },
+  {
+    "id": 103,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 16 # 55",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904253 5001 17408 EFECTY BARRIO POPULAR CR 42B"
+  },
+  {
+    "id": 104,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904372 5001 17521 CASTILLA CALLE 95"
+  },
+  {
+    "id": 105,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 95 # 74",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904377 5001 17523 LORETO"
+  },
+  {
+    "id": 106,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904487 5001 17629 EXPRESS EFECTY AURORA CL 64"
+  },
+  {
+    "id": 107,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904498 5001 17636 DOCE OCTUBRE"
+  },
+  {
+    "id": 108,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 108 # 81",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904515 5001 17665 PORTABLE LA AMERICA"
+  },
+  {
+    "id": 109,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 44 # 82",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904516 5001 17666 PORTABLE TERMINAL DEL NORTE"
+  },
+  {
+    "id": 110,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 64C # 78 - 580",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904517 5001 17667 PORTABLE SAN JAVIER"
+  },
+  {
+    "id": 111,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 44 # 99",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904559 5001 17719 EXPRESS EFECTY COMUNICACIONES ARANJUEZ"
+  },
+  {
+    "id": 112,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 49 # 95",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904611 5001 17770 EXPRESS DIMONEX BELLO ORIENTE"
+  },
+  {
+    "id": 113,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904927 5001 18257 ALMACEN LUMA 1 CALLE COLOMBIA"
+  },
+  {
+    "id": 114,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 50 # 53",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 904993 5001 18309 ROBLEDO DON TRANQUILO"
+  },
+  {
+    "id": 115,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 79 N 92 - 195",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 904979 5001 18227 ENCISO CALLE 59"
+  },
+  {
+    "id": 116,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 59 # 29",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905098 5001 18226 ALFONSO LOPEZ CRA 73 B"
+  },
+  {
+    "id": 117,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905138 5001 18284 EXPRESS DIMONEX SAN ISIDRO CALLE 96"
+  },
+  {
+    "id": 118,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 51 # 96",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905144 5001 18278 LAURELES CON LA 72"
+  },
+  {
+    "id": 119,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 72 # 43",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905165 5001 18305 BELLO HORIZONTE CR 85"
+  },
+  {
+    "id": 120,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 85 # 77BB",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905181 5001 18413 EXPRESS DIMONEX LA GRAN ESQUINA MEDELLIN"
+  },
+  {
+    "id": 121,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905198 5001 18329 EXPRESS EFECTY BUENOS AIRES LUFSARUX"
+  },
+  {
+    "id": 122,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 33 # 48",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905212 5001 18354 EXPRESS EFECTY VILLATINA CRA 17"
+  },
+  {
+    "id": 123,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905306 5001 18443 EXPRESS DIMONEX CRA 76 CON 28"
+  },
+  {
+    "id": 124,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 76 N 28 - 39",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci"
+  },
+  {
+    "id": 125,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CL 48 # 53",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905339 5001 18501 EXPRESS EFECTY BELEN ALTAVISTA ESTACION POLICIA"
+  },
+  {
+    "id": 126,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905351 5001 18528 CENTRO COMERCIAL BOSQUE PLAZA"
+  },
+  {
+    "id": 127,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905363 5001 18526 FLAMINGO AMIGO ARANJUEZ"
+  },
+  {
+    "id": 128,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 48 # 93",
+    "horarioSemana": "Jornada Continua L - V 10 00AM a 9 00PM - 905383 5001 18544 LAS BRISAS CALLE 115"
+  },
+  {
+    "id": 129,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 115 # 64D",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905399 5001 18629 EURO CASTILLA"
+  },
+  {
+    "id": 130,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 68 # 97",
+    "horarioSemana": "Jornada Continua L - V 7 00AM a 8 00PM - 905400 5001 18635 EURO LAURELES"
+  },
+  {
+    "id": 131,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "TRANSVERSAL 39 B CIRCULAR 4 - 52",
+    "horarioSemana": "Jornada Continua L - V 6 00AM a 9 00PM - 905401 5001 18631 EURO PALMAS"
+  },
+  {
+    "id": 132,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 38 CALLE 18 - 101",
+    "horarioSemana": "Jornada Continua L - V 7 00AM a 10 00PM - 905402 5001 18626 EURO FLORIDA"
+  },
+  {
+    "id": 133,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 71 # 65",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 9 00PM - 905411 5001 18627 EURO LOS BERNAL CIUDAD DEL PARQUE"
+  },
+  {
+    "id": 134,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 7 00AM a 9 00PM - 905416 5001 18563 EXPRESS EFECTY FLORESTA LA PRADERA"
+  },
+  {
+    "id": 135,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 48D # 94 - 35",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905427 5001 18574 EXPRESS DIMONEX BARRIO POPULAR 2"
+  },
+  {
+    "id": 136,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 46 # 110",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905428 5001 18577 EXPRESS EFECTY LA ESPERANZA"
+  },
+  {
+    "id": 137,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 98 # 74",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905434 5001 18572 EXPRESS DIMONEX COLINAS DE CALASANZ"
+  },
+  {
+    "id": 138,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 9 00PM - 905423 5001 18582 EXPRESS EFECTY BARRIO EL PLAYON"
+  },
+  {
+    "id": 139,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 124 # 51C",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905503 5001 18665 EXPRESS EFECTY BARRIO CORDOBA CRA 68"
+  },
+  {
+    "id": 140,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 68 # 79C",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905538 5001 18684 EXPRESS EFECTY VERSALLES"
+  },
+  {
+    "id": 141,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 70 # 30",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905565 5001 18755 EXPRESS EFECTY SANTO DOMINGO LA ESPERANZA"
+  },
+  {
+    "id": 142,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 97 # 24C",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905568 5001 18756 EXPRESS DIMONEX CRA 36 EL SALVADOR"
+  },
+  {
+    "id": 143,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 36 # 36",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905574 5001 18785 BARRIO SEVILLA CALLE 68"
+  },
+  {
+    "id": 144,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 68 # 51A",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905627 5001 18900 EXPRESS EFECTY ARANJUEZ CRA 50C"
+  },
+  {
+    "id": 145,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 50C # 94 - 112",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905800 5001 18986 EXPRESS DIMONEX CALLE 56 CON 50"
+  },
+  {
+    "id": 146,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905815 5001 19021 EXPRESS DIMONEX BARRIO LA FRANCIA IE SANTA TERESA"
+  },
+  {
+    "id": 147,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 109 A #51 - 97",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci"
+  },
+  {
+    "id": 148,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905911 5001 19137 EXPRESS EFECTY BARRIO EL SOCORRO"
+  },
+  {
+    "id": 149,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905952 5001 19151 EXPRESS EFECTY ALTAVISTA"
+  },
+  {
+    "id": 150,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 82 B # 20 - 32",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 905955 5001 19171 EXPRESS EFECTY LAS FLORES CLL 64AD"
+  },
+  {
+    "id": 151,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906012 5001 19190 BARRIO FLORENCIA CARRERA 74"
+  },
+  {
+    "id": 152,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 74#110",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906032 5001 19217 SECTOR CRISTO REY CALLE 2 SUR"
+  },
+  {
+    "id": 153,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906055 5001 19230 MEDELLIN CENTRO COMERCIAL OVIEDO LC 154"
+  },
+  {
+    "id": 154,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 10 00AM a 9 00PM - 906090 5001 19269 ROBLEDO EL DIAMANTE CALLE 91"
+  },
+  {
+    "id": 155,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 79 # 84",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906209 5001 19435 EFECTY LA PRADERA SAN JAVIER"
+  },
+  {
+    "id": 156,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 99 # 48A",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906250 5001 19451 EXPRESS EFECTY EDUARDO SANTOS"
+  },
+  {
+    "id": 157,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906259 5001 19551 EFECTY SANTA FE"
+  },
+  {
+    "id": 158,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 20 # 59",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906310 5001 19502 ENCISO LLANADITAS CRA 19"
+  },
+  {
+    "id": 159,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 19 # 59C",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906333 5001 19545 EXPRESS EFECTY CALLE 49 TRANVIA"
+  },
+  {
+    "id": 160,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 49 # 37",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906376 5001 19542 FLAMINGO MANRIQUE"
+  },
+  {
+    "id": 161,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 45 # 77",
+    "horarioSemana": "Jornada Continua L - V 7 00AM a 9 00PM - 906377 5001 19543 FLAMINGO CASTILLA"
+  },
+  {
+    "id": 162,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 96 # 68",
+    "horarioSemana": "Jornada Continua L - V 7 00AM a 9 00PM - 906487 5001 19680 EFECTY FARMAPRO"
+  },
+  {
+    "id": 163,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CL 10 # 43DD",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906524 5001 19675 EXPRESS EFECTY CALLE 40 EL SALVADOR"
+  },
+  {
+    "id": 164,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 40 # 35A",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906533 5001 19750 EXPRESS EFECTY BARRIO GRANIZAL MED"
+  },
+  {
+    "id": 165,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 38A # 104 - 22",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906562 5001 19786 EXPRESS EFECTY CALLE 62 ROBLEDO"
+  },
+  {
+    "id": 166,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906658 5001 19885 MANRIQUE BARRIO SANTA INES MED"
+  },
+  {
+    "id": 167,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 41 # 82",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906737 5001 19989 ROBLEDO PALENQUE CR 88"
+  },
+  {
+    "id": 168,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CR 88 # 68A",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906740 5001 19991 EXPRESS DIMONEX CALLE 77 AURES 1"
+  },
+  {
+    "id": 169,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 77C # 91 - 22",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906745 5001 20014 EFECTY CARRERA 53 CRISTO REY"
+  },
+  {
+    "id": 170,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci"
+  },
+  {
+    "id": 171,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 51 # 93",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906759 5001 19996 SAN GERMAN CR 77"
+  },
+  {
+    "id": 172,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CR 77 # 60",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906783 5001 20005 EXPRESS DIMONEX CALLE 42 BARRIO BOLIVARIANA MEDELL"
+  },
+  {
+    "id": 173,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 42 # 70",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906912 5001 20106 BELEN RINCON CRA 78B CON 2A"
+  },
+  {
+    "id": 174,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906941 5001 20132 EXPRESS DIMONEX CARRERA 92 PICACHO"
+  },
+  {
+    "id": 175,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 92 # 92",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906947 5001 20134 EFECTY SETECEL"
+  },
+  {
+    "id": 176,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 56 # 1",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 906969 5001 20303 EXPRESS EFECTY SEGUNDO PARQUE LAURELES"
+  },
+  {
+    "id": 177,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907024 5001 20279 ESTACION METRO PLUS U"
+  },
+  {
+    "id": 178,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 55 # 65",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907026 5001 20280 EFECTY CARRERA 52 CENTRO"
+  },
+  {
+    "id": 179,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 52 # 45",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907072 5001 20360 EFECTY ROBLEDO CLL 63"
+  },
+  {
+    "id": 180,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CLL 63 # 84A",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907080 5001 20371 MANRIQUE BARRIO CAMPO VALDES"
+  },
+  {
+    "id": 181,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 45 # 73",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907132 5001 20393 SAN MIGUEL VILLA HERMOSA CR 43"
+  },
+  {
+    "id": 182,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CR 43 # 62",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907135 5001 20402 AURES 1 CR 90"
+  },
+  {
+    "id": 183,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CR 90 # 76D",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907136 5001 20404 ENCISO CR 28"
+  },
+  {
+    "id": 184,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CR 28 # 59",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907141 5001 20399 POPULAR BARRIO VILLA GUADALUPE CRA 46 MED"
+  },
+  {
+    "id": 185,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 46 # 97",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907142 5001 20408 SANTA CRUZ BARRIO ANDALUCIA CALLE 107 MED"
+  },
+  {
+    "id": 186,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 107 # 51",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907198 5001 20527 EFECTY SAN JAVIER N 2 CALLE 47A CON 100C"
+  },
+  {
+    "id": 187,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907214 5001 20492 EFECTY BARRIO KENNEDY"
+  },
+  {
+    "id": 188,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907244 5001 20493 ARANJUEZ BERMEJAL - LOS ALAMOS MED"
+  },
+  {
+    "id": 189,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 52 # 87",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907246 5001 20577 MEDELLIN ARANJUEZ PARQUE COMUNICACIONES LYD"
+  },
+  {
+    "id": 190,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 49A # 93 - 63",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907249 5001 20488 EFECTY CENTRO COMERCIAL LOS MOLINOS"
+  },
+  {
+    "id": 191,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 7 00AM a 8 00PM - 907264 5001 20565 EFECTY CALLE 104 12 DE OCTUBRE"
+  },
+  {
+    "id": 192,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 104B # 85 - 7",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907282 5001 20553 BELEN CRA 76 CON 32"
+  },
+  {
+    "id": 193,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 76 N 32 - 111",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci"
+  },
+  {
+    "id": 194,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 52 # 78",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907362 5001 20654 BARRIO MANRIQUE EL RAIZAL CRA 34 MED"
+  },
+  {
+    "id": 195,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 34 # 75C",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907371 5001 20656 EXPRESS EFECTY MANRIQUE UVA ARMONIA"
+  },
+  {
+    "id": 196,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 32 # 81B",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907398 5001 20674 BARRIO SANTANDER IGLESIA SAN JUAN BAUTISTA"
+  },
+  {
+    "id": 197,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907394 5001 20662 EXPRESS EFECTY ENCISO CR 31 VIEJO PARIS"
+  },
+  {
+    "id": 198,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CLL 58 # 31",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907432 5001 20692 EXPRESS EFECTY SAN ANTONIO PRADO CRA 48 42A SUR"
+  },
+  {
+    "id": 199,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 81 # 42A",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907518 5001 20771 AURES 2 CLL 81"
+  },
+  {
+    "id": 200,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CL 81 # 94AA",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907567 5001 20842 CARRRERA 73 LAURELES MEDELLIN"
+  },
+  {
+    "id": 201,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 73 # 40",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907651 5001 20917 PICACHO LA Y CARRERA 83"
+  },
+  {
+    "id": 202,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 83 # 101D",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907683 5001 20937 ROBLEDO MIRAMAR CLL 92"
+  },
+  {
+    "id": 203,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CL 92 # 84",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 907803 5001 21089 BARRIO SANTA LUCIA CARRERA 87"
+  },
+  {
+    "id": 204,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 87 # 46",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908009 5001 21135 MEDELLIN ARANJUEZ CL 92"
+  },
+  {
+    "id": 205,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CL 92 # 50A",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908012 5001 21164 DOCE DE OCTUBRE CR 74"
+  },
+  {
+    "id": 206,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 74 # 99C",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908022 5001 21102 MEDELLIN MOSCU"
+  },
+  {
+    "id": 207,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 47 # 99",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908110 5001 21166 LA ESPERANZA CR 73"
+  },
+  {
+    "id": 208,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 73 # 95",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908137 5001 21198 TRANVIA AYACUCHO CALLE 49"
+  },
+  {
+    "id": 209,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 49 # 40",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908207 5001 31626 GUAYABAL COLINITAS CLL 11 A SUR"
+  },
+  {
+    "id": 210,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908280 5001 21254 PARQUE MILAGROSA CARRERA 30"
+  },
+  {
+    "id": 211,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 30 # 40A",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908296 5001 21317 CAICEDO 3 ESQUINAS 1"
+  },
+  {
+    "id": 212,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 9 # 52 - 18",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908309 5001 21288 MEDELLIN TRICENTENARIO CRA 52 CL 98"
+  },
+  {
+    "id": 213,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 52 # 98",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908636 5001 31638 MEDELLIN TODO PRECIOS SAN PABLO"
+  },
+  {
+    "id": 214,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 37 # 96",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908663 5001 31664 VIA PRINCIPAL BUENOS AIRES CALLE 49"
+  },
+  {
+    "id": 215,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 49 # 29",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci"
+  },
+  {
+    "id": 216,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CL 62 # 128",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908702 5001 31682 MEDELLIN SANTA CRUZ PINCEL Y CELULARES"
+  },
+  {
+    "id": 217,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 43A # 103 - 78",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908729 5001 31752 MANRIQUE LA CRUZ CARRERA 24"
+  },
+  {
+    "id": 218,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 24 # 75C",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908777 5001 31799 SAN JAVIER 20 DE JULIO"
+  },
+  {
+    "id": 219,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 39 # 108",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908793 5001 31764 EL PLAYON CL 123 MEDELLIN"
+  },
+  {
+    "id": 220,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CL 123 # 51D",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908795 5001 31765 EFECTY AURES CL 77 EE"
+  },
+  {
+    "id": 221,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908807 5001 31772 AURES 2 CL 86"
+  },
+  {
+    "id": 222,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CL 86 # 90B",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908816 5001 31795 SAN CRISTOBAL CARRERA 130"
+  },
+  {
+    "id": 223,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908865 5001 31808 EFECTY BELEN GRANADA CRA 74"
+  },
+  {
+    "id": 224,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 74 # 29",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908867 5001 31803 MOVIL OUTLET ANDALUCIA MEDELLIN"
+  },
+  {
+    "id": 225,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 46 # 107",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908970 5001 32021 EFECTY BELEN LAS PLAYAS CRA 71"
+  },
+  {
+    "id": 226,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 71 # 14",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 908987 5001 31925 DIMONEX CASTILLA CR 67"
+  },
+  {
+    "id": 227,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 67 # 92C",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909046 5001 31996 EFECTY CENTRO COMERCIAL ARKADIA"
+  },
+  {
+    "id": 228,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 70 #1",
+    "horarioSemana": "Jornada Continua L - V 7 00AM a 8 00PM - 909090 5001 32089 SAN JAVIER ALTOS DE SAN JUAN"
+  },
+  {
+    "id": 229,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 42D # 117 - 10",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909101 5001 32054 DIMONEX CALASANZ CL 51"
+  },
+  {
+    "id": 230,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CL 51 # 83A",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909133 5001 32088 DIMONEX OLAYA CR 100"
+  },
+  {
+    "id": 231,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CR 100# 57",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909143 5001 32065 EFECTY PICACHO CALLE 98B"
+  },
+  {
+    "id": 232,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 98B # 83 - 48",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909155 5001 32078 CRA 80 12 DE OCTUBRE"
+  },
+  {
+    "id": 233,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 80 # 105",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909218 5001 32173 SAN JAVIER LA ESPERANZA"
+  },
+  {
+    "id": 234,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 39A # 118 - 03",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909235 5001 32156 SANTO DOMINGO LA ALDEA PABLO VI CRA 26"
+  },
+  {
+    "id": 235,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909283 5001 32429 DIMONEX DIAGONAL AL PARQUE BELEN"
+  },
+  {
+    "id": 236,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 30A # 77 - 35",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909312 5001 32197 EFECTY ROBLEDO PAJARITO CL 64B"
+  },
+  {
+    "id": 237,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CLL 64B # 114 - 10",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909401 5001 32405 HOSPITAL MARCO FIDEL NIQUIA AV 40"
+  },
+  {
+    "id": 238,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "DIAGONAL 59 #40",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci"
+  },
+  {
+    "id": 239,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909488 5001 32356 NOVOCELL CARAMBOLAS MEDELLIN"
+  },
+  {
+    "id": 240,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 23 # 97",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909525 5001 32549 SAN JAVIER EL SALADO"
+  },
+  {
+    "id": 241,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 39D # 114 - 33",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909528 5001 32436 ENCISO TERMINAL CALLE 56"
+  },
+  {
+    "id": 242,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909603 5001 32456 PHONE EVOLUTION SANTO DOMINGO"
+  },
+  {
+    "id": 243,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909642 5001 32618 EFECTY PLAYON CARRERA 50C"
+  },
+  {
+    "id": 244,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 50C # 123 - 35",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909643 5001 32546 DIMONEX POPULAR 2 CRA 47"
+  },
+  {
+    "id": 245,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 47 # 120",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909730 5001 32584 EFECTY CRA 74 PEDREGAL"
+  },
+  {
+    "id": 246,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 74 # 106",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909733 5001 32586 EFECTY CRA 74 FLORENCIA"
+  },
+  {
+    "id": 247,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 74 # 114",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909743 5001 32589 DIMONEX CALLE 77 AB ROBLEDO"
+  },
+  {
+    "id": 248,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909747 5001 32591 BUENOS AIRES QUINTA LINDA CR 15B"
+  },
+  {
+    "id": 249,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 15B # 35 - 8",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909919 5001 32779 DIMONEX VILLA HERMOSA CARRERA 43"
+  },
+  {
+    "id": 250,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 43 # 63",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909955 5001 32756 BUENOS AIRES CALLE 49 LAS MELLIZAS"
+  },
+  {
+    "id": 251,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 49 # 25",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909967 5001 32849 DROGUERIA LOS BERNAL CRA 83A CON 9"
+  },
+  {
+    "id": 252,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 83A # 9 - 10",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 909997 5001 32796 EFECTY CARRERA 50B - 121 MEDELLIN"
+  },
+  {
+    "id": 253,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 50B # 121 - 04",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910030 5001 32843 EFECTY CALLE 35 SANTA MONICA"
+  },
+  {
+    "id": 254,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 35 # 89A",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910031 5001 32841 CALLE 92 CASTILLA"
+  },
+  {
+    "id": 255,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 92 # 74A",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910041 5001 32865 PLAZA DE MERCADO LA AMERICA"
+  },
+  {
+    "id": 256,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 45 # 79A",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910042 5001 32864 CALLE 62B BLANQUIZAL"
+  },
+  {
+    "id": 257,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 62B # 93 - 23",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910072 5001 32873 EFECTY CENTRO CIAL TERMINAL DEL NORTE"
+  },
+  {
+    "id": 258,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 64C # 78 - 580",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910073 5001 32874 EFECTY CENTRO CIAL FLORIDA"
+  },
+  {
+    "id": 259,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 71 # 65",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910085 5001 32911 DIMONEX CRA 32 BARRIO ENCISO LA LADERA"
+  },
+  {
+    "id": 260,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 32 # 59B",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910094 5001 32893 BUENOS AIRES CRA 32 CON 44"
+  },
+  {
+    "id": 261,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 32 # 44",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci"
+  },
+  {
+    "id": 262,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 52 # 42",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910138 5001 32934 EFECTY POPULAR 1 CL 111"
+  },
+  {
+    "id": 263,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CLL 111 # 29",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910156 5001 32941 EFECTY LA AVANZADA CR 27B"
+  },
+  {
+    "id": 264,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910198 5001 33102 VILLA HERMOSA EL PINAL CRA 25 AA MEDELLIN"
+  },
+  {
+    "id": 265,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 25AA # 56 - 76",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910374 5001 33700 EFECTY CARPINELO"
+  },
+  {
+    "id": 266,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 36# 86AD",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910400 5001 33190 EFECTY MORAVIA CRA 57"
+  },
+  {
+    "id": 267,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 57 # 82A",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910405 5001 33188 ALEJANDRO ECHAVARRIA CLL 50 BUENOS AIRES"
+  },
+  {
+    "id": 268,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 50 # 13",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910416 5001 33204 BELEN ALIADAS CRA 83 CON 15A"
+  },
+  {
+    "id": 269,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 83 # 15A",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910417 5001 33202 BELEN AV 80 CON 20A"
+  },
+  {
+    "id": 270,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 80 # 20A",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910444 5001 33189 PILARICA CRA 69"
+  },
+  {
+    "id": 271,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 69 # 73",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910441 5001 33203 BARRIO SANTA FE CALLE 16A CON 65GC"
+  },
+  {
+    "id": 272,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910448 5001 33343 ROBLEDO CALLE 76 E"
+  },
+  {
+    "id": 273,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910450 5001 33345 LAURELES LA 70"
+  },
+  {
+    "id": 274,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910476 5001 33239 BARRIO BOSTON CALLE 57 ARGENTINA"
+  },
+  {
+    "id": 275,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 57 # 39A",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910495 5001 33422 BARRIO TRINIDAD CALLE 25"
+  },
+  {
+    "id": 276,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 25 # 55",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910519 5001 33183 SERVIENTREGA CDS AVENIDA 80"
+  },
+  {
+    "id": 277,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 81 # 42",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 910522 5001 33185 SERVIENTREGA CDS BASE MILITAR EL HUECO"
+  },
+  {
+    "id": 278,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 46 # 55",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 910564 5001 33389 BELEN CALLE 30A CON 73"
+  },
+  {
+    "id": 279,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 30A # 73 - 20",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910597 5001 33287 GUAYABAL LA COLINA CALLE 12B SUR CON 53"
+  },
+  {
+    "id": 280,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 12B SUR # 53 - 11",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910598 5001 33333 CLL 50 BUENOS AIRES UNIDAD INTERMEDIA"
+  },
+  {
+    "id": 281,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 50 # 31",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910613 5001 33344 EFECTY CASTILLA CALLE 92B"
+  },
+  {
+    "id": 282,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910622 5001 33486 FLAMINGO SAN ANTONIO DE PRADO"
+  },
+  {
+    "id": 283,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 80 # 39",
+    "horarioSemana": "Jornada Continua L - V 10 00AM a 7 00PM - 910623 5001 33484 FLAMINGO BELEN"
+  },
+  {
+    "id": 284,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 78 # 30",
+    "horarioSemana": "Jornada Continua L - V 10 00AM a 7 00PM - Directorio Puntos de Atenci"
+  },
+  {
+    "id": 285,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 52 # 3",
+    "horarioSemana": "Jornada Continua L - V 10 00AM a 7 00PM - 910620 5001 33485 FLAMINGO SAN CRISTOBAL"
+  },
+  {
+    "id": 286,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 63 # 131",
+    "horarioSemana": "Jornada Continua L - V 10 00AM a 7 00PM - 910628 5001 33460 BARRIO ANTIOQUIA CALLE 27 CON 65B"
+  },
+  {
+    "id": 287,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 27 # 65B",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910686 5001 33446 EFECTY TERMINAL DEL NORTE"
+  },
+  {
+    "id": 288,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 64C # 78 - 344",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910688 5001 33423 KENNEDY CALLE 90"
+  },
+  {
+    "id": 289,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 90 # 77",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910709 5001 33431 VALLEJUELOS CALLE 62"
+  },
+  {
+    "id": 290,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 62 # 105B",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910711 5001 33429 SAN CRISTOBAL CALLE 65A"
+  },
+  {
+    "id": 291,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 65A # 145 - 29",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910721 5001 33641 BELEN SAN BERNARDO CON CRA 70"
+  },
+  {
+    "id": 292,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 70 # 26A",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910781 5001 33529 GRATAMIRA CALLE 106B"
+  },
+  {
+    "id": 293,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 106B # 67 - 11",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910839 5001 33573 UNIONFARMA MANRIQUE CRA 23"
+  },
+  {
+    "id": 294,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 33 # 68",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 910853 5001 33585 EFECTY GRANIZAL CRA 34 MED"
+  },
+  {
+    "id": 295,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 34 # 102",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 991300 5001 3747 CENTRO COMERCIAL MONTERREY"
+  },
+  {
+    "id": 296,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 48 No 10 - 45",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 6 00PM - 991482 5001 3736 TORRES DE BOMBONA"
+  },
+  {
+    "id": 297,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado"
+  },
+  {
+    "id": 298,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "KR 30 # 41",
+    "horarioSemana": "No especificado"
+  },
+  {
+    "id": 299,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "KR 54 # 44",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 992000 5001 4351 CENTRO COMERCIAL EL PUNTO DE LA ORIENTAL"
+  },
+  {
+    "id": 300,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "KR 46 # 47",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 7 00PM - 992526 5001 5204 OLIMPICA VILLANUEVA"
+  },
+  {
+    "id": 301,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 47 No 57 - 40",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 7 00PM - 992570 5001 5467 BARRIO SANTANDER"
+  },
+  {
+    "id": 302,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 992615 5001 5417 BARRIO CARIBE"
+  },
+  {
+    "id": 303,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CL 75 # 64",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 992848 5001 5881 CONSUMO LOS COLORES"
+  },
+  {
+    "id": 304,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "Carrera 74 No. 52 - 105",
+    "horarioSemana": "No especificado"
+  },
+  {
+    "id": 305,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "KR 36 A # 40 - 100",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 9 00PM - Directorio Puntos de Atenci"
+  },
+  {
+    "id": 306,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 63 No. 128 - 53",
+    "horarioSemana": "No especificado"
+  },
+  {
+    "id": 307,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "KR 50 # 51",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 993076 5001 6756 LA PLAYA DROGAS LA BASTILLA P"
+  },
+  {
+    "id": 308,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 7 30AM a 6 00PM - 993131 5001 6669 CONSUMO FLORESTA"
+  },
+  {
+    "id": 309,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 993168 5001 6879 MUTUAL BIENESTAR MEDELIN ESTACION PRINCIPAL"
+  },
+  {
+    "id": 310,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "KR 50 D # 65 - 80",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 5 00PM - 993186 5001 6881 MUTUAL BIENESTAR MEDEELIN JUAN DEL CORRAL"
+  },
+  {
+    "id": 311,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "KR 51 D # 60 - 57",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 5 00PM - 993187 5001 6882 MUTUAL BIENESTAR MEDELIN PLAZA MINORISTA"
+  },
+  {
+    "id": 312,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CL 55 A # 57 - 80",
+    "horarioSemana": "No especificado"
+  },
+  {
+    "id": 313,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CL 94 # 50",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 993421 5001 7255 EDS SANTA MARTA"
+  },
+  {
+    "id": 314,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CL 45 A # 60 - 13",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 6 00PM - 993425 5001 7468 MEDELLIN EDS JARDIN"
+  },
+  {
+    "id": 315,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 51 # 73",
+    "horarioSemana": "No especificado"
+  },
+  {
+    "id": 316,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 6 00PM - 994027 5001 7842 LA PLAYA EDIFICIO COLTEGER T"
+  },
+  {
+    "id": 317,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CL 52 # 47",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 994118 5001 7971 PICACHITO CRA 85 T"
+  },
+  {
+    "id": 318,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 85 A # 98 - 16",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 994513 5001 8319 SERVIENTREGA GUAYABAL CLL 8 SUR"
+  },
+  {
+    "id": 319,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 994595 5001 8533 COOGRANADA EL BOSQUE T"
+  },
+  {
+    "id": 320,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CL 80 B # 52 - 70",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 994598 5001 8537 COOGRANADA PRINCIPAL CENTRO T"
+  },
+  {
+    "id": 321,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CL 46 # 52",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 994599 5001 8538 COOGRANADA VILLA HERMOSA T"
+  },
+  {
+    "id": 322,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "KR 40 # 65",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 994657 5001 8488 CAMPO VALDES LAS ESMERALDAS T"
+  },
+  {
+    "id": 323,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 6 00PM - 995517 5001 9640 AV"
+  },
+  {
+    "id": 324,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "DIAGONAL 74B No. 32 - 10",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 995573 5001 9631 CONSUMO LA AMERICA"
+  },
+  {
+    "id": 325,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 44 No. 80 - 61",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 7 00PM - 995657 5001 9673 SERVIENTREGA DIMONEX ESTACION PARQUE BERRIO"
+  },
+  {
+    "id": 326,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "KR 51 # 50",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 7 00PM - Directorio Puntos de Atenci"
+  },
+  {
+    "id": 327,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CL 54 # 49",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 7 00PM - 995814 5001 10142 CHAGUALO DIMONEX FARMAFACIL"
+  },
+  {
+    "id": 328,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 9 00PM - 995911 5001 10323 ASOCIACION MUTUAL AMIGO REAL MEDELLIN"
+  },
+  {
+    "id": 329,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 52 N 49 - 28",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 5 00PM - 996159 5001 10405 MAG PAPELERIA BELEN"
+  },
+  {
+    "id": 330,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 20 No 76 - 33",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 996214 5001 10397 SERVIENTREGA LOS COLORES CRA 80"
+  },
+  {
+    "id": 331,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 80 No. 54 - 35",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 996246 5001 10410 SERVIENTREGA PRICESMART LA 70"
+  },
+  {
+    "id": 332,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "Carrera 70 No. 1 - 128",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 996423 5001 10651 PASAJE COMERCIAL SAN GERMAN"
+  },
+  {
+    "id": 333,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CL 65 # 78",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 996430 5001 10650 CENTRO VIRTUAL MANRIQUE GUADALUPE"
+  },
+  {
+    "id": 334,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "KR 42 B # 94 - 04",
+    "horarioSemana": "No especificado"
+  },
+  {
+    "id": 335,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "KR 65 # 42",
+    "horarioSemana": "Jornada Continua L - V 7 00AM a 9 00PM - 996460 5001 10674 BELEN RINCON"
+  },
+  {
+    "id": 336,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 2 # 79 - 09",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 996533 5001 10716 BARRIO GRATAMIRA"
+  },
+  {
+    "id": 337,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 7 00PM - 996633 5001 10846 ALFONSO LOPEZ CALLE 91"
+  },
+  {
+    "id": 338,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 996772 5001 10977 DISTRIBUIDORA MAXIMUS MANRIQUE"
+  },
+  {
+    "id": 339,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CL 80 # 36",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 996803 5001 10979 SERVIENTREGA POPULAR"
+  },
+  {
+    "id": 340,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 42 B N 107 - 54",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 5 00PM - 997018 5001 11207 EFECTY TERMINAL DEL SUR"
+  },
+  {
+    "id": 341,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 7 30AM a 7 00PM - 997025 5001 11342 PRADO BARICHARA"
+  },
+  {
+    "id": 342,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 52B SUR N. 67 - 167",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 997552 5001 11874 FLAMINGO BOLIVAR"
+  },
+  {
+    "id": 343,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 51 N 48 - 31",
+    "horarioSemana": "No especificado"
+  },
+  {
+    "id": 344,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 52 No 82 - 36",
+    "horarioSemana": "No especificado"
+  },
+  {
+    "id": 345,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 42 N 101 - 71",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 997716 5001 11967 BARRIO ALCAZARES CRA 87"
+  },
+  {
+    "id": 346,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado"
+  },
+  {
+    "id": 347,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 45 N 82 - 40",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - Directorio Puntos de Atenci"
+  },
+  {
+    "id": 348,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 49 No. 99 - 84",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 7 00PM - 997848 5001 12125 BARRIO BOSTON"
+  },
+  {
+    "id": 349,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 997900 5001 12233 ARANJUEZ CLL 95 CRA 52"
+  },
+  {
+    "id": 350,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 95 # 52",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 8 00PM - 998267 5001 12555 SAN ANTONIO DE PRADO"
+  },
+  {
+    "id": 351,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "No especificado"
+  },
+  {
+    "id": 352,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 56 N 61 - 30",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 998859 5001 13221 LORETO PUERTO VIRTUAL"
+  },
+  {
+    "id": 353,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 998962 5001 13451 12 DE OCTUBRE CRA 80"
+  },
+  {
+    "id": 354,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CARRERA 80 N 98 - 14",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 7 00PM - 999215 5001 13715 ROBLEDO LA MONTA"
+  },
+  {
+    "id": 355,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 9 00AM a 9 00PM - 999291 5001 13784 CALLE 50 CUARTA BRIGADA"
+  },
+  {
+    "id": 356,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 50 N 76 - 137",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 999312 5001 13816 TEMCEL COMUNICACIONES LA 33 CON LA 78"
+  },
+  {
+    "id": 357,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 33 N 78 - 178",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 6 00PM - 999387 5001 13927 BARRIO SANTO DOMINGO BOULEVAR DEL SANTO"
+  },
+  {
+    "id": 358,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "No encontrada",
+    "horarioSemana": "Jornada Continua L - V 10 00AM a 8 00PM - 999813 5001 14375 PARQUE ROBLEDO"
+  },
+  {
+    "id": 359,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CALLE 65 # 86",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 999909 5001 14445 CENTRO SECTOR CORDOBA CON COLOMBIA"
+  },
+  {
+    "id": 360,
+    "departamento": "ANTIOQUIA",
+    "municipio": "MEDELLIN",
+    "direccion": "CRA 42 # 50",
+    "horarioSemana": "Jornada Continua L - V 8 00AM a 8 00PM - 800053 5002 79 CRA 50 ANTIOQUIA ABEJORRAL KR 50"
+  }
+]

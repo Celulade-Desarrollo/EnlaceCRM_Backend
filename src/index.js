@@ -22,9 +22,8 @@ import authRouter from "./interfaces/routes/auth.Routes.js";
 import adminRouter from "./interfaces/routes/adminAccount.route.js";
 import movimientoCuentaRouter from "./interfaces/routes/movimientoCuenta.route.js";
 import validarMoraRouter from "./interfaces/routes/validarMora.route.js";
-
 import "./infrastructure/jobs/validarMora.job.js";
-
+import ubicaionesRoutes from "./interfaces/routes/ubicaciones.route.js";
 // Importar la nueva ruta de movimientos
 import movimientoRouter from "./interfaces/routes/movimiento.route.js";
 
@@ -71,6 +70,7 @@ app.use(estadoCuentaRouter);
 app.use(adminRouter);
 app.use(movimientoCuentaRouter);
 app.use(validarMoraRouter);
+app.use(ubicaionesRoutes);
 app.use("/api/movimiento", movimientoRouter); // Registrar la nueva ruta en la aplicación
 // app.use(movimientoGetRouter);
 app.use(LogsRouter)
