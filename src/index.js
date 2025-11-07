@@ -80,7 +80,7 @@ app.get("/", (req, res) => {
   res.send("Servidor funcionando correctamente");
 });
 
-// Puerto del servidor
+//Puerto del servidor
 const PORT = 3000;
 
 async function startServer() {
