@@ -23,6 +23,10 @@ export const flujoRegistroRepository = {
   async insertarRegistro(input) {
     const pool = await poolPromise;
 
+      const rangoIngresosNum = parseFloat(
+        String(input.Rango_de_Ingresos).replace(/\./g, "").replace(",", ".")
+      )
+      const ingresosOperativoNeto = rangoIngresosNum - (rangoIngresosNum / 1.2);
     await pool.request()
       .input("Estado", sql.NVarChar, input.Estado || "pendiente")
       .input("Numero_de_Cliente_Alpina", sql.NVarChar, input.Numero_de_Cliente_Alpina)
@@ -52,6 +56,7 @@ export const flujoRegistroRepository = {
       .input("Numero_de_neveras", sql.NVarChar, input.Numero_de_neveras)
       .input("Registrado_Camara_Comercio", sql.Bit, input.Registrado_Camara_Comercio)
       .input("Rango_de_Ingresos", sql.NVarChar, input.Rango_de_Ingresos)
+      .input("Ingreso_Operativo_Neto", sql.Decimal(18,2), ingresosOperativoNeto)
       .input("Persona_expuesta_politicamente_PEP", sql.Bit, input.Persona_expuesta_politicamente_PEP)
       .input("Familiar_expuesto_politicamente_PEP", sql.Bit, input.Familiar_expuesto_politicamente_PEP)
       .input("Operaciones_moneda_extranjera", sql.Bit, input.Operaciones_moneda_extranjera)
@@ -77,7 +82,7 @@ export const flujoRegistroRepository = {
           Pais_de_Nacimiento, Departamento_de_Nacimiento, Nivel_Educativo, Estrato, Grupo_Etnico,
           Declara_Renta, Esta_obligado_a_tener_RUT_por_tu_actividad_economica,
           Ubicacion_del_Negocio_Departamento, Ubicacion_del_Negocio_Ciudad, Direccion, Detalles,
-          Barrio, Numero_de_neveras, Registrado_Camara_Comercio, Rango_de_Ingresos,
+          Barrio, Numero_de_neveras, Registrado_Camara_Comercio, Rango_de_Ingresos,Ingreso_Operativo_Neto,
           Persona_expuesta_politicamente_PEP, Familiar_expuesto_politicamente_PEP,
           Operaciones_moneda_extranjera, Declaracion_de_nacionalidad_y_residencia_fiscal_en_Colombia,
           Confirmacion_Identidad,Cedula_Conyuge, Nombre_Conyuge, Apellido_Conyuge, Valor_Bienes, Valor_Deudas,
@@ -90,7 +95,7 @@ export const flujoRegistroRepository = {
           @Pais_de_Nacimiento, @Departamento_de_Nacimiento, @Nivel_Educativo, @Estrato,
           @Grupo_Etnico, @Declara_Renta, @Esta_obligado_a_tener_RUT,
           @Ubicacion_del_Negocio_Departamento, @Ubicacion_del_Negocio_Ciudad, @Direccion, @Detalles,
-          @Barrio, @Numero_de_neveras, @Registrado_Camara_Comercio, @Rango_de_Ingresos,
+          @Barrio, @Numero_de_neveras, @Registrado_Camara_Comercio, @Rango_de_Ingresos,@Ingreso_Operativo_Neto,
           @Persona_expuesta_politicamente_PEP, @Familiar_expuesto_politicamente_PEP,
           @Operaciones_moneda_extranjera, @Declaracion_de_nacionalidad_y_residencia_fiscal_en_Colombia, @Confirmacion_Identidad, @Cedula_Conyuge, @Nombre_Conyuge,@Apellido_Conyuge,
           @Valor_Bienes, @Valor_Deudas, @Gastos_Mensuales, @Deuda_Mensual, @Ingresos_Diferentes_Negocio,
