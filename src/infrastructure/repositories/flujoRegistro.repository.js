@@ -67,8 +67,28 @@ export const flujoRegistroRepository = {
       .input("Ingresos_Diferentes_Negocio", sql.NVarChar, input.Ingresos_Diferentes_Negocio)
       .input("nbCliente", sql.VarChar, input.nbCliente)
       .input("nbAgenteComercial", sql.VarChar, input.nbAgenteComercial)
-      .input("Monto_ingresos_diferentes_negocio", sql.NVarChar, input.Monto_ingresos_diferentes_negocio)
-      .input("Monto_Mensual_Deuda", sql.NVarChar, input.Monto_Mensual_Deuda)
+      .input(
+  "Monto_ingresos_diferentes_negocio",
+  sql.NVarChar,
+  input.Monto_ingresos_diferentes_negocio === 0 ||
+  input.Monto_ingresos_diferentes_negocio === "0" ||
+  input.Monto_ingresos_diferentes_negocio === "" ||
+  input.Monto_ingresos_diferentes_negocio == null
+    ? "No"
+    : input.Monto_ingresos_diferentes_negocio.toString()
+)
+
+      .input(
+  "Monto_Mensual_Deuda",
+  sql.NVarChar,
+  !input.Monto_Mensual_Deuda ||
+  input.Monto_Mensual_Deuda === "0" ||
+  input.Monto_Mensual_Deuda === "0.00" ||
+  input.Monto_Mensual_Deuda === "0,00" ||
+  input.Monto_Mensual_Deuda === "0.000"
+    ? "No"
+    : input.Monto_Mensual_Deuda.toString()
+)
       .query(`
         INSERT INTO FlujosRegistroEnlace (
           Estado, Numero_de_Cliente_Alpina, Cedula_Cliente, Autorizacion_Habeas_Data,
