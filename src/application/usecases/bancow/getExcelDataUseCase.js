@@ -36,7 +36,7 @@ export async function getExcelData() {
         Numero_de_neveras: excelData.Numero_de_neveras,
         Registrado_Camara_Comercio: excelData.Registrado_Camara_Comercio,
         Rango_de_Ingresos: excelData.Rango_de_Ingresos,
-        Ingreso_operativo_neto: excelData.Ingreso_operativo_neto,
+        Ingreso_Operativo_Neto: excelData.Ingreso_Operativo_Neto,
         Valor_Bienes: excelData.Valor_Bienes,
         Valor_Deudas: excelData.Valor_Deudas,
         Gastos_Mensuales: excelData.Gastos_Mensuales,
