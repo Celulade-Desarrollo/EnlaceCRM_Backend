@@ -40,6 +40,7 @@ export async function getExcelData() {
         Valor_Deudas: excelData.Valor_Deudas,
         Gastos_Mensuales: excelData.Gastos_Mensuales,
         Deuda_Mensual: excelData.Deuda_Mensual,
+        Monto_Mensual_Deuda: excelData.Monto_Mensual_Deuda,
         Ingresos_Diferentes_Negocio: excelData.Ingresos_Diferentes_Negocio,
         Monto_ingresos_diferentes_negocio: excelData.Monto_ingresos_diferentes_negocio,
         Declara_Renta: excelData.Declara_Renta,
