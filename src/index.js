@@ -22,11 +22,10 @@ import authRouter from "./interfaces/routes/auth.Routes.js";
 import adminRouter from "./interfaces/routes/adminAccount.route.js";
 import movimientoCuentaRouter from "./interfaces/routes/movimientoCuenta.route.js";
 import validarMoraRouter from "./interfaces/routes/validarMora.route.js";
-
 import "./infrastructure/jobs/validarMora.job.js";
-
-// Importar la nueva ruta de movimientos
+import ubicaionesRoutes from "./interfaces/routes/ubicaciones.route.js";
 import movimientoRouter from "./interfaces/routes/movimiento.route.js";
+import validarOperacionRouter from "./interfaces/routes/verificarOperacionExiste.route.js";
 
 // Swagger
 import swaggerDocs from "./config/swagger-config.js";
@@ -36,7 +35,7 @@ const app = express();
 
 // Configuración de CORS
 app.use(cors({
-  origin: ["http://localhost:5173"], // Permite frontend dev y swagger
+  origin: ["*"], // Permite frontend dev y swagger
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
   allowedHeaders: [
     "Content-Type",
@@ -71,16 +70,17 @@ app.use(estadoCuentaRouter);
 app.use(adminRouter);
 app.use(movimientoCuentaRouter);
 app.use(validarMoraRouter);
-app.use("/api/movimiento", movimientoRouter); // Registrar la nueva ruta en la aplicación
-// app.use(movimientoGetRouter);
+app.use(ubicaionesRoutes);
+app.use("/api/movimiento", movimientoRouter);
 app.use(LogsRouter)
 app.use(abonoRouter);
+app.use("/api/abonos",validarOperacionRouter);
 
 app.get("/", (req, res) => {
   res.send("Servidor funcionando correctamente");
 });
 
-// Puerto del servidor
+//Puerto del servidor
 const PORT = 3000;
 
 async function startServer() {

@@ -36,10 +36,12 @@ export async function getExcelData() {
         Numero_de_neveras: excelData.Numero_de_neveras,
         Registrado_Camara_Comercio: excelData.Registrado_Camara_Comercio,
         Rango_de_Ingresos: excelData.Rango_de_Ingresos,
+        Ingreso_Operativo_Neto: excelData.Ingreso_Operativo_Neto,
         Valor_Bienes: excelData.Valor_Bienes,
         Valor_Deudas: excelData.Valor_Deudas,
         Gastos_Mensuales: excelData.Gastos_Mensuales,
         Deuda_Mensual: excelData.Deuda_Mensual,
+        Monto_Mensual_Deuda: excelData.Monto_Mensual_Deuda,
         Ingresos_Diferentes_Negocio: excelData.Ingresos_Diferentes_Negocio,
         Monto_ingresos_diferentes_negocio: excelData.Monto_ingresos_diferentes_negocio,
         Declara_Renta: excelData.Declara_Renta,
@@ -57,6 +59,8 @@ export async function getExcelData() {
         UsuarioAprobado: excelData.UsuarioAprobado,
         Estatus: excelData.Estatus,
         Estado: excelData.Estado,
+        Latitud: excelData.Latitud,
+        Longitud: excelData.Longitud,
     }));
 
     return excelFullData;
