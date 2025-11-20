@@ -294,7 +294,6 @@ export const estadoCuentaRepository = {
                   ECM.IdEstadoMovimiento,
                   ECM.Monto,
                   ECM.Descripcion,
-                  MontoMasIntereses,
                   ECM.FechaPagoProgramado,
                   ECM.NroFacturaAlpina,
                   ECM.MontoMasIntereses,
