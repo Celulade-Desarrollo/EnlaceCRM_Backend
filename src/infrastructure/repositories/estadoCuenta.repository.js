@@ -266,7 +266,9 @@ export const estadoCuentaRepository = {
             IdEstadoMovimiento,
             Monto,
             Descripcion,
-            FechaPagoProgramado
+            FechaPagoProgramado,
+            NroFacturaAlpina,
+            TelefonoTransportista
           FROM EstadoCuentaMovimientos
           WHERE IdUsuarioFinal = @IdUsuarioFinal
             AND FechaHoraMovimiento >= DATEADD(MONTH, -3, GETDATE())
@@ -292,6 +294,7 @@ export const estadoCuentaRepository = {
                   ECM.IdEstadoMovimiento,
                   ECM.Monto,
                   ECM.Descripcion,
+                  MontoMasIntereses,
                   ECM.FechaPagoProgramado,
                   ECM.NroFacturaAlpina,
                   ECM.MontoMasIntereses,

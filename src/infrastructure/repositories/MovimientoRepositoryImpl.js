@@ -82,6 +82,7 @@ async actualizarMontoMovimiento(idMovimiento, nuevoMonto) {
                     ECM.IdTipoMovimiento,
                     ECM.IdEstadoMovimiento,
                     ECM.Monto,
+                    MontoMasIntereses,
                     ECM.Descripcion,
                     ECM.FechaPagoProgramado,
                     UF.Cedula_Usuario
