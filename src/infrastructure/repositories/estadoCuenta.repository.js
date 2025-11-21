@@ -12,7 +12,10 @@ export const estadoCuentaRepository = {
     fechaPagoProgramado,
     idMedioPago,
     nroFacturaAlpina,
-    telefonoTransportista
+    telefonoTransportista,
+    Intereses,
+    Fees,
+    InteresesMora
   }) {
     const pool = await poolPromise;
 
@@ -40,7 +43,10 @@ export const estadoCuentaRepository = {
         FechaPagoProgramado,
         IdMedioPago,
         NroFacturaAlpina,
-        TelefonoTransportista
+        TelefonoTransportista,
+        Intereses,
+        Fees,
+        InteresesMora
       )
       VALUES (
         @idUsuarioFinal,
@@ -51,7 +57,10 @@ export const estadoCuentaRepository = {
         @fechaProgramada,
         @idMedioPago,
         @nroFacturaAlpina,
-        @telefonoTransportista
+        @telefonoTransportista,
+        @Intereses,
+        @Fees,
+        @InteresesMora
       )
     `;
 
@@ -65,6 +74,10 @@ export const estadoCuentaRepository = {
       .input("idMedioPago", sql.Int, idMedioPago || null)
       .input("nroFacturaAlpina", sql.VarChar, nroFacturaAlpina || null)
       .input("telefonoTransportista", sql.VarChar, telefonoTransportista || null)
+      .input("Intereses", sql.Int, Intereses)
+      .input("Fees", sql.Int, Fees)
+      .input("InteresesMora", sql.Int, InteresesMora)
+
       .query(query);
       
     return { mensaje: "Pago registrado exitosamente" };
@@ -78,7 +91,10 @@ export const estadoCuentaRepository = {
     idMedioPago,
     nroFacturaAlpina,
     telefonoTransportista,
-    tipoMovimiento
+    tipoMovimiento,
+    Intereses,
+    Fees,
+    InteresesMora
   }) {
     const pool = await poolPromise;
     const transaction = new sql.Transaction(pool);
@@ -110,6 +126,9 @@ export const estadoCuentaRepository = {
         .input("idMedioPago", sql.Int, idMedioPago || null)
         .input("nroFacturaAlpina", sql.VarChar, nroFacturaAlpina || null)
         .input("telefonoTransportista", sql.VarChar, telefonoTransportista || null)
+        .input("Intereses", sql.Int, Intereses)
+        .input("Fees", sql.Int, Fees)
+        .input("InteresesMora", sql.Int, InteresesMora)
         .query(`
           INSERT INTO EstadoCuentaMovimientos (
             IdUsuarioFinal,
@@ -120,7 +139,10 @@ export const estadoCuentaRepository = {
             FechaPagoProgramado,
             IdMedioPago,
             NroFacturaAlpina,
-            TelefonoTransportista
+            TelefonoTransportista,
+            Intereses,
+            Fees,
+            InteresesMora
           )
           VALUES (
             @idUsuarioFinal,
@@ -131,7 +153,10 @@ export const estadoCuentaRepository = {
             @fechaProgramada,
             @idMedioPago,
             @nroFacturaAlpina,
-            @telefonoTransportista
+            @telefonoTransportista,
+            @Intereses,
+            @Fees,
+            @InteresesMora
           )
         `);
 
@@ -333,22 +358,15 @@ export const estadoCuentaRepository = {
       }
   },
   
-  async actualizarMontoMovimiento(IdMovimiento, nuevoMonto, Intereses, InteresesMora, Fees) {
+  async actualizarMontoMovimiento(IdMovimiento, nuevoMonto) {
       try {
           const pool = await poolPromise;
           const result = await pool.request()
               .input("IdMovimiento", sql.Int, IdMovimiento)
               .input("monto", sql.Int, nuevoMonto)
-              .input("Intereses", sql.Int, Intereses)
-              .input("InteresesMora",
-                 sql.Int, InteresesMora)
-              .input("Fees", sql.Int, Fees)
               .query(`
                   UPDATE EstadoCuentaMovimientos 
                   SET MontoMasIntereses = @monto
-                      , Intereses = @Intereses
-                      , InteresesMora = @InteresesMora
-                      , Fees = @Fees
                   WHERE IdMovimiento = @IdMovimiento;`);
           return result.recordset;
       } catch (error) {
