@@ -294,7 +294,6 @@ export const estadoCuentaRepository = {
                   ECM.IdEstadoMovimiento,
                   ECM.Monto,
                   ECM.Descripcion,
-                  MontoMasIntereses,
                   ECM.FechaPagoProgramado,
                   ECM.NroFacturaAlpina,
                   ECM.MontoMasIntereses,
@@ -334,15 +333,22 @@ export const estadoCuentaRepository = {
       }
   },
   
-  async actualizarMontoMovimiento(IdMovimiento, nuevoMonto) {
+  async actualizarMontoMovimiento(IdMovimiento, nuevoMonto, Intereses, InteresesMora, Fees) {
       try {
           const pool = await poolPromise;
           const result = await pool.request()
               .input("IdMovimiento", sql.Int, IdMovimiento)
               .input("monto", sql.Int, nuevoMonto)
+              .input("Intereses", sql.Int, Intereses)
+              .input("InteresesMora",
+                 sql.Int, InteresesMora)
+              .input("Fees", sql.Int, Fees)
               .query(`
                   UPDATE EstadoCuentaMovimientos 
                   SET MontoMasIntereses = @monto
+                      , Intereses = @Intereses
+                      , InteresesMora = @InteresesMora
+                      , Fees = @Fees
                   WHERE IdMovimiento = @IdMovimiento;`);
           return result.recordset;
       } catch (error) {

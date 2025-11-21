@@ -71,12 +71,12 @@ export const listarMovimientosParaEnlaceController = async (req, res) => {
 export const calcularInteresesController = async (req, res) => {
   try {
     const { IdMovimiento } = req.params;
-    const { nuevoMonto } = req.body;
+    const { nuevoMonto, Intereses, InteresesMora, Fees } = req.body;
     if (!IdMovimiento || !nuevoMonto) {
       return res.status(400).json({ error: "Faltan parámetros obligatorios: nroFacturaAlpina y nuevoMonto" });
     } 
   
-    const resultado = await calcularInteresesUseCase(parseInt(IdMovimiento), nuevoMonto);
+    const resultado = await calcularInteresesUseCase(parseInt(IdMovimiento), nuevoMonto, Intereses, InteresesMora, Fees);
     res.json(resultado);
   } catch (error) {
     console.error("Error al calcular intereses:", error.message);
