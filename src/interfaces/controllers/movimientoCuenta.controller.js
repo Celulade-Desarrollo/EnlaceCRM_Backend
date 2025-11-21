@@ -7,7 +7,7 @@ import {registrarMovimientoTipoDosUseCase} from "../../application/usecases/pago
 import ValidationError from "../../errors/Validation.error.js";
 
 export const registrarMovimientoController = async (req, res) => {
-  try {
+  
     const {
       identificadorTendero,
       monto,
@@ -16,10 +16,11 @@ export const registrarMovimientoController = async (req, res) => {
       idMedioPago,
       nroFacturaAlpina,
       telefonoTransportista,
-      tipoMovimiento // 1 = débito, 2 = crédito
+      tipoMovimiento, // 1 = débito, 2 = crédito
+      Intereses,
+      InteresesMora,
+      Fees
     } = req.body;
-
-    console.log("🟡 Body recibido en controlador:", req.body);
 
     const resultado = await registrarMovimientoUseCase({
       identificadorTendero,
@@ -29,19 +30,14 @@ export const registrarMovimientoController = async (req, res) => {
       idMedioPago,
       nroFacturaAlpina,
       telefonoTransportista,
-      tipoMovimiento
+      tipoMovimiento,
+      Intereses,
+      InteresesMora,
+      Fees
     });
 
     res.status(201).json(resultado);
-  } catch (error) {
-    console.error("❌ Error en registrarMovimientoController:", error.message);
-
-    if (error instanceof ValidationError) {
-      return res.status(400).json({ mensaje: error.message });
-    }
-
-    res.status(500).json({ mensaje: "Error interno al registrar movimiento" });
-  }
+  
 };
 
 
@@ -71,12 +67,12 @@ export const listarMovimientosParaEnlaceController = async (req, res) => {
 export const calcularInteresesController = async (req, res) => {
   try {
     const { IdMovimiento } = req.params;
-    const { nuevoMonto, Intereses, InteresesMora, Fees } = req.body;
-    if (!IdMovimiento || !nuevoMonto) {
-      return res.status(400).json({ error: "Faltan parámetros obligatorios: nroFacturaAlpina y nuevoMonto" });
+    const { nuevoMonto } = req.body;
+    if (!IdMovimiento) {
+      return res.status(400).json({ error: "Faltan parámetros obligatorios: IdMovimiento" });
     } 
   
-    const resultado = await calcularInteresesUseCase(parseInt(IdMovimiento), nuevoMonto, Intereses, InteresesMora, Fees);
+    const resultado = await calcularInteresesUseCase(parseInt(IdMovimiento), nuevoMonto);
     res.json(resultado);
   } catch (error) {
     console.error("Error al calcular intereses:", error.message);
