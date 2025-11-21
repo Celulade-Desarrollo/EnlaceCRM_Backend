@@ -9,7 +9,7 @@ export class Movimiento {
     nroFacturaAlpina,
     telefonoTransportista
   }) {
-    // 🧩 Validar identificadorTendero
+    // Validar identificadorTendero
     if (
       !identificadorTendero ||
       typeof identificadorTendero !== "string" ||
@@ -18,7 +18,7 @@ export class Movimiento {
       throw new Error("identificadorTendero debe ser una cadena válida no vacía");
     }
 
-    // 🧩 Validar monto
+    // Validar monto
     if (monto === undefined || monto === null || monto === "") {
       throw new Error("monto es requerido");
     }
@@ -28,7 +28,7 @@ export class Movimiento {
       throw new Error("monto debe ser un número válido mayor que cero");
     }
 
-    // 🧩 Validar tipoMovimiento
+    // Validar tipoMovimiento
     const TIPOS_MOVIMIENTO = {
       DEBITO: 1,
       CREDITO: 2,
