@@ -42,8 +42,8 @@ export class EstadoCuentaAdapter extends EstadoCuentaPort {
     return await estadoCuentaRepository.obtenerTodosLosMovimientos();
   }
 
-  async actualizarMontoMovimiento(idMovimiento, nuevoMonto, Intereses, InteresesMora, Fees) {
-    return await estadoCuentaRepository.actualizarMontoMovimiento(idMovimiento, nuevoMonto, Intereses, InteresesMora, Fees);
+  async actualizarMontoMovimiento(idMovimiento, nuevoMonto) {
+    return await estadoCuentaRepository.actualizarMontoMovimiento(idMovimiento, nuevoMonto);
   }
 
   async registrarMovimientoAbono(IdMovimiento, AbonoUsuario){

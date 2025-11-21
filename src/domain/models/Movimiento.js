@@ -7,7 +7,11 @@ export class Movimiento {
     fechaPagoProgramado,
     idMedioPago,
     nroFacturaAlpina,
-    telefonoTransportista
+    telefonoTransportista,
+    Intereses,
+    InteresesMora,
+    Fees
+ 
   }) {
     // 🧩 Validar identificadorTendero
     if (
@@ -52,5 +56,9 @@ export class Movimiento {
     this.idMedioPago = idMedioPago || null;
     this.nroFacturaAlpina = nroFacturaAlpina || null;
     this.telefonoTransportista = telefonoTransportista || null;
+    this.Intereses = Intereses || 0;
+    this.InteresesMora = InteresesMora || 0;
+    this.Fees = Fees || 0;
+   
   }
 }
