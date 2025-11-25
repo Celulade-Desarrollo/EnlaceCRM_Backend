@@ -298,6 +298,7 @@ export const estadoCuentaRepository = {
                   ECM.NroFacturaAlpina,
                   ECM.MontoMasIntereses,
                   ECM.AbonoUsuario,
+                  ECM.TelefonoTransportista,
                   UF.Cedula_Usuario
               FROM 
                   EstadoCuentaMovimientos ECM
