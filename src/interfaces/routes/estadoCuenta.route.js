@@ -2,6 +2,7 @@ import express from "express";
 import { obtenerEstadoCuentaController } from "../controllers/estadoCuenta.controller.js";
 import { authMiddleware } from "../middleware/token-middleware.js";
 
+
 const router = express.Router();
 
 /**
