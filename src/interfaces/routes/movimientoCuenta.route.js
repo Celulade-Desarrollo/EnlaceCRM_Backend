@@ -1,5 +1,5 @@
 import express from "express";
-import { registrarMovimientoController, getMovimientosByCliente, listarMovimientosParaEnlaceController, calcularInteresesController, actualizarAbonoMovimiento,actualizarTelefonoTransportistaController } from "../controllers/movimientoCuenta.controller.js";
+import { registrarMovimientoController, getMovimientosByCliente, listarMovimientosParaEnlaceController, listarRecaudoParaTransportistaController, calcularInteresesController, actualizarAbonoMovimiento,actualizarTelefonoTransportistaController } from "../controllers/movimientoCuenta.controller.js";
 
 import { authMiddleware } from "../middleware/token-middleware.js";
 
@@ -218,6 +218,41 @@ router.get("/api/listar/enlace/movimientos", listarMovimientosParaEnlaceControll
  *         description: Error del servidor
  */
 router.put("/api/actualizarIntereses/:IdMovimiento", calcularInteresesController);
+
+/**
+ * @swagger
+ * /api/recaudo:
+ *   get:
+ *     summary: Listar recaudo para transportista
+ *     description: Devuelve los movimientos de recaudo asociados a un transportista.
+ *     tags:
+ *       - Movimientos
+ *     security:
+ *       - bearerAuth: []
+ *     parameters:
+ *       - in: query
+ *         name: numTransportista
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: Número o identificador del transportista
+ *     responses:
+ *       200:
+ *         description: Recaudo obtenido correctamente
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: object
+ *       400:
+ *         description: Parámetros inválidos
+ *       401:
+ *         description: No autorizado
+ *       500:
+ *         description: Error del servidor
+ */
+router.get("/api/recaudo/:numTransportista", listarRecaudoParaTransportistaController);
 
 /**
  * @swagger

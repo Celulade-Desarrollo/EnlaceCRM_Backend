@@ -411,4 +411,26 @@ export const estadoCuentaRepository = {
       }
   },
   
-};
+
+async consultarRecaudoTransportista(numTransportista) {
+  try {
+    const pool = await poolPromise;
+    const result = await pool.request()
+      .input("TelefonoTransportista", sql.VarChar, numTransportista)
+      .query(`
+        SELECT
+          FechaHoraMovimiento,
+          Monto,
+          NroFacturaAlpina
+        FROM EstadoCuentaMovimientos
+        WHERE TelefonoTransportista = @TelefonoTransportista
+          AND CONVERT(date, FechaHoraMovimiento) = CONVERT(date, GETDATE())
+        ORDER BY FechaHoraMovimiento DESC
+      `);
+    return result.recordset;
+  } catch (error) {
+    console.error("Error en consultarRecaudoTransportista:", error.message);
+    throw error;
+  }
+}
+}
