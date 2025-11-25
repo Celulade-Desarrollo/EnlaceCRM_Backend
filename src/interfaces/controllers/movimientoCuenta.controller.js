@@ -5,9 +5,10 @@ import { calcularInteresesUseCase } from "../../application/usecases/movimientos
 import {registrarMovimientoTipoDosUseCase} from "../../application/usecases/pagos/registrarMovimientoTipoDosUseCase.js"
 
 import ValidationError from "../../errors/Validation.error.js";
+import { estadoCuentaRepository } from "../../infrastructure/repositories/estadoCuenta.repository.js";
 
 export const registrarMovimientoController = async (req, res) => {
-  
+  try {
     const {
       identificadorTendero,
       monto,
@@ -16,11 +17,10 @@ export const registrarMovimientoController = async (req, res) => {
       idMedioPago,
       nroFacturaAlpina,
       telefonoTransportista,
-      tipoMovimiento, // 1 = débito, 2 = crédito
-      Intereses,
-      InteresesMora,
-      Fees
+      tipoMovimiento // 1 = débito, 2 = crédito
     } = req.body;
+
+    console.log("🟡 Body recibido en controlador:", req.body);
 
     const resultado = await registrarMovimientoUseCase({
       identificadorTendero,
@@ -30,14 +30,19 @@ export const registrarMovimientoController = async (req, res) => {
       idMedioPago,
       nroFacturaAlpina,
       telefonoTransportista,
-      tipoMovimiento,
-      Intereses,
-      InteresesMora,
-      Fees
+      tipoMovimiento
     });
 
     res.status(201).json(resultado);
-  
+  } catch (error) {
+    console.error("❌ Error en registrarMovimientoController:", error.message);
+
+    if (error instanceof ValidationError) {
+      return res.status(400).json({ mensaje: error.message });
+    }
+
+    res.status(500).json({ mensaje: "Error interno al registrar movimiento" });
+  }
 };
 
 
@@ -68,8 +73,8 @@ export const calcularInteresesController = async (req, res) => {
   try {
     const { IdMovimiento } = req.params;
     const { nuevoMonto } = req.body;
-    if (!IdMovimiento) {
-      return res.status(400).json({ error: "Faltan parámetros obligatorios: IdMovimiento" });
+    if (!IdMovimiento || !nuevoMonto) {
+      return res.status(400).json({ error: "Faltan parámetros obligatorios: nroFacturaAlpina y nuevoMonto" });
     } 
   
     const resultado = await calcularInteresesUseCase(parseInt(IdMovimiento), nuevoMonto);
@@ -95,3 +100,45 @@ export const actualizarAbonoMovimiento = async (req, res) => {
     res.status(500).json({ error: "Error al calcular intereses" });
   } 
 }
+
+export const actualizarTelefonoTransportistaController = async (req, res) => {
+  try {
+    const { identificadorTendero, telefonoTransportista } = req.body;
+
+    console.log("📞 Actualizando teléfono - Body recibido:", req.body);
+
+    if (!identificadorTendero || !telefonoTransportista) {
+      return res.status(400).json({
+        success: false,
+        error: "Faltan datos requeridos: identificadorTendero y telefonoTransportista"
+      });
+    }
+
+    const resultado = await estadoCuentaRepository.actualizarTelefonoTransportista(
+      identificadorTendero,
+      telefonoTransportista
+    );
+
+    console.log("✅ Teléfono actualizado en BD:", resultado);
+
+    res.json({
+      success: true,
+      mensaje: resultado.mensaje,
+      rowsAffected: resultado.rowsAffected
+    });
+  } catch (error) {
+    console.error("❌ Error al actualizar teléfono:", error.message);
+
+    if (error.message.includes("Usuario no encontrado")) {
+      return res.status(404).json({
+        success: false,
+        error: error.message
+      });
+    }
+
+    res.status(500).json({
+      success: false,
+      error: "Error al actualizar el teléfono del transportista"
+    });
+  }
+};
