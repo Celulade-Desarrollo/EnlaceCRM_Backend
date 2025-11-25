@@ -12,10 +12,7 @@ export const estadoCuentaRepository = {
     fechaPagoProgramado,
     idMedioPago,
     nroFacturaAlpina,
-    telefonoTransportista,
-    Intereses,
-    Fees,
-    InteresesMora
+    telefonoTransportista
   }) {
     const pool = await poolPromise;
 
@@ -43,10 +40,7 @@ export const estadoCuentaRepository = {
         FechaPagoProgramado,
         IdMedioPago,
         NroFacturaAlpina,
-        TelefonoTransportista,
-        Intereses,
-        Fees,
-        InteresesMora
+        TelefonoTransportista
       )
       VALUES (
         @idUsuarioFinal,
@@ -57,10 +51,7 @@ export const estadoCuentaRepository = {
         @fechaProgramada,
         @idMedioPago,
         @nroFacturaAlpina,
-        @telefonoTransportista,
-        @Intereses,
-        @Fees,
-        @InteresesMora
+        @telefonoTransportista
       )
     `;
 
@@ -74,10 +65,6 @@ export const estadoCuentaRepository = {
       .input("idMedioPago", sql.Int, idMedioPago || null)
       .input("nroFacturaAlpina", sql.VarChar, nroFacturaAlpina || null)
       .input("telefonoTransportista", sql.VarChar, telefonoTransportista || null)
-      .input("Intereses", sql.Int, Intereses)
-      .input("Fees", sql.Int, Fees)
-      .input("InteresesMora", sql.Int, InteresesMora)
-
       .query(query);
       
     return { mensaje: "Pago registrado exitosamente" };
@@ -91,10 +78,7 @@ export const estadoCuentaRepository = {
     idMedioPago,
     nroFacturaAlpina,
     telefonoTransportista,
-    tipoMovimiento,
-    Intereses,
-    Fees,
-    InteresesMora
+    tipoMovimiento
   }) {
     const pool = await poolPromise;
     const transaction = new sql.Transaction(pool);
@@ -126,9 +110,6 @@ export const estadoCuentaRepository = {
         .input("idMedioPago", sql.Int, idMedioPago || null)
         .input("nroFacturaAlpina", sql.VarChar, nroFacturaAlpina || null)
         .input("telefonoTransportista", sql.VarChar, telefonoTransportista || null)
-        .input("Intereses", sql.Int, Intereses)
-        .input("Fees", sql.Int, Fees)
-        .input("InteresesMora", sql.Int, InteresesMora)
         .query(`
           INSERT INTO EstadoCuentaMovimientos (
             IdUsuarioFinal,
@@ -139,10 +120,7 @@ export const estadoCuentaRepository = {
             FechaPagoProgramado,
             IdMedioPago,
             NroFacturaAlpina,
-            TelefonoTransportista,
-            Intereses,
-            Fees,
-            InteresesMora
+            TelefonoTransportista
           )
           VALUES (
             @idUsuarioFinal,
@@ -153,10 +131,7 @@ export const estadoCuentaRepository = {
             @fechaProgramada,
             @idMedioPago,
             @nroFacturaAlpina,
-            @telefonoTransportista,
-            @Intereses,
-            @Fees,
-            @InteresesMora
+            @telefonoTransportista
           )
         `);
 
@@ -357,6 +332,51 @@ export const estadoCuentaRepository = {
           throw error;
       }
   },
+
+  async actualizarTelefonoTransportista(identificadorTendero, telefonoTransportista) {
+  try {
+    const pool = await poolPromise;
+    
+    // Buscar el IdUsuarioFinal por la cédula
+    const resultUsuario = await pool.request()
+      .input("identificador", sql.VarChar, identificadorTendero)
+      .query(`
+        SELECT IdUsuarioFinal
+        FROM UsuarioFinal
+        WHERE Cedula_Usuario = @identificador
+      `);
+
+    if (!resultUsuario.recordset.length) {
+      throw new Error("Usuario no encontrado con ese identificador.");
+    }
+
+    const idUsuarioFinal = resultUsuario.recordset[0].IdUsuarioFinal;
+
+    // Actualizar el ÚLTIMO movimiento del usuario
+    const result = await pool.request()
+      .input("idUsuarioFinal", sql.Int, idUsuarioFinal)
+      .input("telefonoTransportista", sql.VarChar, telefonoTransportista)
+      .query(`
+        UPDATE EstadoCuentaMovimientos
+        SET TelefonoTransportista = @telefonoTransportista
+        WHERE IdUsuarioFinal = @idUsuarioFinal
+          AND IdMovimiento = (
+            SELECT TOP 1 IdMovimiento
+            FROM EstadoCuentaMovimientos
+            WHERE IdUsuarioFinal = @idUsuarioFinal
+            ORDER BY FechaHoraMovimiento DESC
+          )
+      `);
+
+    return { 
+      mensaje: "Teléfono actualizado exitosamente",
+      rowsAffected: result.rowsAffected[0]
+    };
+  } catch (error) {
+    console.error("Error en actualizarTelefonoTransportista:", error.message);
+    throw error;
+  }
+},
   
   async actualizarMontoMovimiento(IdMovimiento, nuevoMonto) {
       try {

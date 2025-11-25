@@ -1,7 +1,8 @@
 import express from "express";
-import { registrarMovimientoController, getMovimientosByCliente, listarMovimientosParaEnlaceController, calcularInteresesController, actualizarAbonoMovimiento } from "../controllers/movimientoCuenta.controller.js";
+import { registrarMovimientoController, getMovimientosByCliente, listarMovimientosParaEnlaceController, calcularInteresesController, actualizarAbonoMovimiento,actualizarTelefonoTransportistaController } from "../controllers/movimientoCuenta.controller.js";
 
 import { authMiddleware } from "../middleware/token-middleware.js";
+
 
 const router = express.Router();
 
@@ -273,5 +274,6 @@ router.put("/api/actualizarIntereses/:IdMovimiento", calcularInteresesController
  */
 router.put("/api/actualizarAbono/:IdMovimiento", actualizarAbonoMovimiento);
 
+router.put("/api/movimientos/actualizar-telefono", actualizarTelefonoTransportistaController);
 
 export default router;
