@@ -6,6 +6,7 @@ import {registrarMovimientoTipoDosUseCase} from "../../application/usecases/pago
 
 import ValidationError from "../../errors/Validation.error.js";
 import { estadoCuentaRepository } from "../../infrastructure/repositories/estadoCuenta.repository.js";
+import { consultarRecaudoTransportistaUseCase } from "../../application/usecases/transportista/consultarRecaudoTransportistaUseCase.js";
 
 export const registrarMovimientoController = async (req, res) => {
   try {
@@ -69,6 +70,18 @@ export const listarMovimientosParaEnlaceController = async (req, res) => {
   }
 }
 
+export const listarRecaudoParaTransportistaController = async (req, res) => {
+  try {
+    const {numTransportista} = req.params;
+
+    const recaudo = await consultarRecaudoTransportistaUseCase(numTransportista);
+    res.json(recaudo);
+  } catch (error) {
+    console.error("Error al listar recaudo para transportista:", error.message);
+    res.status(500).json({ error: "Error al listar recaudo" });
+  }
+}
+
 export const calcularInteresesController = async (req, res) => {
   try {
     const { IdMovimiento } = req.params;
@@ -119,7 +132,7 @@ export const actualizarTelefonoTransportistaController = async (req, res) => {
       telefonoTransportista
     );
 
-    console.log("✅ Teléfono actualizado en BD:", resultado);
+    console.log("Teléfono actualizado en BD:", resultado);
 
     res.json({
       success: true,
@@ -127,7 +140,7 @@ export const actualizarTelefonoTransportistaController = async (req, res) => {
       rowsAffected: resultado.rowsAffected
     });
   } catch (error) {
-    console.error("❌ Error al actualizar teléfono:", error.message);
+    console.error("Error al actualizar teléfono:", error.message);
 
     if (error.message.includes("Usuario no encontrado")) {
       return res.status(404).json({

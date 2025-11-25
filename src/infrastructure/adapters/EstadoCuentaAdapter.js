@@ -53,4 +53,8 @@ export class EstadoCuentaAdapter extends EstadoCuentaPort {
   async traerPorIdMovimiento(IdMovimiento){
     return await estadoCuentaRepository.traerPorIdMovimiento(IdMovimiento);
   }
+
+  async consultarRecaudoTransportista(numTransportista) {
+    return await estadoCuentaRepository.consultarRecaudoTransportista(numTransportista);
+  }
 }

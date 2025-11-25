@@ -51,5 +51,9 @@ export class EstadoCuentaPort {
   async traerPorIdMovimiento(IdMovimiento){
     throw new Error("Method not implemented")
   }
+
+  async consultarRecaudoTransportista(numTransportista) {
+    throw new Error("Method not implemented")
+  }
 }
 
