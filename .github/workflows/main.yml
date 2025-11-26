@@ -1,26 +1,40 @@
-name: Deploy EnlaceCRM backend en servidor Ubuntu automático
+name: Deploy EnlaceCRM backend automático
 
 on:
   push:
-    branches: [main]
+    branches: [main, develop]
 
 jobs:
-  deploy:
-    runs-on: self-hosted
 
+  deploy-main:
+    if: github.ref == 'refs/heads/main'
+    runs-on: self-hosted
     steps:
-      - name: Actualizar repositorio en ruta real
+      - name: Actualizar repositorio main
         run: |
           cd /home/s-appadm/EnlaceCRM_Backend
           git reset --hard
           git pull origin main
 
-      - name: Auto deploy con Docker
+      - name: Docker deploy main
         run: |
           cd /home/s-appadm/EnlaceCRM_Backend
-          git pull origin main
           docker compose down
           docker compose up -d --build
 
 
+  deploy-develop:
+    if: github.ref == 'refs/heads/develop'
+    runs-on: self-hosted
+    steps:
+      - name: Actualizar repositorio develop
+        run: |
+          cd /home/s-appadm/EnlaceCRM_Backend
+          git reset --hard
+          git pull origin develop
 
+      - name: Docker deploy develop
+        run: |
+          cd /home/s-appadm/EnlaceCRM_Backend
+          docker compose -f docker-compose-develop.yml down
+          docker compose -f docker-compose-develop.yml up -d --build
