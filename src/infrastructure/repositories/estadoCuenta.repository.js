@@ -78,7 +78,11 @@ export const estadoCuentaRepository = {
     idMedioPago,
     nroFacturaAlpina,
     telefonoTransportista,
-    tipoMovimiento
+    tipoMovimiento,
+    Intereses,
+    InteresesMora,
+    Fees
+
   }) {
     const pool = await poolPromise;
     const transaction = new sql.Transaction(pool);
@@ -110,6 +114,10 @@ export const estadoCuentaRepository = {
         .input("idMedioPago", sql.Int, idMedioPago || null)
         .input("nroFacturaAlpina", sql.VarChar, nroFacturaAlpina || null)
         .input("telefonoTransportista", sql.VarChar, telefonoTransportista || null)
+        .input("Intereses", sql.Int(), Intereses || 0)
+        .input("InteresesMora", sql.Int(), InteresesMora || 0)
+        .input("Fees", sql.Int(), Fees || 0)
+
         .query(`
           INSERT INTO EstadoCuentaMovimientos (
             IdUsuarioFinal,
@@ -120,7 +128,10 @@ export const estadoCuentaRepository = {
             FechaPagoProgramado,
             IdMedioPago,
             NroFacturaAlpina,
-            TelefonoTransportista
+            TelefonoTransportista,
+            Intereses,
+            InteresesMora,
+            Fees
           )
           VALUES (
             @idUsuarioFinal,
@@ -131,7 +142,10 @@ export const estadoCuentaRepository = {
             @fechaProgramada,
             @idMedioPago,
             @nroFacturaAlpina,
-            @telefonoTransportista
+            @telefonoTransportista,
+            @Intereses,
+            @InteresesMora,
+            @Fees
           )
         `);
 
