@@ -107,12 +107,13 @@ export const calcularInteresesController = async (req, res) => {
 export const actualizarAbonoMovimiento = async (req, res) => {
   try {
     const { IdMovimiento } = req.params;
-    const { nuevoMonto } = req.body;
+    const { nuevoMonto, Intereses, Fees } = req.body;
+
     if (!IdMovimiento || !nuevoMonto) {
       return res.status(400).json({ error: "Faltan parámetros obligatorios: nroFacturaAlpina y nuevoMonto" });
     } 
 
-    const resultado = await registrarMovimientoTipoDosUseCase((IdMovimiento), nuevoMonto);
+    const resultado = await registrarMovimientoTipoDosUseCase((IdMovimiento), nuevoMonto, Intereses, Fees);
     res.json(resultado);
   } catch (error) {
     console.error("Error al actualizar el abono:", error.message);

@@ -331,15 +331,19 @@ export const estadoCuentaRepository = {
       }
   },
 
-  async registrarMovimientoAbono(IdMovimiento, AbonoUsuario){
+  async registrarMovimientoAbono(IdMovimiento, AbonoUsuario, Intereses, Fees) {
   try {
           const pool = await poolPromise;
           const result = await pool.request()
               .input("IdMovimiento", sql.Int, IdMovimiento)
               .input("AbonoUsuario", sql.Int, AbonoUsuario)
+              .input("Intereses", sql.Int, Intereses)
+              .input("Fees", sql.Int, Fees)
               .query(`
                   UPDATE EstadoCuentaMovimientos 
                   SET AbonoUsuario = @AbonoUsuario
+                      , Intereses = @Intereses
+                      , Fees = @Fees
                   WHERE IdMovimiento = @IdMovimiento;`);
           return result.recordset;
       } catch (error) {
