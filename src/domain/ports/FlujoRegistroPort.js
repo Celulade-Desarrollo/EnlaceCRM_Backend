@@ -39,4 +39,8 @@ export class FlujoRegistroPort {
     throw new Error("Method not implemented.");
   }
 
+  async obtenerPorCedulaCliente(cedulaCliente) {
+    throw new Error("Method not implemented.");
+  }
+
 }
