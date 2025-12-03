@@ -42,4 +42,8 @@ export class FlujoRegistroAdapter extends FlujoRegistroPort {
     return await flujoRegistroRepository.obtenerPorNumeroCelular(numeroCelular);
   }
 
+  async obtenerPorCedulaCliente(cedulaCliente) {
+    return await flujoRegistroRepository.obtenerPorCedulaCliente(cedulaCliente);
+  }
+
 }

@@ -18,6 +18,7 @@ import {
 import { buscarUsuarioPorTelefono } from "../middleware/cedula_middleware.js";
 import { sendOTP, verifyOTP } from "../controllers/twilio.controller.js";
 import { authMiddleware } from "../middleware/token-middleware.js";
+import { consultarCedulaController } from "../controllers/flujoRegistro.controller.js";
 
 /**
  * @swagger
@@ -287,6 +288,8 @@ flujoRegistroEnlace.delete("/api/flujoRegistroEnlace/:id", authMiddleware, delet
  *         description: Registro encontrado
  */
 flujoRegistroEnlace.get("/api/flujoRegistroEnlace/num/:Numero_Celular", authMiddleware, getBynumber);
+
+flujoRegistroEnlace.post("/api/flujoRegistroEnlace/consultar-por-cedula/:cedula", consultarCedulaController);
 
 export default flujoRegistroEnlace;
 

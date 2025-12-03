@@ -7,6 +7,7 @@ import { createFlujoRegistroUseCase } from "../../application/usecases/flujoRegi
 import { deleteFlujoRegistroUseCase } from "../../application/usecases/flujoRegistro/DeleteFlujoRegistroUseCase.js";
 import { updateEstadoFlujoRegistro } from "../../application/usecases/flujoRegistro/updateEstadoFlujoRegistroUseCase.js";
 import { consultarCedulaUseCase } from "../../application/usecases/flujoRegistro/consultarCedulaUseCase.js";
+import { getFlujoRegistroPorCedula } from "../../application/usecases/flujoRegistro/getFlujoRegistroPorCedulaUseCase.js";
 
 export async function getAll(req, res) {
   try {
@@ -87,5 +88,17 @@ export async function updateEstadoById(req, res) {
     res.status(200).json({ message: "Registro actualizado correctamente" });
   } catch (err) {
     res.status(500).json({ error: err.message });
+  }
+}
+
+
+export async function consultarCedulaController(req, res) {
+  try {
+    const { cedula } = req.params;
+    const data = await getFlujoRegistroPorCedula(cedula);
+    res.status(200).json(data);
+  } catch (error) {
+    console.error("Error al consultar cédula:", error.message);
+    res.status(500).json({ error: "Error al consultar cédula" });
   }
 }
