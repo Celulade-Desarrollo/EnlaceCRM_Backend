@@ -25,12 +25,11 @@ export async function loginUserAccountUseCase(nbCliente, nbAgenteComercial, toke
         error.status = 400;
         throw error;
     }
-
-    if (cuenta.Estado === 'negado') {
-    const error = new Error("El registro para esta cédula ha sido negado.");
-    error.status = 403;
-    throw error;
-    }   
+    if (cuenta.EstadoFlujo && cuenta.EstadoFlujo.toLowerCase() === 'negado') {
+        const error = new Error("El registro para esta cédula ha sido negado.");
+        error.status = 403;
+        throw error;
+    } 
     /*
 
     const Token = token
