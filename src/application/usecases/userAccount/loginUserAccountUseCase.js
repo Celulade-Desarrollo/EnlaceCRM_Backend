@@ -19,12 +19,18 @@ export async function loginUserAccountUseCase(nbCliente, nbAgenteComercial, toke
     }
 
     const cuenta = await userAccountService.validarCuentaCedula(cedula)
+
     if(!cuenta){
          const error = new Error("No se encontró una cuenta creada para esta cédula.");
         error.status = 400;
         throw error;
     }
 
+    if (cuenta.Estado === 'negado') {
+    const error = new Error("El registro para esta cédula ha sido negado.");
+    error.status = 403;
+    throw error;
+    }   
     /*
 
     const Token = token
