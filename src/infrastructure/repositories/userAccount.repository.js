@@ -76,22 +76,46 @@ export const userAccountRepository = {
         return result.rowsAffected[0];
     },
     
-    async validarCuentaCedula(cedula){
+    async validarCuentaCedula(cedula) {
         const pool = await poolPromise;
-        // Verificar si es un usuario final
         const usuario = await pool
-          .request()
-          .input("Cedula_Usuario", sql.NVarChar, cedula)
-          .query(`            
-                 SELECT 
-                    u.*, 
-                    f.Estado
-                FROM EnlaceCRM.dbo.FlujosRegistroEnlace f
-                LEFT JOIN EnlaceCRM.dbo.UsuarioFinal u ON u.IdFlujoRegistro = f.Id
-                WHERE f.Cedula_Cliente = @Cedula_Usuario
+            .request()
+            .input("Cedula_Usuario", sql.NVarChar, cedula)
+            .query(`
+                SELECT * 
+                FROM EnlaceCRM.dbo.UsuarioFinal u 
+                JOIN EnlaceCRM.dbo.FlujosRegistroEnlace f ON u.IdFlujoRegistro = f.Id
+                WHERE f.Cedula_Cliente  = @Cedula_Usuario
             `);
-          return usuario.recordset[0]
+
+        const data = usuario.recordset[0];
+
+        if (!data) {
+            const flujo = await pool
+                .request()
+                .input("Cedula_Usuario", sql.NVarChar, cedula)
+                .query(`
+                    SELECT Estado 
+                    FROM EnlaceCRM.dbo.FlujosRegistroEnlace
+                    WHERE Cedula_Cliente = @Cedula_Usuario
+                `);
+
+            return { EstadoFlujo: flujo.recordset[0]?.Estado || null };
+        }
+
+        const estado = await pool
+            .request()
+            .input("idFlujo", sql.Int, data.IdFlujoRegistro)
+            .query(`
+                SELECT Estado 
+                FROM EnlaceCRM.dbo.FlujosRegistroEnlace
+                WHERE Id = @idFlujo
+            `);
+        data.EstadoFlujo = estado.recordset[0]?.Estado || null;
+
+        return data;
     },
+
 
     async verificarCuentaSimple(cedula){
         const pool = await poolPromise;
