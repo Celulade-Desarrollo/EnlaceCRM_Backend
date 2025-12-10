@@ -77,44 +77,54 @@ export const userAccountRepository = {
     },
     
     async validarCuentaCedula(cedula) {
-        const pool = await poolPromise;
-        const usuario = await pool
+    const pool = await poolPromise;
+
+    const usuario = await pool
+        .request()
+        .input("Cedula_Usuario", sql.NVarChar, cedula)
+        .query(`
+            SELECT * 
+            FROM EnlaceCRM.dbo.UsuarioFinal u 
+            JOIN EnlaceCRM.dbo.FlujosRegistroEnlace f ON u.IdFlujoRegistro = f.Id
+            WHERE f.Cedula_Cliente = @Cedula_Usuario
+        `);
+
+    const data = usuario.recordset[0];
+
+     // No existe usuario
+    if (!data) {
+        const flujo = await pool
             .request()
             .input("Cedula_Usuario", sql.NVarChar, cedula)
             .query(`
-                SELECT * 
-                FROM EnlaceCRM.dbo.UsuarioFinal u 
-                JOIN EnlaceCRM.dbo.FlujosRegistroEnlace f ON u.IdFlujoRegistro = f.Id
-                WHERE f.Cedula_Cliente  = @Cedula_Usuario
-            `);
-
-        const data = usuario.recordset[0];
-
-        if (!data) {
-            const flujo = await pool
-                .request()
-                .input("Cedula_Usuario", sql.NVarChar, cedula)
-                .query(`
-                    SELECT Estado 
-                    FROM EnlaceCRM.dbo.FlujosRegistroEnlace
-                    WHERE Cedula_Cliente = @Cedula_Usuario
-                `);
-
-            return { EstadoFlujo: flujo.recordset[0]?.Estado || null };
-        }
-
-        const estado = await pool
-            .request()
-            .input("idFlujo", sql.Int, data.IdFlujoRegistro)
-            .query(`
                 SELECT Estado 
                 FROM EnlaceCRM.dbo.FlujosRegistroEnlace
-                WHERE Id = @idFlujo
+                WHERE Cedula_Cliente = @Cedula_Usuario
             `);
-        data.EstadoFlujo = estado.recordset[0]?.Estado || null;
 
-        return data;
-    },
+        // Si no  existe un flujo
+        if (!flujo.recordset[0]) {
+            return null;
+        }
+
+        // Si existe un flujo pero no usuario, devolver solo el estado
+        return { EstadoFlujo: flujo.recordset[0].Estado };
+    }
+
+    // Existe usuario, obtener estado del flujo
+    const estado = await pool
+        .request()
+        .input("idFlujo", sql.Int, data.IdFlujoRegistro)
+        .query(`
+            SELECT Estado 
+            FROM EnlaceCRM.dbo.FlujosRegistroEnlace
+            WHERE Id = @idFlujo
+        `);
+
+    data.EstadoFlujo = estado.recordset[0]?.Estado || null;
+
+    return data;
+},
 
 
     async verificarCuentaSimple(cedula){
