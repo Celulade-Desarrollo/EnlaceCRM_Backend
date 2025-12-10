@@ -126,6 +126,7 @@ export const userAccountRepository = {
     return data;
 },
 
+
     async verificarCuentaSimple(cedula){
         const pool = await poolPromise;
         // Verificar si es un usuario final
