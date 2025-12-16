@@ -190,5 +190,21 @@ async obtenerPorNumeroCelular(numeroCelular) {
     .input("Numero_Celular", sql.NVarChar, numeroCelular)
     .query("SELECT * FROM FlujosRegistroEnlace WHERE Numero_Celular = @Numero_Celular");
   return result.recordset;
+},
+
+async obtenerPorCedulaCliente(cedulaCliente) {
+  const pool = await poolPromise;
+  const result = await pool.request()
+    .input("Cedula_Cliente", sql.NVarChar, cedulaCliente)
+    .query(`
+      SELECT 
+        f.*,
+        s.*
+      FROM FlujosRegistroEnlace f
+      INNER JOIN FlujosRegistroEnlaceScoring s 
+        ON f.id = s.idFlujoRegistro
+      WHERE f.Cedula_Cliente = @Cedula_Cliente
+    `);
+  return result.recordset;
 }
 };
