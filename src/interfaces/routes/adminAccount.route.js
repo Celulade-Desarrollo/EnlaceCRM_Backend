@@ -1,5 +1,5 @@
 import express from 'express';
-import { createUserAccount, obtenerTodosAdmin } from '../controllers/adminAccount.controller.js';
+import { createUserAccount, obtenerTodosAdmin, updateContrasenaController } from '../controllers/adminAccount.controller.js';
 import { authMiddleware } from "../middleware/token-middleware.js";
 
 const adminRouter = express.Router();
@@ -54,5 +54,7 @@ adminRouter.post('/api/admin/create', createUserAccount);
  *         description: Error al obtener los administradores
  */
 adminRouter.get('/api/admin', authMiddleware, obtenerTodosAdmin);
+
+adminRouter.put("/api/admin/updateContrasena", authMiddleware, updateContrasenaController);
 
 export default adminRouter;

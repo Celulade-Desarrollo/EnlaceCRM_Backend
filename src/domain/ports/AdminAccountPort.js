@@ -10,5 +10,9 @@ export class AdminAccountPort{
     async obtenerTodos(){
         throw new Error("Method obtenerTodos not implemented")
     }
+
+    async actualizarContrasena(id, nuevaContrasena){
+        throw new Error("Method actualizarContrasena not implemented")
+    }
 }
 
