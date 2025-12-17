@@ -18,6 +18,7 @@ export async function loginAdminAccountUseCase(Cedula, Password){
     
     const token = await tokenGeneratorService.generateToken({Account: Account.Cedula})
     return {
+        Id: Account.Id,
         token: token,
         tipo: "admin",
         company: Account.Empresa_Admin,
