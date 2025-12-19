@@ -16,6 +16,13 @@ export const estadoCuentaRepository = {
   }) {
     const pool = await poolPromise;
 
+     if (nroFacturaAlpina) {
+        const check = await pool.request()
+          .input("f", sql.VarChar, nroFacturaAlpina)
+          .query("SELECT 1 FROM EstadoCuentaMovimientos WHERE NroFacturaAlpina = @f AND IdTipoMovimiento = 1 AND IdEstadoMovimiento <> 7");
+        if (check.recordset.length > 0) throw new Error(`La factura ${nroFacturaAlpina} ya fue pagada.`);
+      }
+
     const resultUsuario = await pool.request()
       .input("identificador", sql.VarChar, identificadorTendero)
       .query(`
@@ -85,10 +92,16 @@ export const estadoCuentaRepository = {
 
   }) {
     const pool = await poolPromise;
+    if (tipoMovimiento === 1 && nroFacturaAlpina) {
+      const check = await pool.request()
+        .input("f", sql.VarChar, nroFacturaAlpina)
+        .query("SELECT 1 FROM EstadoCuentaMovimientos WHERE NroFacturaAlpina = @f AND IdTipoMovimiento = 1 AND IdEstadoMovimiento <> 7");
+      if (check.recordset.length > 0) throw new Error(`La factura ${nroFacturaAlpina} ya fue pagada.`);
+    }
     const transaction = new sql.Transaction(pool);
 
     try {
-      throw new Error("ERROR_SIMULADO_PROCESAMIENTO: El sistema de aliados no responde");
+      //throw new Error("ERROR_SIMULADO_PROCESAMIENTO: El sistema de aliados no responde");
       await transaction.begin();
 
       const resultUsuario = await pool.request()
@@ -322,6 +335,7 @@ export const estadoCuentaRepository = {
                   UsuarioFinal UF ON ECM.IdUsuarioFinal = UF.IdUsuarioFinal
               WHERE 
                   ECM.IdTipoMovimiento = 1
+                  AND ECM.IdEstadoMovimiento <> 7 
               ORDER BY 
                   ECM.FechaHoraMovimiento DESC
           `);
