@@ -51,7 +51,7 @@ export const registrarMovimientoController = async (req, res) => {
 
     // Si es un error de sistema (como el simulado de aliados) devolvemos 500
     // Enviamos el mensaje del error original para que el front pueda mostrarlo
-    res.status(500).json({ 
+    res.status(500).json({
       mensaje: "Error interno al registrar movimiento",
       detalle: error.message 
     });
