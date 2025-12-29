@@ -13,4 +13,8 @@ export class AdminAccountAdapter extends AdminAccountPort{
     async crearCuenaAdmin(input){
         return await adminAccountRepository.crearCuentaAdmin(input)
     }
+
+    async actualizarContrasena(id, nuevaContrasena){
+        return await adminAccountRepository.actualizarContrasena(id, nuevaContrasena)
+    }
 }

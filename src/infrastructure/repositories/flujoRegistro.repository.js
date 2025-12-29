@@ -94,6 +94,7 @@ export const flujoRegistroRepository = {
     ? "No"
     : input.Monto_Mensual_Deuda.toString()
 )
+.input("Fecha_Envio_Formulario", sql.DateTime, new Date())
       .query(`
         INSERT INTO FlujosRegistroEnlace (
           Estado, Numero_de_Cliente_Alpina, Cedula_Cliente, Autorizacion_Habeas_Data,
@@ -107,7 +108,7 @@ export const flujoRegistroRepository = {
           Operaciones_moneda_extranjera, Declaracion_de_nacionalidad_y_residencia_fiscal_en_Colombia,
           Confirmacion_Identidad,Cedula_Conyuge, Nombre_Conyuge, Apellido_Conyuge, Valor_Bienes, Valor_Deudas,
           Gastos_Mensuales, Deuda_Mensual, Ingresos_Diferentes_Negocio, nbCliente, nbAgenteComercial,Monto_ingresos_diferentes_negocio,
-          Monto_Mensual_Deuda
+          Monto_Mensual_Deuda,fecha_envio_formulario
         ) VALUES (
           @Estado, @Numero_de_Cliente_Alpina, @Cedula_Cliente, @Autorizacion_Habeas_Data,
           @Autorizacion_Medios_de_Contacto, @Numero_Celular, @Correo_Electronico, @Nombres,
@@ -119,7 +120,7 @@ export const flujoRegistroRepository = {
           @Persona_expuesta_politicamente_PEP, @Familiar_expuesto_politicamente_PEP,
           @Operaciones_moneda_extranjera, @Declaracion_de_nacionalidad_y_residencia_fiscal_en_Colombia, @Confirmacion_Identidad, @Cedula_Conyuge, @Nombre_Conyuge,@Apellido_Conyuge,
           @Valor_Bienes, @Valor_Deudas, @Gastos_Mensuales, @Deuda_Mensual, @Ingresos_Diferentes_Negocio,
-          @nbCliente, @nbAgenteComercial,@Monto_ingresos_diferentes_negocio,@Monto_Mensual_Deuda
+          @nbCliente, @nbAgenteComercial,@Monto_ingresos_diferentes_negocio,@Monto_Mensual_Deuda,@Fecha_Envio_Formulario
         )
       `);
   },
