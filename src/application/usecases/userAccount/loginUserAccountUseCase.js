@@ -14,8 +14,15 @@ export async function loginUserAccountUseCase(nbCliente, nbAgenteComercial, toke
     const cuentaNbCliente = await userAccountService.verificarNbCliente(nbCliente)
     if(cuentaNbCliente){
         const error = new Error("Ya existe una solicitud de cuenta en proceso para este cliente.");
-        error.status = 207;
-        throw error;
+         error.status = 207;
+         error.payload = {
+            estado: cuentaNbCliente.Estado,
+            confirmacionIdentidad: cuentaNbCliente.Confirmacion_Identidad,
+         
+         }
+    
+         throw error;
+
     }
 
     const cuenta = await userAccountService.validarCuentaCedula(cedula)
