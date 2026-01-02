@@ -44,7 +44,8 @@ export class FlujoRegistro {
     nbCliente,
     nbAgenteComercial,
     Monto_ingresos_diferentes_negocio,
-    Monto_Mensual_Deuda
+    Monto_Mensual_Deuda,
+    Fecha_Envio_Formulario
   }) {
     this.Numero_de_Cliente_Alpina = Numero_de_Cliente_Alpina;
     this.Cedula_Cliente = Cedula_Cliente;
@@ -91,6 +92,7 @@ export class FlujoRegistro {
     this.nbAgenteComercial = nbAgenteComercial;
     this.Monto_ingresos_diferentes_negocio = Monto_ingresos_diferentes_negocio;
     this.Monto_Mensual_Deuda = Monto_Mensual_Deuda;
+    this.Fecha_Envio_Formulario = Fecha_Envio_Formulario;
   }
   validarDatos() {
     // Aquí puedes agregar lógica para validar los datos de entrada
