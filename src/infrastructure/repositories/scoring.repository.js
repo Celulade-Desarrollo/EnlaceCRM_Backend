@@ -81,6 +81,7 @@ export const scoringRepository = {
           s.Longitud,       -- 👈 agregado
           fr.Nombres, 
           fr.Primer_Apellido
+          fr.Correo_Electronico
         FROM FlujosRegistroEnlaceScoring s
         JOIN FlujosRegistroEnlace fr ON s.IdFlujoRegistro = fr.Id
         WHERE s.Estado = @Estado
