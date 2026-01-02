@@ -80,7 +80,7 @@ export const scoringRepository = {
           s.Latitud,        -- 👈 agregado
           s.Longitud,       -- 👈 agregado
           fr.Nombres, 
-          fr.Primer_Apellido
+          fr.Primer_Apellido,
           fr.Correo_Electronico
         FROM FlujosRegistroEnlaceScoring s
         JOIN FlujosRegistroEnlace fr ON s.IdFlujoRegistro = fr.Id
