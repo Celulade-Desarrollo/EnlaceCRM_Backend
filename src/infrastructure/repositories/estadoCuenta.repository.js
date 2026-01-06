@@ -16,6 +16,13 @@ export const estadoCuentaRepository = {
   }) {
     const pool = await poolPromise;
 
+     if (nroFacturaAlpina) {
+        const check = await pool.request()
+          .input("f", sql.VarChar, nroFacturaAlpina)
+          .query("SELECT 1 FROM EstadoCuentaMovimientos WHERE NroFacturaAlpina = @f AND IdTipoMovimiento = 1 AND IdEstadoMovimiento <> 7");
+        if (check.recordset.length > 0) throw new Error(`La factura ${nroFacturaAlpina} ya fue pagada.`);
+      }
+
     const resultUsuario = await pool.request()
       .input("identificador", sql.VarChar, identificadorTendero)
       .query(`
@@ -85,9 +92,20 @@ export const estadoCuentaRepository = {
 
   }) {
     const pool = await poolPromise;
+    if (tipoMovimiento === 1 && nroFacturaAlpina) {
+      const check = await pool.request()
+        .input("factura", sql.VarChar, nroFacturaAlpina)
+        .query(
+          `SELECT 1 FROM EstadoCuentaMovimientos 
+           WHERE NroFacturaAlpina = @factura AND IdTipoMovimiento = 1
+           AND IdEstadoMovimiento <> 7`
+        );
+      if (check.recordset.length > 0) throw new Error(`La factura ${nroFacturaAlpina} ya fue pagada.`);
+    }
     const transaction = new sql.Transaction(pool);
 
     try {
+      //throw new Error("ERROR_SIMULADO_PROCESAMIENTO: El sistema de aliados no responde");
       await transaction.begin();
 
       const resultUsuario = await pool.request()
@@ -170,27 +188,28 @@ export const estadoCuentaRepository = {
     }
   },
 
-  async obtenerEstadoCuentaPorCedula(cedula) {
-    const pool = await poolPromise;
-    const query = `
-      SELECT m.*
-      FROM EstadoCuentaMovimientos m
-      INNER JOIN UsuarioFinal u ON u.IdUsuarioFinal = m.IdUsuarioFinal
-      WHERE u.Cedula_Usuario = @cedula
-      ORDER BY m.FechaHoraMovimiento DESC
-    `;
+ async obtenerEstadoCuentaPorCedula(cedula) {
+  const pool = await poolPromise;
+  const query = `
+    SELECT m.*
+    FROM EstadoCuentaMovimientos m
+    INNER JOIN UsuarioFinal u ON u.IdUsuarioFinal = m.IdUsuarioFinal
+    WHERE u.Cedula_Usuario = @cedula
+      AND m.IdEstadoMovimiento <> 7  -- 🟢 EXCLUIR MOVIMIENTOS FALLIDOS
+    ORDER BY m.FechaHoraMovimiento DESC
+  `;
 
-    try {
-      const result = await pool.request()
-        .input("cedula", sql.VarChar, cedula)
-        .query(query);
+  try {
+    const result = await pool.request()
+      .input("cedula", sql.VarChar, cedula)
+      .query(query);
 
-      return result.recordset;
-    } catch (error) {
-      console.error('Error al consultar estado de cuenta:', error);
-      throw new Error('No se pudo consultar el estado de cuenta');
-    }
-  },
+    return result.recordset;
+  } catch (error) {
+    console.error('Error al consultar estado de cuenta:', error);
+    throw new Error('No se pudo consultar el estado de cuenta');
+  }
+},
 
   async calcularDeudaTotal(cedula) {
     const pool = await poolPromise;
@@ -320,6 +339,7 @@ export const estadoCuentaRepository = {
                   UsuarioFinal UF ON ECM.IdUsuarioFinal = UF.IdUsuarioFinal
               WHERE 
                   ECM.IdTipoMovimiento = 1
+                  AND ECM.IdEstadoMovimiento <> 7 
               ORDER BY 
                   ECM.FechaHoraMovimiento DESC
           `);
@@ -450,5 +470,37 @@ async consultarRecaudoTransportista(numTransportista) {
     console.error("Error en consultarRecaudoTransportista:", error.message);
     throw error;
   }
+},
+async registrarMovimientoFallido({
+  identificadorTendero,
+  monto,
+  descripcion,
+  nroFacturaAlpina,
+  errorMensaje
+}) {
+  const pool = await poolPromise;
+  
+  // 1. Obtener el ID del usuario
+  const resultUsuario = await pool.request()
+    .input("identificador", sql.VarChar, identificadorTendero)
+    .query("SELECT IdUsuarioFinal FROM UsuarioFinal WHERE Cedula_Usuario = @identificador");
+
+  if (!resultUsuario.recordset.length) return; // Si el usuario no existe, no podemos loguear
+
+  const idUsuarioFinal = resultUsuario.recordset[0].IdUsuarioFinal;
+
+  // 2. Registrar el intento con estado 7 (FALLIDO)
+  // Nota: Concatenamos el error en la descripción para saber qué pasó
+  await pool.request()
+    .input("idUsuarioFinal", sql.Int, idUsuarioFinal)
+    .input("tipoMovimiento", sql.Int, 1) // Pago
+    .input("estadoMovimiento", sql.Int, 7) // <--- ID del estado FALLIDO
+    .input("monto", sql.Decimal(18, 2), monto)
+    .input("descripcion", sql.VarChar, `FALLO: ${descripcion} | Error: ${errorMensaje}`.substring(0, 255))
+    .input("nroFacturaAlpina", sql.VarChar, nroFacturaAlpina || null)
+    .query(`
+      INSERT INTO EstadoCuentaMovimientos (IdUsuarioFinal, IdTipoMovimiento, IdEstadoMovimiento, Monto, Descripcion, NroFacturaAlpina)
+      VALUES (@idUsuarioFinal, @tipoMovimiento, @estadoMovimiento, @monto, @descripcion, @nroFacturaAlpina)
+    `);
 }
 }

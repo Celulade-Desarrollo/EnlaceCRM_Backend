@@ -44,11 +44,17 @@ export const registrarMovimientoController = async (req, res) => {
   } catch (error) {
     console.error("❌ Error en registrarMovimientoController:", error.message);
 
-    if (error instanceof ValidationError) {
+    // Si es un error de validación (factura duplicada) devolvemos 400
+    if (error instanceof ValidationError || error.message.includes("ya fue pagada")) {
       return res.status(400).json({ mensaje: error.message });
     }
 
-    res.status(500).json({ mensaje: "Error interno al registrar movimiento" });
+    // Si es un error de sistema (como el simulado de aliados) devolvemos 500
+    // Enviamos el mensaje del error original para que el front pueda mostrarlo
+    res.status(500).json({
+      mensaje: "Error interno al registrar movimiento",
+      detalle: error.message 
+    });
   }
 };
 
