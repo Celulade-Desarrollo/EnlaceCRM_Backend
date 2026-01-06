@@ -94,8 +94,12 @@ export const estadoCuentaRepository = {
     const pool = await poolPromise;
     if (tipoMovimiento === 1 && nroFacturaAlpina) {
       const check = await pool.request()
-        .input("f", sql.VarChar, nroFacturaAlpina)
-        .query("SELECT 1 FROM EstadoCuentaMovimientos WHERE NroFacturaAlpina = @f AND IdTipoMovimiento = 1 AND IdEstadoMovimiento <> 7");
+        .input("factura", sql.VarChar, nroFacturaAlpina)
+        .query(
+          `SELECT 1 FROM EstadoCuentaMovimientos 
+           WHERE NroFacturaAlpina = @factura AND IdTipoMovimiento = 1
+           AND IdEstadoMovimiento <> 7`
+        );
       if (check.recordset.length > 0) throw new Error(`La factura ${nroFacturaAlpina} ya fue pagada.`);
     }
     const transaction = new sql.Transaction(pool);
