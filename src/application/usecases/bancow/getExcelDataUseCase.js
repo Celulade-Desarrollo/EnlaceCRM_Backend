@@ -61,6 +61,7 @@ export async function getExcelData() {
         Estado: excelData.Estado,
         Latitud: excelData.Latitud,
         Longitud: excelData.Longitud,
+        Fecha_Envio_Formulario: excelData.Fecha_Envio_Formulario
     }));
 
     return excelFullData;

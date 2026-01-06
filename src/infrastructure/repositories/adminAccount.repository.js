@@ -27,6 +27,15 @@ export const adminAccountRepository = {
             .input("Contrasena", sql.NVarChar, input.Contrasena)
             .query(`INSERT INTO Admin (Numero_Admin, Nombre_Admin, Empresa_Admin, Cedula_Admin, Contrasena) VALUES (@Numero_Admin, @Nombre_Admin, @Empresa_Admin, @Cedula_Admin, @Contrasena)`);
         return result.recordset
+    },
+
+    async actualizarContrasena(id, nuevaContrasena){
+        const pool = await poolPromise;
+        const result = await pool.request()
+        .input("Id", sql.Int, id)
+        .input("Contrasena", sql.NVarChar, nuevaContrasena)
+        .query(`UPDATE Admin SET Contrasena = @Contrasena WHERE Id = @Id`);
+        return result.recordset
     }
 }
 
