@@ -26,7 +26,7 @@ import "./infrastructure/jobs/validarMora.job.js";
 import ubicaionesRoutes from "./interfaces/routes/ubicaciones.route.js";
 import movimientoRouter from "./interfaces/routes/movimiento.route.js";
 import validarOperacionRouter from "./interfaces/routes/verificarOperacionExiste.route.js";
-
+import dispersionRouter from "./interfaces/routes/dispersion.route.js";
 // Swagger
 import swaggerDocs from "./config/swagger-config.js";
 
@@ -75,6 +75,7 @@ app.use("/api/movimiento", movimientoRouter);
 app.use(LogsRouter)
 app.use(abonoRouter);
 app.use("/api/abonos",validarOperacionRouter);
+app.use(dispersionRouter);
 
 app.get("/", (req, res) => {
   res.send("Servidor funcionando correctamente");
