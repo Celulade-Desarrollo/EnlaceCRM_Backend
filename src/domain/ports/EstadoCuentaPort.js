@@ -55,5 +55,9 @@ export class EstadoCuentaPort {
   async consultarRecaudoTransportista(numTransportista) {
     throw new Error("Method not implemented")
   }
+
+  async registrarMovimientoFallido(datosFallo) {
+    throw new Error("Method not implemented.");
+  }
 }
 
