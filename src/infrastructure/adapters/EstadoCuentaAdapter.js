@@ -60,5 +60,5 @@ export class EstadoCuentaAdapter extends EstadoCuentaPort {
   
   async registrarMovimientoFallido(datosFallo) {
     return await estadoCuentaRepository.registrarMovimientoFallido(datosFallo);
-  }
+  }  
 }

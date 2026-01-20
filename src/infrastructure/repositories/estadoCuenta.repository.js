@@ -461,10 +461,7 @@ async consultarRecaudoTransportista(numTransportista) {
           Monto,
           NroFacturaAlpina
         FROM EstadoCuentaMovimientos
-        WHERE TelefonoTransportista = @TelefonoTransportista
-          AND CONVERT(date, FechaHoraMovimiento) = CONVERT(date, GETDATE())
-        ORDER BY FechaHoraMovimiento DESC
-      `);
+        WHERE TelefonoTransportista = @TelefonoTransportista`);
     return result.recordset;
   } catch (error) {
     console.error("Error en consultarRecaudoTransportista:", error.message);
@@ -502,5 +499,26 @@ async registrarMovimientoFallido({
       INSERT INTO EstadoCuentaMovimientos (IdUsuarioFinal, IdTipoMovimiento, IdEstadoMovimiento, Monto, Descripcion, NroFacturaAlpina)
       VALUES (@idUsuarioFinal, @tipoMovimiento, @estadoMovimiento, @monto, @descripcion, @nroFacturaAlpina)
     `);
+},
+
+async consultarRecaudoTransportistaPorFecha(fecha){
+  try {
+    const pool = await poolPromise;
+    const result = await pool.request()
+      .input("fecha", sql.Date, fecha)
+      .query(`
+        SELECT
+          FechaHoraMovimiento,
+          Monto,
+          NroFacturaAlpina
+        FROM EstadoCuentaMovimientos
+        WHERE CONVERT(date, FechaHoraMovimiento) = @fecha
+        ORDER BY FechaHoraMovimiento DESC
+      `);
+    return result.recordset;
+  } catch (error) {
+    console.error("Error en consultarRecaudoTransportistaPorFecha:", error.message);
+    throw error;
+  }
 }
-}
+};
