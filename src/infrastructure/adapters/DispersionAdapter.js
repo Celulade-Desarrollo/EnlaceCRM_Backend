@@ -5,4 +5,8 @@ export class DispersionAdapter extends DispersionPort {
   async obtenerDispersiones() {
     return await dispersionRepository.obtenerDispersiones();
   }
+  
+  async actualizarEstadoPorId(id, estado) {
+    return await dispersionRepository.actualizarEstadoPorId(id, estado);
+  }
 }
