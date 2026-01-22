@@ -3,4 +3,3 @@ import { estadoCuentaService } from "../../services/estadoCuentaServiceInstance.
 export async function listarMovimientosParaEnlace() {
     return await estadoCuentaService.obtenerTodosLosMovimientos();
 }
-

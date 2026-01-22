@@ -27,6 +27,7 @@ import "./infrastructure/jobs/procesarRecaudo.job.js";
 import ubicaionesRoutes from "./interfaces/routes/ubicaciones.route.js";
 import movimientoRouter from "./interfaces/routes/movimiento.route.js";
 import validarOperacionRouter from "./interfaces/routes/verificarOperacionExiste.route.js";
+import dispersionRouter from "./interfaces/routes/dispersion.route.js";
 import tesoreria from "./interfaces/routes/tesoreria.route.js";
 
 // Swagger
@@ -37,7 +38,7 @@ const app = express();
 
 // Configuración de CORS
 app.use(cors({
-  origin: ["*"], // Permite frontend dev y swagger
+  origin: ["http://localhost:5173"], // Permite frontend dev y swagger
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
   allowedHeaders: [
     "Content-Type",
@@ -77,6 +78,7 @@ app.use("/api/movimiento", movimientoRouter);
 app.use(LogsRouter)
 app.use(abonoRouter);
 app.use("/api/abonos",validarOperacionRouter);
+app.use(dispersionRouter);
 app.use("/tesoreria", tesoreria)
 
 app.get("/", (req, res) => {
