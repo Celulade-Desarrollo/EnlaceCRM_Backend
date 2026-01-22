@@ -502,5 +502,26 @@ async registrarMovimientoFallido({
       INSERT INTO EstadoCuentaMovimientos (IdUsuarioFinal, IdTipoMovimiento, IdEstadoMovimiento, Monto, Descripcion, NroFacturaAlpina)
       VALUES (@idUsuarioFinal, @tipoMovimiento, @estadoMovimiento, @monto, @descripcion, @nroFacturaAlpina)
     `);
+},
+// NECESARIA PARA LA TABLA DE RECAUDO YA QUE DE ESTA TABLA DEPENDE LA INFORMACION 
+// DE TESORERIA Y SE EJECUTAPOR JOBS DIARIAMENTE AL FINALIZAR EL DIA 
+async consultarRecaudoTransportistaPorFecha(){
+  try {
+    const pool = await poolPromise;
+    const result = await pool.request()
+      .query(`
+        SELECT
+        CONVERT(date, FechaHoraMovimiento) AS fecha,
+        SUM(Monto) AS recaudo
+        FROM EstadoCuentaMovimientos
+        GROUP BY CONVERT(date, FechaHoraMovimiento)
+        ORDER BY Fecha DESC;
+      `);
+    return result.recordset;
+  } catch (error) {
+    console.error("Error en consultarRecaudoTransportistaPorFecha:", error.message);
+    throw error;
+  }
 }
-}
+
+};
