@@ -23,9 +23,11 @@ import adminRouter from "./interfaces/routes/adminAccount.route.js";
 import movimientoCuentaRouter from "./interfaces/routes/movimientoCuenta.route.js";
 import validarMoraRouter from "./interfaces/routes/validarMora.route.js";
 import "./infrastructure/jobs/validarMora.job.js";
+import "./infrastructure/jobs/procesarRecaudo.job.js";
 import ubicaionesRoutes from "./interfaces/routes/ubicaciones.route.js";
 import movimientoRouter from "./interfaces/routes/movimiento.route.js";
 import validarOperacionRouter from "./interfaces/routes/verificarOperacionExiste.route.js";
+import tesoreria from "./interfaces/routes/tesoreria.route.js";
 
 // Swagger
 import swaggerDocs from "./config/swagger-config.js";
@@ -75,6 +77,7 @@ app.use("/api/movimiento", movimientoRouter);
 app.use(LogsRouter)
 app.use(abonoRouter);
 app.use("/api/abonos",validarOperacionRouter);
+app.use("/tesoreria", tesoreria)
 
 app.get("/", (req, res) => {
   res.send("Servidor funcionando correctamente");

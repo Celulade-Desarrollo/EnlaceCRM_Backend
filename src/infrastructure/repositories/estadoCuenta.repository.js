@@ -503,20 +503,19 @@ async registrarMovimientoFallido({
       VALUES (@idUsuarioFinal, @tipoMovimiento, @estadoMovimiento, @monto, @descripcion, @nroFacturaAlpina)
     `);
 },
-
-async consultarRecaudoTransportistaPorFecha(fecha){
+// NECESARIA PARA LA TABLA DE RECAUDO YA QUE DE ESTA TABLA DEPENDE LA INFORMACION 
+// DE TESORERIA Y SE EJECUTAPOR JOBS DIARIAMENTE AL FINALIZAR EL DIA 
+async consultarRecaudoTransportistaPorFecha(){
   try {
     const pool = await poolPromise;
     const result = await pool.request()
-      .input("fecha", sql.Date, fecha)
       .query(`
         SELECT
-          FechaHoraMovimiento,
-          Monto,
-          NroFacturaAlpina
+        CONVERT(date, FechaHoraMovimiento) AS fecha,
+        SUM(Monto) AS recaudo
         FROM EstadoCuentaMovimientos
-        WHERE CONVERT(date, FechaHoraMovimiento) = @fecha
-        ORDER BY FechaHoraMovimiento DESC
+        GROUP BY CONVERT(date, FechaHoraMovimiento)
+        ORDER BY Fecha DESC;
       `);
     return result.recordset;
   } catch (error) {
@@ -524,4 +523,5 @@ async consultarRecaudoTransportistaPorFecha(fecha){
     throw error;
   }
 }
+
 };
