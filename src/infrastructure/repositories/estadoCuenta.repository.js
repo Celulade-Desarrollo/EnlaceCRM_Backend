@@ -461,7 +461,10 @@ async consultarRecaudoTransportista(numTransportista) {
           Monto,
           NroFacturaAlpina
         FROM EstadoCuentaMovimientos
-        WHERE TelefonoTransportista = @TelefonoTransportista`);
+        WHERE TelefonoTransportista = @TelefonoTransportista
+          AND CONVERT(date, FechaHoraMovimiento) = CONVERT(date, GETDATE())
+        ORDER BY FechaHoraMovimiento DESC
+      `);
     return result.recordset;
   } catch (error) {
     console.error("Error en consultarRecaudoTransportista:", error.message);
