@@ -5,7 +5,11 @@ export const dispersionRepository = {
     async obtenerDispersiones() {
         try {
             const pool = await poolPromise;
-            const result = await pool.request().query("SELECT * FROM Tesoreria WHERE tesoreria_status = 1");
+            const result = await pool.request()
+            .query(`
+                SELECT * FROM Tesoreria 
+                WHERE tesoreria_status = 1 AND banco_status = 0 OR banco_status IS NULL
+            `);
             return result.recordset;
         } catch (error) {
             console.error("Error en obtenerDispersiones:", error.message);
