@@ -56,6 +56,10 @@ export class EstadoCuentaPort {
     throw new Error("Method not implemented")
   }
 
+  async consultarRecaudoTransportistaPorFecha(){
+    throw new Error("Method not implemented.")
+  }
+
   async registrarMovimientoFallido(datosFallo) {
     throw new Error("Method not implemented.");
   }
