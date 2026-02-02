@@ -3,6 +3,10 @@ import { flujoRegistroRepository } from "../repositories/flujoRegistro.repositor
 import { FlujoRegistroPort } from "../../domain/ports/FlujoRegistroPort.js";
 
 export class FlujoRegistroAdapter extends FlujoRegistroPort {
+  
+   async obtenerPorCedulaYNbCliente(Cedula_Cliente, nbCliente) {
+    return await flujoRegistroRepository.obtenerPorCedulaYNbCliente(Cedula_Cliente, nbCliente);
+  }
   async verificarDuplicados(input) {
     return await flujoRegistroRepository.verificarDuplicados(input);
   }

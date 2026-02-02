@@ -8,6 +8,25 @@ import { deleteFlujoRegistroUseCase } from "../../application/usecases/flujoRegi
 import { updateEstadoFlujoRegistro } from "../../application/usecases/flujoRegistro/updateEstadoFlujoRegistroUseCase.js";
 import { consultarCedulaUseCase } from "../../application/usecases/flujoRegistro/consultarCedulaUseCase.js";
 import { updateClienteAcepto } from "../../application/usecases/flujoRegistro/updateClienteAproboUseCase.js";
+import { consultarPorCedulaYNbClienteUseCase } from "../../application/usecases/flujoRegistro/consultarPorCedulaYNbClienteUseCase.js";
+
+export const consultarPorCedulaYNbCliente = async (req, res) => {
+  try {
+    const { Cedula_Cliente, nbCliente } = req.body;
+
+    const resultado = await consultarPorCedulaYNbClienteUseCase(Cedula_Cliente, nbCliente);
+
+    if (!resultado) {
+      return res.status(404).json({ message: "No encontrado" });
+    }
+
+    res.status(200).json(resultado);
+
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
 export const getAll = async (req, res) => {
   try {
     const data = await getAllFlujoRegistro();

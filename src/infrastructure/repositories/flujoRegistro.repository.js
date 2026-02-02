@@ -20,6 +20,21 @@ export const flujoRegistroRepository = {
     return result.recordset.length > 0;
   },
 
+  async obtenerPorCedulaYNbCliente(Cedula_Cliente, nbCliente) {
+    const pool = await poolPromise;
+    const result = await pool.request()
+      .input("Cedula_Cliente", sql.NVarChar, Cedula_Cliente)
+      .input("nbCliente", sql.VarChar, nbCliente)
+      .query(`
+        SELECT TOP 1 * 
+        FROM FlujosRegistroEnlace 
+        WHERE Cedula_Cliente = @Cedula_Cliente AND nbCliente = @nbCliente
+      `);
+
+    return result.recordset[0] || null;
+  },
+
+  
   async insertarRegistro(input) {
     const pool = await poolPromise;
 

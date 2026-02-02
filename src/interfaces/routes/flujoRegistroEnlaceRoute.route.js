@@ -12,7 +12,8 @@ import {
   getBynumber,
   getByEstado,
   updateEstadoById,
-  updateClienteAceptoById
+  updateClienteAceptoById,
+  consultarPorCedulaYNbCliente
 } from "../controllers/flujoRegistroEnlace.controller.js";
 
 import { buscarUsuarioPorTelefono } from "../middleware/cedula_middleware.js";
@@ -287,6 +288,51 @@ flujoRegistroEnlace.delete("/api/flujoRegistroEnlace/:id", authMiddleware, delet
  *         description: Registro encontrado
  */
 flujoRegistroEnlace.get("/api/flujoRegistroEnlace/num/:Numero_Celular", authMiddleware, getBynumber);
+
+/**
+ * @swagger
+ * /api/flujoRegistroEnlace/consultarEstadoCupo:
+ *   post:
+ *     summary: Consultar estado y cupo del cliente
+ *     tags: [FlujoRegistroEnlace]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - Cedula_Cliente
+ *               - nbCliente
+ *             example:
+ *               Cedula_Cliente: "1003865182"
+ *               nbCliente: "8100002161"
+ *     responses:
+ *       200:
+ *         description: Estado del cliente consultado correctamente
+ *         content:
+ *           application/json:
+ *             schema:
+ *               oneOf:
+ *                 - type: object
+ *                   example:
+ *                     Cedula_Cliente: "1003865182"
+ *                     nbCliente: "8100002161"
+ *                     Estado: 2
+ *                     SubEstado: "1 Pendiente Enlace"
+ *                 - type: object
+ *                   example:
+ *                     Cedula_Cliente: "123456789"
+ *                     nbCliente: "8100002162"
+ *                     Estado: 3
+ *                     Cupo: 2
+ *       404:
+ *         description: Cliente no encontrado
+ *       500:
+ *         description: Error interno del servidor
+ */
+flujoRegistroEnlace.post("/api/flujoRegistroEnlace/consultarEstadoCupo",consultarPorCedulaYNbCliente);
+
 
 export default flujoRegistroEnlace;
 
