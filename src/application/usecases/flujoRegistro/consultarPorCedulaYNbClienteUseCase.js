@@ -1,43 +1,84 @@
 import { flujoRegistroService } from "../../services/flujoRegistroServiceInstance.js";
 
-export async function consultarPorCedulaYNbClienteUseCase(Cedula_Cliente, nbCliente) {
+export async function consultarPorCedulaYNbClienteUseCase(
+  Cedula_Cliente,
+  nbCliente
+) {
+  const registro =
+    await flujoRegistroService.obtenerEstadoYCupo(
+      Cedula_Cliente,
+      nbCliente
+    );
 
-  const registro = await flujoRegistroService.obtenerPorCedulaYNbCliente(Cedula_Cliente, nbCliente);
-
-  if (!registro) return null;
-
-  let estado = 0, subEstado = null, cupo = null;
-
-  switch (registro.Estado?.toLowerCase()) {
-    case "pendiente":
-      estado = 2;
-      subEstado = "1 Pendiente Enlace"; // o "2 Pendiente Tendero" si tienes ese dato
-      break;
-    case "aprobado":
-      estado = 3;
-      cupo = mapCupo(registro.Rango_de_Ingresos);
-      break;
-    case "bloqueo":
-      estado = 4;
-      break;
-    case "no aprobado":
-      estado = 1;
-      break;
-    default:
-      estado = 0;
+  if (!registro) {
+    return {
+      Cedula_Cliente,
+      nbCliente,
+      Estado: 0
+    };
   }
 
-  const resultado = {
+  let estado = 0;
+  let subEstado = null;
+  let cupo = null;
+
+  // BLOQUEO
+  if (registro.BloqueoPorMora === 1) {
+    estado = 4;
+  }
+
+  //APROBADO 
+  else if (registro.CupoDisponible > 0) {
+    estado = 3;
+    cupo = calcularCupo(registro.CupoDisponible);
+  }
+
+  // en APROBACIÓN
+ else {
+  estado = 2;
+
+  const scoring =
+    await flujoRegistroService.obtenerScoringPorFlujo(
+      registro.Id
+    );
+
+  //Subestado 1: Pendiente Enlace
+  if (!scoring) {
+    subEstado = "1 Pendiente Enlace";
+  } else {
+    const banco =
+      await flujoRegistroService.obtenerBancoPorFlujo(
+        registro.Id
+      );
+
+    const estadoScoring = scoring.Estado?.toLowerCase();
+
+    // 🔹 Subestado 2: Pendiente Tendero
+    if (
+      estadoScoring !== "confirmado" &&
+      (!banco || banco.Pagare_Digital_Firmado !== "si")
+    ) {
+      subEstado = "2 Pendiente Tendero";
+    } else {
+      // scoring confirmado, pero aún no hay usuario final
+      subEstado = "1 Pendiente Enlace";
+    }
+  }
+}
+
+  const response = {
     Cedula_Cliente: registro.Cedula_Cliente,
     nbCliente: registro.nbCliente,
-    Estado: estado,
+    Estado: estado
   };
 
-  if (estado === 2) resultado.SubEstado = subEstado;
-  if (estado === 3) resultado.Cupo = cupo;
+  if (estado === 2) response.SubEstado = subEstado;
+  if (estado === 3) response.Cupo = cupo;
 
-  return resultado;
+  return response;
 }
+
+
 
 function calcularCupo(valor) {
   if (valor >= 40000 && valor <= 50000) return 1;

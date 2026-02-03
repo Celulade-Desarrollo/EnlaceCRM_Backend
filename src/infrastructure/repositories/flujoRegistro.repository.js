@@ -34,7 +34,58 @@ export const flujoRegistroRepository = {
     return result.recordset[0] || null;
   },
 
-  
+  async obtenerEstadoYCupo(Cedula_Cliente, nbCliente) {
+  const pool = await poolPromise;
+
+  const result = await pool.request()
+    .input("Cedula_Cliente", sql.NVarChar, Cedula_Cliente)
+    .input("nbCliente", sql.VarChar, nbCliente)
+    .query(`
+      SELECT TOP 1
+        fre.Id,
+        fre.Cedula_Cliente,
+        fre.nbCliente,
+        fre.Estado,
+        uf.CupoDisponible,
+        uf.BloqueoPorMora
+      FROM FlujosRegistroEnlace fre
+      LEFT JOIN UsuarioFinal uf
+        ON uf.IdFlujoRegistro = fre.Id
+      WHERE fre.Cedula_Cliente = @Cedula_Cliente
+        AND fre.nbCliente = @nbCliente
+    `);
+
+  return result.recordset[0] || null;
+},
+async obtenerScoringPorFlujo(idFlujoRegistro) {
+  const pool = await poolPromise;
+
+  const result = await pool.request()
+    .input("IdFlujoRegistro", sql.Int, idFlujoRegistro)
+    .query(`
+      SELECT TOP 1 *
+      FROM FlujosRegistroEnlaceScoring
+      WHERE IdFlujoRegistro = @IdFlujoRegistro
+    `);
+
+  return result.recordset[0] || null;
+},
+async obtenerBancoPorFlujo(idFlujoRegistro) {
+  const pool = await poolPromise;
+
+  const result = await pool.request()
+    .input("IdFlujoRegistro", sql.Int, idFlujoRegistro)
+    .query(`
+      SELECT TOP 1 *
+      FROM FlujosRegistroBancoW
+      WHERE IdFlujoRegistro = @IdFlujoRegistro
+    `);
+
+  return result.recordset[0] || null;
+},
+
+
+
   async insertarRegistro(input) {
     const pool = await poolPromise;
 

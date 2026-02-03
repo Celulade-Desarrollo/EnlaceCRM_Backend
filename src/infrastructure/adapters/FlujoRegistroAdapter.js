@@ -7,6 +7,27 @@ export class FlujoRegistroAdapter extends FlujoRegistroPort {
    async obtenerPorCedulaYNbCliente(Cedula_Cliente, nbCliente) {
     return await flujoRegistroRepository.obtenerPorCedulaYNbCliente(Cedula_Cliente, nbCliente);
   }
+  async obtenerEstadoYCupo(Cedula_Cliente, nbCliente) {
+  return await flujoRegistroRepository.obtenerEstadoYCupo(
+    Cedula_Cliente,
+    nbCliente
+  );
+}
+
+async obtenerScoringPorFlujo(idFlujoRegistro) {
+  return await flujoRegistroRepository.obtenerScoringPorFlujo(
+    idFlujoRegistro
+  );
+}
+
+async obtenerBancoPorFlujo(idFlujoRegistro) {
+  return await flujoRegistroRepository.obtenerBancoPorFlujo(
+    idFlujoRegistro
+  );
+}
+
+
+
   async verificarDuplicados(input) {
     return await flujoRegistroRepository.verificarDuplicados(input);
   }
