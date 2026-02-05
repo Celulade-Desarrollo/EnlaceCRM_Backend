@@ -12,9 +12,9 @@ import { consultarPorCedulaYNbClienteUseCase } from "../../application/usecases/
 
 export const consultarPorCedulaYNbCliente = async (req, res) => {
   try {
-    const { Cedula_Cliente, nbCliente } = req.body;
+    const {  nbCliente } = req.body;
 
-    const resultado = await consultarPorCedulaYNbClienteUseCase(Cedula_Cliente, nbCliente);
+    const resultado = await consultarPorCedulaYNbClienteUseCase(nbCliente);
 
     if (!resultado) {
       return res.status(404).json({ message: "No encontrado" });

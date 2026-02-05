@@ -4,11 +4,11 @@ import { FlujoRegistroPort } from "../../domain/ports/FlujoRegistroPort.js";
 
 export class FlujoRegistroAdapter extends FlujoRegistroPort {
   
-   async obtenerPorCedulaYNbCliente(Cedula_Cliente, nbCliente) {
-    return await flujoRegistroRepository.obtenerPorCedulaYNbCliente(Cedula_Cliente, nbCliente);
+   async obtenerPorCedulaYNbCliente( nbCliente) {
+    return await flujoRegistroRepository.obtenerPorCedulaYNbCliente(nbCliente);
   }
-  async obtenerEstadoYCupo(Cedula_Cliente, nbCliente) {
-  return await flujoRegistroRepository.obtenerEstadoYCupo(Cedula_Cliente,nbCliente);
+  async obtenerEstadoYCupo(nbCliente) {
+  return await flujoRegistroRepository.obtenerEstadoYCupo(nbCliente);
 }
 
 async obtenerScoringPorFlujo(idFlujoRegistro) {

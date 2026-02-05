@@ -302,10 +302,8 @@ flujoRegistroEnlace.get("/api/flujoRegistroEnlace/num/:Numero_Celular", authMidd
  *           schema:
  *             type: object
  *             required:
- *               - Cedula_Cliente
  *               - nbCliente
  *             example:
- *               Cedula_Cliente: "1003865182"
  *               nbCliente: "8100002161"
  *     responses:
  *       200:
@@ -316,7 +314,6 @@ flujoRegistroEnlace.get("/api/flujoRegistroEnlace/num/:Numero_Celular", authMidd
  *               oneOf:
  *                 - type: object
  *                   example:
- *                     Cedula_Cliente: "1003865182"
  *                     nbCliente: "8100002161"
  *                     Estado: 2
  *                     SubEstado: "1 Pendiente Enlace"

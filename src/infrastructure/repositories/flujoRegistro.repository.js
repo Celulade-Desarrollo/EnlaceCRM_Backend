@@ -20,25 +20,23 @@ export const flujoRegistroRepository = {
     return result.recordset.length > 0;
   },
 
-  async obtenerPorCedulaYNbCliente(Cedula_Cliente, nbCliente) {
+  async obtenerPorCedulaYNbCliente(nbCliente) {
     const pool = await poolPromise;
     const result = await pool.request()
-      .input("Cedula_Cliente", sql.NVarChar, Cedula_Cliente)
       .input("nbCliente", sql.VarChar, nbCliente)
       .query(`
         SELECT TOP 1 * 
-        FROM FlujosRegistroEnlace 
-        WHERE Cedula_Cliente = @Cedula_Cliente AND nbCliente = @nbCliente
+        FROM FlujosRegistroEnlace
+        WHERE nbCliente = @nbCliente
       `);
 
     return result.recordset[0] || null;
   },
 
-  async obtenerEstadoYCupo(Cedula_Cliente, nbCliente) {
+  async obtenerEstadoYCupo(nbCliente) {
   const pool = await poolPromise;
 
   const result = await pool.request()
-    .input("Cedula_Cliente", sql.NVarChar, Cedula_Cliente)
     .input("nbCliente", sql.VarChar, nbCliente)
     .query(`
       SELECT TOP 1
@@ -46,13 +44,15 @@ export const flujoRegistroRepository = {
         fre.Cedula_Cliente,
         fre.nbCliente,
         fre.Estado,
+        fre.Nombres,
+        fre.Primer_Apellido,
+        fre.[2do_Apellido_opcional],
         uf.CupoDisponible,
         uf.BloqueoPorMora
       FROM FlujosRegistroEnlace fre
       LEFT JOIN UsuarioFinal uf
         ON uf.IdFlujoRegistro = fre.Id
-      WHERE fre.Cedula_Cliente = @Cedula_Cliente
-        AND fre.nbCliente = @nbCliente
+      WHERE fre.nbCliente = @nbCliente
     `);
 
   return result.recordset[0] || null;

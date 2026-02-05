@@ -15,11 +15,9 @@ function calcularCupo(valor) {
 };
 
 export async function consultarPorCedulaYNbClienteUseCase(
-  Cedula_Cliente,
   nbCliente
 ) {
   const registro = await flujoRegistroService.obtenerEstadoYCupo(
-      Cedula_Cliente,
       nbCliente
     );
     console.log(`registro-`,registro)
@@ -37,7 +35,7 @@ export async function consultarPorCedulaYNbClienteUseCase(
   let cupo = null;
 
   // BLOQUEO
-  if (registro.BloqueoPorMora === 1) {
+  if (registro.BloqueoPorMora === true) {
     estado = 4;
   }
   
@@ -84,8 +82,10 @@ export async function consultarPorCedulaYNbClienteUseCase(
 }
 
   const response = {
-    Cedula_Cliente: registro.Cedula_Cliente,
     nbCliente: registro.nbCliente,
+    Nombres: registro.Nombres,
+    Primer_Apellido: registro.Primer_Apellido,
+    Segundo_Apellido_opcional: registro.Segundo_Apellido_opcional,
     Estado: estado
   };
 
