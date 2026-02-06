@@ -13,7 +13,8 @@ import {
   getByEstado,
   updateEstadoById,
   updateClienteAceptoById,
-  consultarPorCedulaYNbCliente
+  consultarPorCedulaYNbCliente,
+  consultarEstadoCupoTodos
 } from "../controllers/flujoRegistroEnlace.controller.js";
 
 import { buscarUsuarioPorTelefono } from "../middleware/cedula_middleware.js";
@@ -329,7 +330,19 @@ flujoRegistroEnlace.get("/api/flujoRegistroEnlace/num/:Numero_Celular", authMidd
  *         description: Error interno del servidor
  */
 flujoRegistroEnlace.post("/api/flujoRegistroEnlace/consultarEstadoCupo",consultarPorCedulaYNbCliente);
-
+/**
+ * @swagger
+ * /api/flujoRegistroEnlace/consultarEstadoCupo/todos:
+ *   get:
+ *     summary: Obtener todos los estados de cupo y subestados
+ *     tags: [FlujoRegistroEnlace]
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Lista de registros
+ */
+flujoRegistroEnlace.get("/api/flujoRegistroEnlace/consultarEstadoCupo/todos",consultarEstadoCupoTodos);
 
 export default flujoRegistroEnlace;
 

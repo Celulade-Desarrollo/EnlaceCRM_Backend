@@ -83,6 +83,7 @@ export async function consultarPorCedulaYNbClienteUseCase(
 
   const response = {
     nbCliente: registro.nbCliente,
+    nombreTienda: registro.Nombre_Tienda,
     Nombres: registro.Nombres,
     Primer_Apellido: registro.Primer_Apellido,
     Segundo_Apellido_opcional: registro.Segundo_Apellido_opcional,
