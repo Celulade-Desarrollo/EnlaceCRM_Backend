@@ -24,7 +24,6 @@ export async function consultarPorCedulaYNbClienteUseCase(
 
   if (!registro) {
     return {
-      Cedula_Cliente,
       nbCliente,
       Estado: 0
     };
@@ -86,7 +85,7 @@ export async function consultarPorCedulaYNbClienteUseCase(
     nombreTienda: registro.Nombre_Tienda,
     Nombres: registro.Nombres,
     Primer_Apellido: registro.Primer_Apellido,
-    Segundo_Apellido_opcional: registro.Segundo_Apellido_opcional,
+    Segundo_Apellido_opcional: registro["2do_Apellido_opcional"],
     Estado: estado
   };
 

@@ -84,26 +84,31 @@ async obtenerBancoPorFlujo(idFlujoRegistro) {
   return result.recordset[0] || null;
 },
 
-  async obtenerEstadoYCupoTodos() {
-    const pool = await poolPromise;
+async obtenerEstadoYCupoTodos() {
+  const pool = await poolPromise;
 
-    const result = await pool.request().query(`
-      SELECT 
-        fre.Id,
-        fre.nbCliente,
-        fre.Nombres,
-        fre.Primer_Apellido,
-        fre.[2do_Apellido_opcional],
-        uf.CupoDisponible,
-        uf.CupoDisponible,
-        uf.BloqueoPorMora
-      FROM FlujosRegistroEnlace fre
-      LEFT JOIN UsuarioFinal uf
-       ON uf.IdFlujoRegistro = fre.Id
-    `);
-    return result.recordset;
-  },
+  const result = await pool.request().query(`
+    SELECT 
+      fre.Id,
+      fre.nbCliente,
+      fre.Nombres,
+      fre.Primer_Apellido,
+      fre.[2do_Apellido_opcional],
+      uf.CupoDisponible,
+      uf.BloqueoPorMora
+    FROM FlujosRegistroEnlace fre
+    OUTER APPLY (
+      SELECT TOP 1
+        uf2.CupoDisponible,
+        uf2.BloqueoPorMora
+      FROM UsuarioFinal uf2
+      WHERE uf2.IdFlujoRegistro = fre.Id
+      ORDER BY uf2.IdUsuarioFinal DESC
+    ) uf
+  `);
 
+  return result.recordset;
+},
 
   async insertarRegistro(input) {
     const pool = await poolPromise;
