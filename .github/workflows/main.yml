@@ -33,8 +33,7 @@ jobs:
           git reset --hard
           git pull origin develop
 
-      - name: Docker deploy develop
+      - name: PM2 deploy develop
         run: |
           cd /home/s-appadm/EnlaceCRM_Backend
-          docker compose -f docker-compose-develop.yml down
-          docker compose -f docker-compose-develop.yml up -d --build
+          pm2 restart develop --update-env
