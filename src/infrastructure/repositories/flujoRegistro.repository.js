@@ -126,6 +126,7 @@ export const flujoRegistroRepository = {
       `);
   },
 
+
   async obtenerTodos() {
     const pool = await poolPromise;
     const result = await pool.request().query("SELECT * FROM FlujosRegistroEnlace");
