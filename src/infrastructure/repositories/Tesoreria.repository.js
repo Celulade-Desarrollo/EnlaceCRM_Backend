@@ -34,6 +34,7 @@ export const tesoreriaRepository = {
                     SET tesoreria_status = @tesoreria_status
                     WHERE id = @id;
                 `);
+                return true;
         } catch (err) {
             console.error("Error al actualizar estado de Tesoreria:", err.message);
             throw err;
@@ -80,6 +81,7 @@ export const tesoreriaRepository = {
                     SET dispersion = @dispersion
                     WHERE id = @id;
                 `);
+                return true;
         } catch (err) {
             console.error("Error al actualizar dispersion:", err.message);
             throw err;
@@ -136,22 +138,21 @@ export const tesoreriaRepository = {
             throw err;
         }
     },
-    async consultarDatosRecaudo() {
-        try {
-            const pool = await poolPromise;
-            const result = await pool.request()
-                .query(`
-                    SELECT fecha, recaudo
-                    FROM Recaudo
-                    WHERE status = 0 OR status IS NULL
-                    ORDER BY fecha DESC;
-                `);
-            return result.recordset;
-        } catch (err) {
-            console.error("Error al consultar datos de recaudo:", err.message);
-            throw err;
-        }
-    },
+async consultarDatosRecaudo() {
+    try {
+        const pool = await poolPromise;
+        const result = await pool.request()
+            .query(`
+                SELECT id, fecha, recaudo, dispersion
+                FROM Tesoreria
+                ORDER BY fecha DESC;
+            `);
+        return result.recordset;
+    } catch (err) {
+        console.error("Error al consultar datos de recaudo:", err.message);
+        throw err;
+    }
+},
     async consultarRegistrosSinDispersion() {
         try {
             const pool = await poolPromise;
