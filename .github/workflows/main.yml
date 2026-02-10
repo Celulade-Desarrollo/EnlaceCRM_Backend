@@ -29,11 +29,11 @@ jobs:
     steps:
       - name: Actualizar repositorio develop
         run: |
-          cd /home/s-appadm/EnlaceCRM_Backend
+          cd /home/s-appadm/EnlaceCRM_Backend_Dev
           git reset --hard
           git pull origin develop
 
       - name: PM2 deploy develop
         run: |
-          cd /home/s-appadm/EnlaceCRM_Backend
+          cd /home/s-appadm/EnlaceCRM_Backend_Dev
           pm2 restart develop --update-env
