@@ -24,6 +24,7 @@ export class FlujoRegistro {
     Direccion,
     Detalles,
     Barrio,
+    Nombre_Tienda,
     Numero_de_neveras,
     Registrado_Camara_Comercio,
     Rango_de_Ingresos,
@@ -71,6 +72,7 @@ export class FlujoRegistro {
     this.Direccion = Direccion;
     this.Detalles = Detalles;
     this.Barrio = Barrio;
+    this.Nombre_Tienda = Nombre_Tienda;
     this.Numero_de_neveras = Numero_de_neveras;
     this.Registrado_Camara_Comercio = Registrado_Camara_Comercio;
     this.Rango_de_Ingresos = Rango_de_Ingresos;
