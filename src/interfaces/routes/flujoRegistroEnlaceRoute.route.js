@@ -12,7 +12,9 @@ import {
   getBynumber,
   getByEstado,
   updateEstadoById,
-  updateClienteAceptoById
+  updateClienteAceptoById,
+  consultarPorCedulaYNbCliente,
+  consultarEstadoCupoTodos
 } from "../controllers/flujoRegistroEnlace.controller.js";
 
 import { buscarUsuarioPorTelefono } from "../middleware/cedula_middleware.js";
@@ -288,5 +290,58 @@ flujoRegistroEnlace.delete("/api/flujoRegistroEnlace/:id", authMiddleware, delet
  */
 flujoRegistroEnlace.get("/api/flujoRegistroEnlace/num/:Numero_Celular", authMiddleware, getBynumber);
 
-export default flujoRegistroEnlace;
+/**
+ * @swagger
+ * /api/flujoRegistroEnlace/consultarEstadoCupo:
+ *   post:
+ *     summary: Consultar estado y cupo del cliente
+ *     tags: [FlujoRegistroEnlace]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - nbCliente
+ *             example:
+ *               nbCliente: "8100002161"
+ *     responses:
+ *       200:
+ *         description: Estado del cliente consultado correctamente
+ *         content:
+ *           application/json:
+ *             schema:
+ *               oneOf:
+ *                 - type: object
+ *                   example:
+ *                     nbCliente: "8100002161"
+ *                     Estado: 2
+ *                     SubEstado: "1 Pendiente Enlace"
+ *                 - type: object
+ *                   example:
+ *                     Cedula_Cliente: "123456789"
+ *                     nbCliente: "8100002162"
+ *                     Estado: 3
+ *                     Cupo: 2
+ *       404:
+ *         description: Cliente no encontrado
+ *       500:
+ *         description: Error interno del servidor
+ */
+flujoRegistroEnlace.post("/api/flujoRegistroEnlace/consultarEstadoCupo",authMiddleware,consultarPorCedulaYNbCliente);
+/**
+ * @swagger
+ * /api/flujoRegistroEnlace/consultarEstadoCupo/todos:
+ *   get:
+ *     summary: Obtener todos los estados de cupo y subestados
+ *     tags: [FlujoRegistroEnlace]
+ *     security:
+ *       - bearerAuth: []
+ *     responses:
+ *       200:
+ *         description: Lista de registros
+ */
+flujoRegistroEnlace.get("/api/flujoRegistroEnlace/consultarEstadoCupo/todos",authMiddleware,consultarEstadoCupoTodos);
 
+export default flujoRegistroEnlace;
