@@ -143,6 +143,7 @@ async obtenerEstadoYCupoTodos() {
       .input("Direccion", sql.NVarChar, input.Direccion)
       .input("Detalles", sql.NVarChar, input.Detalles)
       .input("Barrio", sql.NVarChar, input.Barrio)
+      .input("Nombre_Tienda", sql.NVarChar, input.Nombre_Tienda)
       .input("Numero_de_neveras", sql.NVarChar, input.Numero_de_neveras)
       .input("Registrado_Camara_Comercio", sql.Bit, input.Registrado_Camara_Comercio)
       .input("Rango_de_Ingresos", sql.NVarChar, input.Rango_de_Ingresos)
@@ -193,7 +194,7 @@ async obtenerEstadoYCupoTodos() {
           Pais_de_Nacimiento, Departamento_de_Nacimiento, Nivel_Educativo, Estrato, Grupo_Etnico,
           Declara_Renta, Esta_obligado_a_tener_RUT_por_tu_actividad_economica,
           Ubicacion_del_Negocio_Departamento, Ubicacion_del_Negocio_Ciudad, Direccion, Detalles,
-          Barrio, Numero_de_neveras, Registrado_Camara_Comercio, Rango_de_Ingresos,Ingreso_Operativo_Neto,
+          Barrio,  Nombre_Tienda, Numero_de_neveras, Registrado_Camara_Comercio, Rango_de_Ingresos,Ingreso_Operativo_Neto,
           Persona_expuesta_politicamente_PEP, Familiar_expuesto_politicamente_PEP,
           Operaciones_moneda_extranjera, Declaracion_de_nacionalidad_y_residencia_fiscal_en_Colombia,
           Confirmacion_Identidad,Cedula_Conyuge, Nombre_Conyuge, Apellido_Conyuge, Valor_Bienes, Valor_Deudas,
@@ -206,7 +207,7 @@ async obtenerEstadoYCupoTodos() {
           @Pais_de_Nacimiento, @Departamento_de_Nacimiento, @Nivel_Educativo, @Estrato,
           @Grupo_Etnico, @Declara_Renta, @Esta_obligado_a_tener_RUT,
           @Ubicacion_del_Negocio_Departamento, @Ubicacion_del_Negocio_Ciudad, @Direccion, @Detalles,
-          @Barrio, @Numero_de_neveras, @Registrado_Camara_Comercio, @Rango_de_Ingresos,@Ingreso_Operativo_Neto,
+          @Barrio, @Nombre_Tienda, @Numero_de_neveras, @Registrado_Camara_Comercio, @Rango_de_Ingresos,@Ingreso_Operativo_Neto,
           @Persona_expuesta_politicamente_PEP, @Familiar_expuesto_politicamente_PEP,
           @Operaciones_moneda_extranjera, @Declaracion_de_nacionalidad_y_residencia_fiscal_en_Colombia, @Confirmacion_Identidad, @Cedula_Conyuge, @Nombre_Conyuge,@Apellido_Conyuge,
           @Valor_Bienes, @Valor_Deudas, @Gastos_Mensuales, @Deuda_Mensual, @Ingresos_Diferentes_Negocio,
@@ -214,6 +215,7 @@ async obtenerEstadoYCupoTodos() {
         )
       `);
   },
+
 
   async obtenerTodos() {
     const pool = await poolPromise;
