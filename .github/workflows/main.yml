@@ -29,7 +29,7 @@ jobs:
     steps:
       - name: Actualizar repositorio develop
         run: |
-          cd /home/s-appadm/EnlaceCRM_Backend
+          cd /home/s-appadm/EnlaceCRM_Backend_Dev
           git reset --hard
           git pull origin develop
 
