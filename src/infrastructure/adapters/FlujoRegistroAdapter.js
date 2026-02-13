@@ -3,6 +3,28 @@ import { flujoRegistroRepository } from "../repositories/flujoRegistro.repositor
 import { FlujoRegistroPort } from "../../domain/ports/FlujoRegistroPort.js";
 
 export class FlujoRegistroAdapter extends FlujoRegistroPort {
+  
+  async obtenerPorCedulaYNbCliente( nbCliente) {
+    return await flujoRegistroRepository.obtenerPorCedulaYNbCliente(nbCliente);
+  }
+  async obtenerEstadoYCupo(nbCliente) {
+    return await flujoRegistroRepository.obtenerEstadoYCupo(nbCliente);
+  }
+
+  async obtenerScoringPorFlujo(idFlujoRegistro) {
+    return await flujoRegistroRepository.obtenerScoringPorFlujo(idFlujoRegistro);
+  }
+
+  async obtenerBancoPorFlujo(idFlujoRegistro) {
+    return await flujoRegistroRepository.obtenerBancoPorFlujo(idFlujoRegistro);
+  }
+
+  async obtenerEstadoYCupoTodos() {
+  return await flujoRegistroRepository.obtenerEstadoYCupoTodos();
+  }
+
+
+
   async verificarDuplicados(input) {
     return await flujoRegistroRepository.verificarDuplicados(input);
   }
