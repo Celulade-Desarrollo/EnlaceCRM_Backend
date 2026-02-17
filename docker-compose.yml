@@ -9,9 +9,11 @@ services:
     environment:
       - PORT=3000
     restart: always
-    networks:
+    volumes:
+      - .:/app
+    command: npm start
+    networks: 
       - enlace-net
-
 networks:
   enlace-net:
     external: true
