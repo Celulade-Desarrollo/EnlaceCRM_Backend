@@ -143,8 +143,9 @@ async consultarDatosRecaudo() {
         const pool = await poolPromise;
         const result = await pool.request()
             .query(`
-                SELECT id, fecha, recaudo, dispersion
-                FROM Tesoreria
+                SELECT fecha, recaudo
+                FROM Recaudo
+                WHERE status = 0 OR status IS NULL
                 ORDER BY fecha DESC;
             `);
         return result.recordset;
