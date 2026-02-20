@@ -329,7 +329,7 @@ flujoRegistroEnlace.get("/api/flujoRegistroEnlace/num/:Numero_Celular", authMidd
  *       500:
  *         description: Error interno del servidor
  */
-flujoRegistroEnlace.post("/api/flujoRegistroEnlace/consultarEstadoCupo",consultarPorCedulaYNbCliente);
+flujoRegistroEnlace.post("/api/flujoRegistroEnlace/consultarEstadoCupo",authMiddleware,consultarPorCedulaYNbCliente);
 /**
  * @swagger
  * /api/flujoRegistroEnlace/consultarEstadoCupo/todos:
@@ -342,7 +342,6 @@ flujoRegistroEnlace.post("/api/flujoRegistroEnlace/consultarEstadoCupo",consulta
  *       200:
  *         description: Lista de registros
  */
-flujoRegistroEnlace.get("/api/flujoRegistroEnlace/consultarEstadoCupo/todos",consultarEstadoCupoTodos);
+flujoRegistroEnlace.get("/api/flujoRegistroEnlace/consultarEstadoCupo/todos",authMiddleware,consultarEstadoCupoTodos);
 
 export default flujoRegistroEnlace;
-
