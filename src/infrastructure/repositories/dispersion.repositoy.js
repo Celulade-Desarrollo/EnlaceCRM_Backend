@@ -8,7 +8,7 @@ export const dispersionRepository = {
             const result = await pool.request()
             .query(`
                 SELECT * FROM Tesoreria 
-                WHERE tesoreria_status = 1 AND banco_status = 0 OR banco_status IS NULL
+                WHERE tesoreria_status = 1
              `);
             return result.recordset;
         } catch (error) {

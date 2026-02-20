@@ -94,6 +94,7 @@ export const bancowRepository = {
             fres.Cliente_Acepto,
             fres.Latitud,
             fres.Longitud,
+            fre.Nombre_Tienda,
             frb.Aprobacion_Cupo_sugerido,
             frb.Pagare_Digital_Firmado,
             frb.Pagare_Digital_Enviado,
