@@ -20,6 +20,96 @@ export const flujoRegistroRepository = {
     return result.recordset.length > 0;
   },
 
+  async obtenerPorCedulaYNbCliente(nbCliente) {
+    const pool = await poolPromise;
+    const result = await pool.request()
+      .input("nbCliente", sql.VarChar, nbCliente)
+      .query(`
+        SELECT TOP 1 * 
+        FROM FlujosRegistroEnlace
+        WHERE nbCliente = @nbCliente
+      `);
+
+    return result.recordset[0] || null;
+  },
+
+  async obtenerEstadoYCupo(nbCliente) {
+  const pool = await poolPromise;
+
+  const result = await pool.request()
+    .input("nbCliente", sql.VarChar, nbCliente)
+    .query(`
+      SELECT TOP 1
+        fre.Id,
+        fre.Cedula_Cliente,
+        fre.nbCliente,
+        fre.Estado,
+        fre.Nombres,
+        fre.Primer_Apellido,
+        fre.[2do_Apellido_opcional],
+        uf.CupoDisponible,
+        uf.BloqueoPorMora
+      FROM FlujosRegistroEnlace fre
+      LEFT JOIN UsuarioFinal uf
+        ON uf.IdFlujoRegistro = fre.Id
+      WHERE fre.nbCliente = @nbCliente
+    `);
+
+  return result.recordset[0] || null;
+},
+async obtenerScoringPorFlujo(idFlujoRegistro) {
+  const pool = await poolPromise;
+
+  const result = await pool.request()
+    .input("IdFlujoRegistro", sql.Int, idFlujoRegistro)
+    .query(`
+      SELECT TOP 1 *
+      FROM FlujosRegistroEnlaceScoring
+      WHERE IdFlujoRegistro = @IdFlujoRegistro
+    `);
+
+  return result.recordset[0] || null;
+},
+async obtenerBancoPorFlujo(idFlujoRegistro) {
+  const pool = await poolPromise;
+
+  const result = await pool.request()
+    .input("IdFlujoRegistro", sql.Int, idFlujoRegistro)
+    .query(`
+      SELECT TOP 1 *
+      FROM FlujosRegistroBancoW
+      WHERE IdFlujoRegistro = @IdFlujoRegistro
+    `);
+
+  return result.recordset[0] || null;
+},
+
+async obtenerEstadoYCupoTodos() {
+  const pool = await poolPromise;
+
+  const result = await pool.request().query(`
+    SELECT 
+      fre.Id,
+      fre.nbCliente,
+      fre.Nombres,
+      fre.Primer_Apellido,
+      fre.[2do_Apellido_opcional],
+      uf.CupoDisponible,
+      uf.BloqueoPorMora
+    FROM FlujosRegistroEnlace fre
+    OUTER APPLY (
+      SELECT TOP 1
+        uf2.CupoDisponible,
+        uf2.BloqueoPorMora
+      FROM UsuarioFinal uf2
+      WHERE uf2.IdFlujoRegistro = fre.Id
+      ORDER BY uf2.IdUsuarioFinal DESC
+    ) uf
+  `);
+
+  return result.recordset;
+},
+
   async insertarRegistro(input) {
     const pool = await poolPromise;
 

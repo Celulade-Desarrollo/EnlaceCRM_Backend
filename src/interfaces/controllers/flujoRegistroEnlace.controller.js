@@ -8,6 +8,35 @@ import { deleteFlujoRegistroUseCase } from "../../application/usecases/flujoRegi
 import { updateEstadoFlujoRegistro } from "../../application/usecases/flujoRegistro/updateEstadoFlujoRegistroUseCase.js";
 import { consultarCedulaUseCase } from "../../application/usecases/flujoRegistro/consultarCedulaUseCase.js";
 import { updateClienteAcepto } from "../../application/usecases/flujoRegistro/updateClienteAproboUseCase.js";
+import { consultarPorCedulaYNbClienteUseCase } from "../../application/usecases/flujoRegistro/consultarPorCedulaYNbClienteUseCase.js";
+import { consultarEstadoCupoTodosUseCase } from "../../application/usecases/flujoRegistro/getAllEstadoCupoUseCase.js";
+
+export const consultarPorCedulaYNbCliente = async (req, res) => {
+  try {
+    const {  nbCliente } = req.body;
+
+    const resultado = await consultarPorCedulaYNbClienteUseCase(nbCliente);
+
+    if (!resultado) {
+      return res.status(404).json({ message: "No encontrado" });
+    }
+
+    res.status(200).json(resultado);
+
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
+export const consultarEstadoCupoTodos = async (req, res) => {
+  try {
+    const data = await consultarEstadoCupoTodosUseCase();
+    res.json(data);
+  }catch(err){
+    res.status(500).json({ error: err.message });
+  }
+};
+
 export const getAll = async (req, res) => {
   try {
     const data = await getAllFlujoRegistro();
