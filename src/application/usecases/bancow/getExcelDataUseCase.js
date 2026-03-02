@@ -57,7 +57,7 @@ export async function getExcelData() {
         Cliente_Acepto: excelData.Cliente_Acepto,
         Pagare_Digital_Enviado: excelData.Pagare_Digital_Enviado,
         Pagare_Digital_Firmado: excelData.Pagare_Digital_Firmado,
-        UsuarioAprobado: excelData.UsuarioAprobado,
+        UsuarioCreado: excelData.UsuarioAprobado,
         Estatus: excelData.Estatus,
         Estado: excelData.Estado,
         Latitud: excelData.Latitud,
