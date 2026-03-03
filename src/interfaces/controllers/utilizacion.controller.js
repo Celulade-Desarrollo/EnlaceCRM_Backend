@@ -28,7 +28,6 @@ export const subirInteresesBanco = async (req, res) => {
 export const descargarInteresesAdmin = async (req, res) => {
     try {
         const data = await repo.obtenerTodoParaAdmin();
-        
         if (!data || data.length === 0) {
             return res.status(404).json({ message: "No hay datos para descargar" });
         }

@@ -56,12 +56,12 @@ export const obtenerTodoParaAdmin = async () => {
     try {
         const pool = await poolPromise;
         const result = await pool.request().query(`
-            SELECT 
-                [Cédula], 
-                [Nombre], 
-                [Apellido], 
-                [Código Transacción], 
-                [Factura], 
+            SELECT
+                [Cédula],
+                [Nombre],
+                [Apellido],
+                [Código Transacción],
+                [Factura],
                 FORMAT([Valor], 'C', 'es-CO') AS [Valor],
                 FORMAT([Fecha], 'yyyy-MM-dd') AS [Fecha],
                 CONVERT(VARCHAR, [Hora], 108) AS [Hora],
