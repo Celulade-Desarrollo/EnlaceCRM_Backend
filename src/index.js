@@ -13,7 +13,8 @@ import ubicacionRoutes from "./interfaces/routes/ubicacion.routes.js";
 import alpinaRouter from "./interfaces/routes/alpina.route.js";
 import estadoCuentaRouter from "./interfaces/routes/estadoCuenta.route.js";
 import movimientoGetRouter from "./interfaces/routes/movimientoGet.routes.js";
-import transaccionesRoutes from "./interfaces/routes/transacciones.routes.js"; 
+import transaccionesRoutes from "./interfaces/routes/transacciones.routes.js";
+import utilizacionRouter from "./interfaces/routes/utilizacion.route.js";
 import abonoRouter from "./interfaces/routes/abonos.route.js";
 // import pagosRouter from "./interfaces/routes/confirmarPago.route.js"; 
 import { LogsRouter } from "./interfaces/routes/logs.route.js";
@@ -59,7 +60,7 @@ app.use(express.urlencoded({ extended: true }));
 swaggerDocs(app);
 
 app.use("/api/transacciones", transaccionesRoutes);
-
+app.use("/api/utilizacion", utilizacionRouter);
 app.use(flujoRegistroEnlace);
 app.use(bancoW);
 app.use(scoring);
