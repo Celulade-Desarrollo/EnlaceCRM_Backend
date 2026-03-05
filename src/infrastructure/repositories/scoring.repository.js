@@ -13,8 +13,9 @@ export const scoringRepository = {
         s.Estado,
         s.Numero_Cliente,
         s.Cedula_Cliente,
-        s.Latitud,         -- 👈 agregado
-        s.Longitud,        -- 👈 agregado
+        s.Latitud,
+        s.Longitud,
+        s.CupoConfirmado,
         fr.Nombres, 
         fr.Primer_Apellido
       FROM FlujosRegistroEnlaceScoring s
@@ -55,7 +56,8 @@ export const scoringRepository = {
           Numero_Cliente,
           Cedula_Cliente,
           Latitud,
-          Longitud
+          Longitud,
+          CupoConfirmado,
         FROM FlujosRegistroEnlaceScoring
         WHERE IdFlujoRegistro = @IdFlujoRegistro
       `);
@@ -77,8 +79,9 @@ export const scoringRepository = {
           s.Estado,
           s.Numero_Cliente,
           s.Cedula_Cliente,
-          s.Latitud,        -- 👈 agregado
-          s.Longitud,       -- 👈 agregado
+          s.Latitud,      
+          s.Longitud,
+          s.CupoConfirmado,       
           fr.Nombres, 
           fr.Primer_Apellido,
           fr.Correo_Electronico
