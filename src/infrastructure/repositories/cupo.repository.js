@@ -20,11 +20,7 @@ export const cupoRepository = {
                 SET Cupo = @cupo,
                  CupoConfirmado = 1
                 WHERE IdFlujoRegistro = @id;
-                
 
-                UPDATE UsuarioFinal 
-                SET CupoFinal = @cupo 
-                WHERE IdFlujoRegistro = @id;
             `);
 
             await transaction.commit();

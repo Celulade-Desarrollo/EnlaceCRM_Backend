@@ -57,7 +57,7 @@ export const scoringRepository = {
           Cedula_Cliente,
           Latitud,
           Longitud,
-          CupoConfirmado,
+          CupoConfirmado
         FROM FlujosRegistroEnlaceScoring
         WHERE IdFlujoRegistro = @IdFlujoRegistro
       `);
