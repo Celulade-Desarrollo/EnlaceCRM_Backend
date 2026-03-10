@@ -2,6 +2,8 @@ import { movimientoRepository } from "../../../infrastructure/repositories/movim
 import {estadoCuentaService} from "../../services/estadoCuentaServiceInstance.js";
 import { EstadoCuenta } from "../../../domain/models/EstadoCuenta.js";
 import { Factura } from "../../../domain/models/Factura.js";
+import { LogsService } from "../../services/LogsService.js";
+import { LOGS_TYPE } from "../../../constants/LogsType.js";
 
 class CreateMovimientoUseCase {
   async execute({ cedula, monto, facturasSeleccionadas, idMedioPago }) {
@@ -54,7 +56,21 @@ class CreateMovimientoUseCase {
     }));
 
     // ✅ Llamamos al repositorio
-    return await movimientoRepository.crearMovimientoYFacturas(movimiento, facturas);
+    const resultado = await movimientoRepository.crearMovimientoYFacturas(movimiento, facturas);
+
+    try {
+        await LogsService.generarLog(
+            cedula,
+            "Tendero",
+            LOGS_TYPE.PAGO,
+            new Date(),
+            `Pago creado exitosamente por un monto de ${monto} para la cédula ${cedula}`
+        );
+    } catch (logError) {
+        console.error("Error registrando log de pago", logError);
+    }
+
+    return resultado;
   }
 }
 

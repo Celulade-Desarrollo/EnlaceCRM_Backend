@@ -134,7 +134,7 @@ export const estadoCuentaRepository = {
         .input("telefonoTransportista", sql.VarChar, telefonoTransportista || null)
         .input("Intereses", sql.Int(), Intereses || 0)
         .input("InteresesMora", sql.Int(), InteresesMora || 0)
-        .input("Fees", sql.Int(), Fees || 0)
+        .input("Fees", sql.Float(), Fees || 0)
 
         .query(`
           INSERT INTO EstadoCuentaMovimientos (
@@ -358,7 +358,7 @@ export const estadoCuentaRepository = {
               .input("IdMovimiento", sql.Int, IdMovimiento)
               .input("AbonoUsuario", sql.Int, AbonoUsuario)
               .input("Intereses", sql.Int, Intereses)
-              .input("Fees", sql.Int, Fees)
+              .input("Fees", sql.Float, Fees)
               .query(`
                   UPDATE EstadoCuentaMovimientos 
                   SET AbonoUsuario = @AbonoUsuario

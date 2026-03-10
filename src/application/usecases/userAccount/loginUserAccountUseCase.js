@@ -5,6 +5,8 @@ import { fetchNbCliente } from "../../services/fetchNbCliente.js";
 import { alpinaService } from '../../services/alpinaServiceInstance.js';
 import { AuthAlpinaAdapter } from '../../../infrastructure/adapters/AuthAlpinaAdapter.js';  
 import {fetchLoginAlpina} from '../../services/fetchAlpina.js';
+import { LogsService } from "../../services/LogsService.js";
+import { LOGS_TYPE } from "../../../constants/LogsType.js";
 
 export async function loginUserAccountUseCase(nbCliente, nbAgenteComercial, token){
     const authAdapter = new AuthAlpinaAdapter();
@@ -54,6 +56,18 @@ export async function loginUserAccountUseCase(nbCliente, nbAgenteComercial, toke
     if(!tokenTenderoEnlaceCRM) throw new Error("Falló la creación del token para el tendero")
 
     console.log(cuenta)
+
+    try {
+        await LogsService.generarLog(
+            cedula,
+            "Usuario",
+            LOGS_TYPE.LOGIN,
+            new Date(),
+            `El usuario con cédula ${cedula} ha iniciado sesión`
+        );
+    } catch (logError) {
+        console.error("Error registrando log de login de usuario", logError);
+    }
 
     return{
      
