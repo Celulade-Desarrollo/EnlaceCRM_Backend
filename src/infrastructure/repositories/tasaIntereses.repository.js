@@ -1,4 +1,5 @@
 import { poolPromise } from "../persistence/database.js";
+import sql from "mssql";
 
 export const tasaInteresesRepository = {
   async obtenerTodos() {
@@ -9,5 +10,34 @@ export const tasaInteresesRepository = {
     `);
 
     return result.recordset;
+  },
+
+  async actualizarTasaIntereses(id, valorFactorSeguro, tasaEfectivaAnual) {
+    const pool = await poolPromise;
+    const transaction = new sql.Transaction(pool);
+
+    try {
+      await transaction.begin();
+
+      const request = new sql.Request(transaction);
+
+      await request
+        .input("id", sql.Int, id)
+        .input("valorFactorSeguro", sql.Decimal(10, 5), valorFactorSeguro)
+        .input("tasaEfectivaAnual", sql.Decimal(10, 5), tasaEfectivaAnual)
+        .query(`
+          UPDATE TasasIntereses 
+          SET 
+            valorFactorSeguro = CASE WHEN @valorFactorSeguro IS NOT NULL THEN @valorFactorSeguro ELSE valorFactorSeguro END,
+            tasaEfectivaAnual = CASE WHEN @tasaEfectivaAnual IS NOT NULL THEN @tasaEfectivaAnual ELSE tasaEfectivaAnual END
+          WHERE Id = @id;
+        `);
+
+      await transaction.commit();
+
+    } catch (error) {
+      await transaction.rollback();
+      throw error;
+    }
   }
 };
