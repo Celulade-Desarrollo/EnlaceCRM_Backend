@@ -366,7 +366,7 @@ export const estadoCuentaRepository = {
               .input("IdMovimiento", sql.Int, IdMovimiento)
               .input("AbonoUsuario", sql.Int, AbonoUsuario)
               .input("Intereses", sql.Int, Intereses)
-              .input("Fees", sql.Int, Fees)
+              .input("Fees", sql.Float, Fees)
               .query(`
                   UPDATE EstadoCuentaMovimientos 
                   SET AbonoUsuario = @AbonoUsuario

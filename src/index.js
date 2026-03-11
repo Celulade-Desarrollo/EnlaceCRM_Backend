@@ -40,7 +40,7 @@ const app = express();
 
 // Configuración de CORS
 app.use(cors({
-  origin: ["http://localhost:5173"], // Permite frontend dev y swagger
+  origin: ["*"], // Permite frontend dev y swagger
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
   allowedHeaders: [
     "Content-Type",
