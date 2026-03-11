@@ -3,7 +3,10 @@ import { tasaInteresesRepository } from "../repositories/tasaIntereses.repositor
 
 export class TasaInteresesAdapter extends TasaInteresesPort {
   
-  async actualizarTasaIntereses(id, valorFactorSeguro, tasaEfectivaAnual) {
-    return await tasaInteresesRepository.actualizarTasaIntereses(id, valorFactorSeguro, tasaEfectivaAnual);
+  async actualizarTasaIntereses(id, valorFactorSeguro, tasaEfectivaAnual, diasDuracionCuota) {
+    return await tasaInteresesRepository.actualizarTasaIntereses
+    (
+      id, valorFactorSeguro, tasaEfectivaAnual, diasDuracionCuota, diasDuracionCuota
+    );
   }
 }

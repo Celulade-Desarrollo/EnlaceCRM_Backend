@@ -13,8 +13,8 @@ export async function getAllTasaIntereses(req, res) {
 export const updateTasaIntereses = async (req, res) => {
   try {
     const { id } = req.params;
-    const { valorFactorSeguro, tasaEfectivaAnual } = req.body;
-    await updateTasaInteresesUseCase(id, valorFactorSeguro, tasaEfectivaAnual);
+    const { valorFactorSeguro, tasaEfectivaAnual, diasDuracionCuota } = req.body;
+    await updateTasaInteresesUseCase(id, valorFactorSeguro, tasaEfectivaAnual, diasDuracionCuota);
     res.json({ message: "Tasa de intereses actualizada correctamente" });
   } catch (err) {
     res.status(500).send(err.message);
