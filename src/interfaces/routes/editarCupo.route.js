@@ -53,6 +53,6 @@ const router = express.Router();
  *         description: Error del servidor
  */
 
-router.put("/api/editar-cupo/:id",  updateCupoById);
+router.put("/api/editar-cupo/:id", authMiddleware, updateCupoById);
 
 export default router;

@@ -7,6 +7,7 @@ export class Movimiento {
     fechaPagoProgramado,
     idMedioPago,
     nroFacturaAlpina,
+    MontoMasIntereses,
     telefonoTransportista,
     Intereses,
     InteresesMora,
@@ -55,6 +56,7 @@ export class Movimiento {
     this.fechaPagoProgramado = fechaPagoProgramado || null;
     this.idMedioPago = idMedioPago || null;
     this.nroFacturaAlpina = nroFacturaAlpina || null;
+    this.MontoMasIntereses = MontoMasIntereses || null;
     this.telefonoTransportista = telefonoTransportista || null;
     this.Intereses = Intereses || 0;
     this.InteresesMora = InteresesMora || 0;
