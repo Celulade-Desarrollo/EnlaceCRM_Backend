@@ -19,6 +19,7 @@ export const registrarMovimientoController = async (req, res) => {
       nroFacturaAlpina,
       telefonoTransportista,
       tipoMovimiento, // 1 = débito, 2 = crédito
+      MontoMasIntereses,
       Intereses,
       InteresesMora,
       Fees
@@ -35,6 +36,7 @@ export const registrarMovimientoController = async (req, res) => {
       nroFacturaAlpina,
       telefonoTransportista,
       tipoMovimiento,
+      MontoMasIntereses,
       Intereses,
       InteresesMora,
       Fees

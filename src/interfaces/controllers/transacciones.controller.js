@@ -82,7 +82,9 @@ export async function exportTransaccionesExcel(req, res) {
       { header: "Factura", key: "codigoFactura", width: 20 },
       { header: "Valor", key: "valor", width: 15 },
       { header: "Fecha", key: "fecha", width: 15 },
-      { header: "Hora", key: "hora", width: 15 }
+      { header: "Hora", key: "hora", width: 15 },
+      { header: "Intereses", key: "intereses", width: 15 },
+      { header: "Cobro Seguros", key: "cobroSeguros", width: 15 }
     ];
 
     transacciones.forEach(row => {
@@ -94,7 +96,9 @@ export async function exportTransaccionesExcel(req, res) {
         codigoFactura: row.codigoFactura,
         valor: row.valor,
         fecha: row.fecha,
-        hora: row.hora
+        hora: row.hora,
+        intereses: "",
+        cobroSeguros: ""
       });
     });
 

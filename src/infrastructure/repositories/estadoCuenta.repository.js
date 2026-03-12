@@ -12,6 +12,7 @@ export const estadoCuentaRepository = {
     fechaPagoProgramado,
     idMedioPago,
     nroFacturaAlpina,
+    MontoMasIntereses,
     telefonoTransportista
   }) {
     const pool = await poolPromise;
@@ -47,6 +48,7 @@ export const estadoCuentaRepository = {
         FechaPagoProgramado,
         IdMedioPago,
         NroFacturaAlpina,
+        MontoMasIntereses,
         TelefonoTransportista
       )
       VALUES (
@@ -58,6 +60,7 @@ export const estadoCuentaRepository = {
         @fechaProgramada,
         @idMedioPago,
         @nroFacturaAlpina,
+        @MontoMasIntereses,
         @telefonoTransportista
       )
     `;
@@ -71,6 +74,7 @@ export const estadoCuentaRepository = {
       .input("fechaProgramada", sql.Date, fechaPagoProgramado || null)
       .input("idMedioPago", sql.Int, idMedioPago || null)
       .input("nroFacturaAlpina", sql.VarChar, nroFacturaAlpina || null)
+      .input("MontoMasIntereses", sql.Decimal(18, 2), MontoMasIntereses || null)
       .input("telefonoTransportista", sql.VarChar, telefonoTransportista || null)
       .query(query);
       
@@ -84,6 +88,7 @@ export const estadoCuentaRepository = {
     fechaPagoProgramado,
     idMedioPago,
     nroFacturaAlpina,
+    MontoMasIntereses,
     telefonoTransportista,
     tipoMovimiento,
     Intereses,
@@ -131,10 +136,11 @@ export const estadoCuentaRepository = {
         .input("fechaProgramada", sql.Date, fechaPagoProgramado || null)
         .input("idMedioPago", sql.Int, idMedioPago || null)
         .input("nroFacturaAlpina", sql.VarChar, nroFacturaAlpina || null)
+        .input("MontoMasIntereses", sql.Decimal(18, 2), MontoMasIntereses ?? null)
         .input("telefonoTransportista", sql.VarChar, telefonoTransportista || null)
-        .input("Intereses", sql.Int(), Intereses || 0)
-        .input("InteresesMora", sql.Int(), InteresesMora || 0)
-        .input("Fees", sql.Int(), Fees || 0)
+        .input("Intereses", sql.Decimal(18, 2), Intereses || 0)
+        .input("InteresesMora", sql.Decimal(18, 2), InteresesMora || 0)
+        .input("Fees", sql.Decimal(18, 2), Fees || 0)
 
         .query(`
           INSERT INTO EstadoCuentaMovimientos (
@@ -146,6 +152,7 @@ export const estadoCuentaRepository = {
             FechaPagoProgramado,
             IdMedioPago,
             NroFacturaAlpina,
+            MontoMasIntereses,
             TelefonoTransportista,
             Intereses,
             InteresesMora,
@@ -160,6 +167,7 @@ export const estadoCuentaRepository = {
             @fechaProgramada,
             @idMedioPago,
             @nroFacturaAlpina,
+            @MontoMasIntereses,
             @telefonoTransportista,
             @Intereses,
             @InteresesMora,
@@ -358,7 +366,7 @@ export const estadoCuentaRepository = {
               .input("IdMovimiento", sql.Int, IdMovimiento)
               .input("AbonoUsuario", sql.Int, AbonoUsuario)
               .input("Intereses", sql.Int, Intereses)
-              .input("Fees", sql.Int, Fees)
+              .input("Fees", sql.Float, Fees)
               .query(`
                   UPDATE EstadoCuentaMovimientos 
                   SET AbonoUsuario = @AbonoUsuario

@@ -11,9 +11,9 @@ export const guardarDatosBanco = async (datos) => {
                 USING (SELECT @codigo AS cod) AS source
                 ON (target.[Código Transacción] = source.cod)
                 WHEN MATCHED THEN
-                    UPDATE SET [Intereses] = @intereses, [Fees] = @fees
+                    UPDATE SET [Intereses] = @intereses, [Cobro Seguro] = @fees
                 WHEN NOT MATCHED THEN
-                    INSERT ([Cédula], [Nombre], [Apellido], [Código Transacción], [Factura], [Valor], [Fecha], [Hora], [Intereses], [Fees])
+                    INSERT ([Cédula], [Nombre], [Apellido], [Código Transacción], [Factura], [Valor], [Fecha], [Hora], [Intereses], [Cobro Seguro])
                     VALUES (@cedula, @nombre, @apellido, @codigo, @factura, @valor, @fecha, @hora, @intereses, @fees);
             `;
 
@@ -43,7 +43,7 @@ export const guardarDatosBanco = async (datos) => {
                 .input('fecha', sql.VarChar, fechaFinal)
                 .input('hora', sql.VarChar, horaFinal)
                 .input('intereses', sql.Decimal(15, 2), t['Intereses'] || 0)
-                .input('fees', sql.Decimal(15, 2), t['Fees'] || 0)
+                .input('fees', sql.Decimal(15, 2), t['Cobro Seguros'] || 0)
                 .query(query);
         }
     } catch (err) {
@@ -66,7 +66,7 @@ export const obtenerTodoParaAdmin = async () => {
                 FORMAT([Fecha], 'yyyy-MM-dd') AS [Fecha],
                 CONVERT(VARCHAR, [Hora], 108) AS [Hora],
                 FORMAT([Intereses], 'C', 'es-CO') AS [Intereses],
-                FORMAT([Fees], 'C', 'es-CO') AS [Fees],
+                FORMAT([Cobro Seguro], 'C', 'es-CO') AS [Cobro Seguro],
                 FORMAT([fecha_creacion], 'yyyy-MM-dd HH:mm:ss') AS [Fecha Registro]
             FROM utilizacion_intereses
         `);

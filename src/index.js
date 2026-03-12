@@ -31,6 +31,7 @@ import validarOperacionRouter from "./interfaces/routes/verificarOperacionExiste
 import dispersionRouter from "./interfaces/routes/dispersion.route.js";
 import tesoreria from "./interfaces/routes/tesoreria.route.js";
 import cupo from "./interfaces/routes/editarCupo.route.js";
+import tasaInteresesRouter from "./interfaces/routes/tasaIntereses.route.js";
 // Swagger
 import swaggerDocs from "./config/swagger-config.js";
 
@@ -39,7 +40,7 @@ const app = express();
 
 // Configuración de CORS
 app.use(cors({
-  origin: ["http://localhost:5173"], // Permite frontend dev y swagger
+  origin: ["*"], // Permite frontend dev y swagger
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
   allowedHeaders: [
     "Content-Type",
@@ -82,6 +83,7 @@ app.use("/api/abonos",validarOperacionRouter);
 app.use(dispersionRouter);
 app.use("/tesoreria", tesoreria)
 app.use(cupo)
+app.use(tasaInteresesRouter)
 
 app.get("/", (req, res) => {
   res.send("Servidor funcionando correctamente");
