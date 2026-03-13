@@ -11,7 +11,9 @@ export class Movimiento {
     telefonoTransportista,
     Intereses,
     InteresesMora,
-    Fees
+    Fees,
+    Placa,
+    Planilla
  
   }) {
     // Validar identificadorTendero
@@ -61,6 +63,8 @@ export class Movimiento {
     this.Intereses = Intereses || 0;
     this.InteresesMora = InteresesMora || 0;
     this.Fees = Fees || 0;
+    this.Placa = Placa || null;
+    this.Planilla = Planilla || null;
    
   }
 }
