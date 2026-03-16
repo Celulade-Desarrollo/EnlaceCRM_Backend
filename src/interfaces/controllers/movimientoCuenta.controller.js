@@ -22,7 +22,9 @@ export const registrarMovimientoController = async (req, res) => {
       MontoMasIntereses,
       Intereses,
       InteresesMora,
-      Fees
+      Fees,
+      Placa,
+      Planilla,
     } = req.body;
 
     console.log("🟡 Body recibido en controlador:", req.body);
@@ -39,7 +41,9 @@ export const registrarMovimientoController = async (req, res) => {
       MontoMasIntereses,
       Intereses,
       InteresesMora,
-      Fees
+      Fees,
+      Placa,
+      Planilla,
     });
 
     res.status(201).json(resultado);
