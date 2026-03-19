@@ -13,7 +13,8 @@ export class Movimiento {
     InteresesMora,
     Fees,
     Placa,
-    Planilla
+    Planilla,
+    NombreRuta
  
   }) {
     // Validar identificadorTendero
@@ -65,6 +66,6 @@ export class Movimiento {
     this.Fees = Fees || 0;
     this.Placa = Placa || null;
     this.Planilla = Planilla || null;
-   
+    this.NombreRuta = NombreRuta || null;
   }
 }
