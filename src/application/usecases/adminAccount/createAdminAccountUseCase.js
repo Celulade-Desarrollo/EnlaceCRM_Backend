@@ -22,7 +22,8 @@ export async function createAdminAccountUseCase(input){
 
     return{
         state: "Cuenta creada correctamente para " + Cedula_Admin,
-        tipo: "Admin"
+        tipo: "Admin",
+        Rol: adminAccount.Rol
     }
 }
 
