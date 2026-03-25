@@ -67,7 +67,6 @@ export const registrarMovimientoController = async (req, res) => {
 };
 
 
-
 export const getMovimientosByCliente = async (req, res) => {
   try {
     const { clienteId } = req.params;
