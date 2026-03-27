@@ -4,14 +4,18 @@ export const getPlantillaData = async () => {
   const pool = await poolPromise;
 
   const result = await pool.request().query(`
-    SELECT 
-      f.Id             AS Operacion,
-      f.Cedula_Cliente AS NumeroID,
-      f.Nombres        AS Persona
-    FROM [EnlaceCRM].[dbo].[FlujosRegistroEnlace] f
-    WHERE NOT EXISTS (
+    SELECT DISTINCT
+      u.Cedula_Usuario                      AS NumeroID,
+      f.Nombres + ' ' + f.Primer_Apellido   AS Persona
+    FROM [EnlaceCRM].[dbo].[UsuarioFinal] u
+    JOIN [EnlaceCRM].[dbo].[FlujosRegistroEnlace] f 
+      ON u.IdFlujoRegistro = f.Id
+    JOIN [EnlaceCRM].[dbo].[EstadoCuentaMovimientos] e
+      ON e.IdUsuarioFinal = u.IdUsuarioFinal
+    WHERE e.IdEstadoMovimiento = 2
+    AND NOT EXISTS (
       SELECT 1 FROM [EnlaceCRM].[dbo].[Abonos] a
-      WHERE a.Operacion = f.Id
+      WHERE a.NumeroID = u.Cedula_Usuario
     )
   `);
 
