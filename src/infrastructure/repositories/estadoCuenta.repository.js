@@ -93,7 +93,10 @@ export const estadoCuentaRepository = {
     tipoMovimiento,
     Intereses,
     InteresesMora,
-    Fees
+    Fees,
+    Placa,
+    Planilla,
+    NombreRuta
 
   }) {
     const pool = await poolPromise;
@@ -141,6 +144,9 @@ export const estadoCuentaRepository = {
         .input("Intereses", sql.Decimal(18, 2), Intereses || 0)
         .input("InteresesMora", sql.Decimal(18, 2), InteresesMora || 0)
         .input("Fees", sql.Decimal(18, 2), Fees || 0)
+        .input("Placa", sql.VarChar, Placa || null)
+        .input("Planilla", sql.VarChar, Planilla || null)
+        .input("NombreRuta", sql.VarChar, NombreRuta || null)
 
         .query(`
           INSERT INTO EstadoCuentaMovimientos (
@@ -156,7 +162,10 @@ export const estadoCuentaRepository = {
             TelefonoTransportista,
             Intereses,
             InteresesMora,
-            Fees
+            Fees,
+            Placa,
+            Planilla,
+            NombreRuta
           )
           VALUES (
             @idUsuarioFinal,
@@ -171,7 +180,10 @@ export const estadoCuentaRepository = {
             @telefonoTransportista,
             @Intereses,
             @InteresesMora,
-            @Fees
+            @Fees,
+            @Placa,
+            @Planilla,
+            @NombreRuta
           )
         `);
 
@@ -340,6 +352,9 @@ export const estadoCuentaRepository = {
                   ECM.MontoMasIntereses,
                   ECM.AbonoUsuario,
                   ECM.TelefonoTransportista,
+                  ECM.Placa,
+                  ECM.Planilla,
+                  ECM.NombreRuta,
                   UF.Cedula_Usuario
               FROM 
                   EstadoCuentaMovimientos ECM
