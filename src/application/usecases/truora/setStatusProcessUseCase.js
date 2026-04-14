@@ -3,7 +3,7 @@ import { TruoraService } from "../../services/TruoraService.js";
 export async function setStatusProcessUseCase(process_id) {
     const data = await TruoraService.truoraInfoProcess(process_id);
 
-    const validation_status = data.validations[0].validation_status
+    const validation_status = data.status
     const document_details = data.validations[0].details.document_details
 
     const birth_date = document_details.date_of_birth

@@ -22,7 +22,8 @@ export async function loginAdminAccountUseCase(Cedula, Password){
         token: token,
         tipo: "admin",
         company: Account.Empresa_Admin,
-        state: "Authenticated"
+        state: "Authenticated",
+        Rol: Account.Rol
     }    
 
 }

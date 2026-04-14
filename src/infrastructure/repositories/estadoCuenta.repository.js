@@ -12,6 +12,7 @@ export const estadoCuentaRepository = {
     fechaPagoProgramado,
     idMedioPago,
     nroFacturaAlpina,
+    MontoMasIntereses,
     telefonoTransportista
   }) {
     const pool = await poolPromise;
@@ -47,6 +48,7 @@ export const estadoCuentaRepository = {
         FechaPagoProgramado,
         IdMedioPago,
         NroFacturaAlpina,
+        MontoMasIntereses,
         TelefonoTransportista
       )
       VALUES (
@@ -58,6 +60,7 @@ export const estadoCuentaRepository = {
         @fechaProgramada,
         @idMedioPago,
         @nroFacturaAlpina,
+        @MontoMasIntereses,
         @telefonoTransportista
       )
     `;
@@ -71,6 +74,7 @@ export const estadoCuentaRepository = {
       .input("fechaProgramada", sql.Date, fechaPagoProgramado || null)
       .input("idMedioPago", sql.Int, idMedioPago || null)
       .input("nroFacturaAlpina", sql.VarChar, nroFacturaAlpina || null)
+      .input("MontoMasIntereses", sql.Decimal(18, 2), MontoMasIntereses || null)
       .input("telefonoTransportista", sql.VarChar, telefonoTransportista || null)
       .query(query);
       
@@ -84,11 +88,15 @@ export const estadoCuentaRepository = {
     fechaPagoProgramado,
     idMedioPago,
     nroFacturaAlpina,
+    MontoMasIntereses,
     telefonoTransportista,
     tipoMovimiento,
     Intereses,
     InteresesMora,
-    Fees
+    Fees,
+    Placa,
+    Planilla,
+    NombreRuta
 
   }) {
     const pool = await poolPromise;
@@ -131,10 +139,14 @@ export const estadoCuentaRepository = {
         .input("fechaProgramada", sql.Date, fechaPagoProgramado || null)
         .input("idMedioPago", sql.Int, idMedioPago || null)
         .input("nroFacturaAlpina", sql.VarChar, nroFacturaAlpina || null)
+        .input("MontoMasIntereses", sql.Decimal(18, 2), MontoMasIntereses ?? null)
         .input("telefonoTransportista", sql.VarChar, telefonoTransportista || null)
-        .input("Intereses", sql.Int(), Intereses || 0)
-        .input("InteresesMora", sql.Int(), InteresesMora || 0)
-        .input("Fees", sql.Int(), Fees || 0)
+        .input("Intereses", sql.Decimal(18, 2), Intereses || 0)
+        .input("InteresesMora", sql.Decimal(18, 2), InteresesMora || 0)
+        .input("Fees", sql.Decimal(18, 2), Fees || 0)
+        .input("Placa", sql.VarChar, Placa || null)
+        .input("Planilla", sql.VarChar, Planilla || null)
+        .input("NombreRuta", sql.VarChar, NombreRuta || null)
 
         .query(`
           INSERT INTO EstadoCuentaMovimientos (
@@ -146,10 +158,14 @@ export const estadoCuentaRepository = {
             FechaPagoProgramado,
             IdMedioPago,
             NroFacturaAlpina,
+            MontoMasIntereses,
             TelefonoTransportista,
             Intereses,
             InteresesMora,
-            Fees
+            Fees,
+            Placa,
+            Planilla,
+            NombreRuta
           )
           VALUES (
             @idUsuarioFinal,
@@ -160,10 +176,14 @@ export const estadoCuentaRepository = {
             @fechaProgramada,
             @idMedioPago,
             @nroFacturaAlpina,
+            @MontoMasIntereses,
             @telefonoTransportista,
             @Intereses,
             @InteresesMora,
-            @Fees
+            @Fees,
+            @Placa,
+            @Planilla,
+            @NombreRuta
           )
         `);
 
@@ -332,6 +352,9 @@ export const estadoCuentaRepository = {
                   ECM.MontoMasIntereses,
                   ECM.AbonoUsuario,
                   ECM.TelefonoTransportista,
+                  ECM.Placa,
+                  ECM.Planilla,
+                  ECM.NombreRuta,
                   UF.Cedula_Usuario
               FROM 
                   EstadoCuentaMovimientos ECM
@@ -358,7 +381,7 @@ export const estadoCuentaRepository = {
               .input("IdMovimiento", sql.Int, IdMovimiento)
               .input("AbonoUsuario", sql.Int, AbonoUsuario)
               .input("Intereses", sql.Int, Intereses)
-              .input("Fees", sql.Int, Fees)
+              .input("Fees", sql.Float, Fees)
               .query(`
                   UPDATE EstadoCuentaMovimientos 
                   SET AbonoUsuario = @AbonoUsuario

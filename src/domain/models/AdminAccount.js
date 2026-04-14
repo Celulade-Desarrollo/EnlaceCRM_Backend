@@ -4,13 +4,15 @@ export class AdminAccount {
         Nombre_Admin,
         Empresa_Admin,
         Cedula_Admin,
-        Contrasena
+        Contrasena,
+        Rol
     }) {
         this.Numero_Admin = Numero_Admin,
         this.Nombre_Admin = Nombre_Admin,
         this.Empresa_Admin = Empresa_Admin,
         this.Cedula_Admin = Cedula_Admin,
-        this.Contrasena = Contrasena
+        this.Contrasena = Contrasena,
+        this.Rol = Rol
     }
     ValidarDatos() {
         // Logica para validar datos del administrador  

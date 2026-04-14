@@ -25,7 +25,8 @@ export const adminAccountRepository = {
             .input("Empresa_Admin", sql.NVarChar, input.Empresa_Admin)
             .input("Cedula_Admin", sql.NVarChar, input.Cedula_Admin)
             .input("Contrasena", sql.NVarChar, input.Contrasena)
-            .query(`INSERT INTO Admin (Numero_Admin, Nombre_Admin, Empresa_Admin, Cedula_Admin, Contrasena) VALUES (@Numero_Admin, @Nombre_Admin, @Empresa_Admin, @Cedula_Admin, @Contrasena)`);
+            .input("Rol", sql.NVarChar, input.Rol)
+            .query(`INSERT INTO Admin (Numero_Admin, Nombre_Admin, Empresa_Admin, Cedula_Admin, Contrasena, Rol) VALUES (@Numero_Admin, @Nombre_Admin, @Empresa_Admin, @Cedula_Admin, @Contrasena, @Rol)`);
         return result.recordset
     },
 

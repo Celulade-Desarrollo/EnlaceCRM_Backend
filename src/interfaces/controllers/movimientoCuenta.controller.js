@@ -19,9 +19,13 @@ export const registrarMovimientoController = async (req, res) => {
       nroFacturaAlpina,
       telefonoTransportista,
       tipoMovimiento, // 1 = débito, 2 = crédito
+      MontoMasIntereses,
       Intereses,
       InteresesMora,
-      Fees
+      Fees,
+      Placa,
+      Planilla,
+      NombreRuta,
     } = req.body;
 
     console.log("🟡 Body recibido en controlador:", req.body);
@@ -35,9 +39,13 @@ export const registrarMovimientoController = async (req, res) => {
       nroFacturaAlpina,
       telefonoTransportista,
       tipoMovimiento,
+      MontoMasIntereses,
       Intereses,
       InteresesMora,
-      Fees
+      Fees,
+      Placa,
+      Planilla,
+      NombreRuta,
     });
 
     res.status(201).json(resultado);
@@ -57,7 +65,6 @@ export const registrarMovimientoController = async (req, res) => {
     });
   }
 };
-
 
 
 export const getMovimientosByCliente = async (req, res) => {

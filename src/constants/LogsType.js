@@ -6,6 +6,7 @@ export const LOGS_TYPE = {
   RECHAZO_SCORING: 5,
   CREACION_SCORING: 6,
   EDICION_CORE_BANCARIO: 7,
+  PAGO: 8,
 };
 
 export const LOGS_TYPE_NAMES = {
@@ -16,4 +17,5 @@ export const LOGS_TYPE_NAMES = {
   [LOGS_TYPE.RECHAZO_SCORING]: "Rechazo Scoring",
   [LOGS_TYPE.APROBACION_SCORING]: "Aprobacion Scoring",
   [LOGS_TYPE.EDICION_CORE_BANCARIO]: "Edicion Core Bancario",
+  [LOGS_TYPE.PAGO]: "Pago",
 };

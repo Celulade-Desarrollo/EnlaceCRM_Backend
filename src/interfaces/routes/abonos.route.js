@@ -1,6 +1,6 @@
 import express from "express";
-import { createAbono, getExcel } from "../controllers/abonos.controller.js";
 import { authMiddleware } from "../middleware/token-middleware.js";
+import { createAbono, getExcel, getPlantilla } from "../controllers/abonos.controller.js";
 
 const rutaAbonos = express.Router();
 
@@ -61,5 +61,8 @@ const rutaAbonos = express.Router();
 rutaAbonos.post('/api/abonos/upload', authMiddleware, createAbono);
 
 rutaAbonos.get("/api/bajarAbonos", authMiddleware, getExcel);
+
+rutaAbonos.get("/api/abonos/plantilla", authMiddleware, getPlantilla);
+
 
 export default rutaAbonos;

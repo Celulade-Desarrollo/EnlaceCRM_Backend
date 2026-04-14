@@ -1,5 +1,6 @@
 import { createAbonoUseCase } from "../../application/usecases/abonos/createAbonoUseCase.js";
 import { getExcelData } from "../../application/usecases/abonos/getAbonosUseCase.js";
+import { getPlantillaData } from "../../application/usecases/abonos/getPlantillaUseCase.js";
 
 export const getExcel = async (req, res) => {
   try {
@@ -23,6 +24,15 @@ export const createAbono = async (req, res) => {
       message: `Se insertaron ${resultado.successCount} filas. ${resultado.errorCount} filas con error.`,
       detalles: resultado.errores
     });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
+export const getPlantilla = async (req, res) => {
+  try {
+    const data = await getPlantillaData();
+    res.json({ data });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
