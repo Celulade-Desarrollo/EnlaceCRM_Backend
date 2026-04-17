@@ -1,5 +1,5 @@
 export async function callMicroserviceUseCase(data) {
-    const response = await fetch("http://localhost:2000/scoring", {
+    const response = await fetch("http://localhost:2050/scoring", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
