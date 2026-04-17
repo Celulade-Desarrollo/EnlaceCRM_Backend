@@ -166,4 +166,56 @@ export const scoringRepository = {
         WHERE IdFlujoRegistro = @IdFlujoRegistro
       `);
   },
+
+  // Obtener datos completos para Scoring (DTO) por CC para el microservicio en Nest de scoring por IA 
+  async UserScoringDataByCC(cedula) {
+    const pool = await poolPromise;
+
+    // 1. Obtener datos de cliente, negocio y scoring
+    const result = await pool.request()
+      .input("Cedula_Cliente", sql.NVarChar, cedula)
+      .query(`
+        SELECT 
+          fre.Id AS IdFlujo,
+          fre.Cedula_Cliente,
+          fre.Fecha_de_Nacimiento,
+          fre.Ubicacion_del_Negocio_Ciudad,
+          fre.Barrio,
+          fre.Estrato,
+          fre.Nombre_Tienda,
+          fre.Numero_de_neveras,
+          fre.Rango_de_Ingresos,
+          fs.Scoring,
+          fs.Latitud,
+          fs.Longitud,
+          uf.IdUsuarioFinal,
+          uf.CupoFinal
+        FROM FlujosRegistroEnlace fre
+        INNER JOIN FlujosRegistroEnlaceScoring fs ON fs.IdFlujoRegistro = fre.Id
+        LEFT JOIN UsuarioFinal uf ON uf.IdFlujoRegistro = fre.Id
+        WHERE fre.Cedula_Cliente = @Cedula_Cliente
+      `);
+
+    const data = result.recordset[0];
+    if (!data) return null;
+
+    // 2. Si existe un usuario final, obtener sus movimientos
+    let movements = [];
+    if (data.IdUsuarioFinal) {
+      const resultMovs = await pool.request()
+        .input("IdUsuarioFinal", sql.Int, data.IdUsuarioFinal)
+        .query(`
+          SELECT TOP 80 *
+          FROM EstadoCuentaMovimientos
+          WHERE IdUsuarioFinal = @IdUsuarioFinal
+          ORDER BY FechaHoraMovimiento DESC
+        `);
+      movements = resultMovs.recordset;
+    }
+
+    return {
+      ...data,
+      movements
+    };
+  },
 };
