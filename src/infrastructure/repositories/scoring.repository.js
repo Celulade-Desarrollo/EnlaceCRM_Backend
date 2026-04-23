@@ -188,6 +188,7 @@ export const scoringRepository = {
           fs.Scoring,
           fs.Latitud,
           fs.Longitud,
+          fs.Cupo,
           uf.IdUsuarioFinal,
           uf.CupoFinal
         FROM FlujosRegistroEnlace fre

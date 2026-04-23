@@ -26,7 +26,7 @@ export class UserScoringData {
       refrigerator_count: business.refrigerator_count || 0
     };
     this.credit_request = {
-      requested_amount: credit_request.requested_amount || 0,
+      requested_amount: `${credit_request.requested_amount}` || 0,
       currency: credit_request.currency || "COP"
     };
     this.payment_behavior = {
