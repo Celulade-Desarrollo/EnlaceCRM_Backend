@@ -30,6 +30,13 @@ function parseVentasDiarias(rango) {
   return isNaN(valor) ? 0 : valor;
 }
 
+function parseCupo(cupo) {
+  if (!cupo) return 0;
+  // Ejemplo: "1.000.000" -> 1000000
+  const valor = parseFloat(String(cupo).replace(/\./g, "").replace(",", "."));
+  return isNaN(valor) ? 0 : valor;
+}
+
 export async function getUserScoringDataByCCUseCase(cedula, requestId = null) {
   const rawData = await scoringRepository.UserScoringDataByCC(cedula);
 
@@ -58,7 +65,7 @@ export async function getUserScoringDataByCCUseCase(cedula, requestId = null) {
       refrigerator_count: parseInt(rawData.Numero_de_neveras) || 0
     },
     credit_request: {
-      requested_amount: rawData.CupoFinal || 0,
+      requested_amount: parseCupo(rawData.Cupo),
       currency: "COP"
     },
     payment_behavior: {
