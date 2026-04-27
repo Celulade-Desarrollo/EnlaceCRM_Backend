@@ -14,6 +14,7 @@ export async function loginUserAccountUseCase(nbCliente, nbAgenteComercial, toke
 
     const cedula = await fetchNbCliente(nbCliente, nbAgenteComercial, bearerToken)
     const cuentaNbCliente = await userAccountService.verificarNbCliente(nbCliente)
+    
     if(cuentaNbCliente){
         const error = new Error("Ya existe una solicitud de cuenta en proceso para este cliente.");
          error.status = 207;
@@ -26,12 +27,30 @@ export async function loginUserAccountUseCase(nbCliente, nbAgenteComercial, toke
          throw error;
 
     }
+    if (cuentaNbCliente.Estado == 'Asesor'){
+        const error = new Error("El usuario requiere asesoria");
+        error.status = 207;
+        error.payload = {
+            estado: cuentaNbCliente.Estado,
+            nbCliente: cuentaNbCliente.nbCliente,
+            nbAgenteComercial: cuentaNbCliente.nbAgenteComercial,
+            Autorizacion_Habeas_Data: cuentaNbCliente.Autorizacion_Habeas_Data,
+            Autorizacion_Medios_de_Contacto: cuentaNbCliente.Autorizacion_Medios_de_Contacto, 
+        }
+        throw error;
+    }
 
-    const cuenta = await userAccountService.validarCuentaCedula(cedula)
+  const cuenta = await userAccountService.validarCuentaCedula(cedula)
 
     if(!cuenta){
-         const error = new Error("No se encontró una cuenta creada para esta cédula.");
+        const tokenTenderoEnlaceCRM = await tokenGeneratorService.generateToken({ cedula: cedula });
+        
+        const error = new Error("No se encontró una cuenta creada para esta cédula.");
         error.status = 400;
+        error.payload = {
+            message: "No se encontró una cuenta creada para esta cédula.",
+            token: tokenTenderoEnlaceCRM
+        }
         throw error;
     }
 
