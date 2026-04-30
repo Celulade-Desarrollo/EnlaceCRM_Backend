@@ -16,7 +16,6 @@ export async function loginUserAccountUseCase(nbCliente, nbAgenteComercial, toke
 const cuentaNbCliente = await userAccountService.verificarNbCliente(nbCliente)
 
 if(cuentaNbCliente) {
-    // Asesor PRIMERO
     if(cuentaNbCliente.Estado === 'Asesor') {
         const error = new Error("El usuario requiere asesoría.");
         error.status = 207;
@@ -26,11 +25,11 @@ if(cuentaNbCliente) {
             nbAgenteComercial: cuentaNbCliente.nbAgenteComercial,
             Autorizacion_Habeas_Data: cuentaNbCliente.Autorizacion_Habeas_Data,
             Autorizacion_Medios_de_Contacto: cuentaNbCliente.Autorizacion_Medios_de_Contacto, 
+            Id: cuentaNbCliente.Id
         }
         throw error;
     }
 
-    // General después
     const error = new Error("Ya existe una solicitud de cuenta en proceso.");
     error.status = 207;
     error.payload = {

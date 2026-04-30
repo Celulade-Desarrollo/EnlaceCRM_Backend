@@ -14,7 +14,8 @@ import {
   updateEstadoById,
   updateClienteAceptoById,
   consultarPorCedulaYNbCliente,
-  consultarEstadoCupoTodos
+  consultarEstadoCupoTodos,
+  updateRegistroById
 } from "../controllers/flujoRegistroEnlace.controller.js";
 
 import { buscarUsuarioPorTelefono } from "../middleware/cedula_middleware.js";
@@ -235,6 +236,35 @@ flujoRegistroEnlace.put("/api/flujoRegistroEnlace/clienteAcepto/:id", authMiddle
  *         description: Registro encontrado
  */
 flujoRegistroEnlace.get("/api/flujoRegistroEnlace/:id", authMiddleware, getById);
+
+/**
+ * @swagger
+ * /api/flujoRegistroEnlace/{id}:
+ *   put:
+ *     summary: Actualizar registro por ID
+ *     tags: [FlujoRegistroEnlace]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             example:
+ *               Nombres: "Juan"
+ *               Primer_Apellido: "Pérez"
+ *     responses:
+ *       200:
+ *         description: Registro actualizado exitosamente
+ *       400:
+ *         description: Error en los datos enviados
+ */
+flujoRegistroEnlace.put("/api/flujoRegistroEnlace/:id", updateRegistroById);
 
 /**
  * @swagger
