@@ -32,6 +32,8 @@ import dispersionRouter from "./interfaces/routes/dispersion.route.js";
 import tesoreria from "./interfaces/routes/tesoreria.route.js";
 import cupo from "./interfaces/routes/editarCupo.route.js";
 import tasaInteresesRouter from "./interfaces/routes/tasaIntereses.route.js";
+import alpinaClienteRouter from "./interfaces/routes/alpina-cliente.route.js";
+import asesoriaRouter from "./interfaces/routes/asesoria.route.js";
 // Swagger
 import swaggerDocs from "./config/swagger-config.js";
 
@@ -84,6 +86,8 @@ app.use(dispersionRouter);
 app.use("/tesoreria", tesoreria)
 app.use(cupo)
 app.use(tasaInteresesRouter)
+app.use("/api/alpina-cliente", alpinaClienteRouter);
+app.use("/api/asesoria", asesoriaRouter);
 
 app.get("/", (req, res) => {
   res.send("Servidor funcionando correctamente");
