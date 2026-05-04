@@ -10,6 +10,7 @@ import { consultarCedulaUseCase } from "../../application/usecases/flujoRegistro
 import { updateClienteAcepto } from "../../application/usecases/flujoRegistro/updateClienteAproboUseCase.js";
 import { consultarPorCedulaYNbClienteUseCase } from "../../application/usecases/flujoRegistro/consultarPorCedulaYNbClienteUseCase.js";
 import { consultarEstadoCupoTodosUseCase } from "../../application/usecases/flujoRegistro/getAllEstadoCupoUseCase.js";
+import { updateFlujoRegistroUseCase } from "../../application/usecases/flujoRegistro/updateFlujoRegistroUseCase.js";
 
 export const consultarPorCedulaYNbCliente = async (req, res) => {
   try {
@@ -133,5 +134,15 @@ export const updateClienteAceptoById = async (req, res) => {
     res.json({ message: "campo cliente acepto actualizado correctamente" });
   } catch (err) {
     res.status(500).send(err.message);
+  }
+};
+
+export const updateRegistroById = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const result = await updateFlujoRegistroUseCase(id, req.body);
+    res.status(200).json({ message: result });
+  } catch (err) {
+    res.status(400).json({ error: err.message });
   }
 };
