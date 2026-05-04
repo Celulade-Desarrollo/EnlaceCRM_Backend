@@ -1,6 +1,7 @@
 import { getFacturasPendientesUseCase } from "../../application/usecases/alpina/getFacturasPendientesUseCase.js";
 import { logger } from "../../config/logger.js";
 import ValidationError from "../../errors/Validation.error.js";
+import { getClienteNombreUseCase } from "../../application/usecases/alpina/getClienteNombreUseCase.js";
 
 export const obtenerFacturas = async (req, res) => {
   try {
@@ -23,6 +24,23 @@ export const obtenerFacturas = async (req, res) => {
     const mensaje = error.message;
 
     res.status(statusCode).json({ mensaje });
+  }
+};
+
+export const consultarNombreCliente = async (req, res) => {
+  try {
+    const { nbCliente, nbAgenteComercial } = req.body;
+
+    if (!nbCliente || !nbAgenteComercial) {
+      return res.status(400).json({ mensaje: "nbCliente y nbAgenteComercial son requeridos" });
+    }
+
+    const data = await getClienteNombreUseCase(nbCliente, nbAgenteComercial);
+    res.status(200).json(data);
+
+  } catch (error) {
+    logger.error("Error consultando nombre cliente Alpina:", { mensaje: error.message });
+    res.status(500).json({ mensaje: error.message });
   }
 };
 
