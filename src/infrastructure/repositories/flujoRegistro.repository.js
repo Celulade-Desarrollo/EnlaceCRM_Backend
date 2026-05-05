@@ -280,7 +280,7 @@ async obtenerEstadoYCupoTodos() {
       .input("Lugar_expedicion", sql.NVarChar, input.Lugar_expedicion)
       .input("Fecha_expedicion", sql.NVarChar, input.Fecha_expedicion)
       .input("Fecha_Envio_Formulario", sql.DateTime, input.Fecha_Envio_Formulario ? new Date(input.Fecha_Envio_Formulario) : new Date())
-      .input("AntiguedadNegocioAnios", sql.Int, input.AntiguedadNegocioAños)
+      .input("AntiguedadNegocioAnios", sql.Int, input.AntiguedadNegocioAnios ?? null )
       .input("ComprasPromedioAlpinaUltTrim", sql.NVarChar, input.ComprasPromedioAlpinaUltTrim)
       .query(`
         UPDATE FlujosRegistroEnlace SET
@@ -332,7 +332,7 @@ async obtenerEstadoYCupoTodos() {
           Lugar_expedicion = ISNULL(@Lugar_expedicion, Lugar_expedicion),
           Fecha_expedicion = ISNULL(@Fecha_expedicion, Fecha_expedicion),
           fecha_envio_formulario = ISNULL(@Fecha_Envio_Formulario, fecha_envio_formulario),
-          AntiguedadNegocioAños = ISNULL(@AntiguedadNegocioAños, AntiguedadNegocioAños),
+          AntiguedadNegocioAnios = ISNULL(@AntiguedadNegocioAnios, AntiguedadNegocioAnios),
           ComprasPromedioAlpinaUltTrim = ISNULL(@ComprasPromedioAlpinaUltTrim, ComprasPromedioAlpinaUltTrim)
         WHERE Id = @id
       `);
