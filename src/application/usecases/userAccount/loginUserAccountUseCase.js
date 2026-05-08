@@ -16,11 +16,11 @@ export async function loginUserAccountUseCase(nbCliente, nbAgenteComercial, toke
 const cuentaNbCliente = await userAccountService.verificarNbCliente(nbCliente)
 
 if(cuentaNbCliente) {
-    if(cuentaNbCliente.Estado === 'Asesor') {
+    if(cuentaNbCliente.Estado === 'Asesor' || cuentaNbCliente.Estado === 'Incompleto') {
         const error = new Error("El usuario requiere asesoría.");
         error.status = 207;
         error.payload = {
-            estado: cuentaNbCliente.Estado,
+            estado: cuentaNbCliente.Estado.trim(),
             nbCliente: cuentaNbCliente.nbCliente,
             nbAgenteComercial: cuentaNbCliente.nbAgenteComercial,
             Autorizacion_Habeas_Data: cuentaNbCliente.Autorizacion_Habeas_Data,
