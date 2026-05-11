@@ -485,6 +485,8 @@ async consultarRecaudoTransportista(numTransportista) {
           NroFacturaAlpina
         FROM EstadoCuentaMovimientos
         WHERE TelefonoTransportista = @TelefonoTransportista
+          AND IdTipoMovimiento = 1 -- 🎯 AGREGAR ESTO para que no duplique
+          AND IdEstadoMovimiento <> 7
           AND CONVERT(date, FechaHoraMovimiento) = CONVERT(date, GETDATE())
         ORDER BY FechaHoraMovimiento DESC
       `);
@@ -534,11 +536,13 @@ async consultarRecaudoTransportistaPorFecha(){
     const result = await pool.request()
       .query(`
         SELECT
-        CONVERT(date, FechaHoraMovimiento) AS fecha,
-        SUM(Monto) AS recaudo
+          CONVERT(date, FechaHoraMovimiento) AS fecha,
+          SUM(Monto) AS recaudo
         FROM EstadoCuentaMovimientos
+        WHERE IdTipoMovimiento = 1  -- 🎯 AQUÍ: Solo facturas
+          AND IdEstadoMovimiento <> 7 -- Excluir fallidos
         GROUP BY CONVERT(date, FechaHoraMovimiento)
-        ORDER BY Fecha DESC;
+        ORDER BY fecha DESC;
       `);
     return result.recordset;
   } catch (error) {

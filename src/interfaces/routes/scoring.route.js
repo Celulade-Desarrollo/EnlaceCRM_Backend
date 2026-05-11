@@ -5,6 +5,7 @@ import {
   createScoring,
   getScoringByEstado,
   updateScoringById,
+  getUserScoringDataByCC,
 } from "../controllers/enlaceScoring.controller.js";
 import { authMiddleware } from "../middleware/token-middleware.js";
 
@@ -110,5 +111,31 @@ scoringRouter.put("/api/scoring/estado/update/:id", authMiddleware, updateScorin
  *         description: Registro creado
  */
 scoringRouter.post("/api/scoring", authMiddleware, createScoring);
+
+/**
+ * @swagger
+ * /api/scoring/data/{cedula}:
+ *   get:
+ *     summary: Obtener datos estructurados de scoring por CC
+ *     tags: [Scoring]
+ *     parameters:
+ *       - in: path
+ *         name: cedula
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: Cédula del cliente
+ *       - in: query
+ *         name: request_id
+ *         schema:
+ *           type: string
+ *         description: ID opcional para la solicitud
+ *     responses:
+ *       200:
+ *         description: Datos de scoring encontrados
+ *       404:
+ *         description: No se encontró información para la cédula dada
+ */
+scoringRouter.get("/api/scoring/data/:cedula", getUserScoringDataByCC);
 
 export default scoringRouter;

@@ -15,7 +15,7 @@ async function loginUserAccount(req, res) {
     if (err.status === 207 && err.payload) {
       return res.status(207).json(err.payload);
     }
-    return res.status(err.status || 500).json({ message: err.message });
+    return res.status(err.status || 500).json(err.payload || { message: err.message });
   }
 };
 

@@ -3,6 +3,8 @@ import { getScoringByIdUseCase } from "../../application/usecases/scoring/getSco
 import { getScoringByEstadoUseCase } from "../../application/usecases/scoring/getScoringByEstadoUseCase.js";
 import { createScoringUseCase } from "../../application/usecases/scoring/createScoringUseCase.js";
 import { updateScoringByIdUseCase } from "../../application/usecases/scoring/updateScoringByIdUseCase.js";
+import { getUserScoringDataByCCUseCase } from "../../application/usecases/scoring/getUserScoringDataByCCUseCase.js";
+import { callMicroserviceUseCase } from "../../application/usecases/scoring/callMicroserviceUseCase.js";
 
 export async function getAllScoring(req, res) {
   try {
@@ -51,6 +53,21 @@ export async function updateScoringById(req, res) {
     await updateScoringByIdUseCase(id, Estado || "pendiente");
     res.status(200).json({ message: "Registro actualizado correctamente" });
   } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+}
+
+export async function getUserScoringDataByCC(req, res) {
+  try {
+    const { cedula } = req.params;
+    const { request_id } = req.query; // Dejarlo como opcional desde la query
+    const data = await getUserScoringDataByCCUseCase(cedula, request_id);
+    const request_microserver = await callMicroserviceUseCase(data);
+    res.status(200).json(request_microserver);
+  } catch (err) {
+    if (err.message.includes("No se encontró")) {
+      return res.status(404).json({ error: err.message });
+    }
     res.status(500).json({ error: err.message });
   }
 }
