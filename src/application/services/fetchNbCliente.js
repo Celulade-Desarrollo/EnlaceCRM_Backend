@@ -1,3 +1,5 @@
+import fetch from 'node-fetch';
+
 export async function fetchNbCliente(nbCliente, nbAgenteComercial, bearerToken) {
     const url = 'https://qa-client-gateway-general.amovil.com.co:42281/clients/bancoW';
   
