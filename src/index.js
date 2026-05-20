@@ -94,7 +94,8 @@ app.get("/", (req, res) => {
 });
 
 //Puerto del servidor
-const PORT = 3000;
+const PORT = process.env.PORT
+
 
 async function startServer() {
   try {
