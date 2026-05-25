@@ -1,9 +1,11 @@
+import fetch from 'node-fetch';
+
 export async function fetchLoginAlpina() {
-    const url = 'https://qa-client-gateway-general.amovil.com.co:42281/auth';
+    const url = process.env.ALPINA_AUTH_URL;
   
     const data = {
-      username: "alpina",
-      password: "1n5RiZ3F6e8L"
+      username: process.env.ALPINA_AUTH_USERNAME,
+      password: process.env.ALPINA_AUTH_PASSWORD
     };
   
     try {

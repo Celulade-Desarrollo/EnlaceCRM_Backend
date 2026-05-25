@@ -42,7 +42,7 @@ const app = express();
 
 // Configuración de CORS
 app.use(cors({
-  origin: ["http://localhost:5173", "http://localhost:5174"], // Permite frontend dev y swagger
+  origin: ["https://enlace-crm.com:3000/"], // Permite frontend dev y swagger
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
   allowedHeaders: [
     "Content-Type",
@@ -94,7 +94,8 @@ app.get("/", (req, res) => {
 });
 
 //Puerto del servidor
-const PORT = 3000;
+const PORT = process.env.PORT
+
 
 async function startServer() {
   try {
