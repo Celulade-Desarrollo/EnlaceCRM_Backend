@@ -59,9 +59,10 @@ export async function updateScoringById(req, res) {
 
 export async function getUserScoringDataByCC(req, res) {
   try {
-    const { cedula } = req.params;
+    const { cedula, lat, lon } = req.params;
     const { request_id } = req.query; // Dejarlo como opcional desde la query
-    const data = await getUserScoringDataByCCUseCase(cedula, request_id);
+    const data = await getUserScoringDataByCCUseCase(cedula, request_id, lat, lon);
+  
     const request_microserver = await callMicroserviceUseCase(data);
     res.status(200).json(request_microserver);
   } catch (err) {

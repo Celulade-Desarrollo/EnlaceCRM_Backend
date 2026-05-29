@@ -37,11 +37,12 @@ function parseCupo(cupo) {
   return isNaN(valor) ? 0 : valor;
 }
 
-export async function getUserScoringDataByCCUseCase(cedula, requestId = null) {
+export async function getUserScoringDataByCCUseCase(cedula, requestId = null, lat, lon) {
+  console.log(cedula, requestId, lat, lon)
   const rawData = await scoringRepository.UserScoringDataByCC(cedula);
 
   if (!rawData) {
-    throw new Error("No se encontró información de scoring para el cliente especificado.");
+    throw new Error("No se encontró información de scoring para el cliente especifico.");
   }
 
   // Mapeo al DTO
@@ -56,8 +57,8 @@ export async function getUserScoringDataByCCUseCase(cedula, requestId = null) {
       socioeconomic_level: parseInt(rawData.Estrato) || 0,
       legal_nature: "natural",
       geo: {
-        x: parseFloat(rawData.Latitud) || 0,
-        y: parseFloat(rawData.Longitud) || 0
+        x: parseFloat(lat) || 0,
+        y: parseFloat(lon) || 0
       }
     },
     business: {
