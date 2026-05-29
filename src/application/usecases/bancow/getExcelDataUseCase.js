@@ -47,7 +47,7 @@ export async function getExcelData() {
                 Math.round(rangoIngresos * (1 - PORCENTAJE_COSTO))
             ),
             Utilidad_Operativa: excelData.Ingreso_Operativo_Neto,
-            AntiguedadNegocioAños: excelData.AntiguedadNegocioAños,
+            AntiguedadNegocioAnios: excelData.AntiguedadNegocioAnios,
             ComprasPromedioAlpinaUltTrim: excelData.ComprasPromedioAlpinaUltTrim,
             Valor_Bienes: excelData.Valor_Bienes,
             Valor_Deudas: excelData.Valor_Deudas,
