@@ -136,6 +136,6 @@ scoringRouter.post("/api/scoring", authMiddleware, createScoring);
  *       404:
  *         description: No se encontró información para la cédula dada
  */
-scoringRouter.get("/api/scoring/data/:cedula", getUserScoringDataByCC);
+scoringRouter.get("/api/scoring/data/:cedula/:lat/:lon", getUserScoringDataByCC);
 
 export default scoringRouter;

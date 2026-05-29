@@ -192,7 +192,7 @@ export const scoringRepository = {
           uf.IdUsuarioFinal,
           uf.CupoFinal
         FROM FlujosRegistroEnlace fre
-        INNER JOIN FlujosRegistroEnlaceScoring fs ON fs.IdFlujoRegistro = fre.Id
+        LEFT JOIN FlujosRegistroEnlaceScoring fs ON fs.IdFlujoRegistro = fre.Id
         LEFT JOIN UsuarioFinal uf ON uf.IdFlujoRegistro = fre.Id
         WHERE fre.Cedula_Cliente = @Cedula_Cliente
       `);
