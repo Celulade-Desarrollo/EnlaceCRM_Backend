@@ -26,10 +26,9 @@ export async function fetchNbCliente(nbCliente, nbAgenteComercial, bearerToken) 
       const result = await response.json();
       console.log('Respuesta del servidor:', result);
   
-      return result.data[0].documento; 
+      return result.data[0]; 
   
     } catch (error) {
       console.error('Error al hacer el POST:', error);
     }
   }
-  
