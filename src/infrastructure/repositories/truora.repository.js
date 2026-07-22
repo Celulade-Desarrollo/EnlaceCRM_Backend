@@ -20,7 +20,7 @@ export const truoraRepository = {
                     }
                 }
             );
-            
+            console.log("Datos obtenidos de Truoraprocess:", response.data);
             return response.data;
         } catch (error) {
             throw new Error(`Error al consultar Truora: ${error.message}`);
