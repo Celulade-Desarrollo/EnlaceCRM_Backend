@@ -13,6 +13,7 @@ export async function loginUserAccountUseCase(
   nbAgenteComercial,
   token
 ) {
+  
   const authAdapter = new AuthAlpinaAdapter();
   const bearerToken = await fetchLoginAlpina();
 
@@ -22,6 +23,20 @@ export async function loginUserAccountUseCase(
     nbAgenteComercial,
     bearerToken
   );
+
+ if (!datosCliente) {
+    const error = new Error(
+      "No encontramos información para este cliente."
+    );
+
+    error.status = 404;
+    error.payload = {
+      message:
+        "No encontramos información para este cliente. No es posible continuar con el registro.",
+    };
+
+    throw error;
+  }
 
   const cedula = datosCliente.documento;
 
