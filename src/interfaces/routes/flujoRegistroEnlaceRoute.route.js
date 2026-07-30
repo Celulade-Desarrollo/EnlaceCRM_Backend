@@ -264,7 +264,7 @@ flujoRegistroEnlace.get("/api/flujoRegistroEnlace/:id", authMiddleware, getById)
  *       400:
  *         description: Error en los datos enviados
  */
-flujoRegistroEnlace.put("/api/flujoRegistroEnlace/:id", updateRegistroById);
+flujoRegistroEnlace.patch("/api/flujoRegistroEnlace/:id", updateRegistroById);
 
 /**
  * @swagger
