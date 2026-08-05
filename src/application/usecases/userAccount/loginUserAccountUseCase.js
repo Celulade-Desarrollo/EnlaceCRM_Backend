@@ -56,6 +56,9 @@ export async function loginUserAccountUseCase(
       cuentaNbCliente.Estado === "IncompletoBloqInfoFinanciera"
       
     ) {
+      const tokenTenderoEnlaceCRM = await tokenGeneratorService.generateToken({
+      cedula,
+    });
       const error = new Error("El usuario requiere asesoría.");
       error.status = 207;
       error.payload = {
@@ -67,6 +70,7 @@ export async function loginUserAccountUseCase(
         Autorizacion_Medios_de_Contacto:
           cuentaNbCliente.Autorizacion_Medios_de_Contacto,
         Id: cuentaNbCliente.Id,
+        token: tokenTenderoEnlaceCRM,
       };
       throw error;
     }
