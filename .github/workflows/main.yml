@@ -9,6 +9,7 @@ jobs:
   deploy-main:
     if: github.ref == 'refs/heads/main'
     runs-on: self-hosted
+
     steps:
       - name: Actualizar repositorio main
         run: |
@@ -19,13 +20,18 @@ jobs:
       - name: Docker deploy main
         run: |
           cd /home/s-appadm/EnlaceCRM_Backend
-          docker compose down
           docker compose up -d --build
+
+      - name: Verificar contenedor main
+        run: |
+          cd /home/s-appadm/EnlaceCRM_Backend
+          docker compose ps
 
 
   deploy-develop:
     if: github.ref == 'refs/heads/develop'
     runs-on: self-hosted
+
     steps:
       - name: Actualizar repositorio develop
         run: |
