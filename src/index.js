@@ -34,7 +34,7 @@ import cupo from "./interfaces/routes/editarCupo.route.js";
 import tasaInteresesRouter from "./interfaces/routes/tasaIntereses.route.js";
 import alpinaClienteRouter from "./interfaces/routes/alpina-cliente.route.js";
 import asesoriaRouter from "./interfaces/routes/asesoria.route.js";
-import cookieParser from "cookie-parser";
+
 // Swagger
 import swaggerDocs from "./config/swagger-config.js";
 
@@ -56,7 +56,7 @@ app.use(cors({
   optionsSuccessStatus: 200
 }));
 
-app.use(cookieParser());
+
 
 // Body parser
 app.use(express.json());
