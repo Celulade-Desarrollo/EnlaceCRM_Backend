@@ -138,6 +138,7 @@ export const updateClienteAceptoById = async (req, res) => {
 };
 
 export const updateRegistroById = async (req, res) => {
+  console.log(req.body);
   try {
     const { id } = req.params;
     const result = await updateFlujoRegistroUseCase(id, req.body);
