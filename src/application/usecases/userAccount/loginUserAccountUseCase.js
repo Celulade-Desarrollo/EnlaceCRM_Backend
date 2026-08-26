@@ -47,7 +47,7 @@ export async function loginUserAccountUseCase(
   if (cuentaNbCliente) {
     if (
       cuentaNbCliente.Estado === "Asesor" ||
-      cuentaNbCliente.Estado === "Incompleto" || 
+      cuentaNbCliente.Estado === "Incompleto" ||
       cuentaNbCliente.Estado === "IncompletoBloqCorreo" ||
       cuentaNbCliente.Estado === "IncompletoBloqCedula" ||
       cuentaNbCliente.Estado === "IncompletoBloqUbiNegocio" ||
