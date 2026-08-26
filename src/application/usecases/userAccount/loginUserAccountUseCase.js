@@ -47,8 +47,18 @@ export async function loginUserAccountUseCase(
   if (cuentaNbCliente) {
     if (
       cuentaNbCliente.Estado === "Asesor" ||
-      cuentaNbCliente.Estado === "Incompleto"
+      cuentaNbCliente.Estado === "Incompleto" || 
+      cuentaNbCliente.Estado === "IncompletoBloqCorreo" ||
+      cuentaNbCliente.Estado === "IncompletoBloqCedula" ||
+      cuentaNbCliente.Estado === "IncompletoBloqUbiNegocio" ||
+      cuentaNbCliente.Estado === "IncompletoBloqInfoNegocio" ||
+      cuentaNbCliente.Estado === "IncompletoBloqVentas" ||
+      cuentaNbCliente.Estado === "IncompletoBloqInfoFinanciera"
+      
     ) {
+      const tokenTenderoEnlaceCRM = await tokenGeneratorService.generateToken({
+      cedula,
+    });
       const error = new Error("El usuario requiere asesoría.");
       error.status = 207;
       error.payload = {
@@ -60,6 +70,7 @@ export async function loginUserAccountUseCase(
         Autorizacion_Medios_de_Contacto:
           cuentaNbCliente.Autorizacion_Medios_de_Contacto,
         Id: cuentaNbCliente.Id,
+        token: tokenTenderoEnlaceCRM,
       };
       throw error;
     }
