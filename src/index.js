@@ -43,7 +43,7 @@ const app = express();
 
 // Configuración de CORS
 app.use(cors({
-  origin: ["http://localhost:5173", "http://localhost:5174"], // Permite frontend dev y swagger
+  origin: ["https://enlace-crm.com/"], // Permite frontend dev y swagger
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
   allowedHeaders: [
     "Content-Type",
