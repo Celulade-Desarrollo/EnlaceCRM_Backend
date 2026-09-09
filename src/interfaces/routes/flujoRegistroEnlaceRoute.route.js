@@ -15,7 +15,8 @@ import {
   updateClienteAceptoById,
   consultarPorCedulaYNbCliente,
   consultarEstadoCupoTodos,
-  updateRegistroById
+  updateRegistroById,
+  updateRegistroByIdTruora
 } from "../controllers/flujoRegistroEnlace.controller.js";
 
 import { buscarUsuarioPorTelefono } from "../middleware/cedula_middleware.js";
@@ -265,6 +266,35 @@ flujoRegistroEnlace.get("/api/flujoRegistroEnlace/:id", authMiddleware, getById)
  *         description: Error en los datos enviados
  */
 flujoRegistroEnlace.patch("/api/flujoRegistroEnlace/:id", updateRegistroById);
+
+/**
+ * @swagger
+ * /api/truora/forms/flujoregistroenlace/{id}:
+ *   patch:
+ *     summary: Actualizar registro por ID (Truora)
+ *     tags: [FlujoRegistroEnlace]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             example:
+ *               Nombres: "Juan"
+ *               Primer_Apellido: "Pérez"
+ *     responses:
+ *       200:
+ *         description: Registro actualizado exitosamente
+ *       400:
+ *         description: Error en los datos enviados
+ */
+flujoRegistroEnlace.patch("/api/truora/forms/flujoregistroenlace/:id", updateRegistroByIdTruora);
 
 /**
  * @swagger

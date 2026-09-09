@@ -338,6 +338,9 @@ async obtenerEstadoYCupoTodos() {
       `);
   },
 
+  async actualizarRegistroTruora(id, input) {
+    return this.actualizarRegistro(id, input);
+  },
 
   async obtenerTodos() {
     const pool = await poolPromise;
