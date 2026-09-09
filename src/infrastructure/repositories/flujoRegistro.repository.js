@@ -250,7 +250,7 @@ async obtenerEstadoYCupoTodos() {
       .input("Barrio", sql.NVarChar(100), input.Barrio)
       .input("Nombre_Tienda", sql.NVarChar(100), input.Nombre_Tienda)
       .input("Numero_de_neveras", sql.NVarChar(100), input.Numero_de_neveras)
-      .input("Registrado_Camara_Comercio", sql.NVarChar(4), input.Registrado_Camara_Comercio)
+      .input("Registrado_Camara_Comercio", sql.Bit, input.Registrado_Camara_Comercio)
       .input("Rango_de_Ingresos", sql.NVarChar(100), input.Rango_de_Ingresos)
       .input("Ingreso_Operativo_Neto", sql.Decimal(18,2), ingresosOperativoNeto)
       .input("Persona_expuesta_politicamente_PEP", sql.Bit, input.Persona_expuesta_politicamente_PEP)
