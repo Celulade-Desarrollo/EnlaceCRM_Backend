@@ -11,6 +11,7 @@ import { updateClienteAcepto } from "../../application/usecases/flujoRegistro/up
 import { consultarPorCedulaYNbClienteUseCase } from "../../application/usecases/flujoRegistro/consultarPorCedulaYNbClienteUseCase.js";
 import { consultarEstadoCupoTodosUseCase } from "../../application/usecases/flujoRegistro/getAllEstadoCupoUseCase.js";
 import { updateFlujoRegistroUseCase } from "../../application/usecases/flujoRegistro/updateFlujoRegistroUseCase.js";
+import { updateFlujoRegistroTruoraUseCase } from "../../application/usecases/flujoRegistro/updateFlujoRegistroTruoraUseCase.js";
 
 export const consultarPorCedulaYNbCliente = async (req, res) => {
   try {
@@ -86,6 +87,7 @@ export const getBynumber = async (req, res) => {
 };
 
 export const createRegistro = async (req, res) => {
+    console.log("log del registro", req.body)
   try {
     const result = await createFlujoRegistroUseCase(req.body);
     res.status(201).json({ message: result });
@@ -142,6 +144,17 @@ export const updateRegistroById = async (req, res) => {
   try {
     const { id } = req.params;
     const result = await updateFlujoRegistroUseCase(id, req.body);
+    res.status(200).json({ message: result });
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+};
+
+export const updateRegistroByIdTruora = async (req, res) => {
+  console.log(req.body);
+  try {
+    const { id } = req.params;
+    const result = await updateFlujoRegistroTruoraUseCase(id, req.body);
     res.status(200).json({ message: result });
   } catch (err) {
     res.status(400).json({ error: err.message });

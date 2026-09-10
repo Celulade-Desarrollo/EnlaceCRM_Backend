@@ -4,7 +4,7 @@ import { LOGS_TYPE_NAMES } from "../../constants/LogsType.js";
 
 export class LogsAdapter extends LogsPort {
     async generarLog(Usuario, Rol, Proceso, Fecha, Descripcion) {
-        const nombreProceso = LOGS_TYPE_NAMES[Proceso];
+        const nombreProceso = LOGS_TYPE_NAMES[Proceso] ?? "Sistema";
 
         return await logsRepository.generarLog(
             Usuario,
