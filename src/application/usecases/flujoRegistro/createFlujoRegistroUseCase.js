@@ -22,6 +22,7 @@ export async function createFlujoRegistroUseCase(input) {
         new Date(),
         "usuario aceptó politica de tratamiento de datos personales"
       );
+      console.log("Log generado para creacion de usuario", registro.Cedula_Cliente);
     }
   } catch (err) {
     // No detener el flujo principal si falla el log
