@@ -87,6 +87,7 @@ export const getBynumber = async (req, res) => {
 };
 
 export const createRegistro = async (req, res) => {
+    console.log("log del registro", req.body)
   try {
     const result = await createFlujoRegistroUseCase(req.body);
     res.status(201).json({ message: result });
